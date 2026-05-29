@@ -14,13 +14,21 @@ export const siteName = "taichinh.de";
 
 export const headerNav: NavItem[] = [
   {
-    label: "Đầu tư – Tiết kiệm",
+    label: "Về chúng tôi",
+    href: "/page/gioi-thieu",
+    items: [
+      { label: "Đối tác", href: "/recommendations" },
+      { label: "Tin mới", href: "/archive" },
+    ],
+  },
+  {
+    label: "Đầu tư - Tiết kiệm",
     href: "/series/invest",
     items: [
-      { label: "Quỹ đầu tư – Fonds Sparplan", href: "/dau-tu-vao-quy-fonds-sparsplan" },
-      { label: "Tích lũy & Bảo hiểm hỗ trợ", href: "/tich-luy-tai-chinh-and-bao-hiem-ho-tro-fondspolice" },
-      { label: "Đầu tư Vàng", href: "/dau-tu-vao-vang-gold" },
-      { label: "Tài chính cho con", href: "/ke-hoach-cho-tuong-lai-con-yeu" },
+      { label: "Tiết kiệm vào Quỹ đầu tư", href: "/dau-tu-vao-quy-fonds-sparsplan" },
+      { label: "Đầu tư vào Vàng, Bạc", href: "/dau-tu-vao-vang-gold" },
+      { label: "Kế hoạch tài chính cho con trẻ", href: "/ke-hoach-cho-tuong-lai-con-yeu" },
+      { label: "Tích lũy tài chính - Kế hoạch an toàn", href: "/tich-luy-tai-chinh-and-bao-hiem-ho-tro-fondspolice" },
     ],
   },
   {
@@ -29,17 +37,26 @@ export const headerNav: NavItem[] = [
     items: [
       { label: "Bảo hiểm hưu trí Riester", href: "/bao-hiem-huu-tri-riester" },
       { label: "Bảo hiểm hưu trí Basisrente", href: "/bao-hiem-huu-tri-co-ban" },
-      { label: "Bảo hiểm doanh nghiệp – FirmenSAFE", href: "/bao-hiem-doanh-nghiep" },
+      { label: "Bảo hiểm doanh nghiệp", href: "/bao-hiem-doanh-nghiep" },
+      { label: "Bảo hiểm mất sức lao động", href: "/bao-hiem-mat-suc-lao-dong" },
       { label: "Bảo hiểm Y tế", href: "/bao-hiem-y-te" },
     ],
   },
   {
-    label: "Quỹ xây dựng",
+    label: "Bất động sản",
     href: "/series/bauspar",
     items: [
-      { label: "Bauspar – Tiết kiệm xây nhà", href: "/tiet-kiem-xay-dung" },
+      { label: "Bauspar - Tiết kiệm xây nhà", href: "/tiet-kiem-xay-dung" },
       { label: "Nhà ở tiền chế FingerHaus", href: "/fingerhaus" },
       { label: "Tín dụng bất động sản", href: "/tin-dung-bat-dong-san" },
+    ],
+  },
+  {
+    label: "Năng lượng",
+    href: "/series/energy",
+    items: [
+      { label: "Máy bơm nhiệt & năng lượng mặt trời", href: "/he-thong-dien-mat-troi-solaranlage" },
+      { label: "Nguồn điện, gas rẻ", href: "/nguon-dien-gas-re" },
     ],
   },
   {
@@ -47,10 +64,8 @@ export const headerNav: NavItem[] = [
     href: "/dat-lich",
     items: [
       { label: "Đặt lịch tư vấn", href: "/dat-lich" },
-      { label: "Về chúng tôi", href: "/page/gioi-thieu" },
       { label: "Liên hệ & Imprint", href: "/page/contact" },
       { label: "Impressum", href: "/page/impressum" },
-      { label: "Tất cả bài viết", href: "/archive" },
     ],
   },
 ];
@@ -62,39 +77,30 @@ export const headerCTAs: { primary: CTA; secondary: CTA } = {
 
 export const heroSlides = [
   {
-    eyebrow: "Tài chính cho cộng đồng người Việt tại Đức",
-    headline: "Tư vấn chuyên nghiệp tài chính của bạn",
-    cta: { label: "Tìm hiểu thêm", href: "/quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban" } as CTA,
+    eyebrow: "",
+    headline: "Tư vấn tài chính chuyên nghiệp của bạn",
+    cta: { label: "Đặt lịch tư vấn", href: "/dat-lich" } as CTA,
+    image: {
+      src: "/images/cong-dong-desktop.png",
+      alt: "Tư vấn tài chính chuyên nghiệp tại văn phòng",
+    },
+  },
+  {
+    eyebrow: "",
+    headline: "Những sản phẩm và giải pháp độc quyền của các đối tác hàng đầu phù hợp với nhu cầu của bạn",
+    cta: { label: "Đặt lịch tư vấn", href: "/dat-lich" } as CTA,
     image: {
       src: "/images/article-03-tu-van-chuyen-nghiep.jpeg",
-      alt: "Tư vấn chuyên nghiệp tài chính – taichinh.de",
+      alt: "Giải pháp tài chính từ các đối tác hàng đầu",
     },
   },
   {
-    eyebrow: "Đầu tư & Tiết kiệm",
-    headline: "Xây dựng tài sản vàng cho tương lai",
-    cta: { label: "Khám phá quỹ & vàng", href: "/series/invest" } as CTA,
+    eyebrow: "",
+    headline: "Tư vấn tài chính đa diện cho từng giai đoạn cuộc sống",
+    cta: { label: "Đặt lịch tư vấn", href: "/dat-lich" } as CTA,
     image: {
-      src: "/images/article-09-vang-goldsparplan.jpeg",
-      alt: "Đầu tư vàng và quỹ Sparplan",
-    },
-  },
-  {
-    eyebrow: "Bảo hiểm toàn diện",
-    headline: "Bảo vệ gia đình & tài sản của bạn",
-    cta: { label: "Các sản phẩm bảo hiểm", href: "/series/insurance" } as CTA,
-    image: {
-      src: "/images/article-07-riester.png",
-      alt: "Riester-Rente & bảo hiểm hưu trí",
-    },
-  },
-  {
-    eyebrow: "Quỹ xây dựng",
-    headline: "Chuẩn bị tài chính cho bất động sản",
-    cta: { label: "Tìm hiểu Bauspar", href: "/series/bauspar" } as CTA,
-    image: {
-      src: "/images/article-04-bauspar.jpeg",
-      alt: "Quỹ xây dựng Bauspar",
+      src: "/images/sl3.png",
+      alt: "Tư vấn tài chính đa diện",
     },
   },
 ];
@@ -102,78 +108,77 @@ export const heroSlides = [
 export const heroContent = heroSlides[0];
 
 export const finanzcoachingSection = {
-  eyebrow: "Tư vấn tài chính",
-  headline: "Hành trình tài chính an toàn của bạn",
-  bodyParts: [
-    "Chào mừng bạn đến với taichinh.de. Trang web cung cấp thông tin chính xác và cập nhật về ",
-    { highlight: "Đầu tư – Tiết kiệm, Bảo hiểm, Quỹ xây dựng, Ngân hàng và Năng lượng" },
-    " dành cho ",
-    { highlight: "cộng đồng người Việt tại Đức" },
-    ".",
-  ] as Array<string | { highlight: string }>,
-  bodyExtra:
-    "Hãy để chúng tôi đồng hành cùng bạn xây dựng kế hoạch tài chính rõ ràng – từ tích lũy hàng tháng đến hưu trí và sở hữu nhà ở Đức. Tư vấn bằng tiếng Việt, miễn phí và không ràng buộc.",
+  eyebrow: "",
+  headline: "Tư vấn tài chính chuyên nghiệp. Giá trị bền vững cho tương lai",
+  bodyParagraphs: [
+    "Một nền tảng tài chính vững mạnh là tiền đề quan trọng giúp mỗi cá nhân chủ động xây dựng tương lai ổn định và bền vững.",
+    "Văn phòng Tư vấn Tài chính Vũ Thế Bảo trực thuộc Deutsche Vermögensberatung (DVAG) - là tập đoàn tư vấn tài chính uy tín hàng đầu tại Đức.",
+    "Với hơn 50 năm kinh nghiệm hoạt động cùng đội ngũ gần 20.000 chuyên viên tư vấn trên toàn quốc, DVAG hiện đang đồng hành cùng khoảng 8 triệu khách hàng tại Đức trong việc hoạch định và bảo vệ tương lai tài chính của họ.",
+    "Chúng tôi cung cấp các giải pháp tư vấn tài chính toàn diện và chuyên sâu trong các lĩnh vực: Đầu tư - Tiết kiệm, Bảo hiểm, Bất động sản, lập kế hoạch hưu trí và hoạch định tài chính dài hạn.",
+    "Thông qua quy trình tư vấn cá nhân hóa, minh bạch và định hướng dài hạn, chúng tôi hỗ trợ khách hàng đưa ra những quyết định tài chính phù hợp, hiệu quả và bền vững theo từng giai đoạn của cuộc sống.",
+    "Với tinh thần trách nhiệm, tính chuyên nghiệp và cam kết đồng hành lâu dài, chúng tôi hướng tới mục tiêu xây dựng những giá trị tài chính ổn định và bền vững cho mỗi khách hàng và gia đình của họ.",
+  ],
   primaryCta: { label: "Đặt lịch tư vấn miễn phí", href: "/dat-lich" } as CTA,
   secondaryCta: { label: "Tìm hiểu dịch vụ", href: "/quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban" } as CTA,
-  ratingsBadgeAlt: "Đánh giá khách hàng – 5 sao",
+  ratingsBadgeAlt: "Đánh giá khách hàng 5 sao",
 };
 
 export const advantages: AdvantageColumn[] = [
   {
     icon: "wuensche",
-    headline: "Đầu tư & Tiết kiệm đa dạng",
+    headline: "Những mong muốn và mục tiêu của bạn",
     body:
-      "Fonds Sparplan, Bauspar, Vàng và bất động sản — nhiều phương án để tài sản của bạn sinh lời phù hợp với mục tiêu và mức rủi ro mong muốn.",
+      "Tất cả đều xoay quanh chính bạn! Chuyên gia tư vấn tài chính sẽ dành thời gian tìm hiểu kỹ lưỡng tình hình của bạn, cũng như thấu hiểu những điều bạn mong muốn đạt được.",
   },
   {
     icon: "ganzheitlich",
-    headline: "Hưu trí có hỗ trợ Nhà nước",
+    headline: "Tư vấn tài chính Toàn diện",
     body:
-      "Riester-Rente, Basisrente và các hình thức hưu trí cho doanh nghiệp giúp bạn tận dụng tối đa hỗ trợ và ưu đãi thuế tại Đức.",
+      "Đối với chúng tôi, bảo vệ tài chính, lập kế hoạch hưu trí và tích lũy tài sản là những yếu tố luôn song hành cùng nhau. Chúng tôi sẽ cùng bạn xây dựng một chiến lược toàn diện nhằm kiến tạo sự thành công về tài chính cho chính bạn.",
   },
   {
     icon: "gemeinsam",
-    headline: "Bảo hiểm cá nhân & doanh nghiệp",
+    headline: "Cùng nhau kiến tạo thành công",
     body:
-      "Từ bảo hiểm sức khỏe, tai nạn đến FirmenSAFE và hưu trí cho doanh nghiệp — chúng tôi giúp bạn an toàn cho cả gia đình và công việc.",
+      "Chuyên gia tư vấn tài chính sẽ đồng hành cùng bạn trong mọi quyết định quan trọng, cung cấp những lời khuyên chuyên sâu phù hợp với từng giai đoạn của cuộc sống, đồng thời hỗ trợ bạn hiện thực hóa các mục tiêu tiết kiệm, đầu tư và hưu trí một cách vững chắc.",
   },
 ];
 
 export const teaserCards: TeaserCard[] = [
   {
-    label: "Tư vấn chuyên nghiệp",
-    headline: "Hành trình tài chính 5 lĩnh vực",
-    cta: { label: "Tìm hiểu", href: "/quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban" },
+    label: "",
+    headline: "Vì tương lai con em chúng ta",
+    cta: { label: "Xem tiếp", href: "/ke-hoach-cho-tuong-lai-con-yeu" },
     image: {
-      src: "/images/article-03-tu-van-chuyen-nghiep.jpeg",
-      alt: "Tư vấn tài chính chuyên nghiệp",
+      src: "/images/gallery-04.jpeg",
+      alt: "Vì tương lai con em chúng ta",
     },
   },
   {
-    label: "Đầu tư – Tiết kiệm",
-    headline: "Quỹ đầu tư & Vàng",
-    cta: { label: "Tìm hiểu", href: "/series/invest" },
+    label: "",
+    headline: "Đầu tư vàng, bạc - Một ý tưởng sáng giá",
+    cta: { label: "Xem tiếp", href: "/dau-tu-vao-vang-gold" },
     image: {
-      src: "/images/article-09-vang-goldsparplan.jpeg",
-      alt: "Đầu tư vàng và quỹ Fonds Sparplan",
+      src: "/images/pdf-field-retirement.jpeg",
+      alt: "Đầu tư vàng bạc",
     },
   },
   {
-    label: "Bảo hiểm",
-    headline: "12 sản phẩm bảo hiểm",
-    cta: { label: "Tìm hiểu", href: "/series/insurance" },
+    label: "",
+    headline: "Đặt nền móng cho Ngôi nhà mơ ước của bạn",
+    cta: { label: "Xem tiếp", href: "/tiet-kiem-xay-dung" },
     image: {
-      src: "/images/article-07-riester.png",
-      alt: "Các sản phẩm bảo hiểm Đức",
+      src: "/images/pdf-field-child.jpeg",
+      alt: "Đặt nền móng cho ngôi nhà mơ ước",
     },
   },
   {
-    label: "Quỹ xây dựng",
-    headline: "Bauspar & Bất động sản",
-    cta: { label: "Tìm hiểu", href: "/series/bauspar" },
+    label: "",
+    headline: "Tài chính chủ động - An nhiên tuổi già",
+    cta: { label: "Xem tiếp", href: "/bao-hiem-huu-tri-riester" },
     image: {
-      src: "/images/article-04-bauspar.jpeg",
-      alt: "Quỹ xây dựng Bauspar",
+      src: "/images/pdf-field-house.jpeg",
+      alt: "Tài chính chủ động an nhiên tuổi già",
     },
   },
 ];
@@ -222,19 +227,27 @@ export const ratingMocks: RatingMock[] = [
 ];
 
 export const kloppContent = {
-  eyebrow: "Đồng hành cùng bạn",
-  headline: "Tư vấn tận tâm cho cộng đồng người Việt tại Đức",
+  eyebrow: "",
+  headline: "Tư vấn tài chính đa diện",
   body:
-    "Bằng tiếng Việt, không rào cản ngôn ngữ — chúng tôi hiểu hoàn cảnh, mục tiêu và những lo lắng riêng của người Việt khi sinh sống và làm việc tại Đức. Mỗi kế hoạch tài chính được xây dựng riêng cho bạn.",
-  cta: { label: "Tất cả chủ đề tài chính", href: "/archive" } as CTA,
+    "Bao Vu The - Vermögensberater. Büro für Deutsche Vermögensberatung, Proskauer Str. 13, 10247 Berlin. Tel.: +49 30-4268859. Mobil/WhatsApp: 0176-10178768. Mail: bao.vu-the.3625100@dvag.de.",
+  cta: { label: "Đặt lịch hẹn tư vấn", href: "/dat-lich" } as CTA,
   image: {
-    desktop: "/images/cong-dong-desktop.jpg",
-    mobile: "/images/cong-dong-mobile.jpg",
-    alt: "Tư vấn tài chính 100% dành cho cộng đồng người Việt tại Đức",
+    desktop: "/images/pdf-team-office.jpeg",
+    mobile: "/images/pdf-team-office.jpeg",
+    alt: "Tư vấn tài chính đa diện",
   },
 };
 
 export const articles: Article[] = [
+  {
+    slug: "cai-cach-che-do-huu-tri-tu-nhan-riester",
+    title: "Cải cách chế độ hưu trí tư nhân Riester",
+    date: "May 8, 2026",
+    excerpt:
+      "Chính phủ Liên bang Đức thông qua chương trình cải cách Hưu trí Riester. Từ năm 2027, tài khoản tiết kiệm hưu trí được nhà nước hỗ trợ sẽ thay thế lương hưu Riester.",
+    image: "/images/pdf-news-riester.jpeg",
+  },
   {
     slug: "ke-hoach-cho-tuong-lai-con-yeu",
     title: "Kế hoạch Tài chính cho tương lai con trẻ",
@@ -307,73 +320,81 @@ export const articles: Article[] = [
     slug: "he-thong-dien-mat-troi-solaranlage",
     title: "Máy bơm nhiệt & Năng lượng mặt trời",
     date: "Mar 28, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1746300912851/24486b5d-2935-405e-9bfe-cf5e2ce2253f.png",
+    image: "/images/gallery-07.jpeg",
   },
   {
     slug: "tin-dung-ca-nhan",
     title: "Tín dụng cá nhân - Privatkredit",
     date: "Mar 27, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/t-UV1rZqPuY/upload/d07e66cb6b3c0d32d9eae01da8b8e138.jpeg",
+    image: "/images/4.jpeg",
   },
   {
     slug: "bao-hiem-y-te",
     title: "Bảo hiểm Y tế",
     date: "Mar 26, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/mwpFjE1Bi0M/upload/2dfd1feb580d1d1e86918ad507baca1f.jpeg",
+    image: "/images/gallery-03.jpeg",
   },
   {
     slug: "fingerhaus",
     title: "Nhà ở tiền chế - FingerHaus",
     date: "Mar 24, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1745689028964/42780419-201b-4fc9-8a95-d68c846d2dcc.png",
+    image: "/images/article-06-huu-tri-doanh-nghiep.jpeg",
   },
   {
     slug: "bao-hiem-phap-ly",
     title: "Bảo hiểm pháp lý",
     date: "Mar 24, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/6sl88x150Xs/upload/bc857f2f11022a78f9346b43d3641ceb.jpeg",
+    image: "/images/gallery-05.jpeg",
   },
   {
     slug: "bao-hiem-cho-he-thong-dien-mat-troi",
     title: "Bảo hiểm cho hệ thống điện mặt trời",
     date: "Mar 23, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/7razCd-RUGs/upload/aece376ac8c0f8ada2b3687c3220ba81.jpeg",
+    image: "/images/gallery-08.jpeg",
   },
   {
     slug: "bao-hiem-trach-nhiem-ca-nhan",
     title: "Bảo hiểm trách nhiệm cá nhân",
     date: "Mar 23, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/RVk8EwpRwNs/upload/2ef9619b745fc99882c2647030dc8bd0.jpeg",
+    image: "/images/gallery-07.jpeg",
   },
   {
     slug: "bao-hiem-tai-san",
     title: "Bảo hiểm tài sản",
     date: "Mar 23, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/3OiYMgDKJ6k/upload/b1fda52ce60144f7c0682faa979bf36e.jpeg",
+    image: "/images/insurance-property-temple.jpg",
   },
   {
     slug: "bao-hiem-nha-dat",
     title: "Bảo hiểm nhà đất",
     date: "Mar 23, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/6Xdx42pvbAc/upload/0b05e8ea09c8369a897f1d4529c2abd8.jpeg",
+    image: "/images/article-10-tin-dung-bat-dong-san.jpeg",
   },
   {
     slug: "bao-hiem-kinh",
     title: "Bảo hiểm kính",
     date: "Mar 21, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/5Uh-wTSz-q0/upload/a95f8ec9bc423391249e618700697e91.jpeg",
+    image: "/images/2.jpeg",
   },
   {
     slug: "bao-hiem-tai-nan",
     title: "Bảo hiểm tai nạn",
     date: "Mar 21, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/5_GRulmDNX0/upload/172546f6fa164dcd01873d83a21e98b8.jpeg",
+    image: "/images/3.jpeg",
+  },
+  {
+    slug: "bao-hiem-mat-suc-lao-dong",
+    title: "Bảo hiểm mất sức lao động",
+    date: "Mar 20, 2025",
+    excerpt:
+      "Bảo vệ giá trị sức lao động của bạn trước rủi ro bệnh tật hoặc tai nạn khiến thu nhập bị gián đoạn.",
+    image: "/images/gallery-06.jpeg",
   },
   {
     slug: "nguon-dien-gas-re",
     title: "Nguồn Điện, Gas rẻ",
     date: "Feb 22, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1746302036868/f594abdb-8a64-4087-81b0-ec1a83d687fa.jpeg",
+    image: "/images/gallery-09.jpeg",
   },
 ];
 
@@ -382,6 +403,7 @@ export const articles: Article[] = [
  * "Đầu tư – Tiết kiệm", "Bảo hiểm", "Quỹ xây dựng".
  */
 const SLUG_TO_CATEGORY: Record<string, string> = {
+  "cai-cach-che-do-huu-tri-tu-nhan-riester": "Bảo hiểm",
   "quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban": "Đầu tư – Tiết kiệm",
   "ke-hoach-cho-tuong-lai-con-yeu": "Đầu tư – Tiết kiệm",
   "tich-luy-tai-chinh-and-bao-hiem-ho-tro-fondspolice": "Đầu tư – Tiết kiệm",
@@ -405,19 +427,31 @@ const SLUG_TO_CATEGORY: Record<string, string> = {
   "bao-hiem-nha-dat": "Bảo hiểm",
   "bao-hiem-kinh": "Bảo hiểm",
   "bao-hiem-tai-nan": "Bảo hiểm",
+  "bao-hiem-mat-suc-lao-dong": "Bảo hiểm",
 };
 
 const FALLBACK_LEAD =
   "Tư vấn chuyên nghiệp dành cho cộng đồng người Việt tại Đức — đầu tư, tiết kiệm, bảo hiểm và quỹ xây dựng.";
 
-// Top 5 articles for the DVAG-style article slider on the homepage,
-// expressed as FeedItem so they can be merged with localStorage drafts.
-export const articleSliderItems: FeedItem[] = articles.slice(0, 5).map((a) =>
-  articleAsFeedItem(
-    { ...a, excerpt: a.excerpt ?? FALLBACK_LEAD },
-    SLUG_TO_CATEGORY[a.slug],
+// Top articles for the homepage news section, following the PDF mockup.
+export const articleSliderItems: FeedItem[] = [
+  {
+    slug: "cai-cach-che-do-huu-tri-tu-nhan-riester",
+    href: "/cai-cach-che-do-huu-tri-tu-nhan-riester",
+    title: "Cải cách chế độ hưu trí tư nhân Riester",
+    date: "May 8, 2026",
+    image: "/images/pdf-news-riester.jpeg",
+    excerpt:
+      "Chính phủ Liên bang Đức thông qua chương trình cải cách Hưu trí Riester. Từ năm 2027, tài khoản tiết kiệm hưu trí được nhà nước hỗ trợ sẽ thay thế lương hưu Riester và mang đến các sản phẩm hưu trí linh hoạt hơn.",
+    category: "Tin mới",
+  },
+  ...articles.slice(1, 5).map((a) =>
+    articleAsFeedItem(
+      { ...a, excerpt: a.excerpt ?? FALLBACK_LEAD },
+      SLUG_TO_CATEGORY[a.slug],
+    ),
   ),
-);
+];
 
 // All articles as FeedItem (used by archive merge with drafts)
 export const allArticleFeedItems: FeedItem[] = articles.map((a) =>
@@ -436,41 +470,26 @@ export const author = {
 /* DVAG-style 4-column footer */
 export const footerColumns: FooterColumn[] = [
   {
-    title: "Dịch vụ",
+    title: "Về chúng tôi",
     links: [
-      { label: "Đầu tư – Tiết kiệm", href: "/series/invest" },
+      { label: "Đối tác", href: "/recommendations" },
+      { label: "Tin mới", href: "/archive" },
+    ],
+  },
+  {
+    title: "Tư vấn",
+    links: [
+      { label: "Đầu tư - Tiết kiệm", href: "/series/invest" },
       { label: "Bảo hiểm", href: "/series/insurance" },
-      { label: "Quỹ xây dựng – Bauspar", href: "/series/bauspar" },
-      { label: "Tín dụng", href: "/series/credit" },
-      { label: "Năng lượng (gas, điện)", href: "/series/energy" },
-    ],
-  },
-  {
-    title: "Sản phẩm",
-    links: [
-      { label: "Riester-Rente", href: "/bao-hiem-huu-tri-riester" },
-      { label: "Basisrente", href: "/bao-hiem-huu-tri-co-ban" },
-      { label: "Fonds Sparplan", href: "/dau-tu-vao-quy-fonds-sparsplan" },
-      { label: "FirmenSAFE", href: "/bao-hiem-doanh-nghiep" },
-      { label: "Đầu tư Vàng", href: "/dau-tu-vao-vang-gold" },
-    ],
-  },
-  {
-    title: "Bài viết",
-    links: [
-      { label: "Tài chính cho con", href: "/ke-hoach-cho-tuong-lai-con-yeu" },
-      { label: "Bauspar", href: "/tiet-kiem-xay-dung" },
-      { label: "FingerHaus", href: "/fingerhaus" },
-      { label: "Tất cả bài viết", href: "/archive" },
+      { label: "Bất động sản", href: "/series/bauspar" },
+      { label: "Năng lượng", href: "/series/energy" },
     ],
   },
   {
     title: "Liên hệ",
     links: [
       { label: "Đặt lịch tư vấn", href: "/dat-lich" },
-      { label: "Về chúng tôi", href: "/page/gioi-thieu" },
       { label: "Impressum", href: "/page/impressum" },
-      { label: "Trang đề cử", href: "/recommendations" },
     ],
   },
 ];

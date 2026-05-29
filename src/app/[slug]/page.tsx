@@ -5,6 +5,29 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AuthorCard } from "@/components/AuthorCard";
 import { ArticleBody } from "@/components/ArticleBody";
+import { BasicPensionArticle } from "@/components/BasicPensionArticle";
+import { BuildingSavingsArticle } from "@/components/BuildingSavingsArticle";
+import { BusinessInsuranceArticle } from "@/components/BusinessInsuranceArticle";
+import { ChildFutureArticle } from "@/components/ChildFutureArticle";
+import { CorporatePensionArticle } from "@/components/CorporatePensionArticle";
+import { EnergySupplierArticle } from "@/components/EnergySupplierArticle";
+import { FingerHausArticle } from "@/components/FingerHausArticle";
+import { FondsSparplanArticle } from "@/components/FondsSparplanArticle";
+import { GlassInsuranceArticle } from "@/components/GlassInsuranceArticle";
+import { GoldGeigerArticle } from "@/components/GoldGeigerArticle";
+import { HealthInsuranceArticle } from "@/components/HealthInsuranceArticle";
+import { HomeBuildingInsuranceArticle } from "@/components/HomeBuildingInsuranceArticle";
+import { LegalInsuranceArticle } from "@/components/LegalInsuranceArticle";
+import { AccidentInsuranceArticle } from "@/components/AccidentInsuranceArticle";
+import { PersonalLoanArticle } from "@/components/PersonalLoanArticle";
+import { PersonalLiabilityArticle } from "@/components/PersonalLiabilityArticle";
+import { PropertyInsuranceArticle } from "@/components/PropertyInsuranceArticle";
+import { RealEstateLoanArticle } from "@/components/RealEstateLoanArticle";
+import { RenewableEnergyArticle } from "@/components/RenewableEnergyArticle";
+import { RiesterPensionArticle } from "@/components/RiesterPensionArticle";
+import { SolarInsuranceArticle } from "@/components/SolarInsuranceArticle";
+import { WealthProtectionArticle } from "@/components/WealthProtectionArticle";
+import { WorkAbilityInsuranceArticle } from "@/components/WorkAbilityInsuranceArticle";
 import { articles } from "@/lib/content";
 import { articleBodies } from "@/lib/articles-content";
 import { ChevronLeftIcon } from "@/components/icons";
@@ -124,6 +147,282 @@ export default async function ArticlePage({
   const prev = idx > 0 ? articles[idx - 1] : null;
   const next = idx < articles.length - 1 ? articles[idx + 1] : null;
   const related = articles.filter((a) => a.slug !== slug).slice(0, 3);
+
+  if (slug === "dau-tu-vao-quy-fonds-sparsplan") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <FondsSparplanArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "dau-tu-vao-vang-gold") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <GoldGeigerArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "tich-luy-tai-chinh-and-bao-hiem-ho-tro-fondspolice") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <WealthProtectionArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "ke-hoach-cho-tuong-lai-con-yeu") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <ChildFutureArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "tiet-kiem-xay-dung") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <BuildingSavingsArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "fingerhaus") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <FingerHausArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "tin-dung-bat-dong-san") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <RealEstateLoanArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "tin-dung-ca-nhan") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <PersonalLoanArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-huu-tri-riester") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <RiesterPensionArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-huu-tri-co-ban") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <BasicPensionArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-huu-tri-doanh-nghiep") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <CorporatePensionArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-doanh-nghiep") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <BusinessInsuranceArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "nguon-dien-gas-re") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <EnergySupplierArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "he-thong-dien-mat-troi-solaranlage") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <RenewableEnergyArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-tai-san") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <PropertyInsuranceArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-trach-nhiem-ca-nhan") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <PersonalLiabilityArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-kinh") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <GlassInsuranceArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-nha-dat") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <HomeBuildingInsuranceArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-cho-he-thong-dien-mat-troi") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <SolarInsuranceArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-phap-ly") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <LegalInsuranceArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-y-te") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <HealthInsuranceArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-tai-nan") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <AccidentInsuranceArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "bao-hiem-mat-suc-lao-dong") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+          <WorkAbilityInsuranceArticle />
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>

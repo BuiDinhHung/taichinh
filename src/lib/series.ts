@@ -1,4 +1,4 @@
-// Series mapping — based on taichinh.de's /series/<slug> URLs
+// Series mapping - based on taichinh.de's /series/<slug> URLs.
 // Each series groups articles by topic. Used by /series/[slug] route.
 
 export type Series = {
@@ -17,7 +17,7 @@ export const seriesList: Series[] = [
   },
   {
     slug: "invest",
-    name: "Đầu tư – Tiết kiệm",
+    name: "Đầu tư - Tiết kiệm",
     description: "Quỹ đầu tư, kế hoạch tiết kiệm linh hoạt, đầu tư vàng và các lựa chọn tích lũy tài sản dài hạn.",
     articleSlugs: [
       "ke-hoach-cho-tuong-lai-con-yeu",
@@ -37,6 +37,7 @@ export const seriesList: Series[] = [
     name: "Bảo hiểm",
     description: "Bảo hiểm hưu trí, doanh nghiệp, sức khỏe, tai nạn và các sản phẩm bảo hiểm khác tại Đức.",
     articleSlugs: [
+      "cai-cach-che-do-huu-tri-tu-nhan-riester",
       "bao-hiem-huu-tri-doanh-nghiep",
       "bao-hiem-huu-tri-riester",
       "bao-hiem-doanh-nghiep",
@@ -49,6 +50,7 @@ export const seriesList: Series[] = [
       "bao-hiem-nha-dat",
       "bao-hiem-kinh",
       "bao-hiem-tai-nan",
+      "bao-hiem-mat-suc-lao-dong",
     ],
   },
   {

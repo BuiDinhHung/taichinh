@@ -1,14 +1,12 @@
-// Booking helpers — no backend, no database.
-// All "submissions" open mailto: or WhatsApp deep links in a new tab.
+// Booking helpers: no backend, no database. Submissions open mailto: or WhatsApp links.
 
 export const CONTACT = {
   name: "Bao Vu The (Vũ Thế Bảo)",
   role: "Vermögensberater",
   address: "Proskauer Str. 13, 10247 Berlin",
   phoneDisplay: "+49 30 4268859",
-  phoneHref: "tel:+4930426885 9".replace(/\s/g, ""),
+  phoneHref: "tel:+49304268859",
   mobileDisplay: "+49 176 10178768",
-  // E.164 without leading + for wa.me
   mobileWhatsApp: "4917610178768",
   email: "bao.vu-the.3625100@dvag.de",
 };
@@ -18,16 +16,16 @@ export const TOPICS = [
   { value: "dau-tu-tiet-kiem", label: "Đầu tư & Tiết kiệm (Fonds, Vàng)" },
   { value: "huu-tri", label: "Hưu trí (Riester, Basisrente, doanh nghiệp)" },
   { value: "bao-hiem", label: "Bảo hiểm (sức khỏe, tai nạn, doanh nghiệp)" },
-  { value: "bauspar", label: "Bauspar – Tiết kiệm xây nhà" },
+  { value: "bauspar", label: "Bauspar - Tiết kiệm xây nhà" },
   { value: "tin-dung", label: "Tín dụng (cá nhân, bất động sản)" },
   { value: "nang-luong", label: "Năng lượng (gas, điện)" },
   { value: "khac", label: "Vấn đề khác" },
 ] as const;
 
 export const TIME_SLOTS = [
-  { value: "sang", label: "Buổi sáng (09:00 – 12:00)" },
-  { value: "chieu", label: "Buổi chiều (13:00 – 17:00)" },
-  { value: "toi", label: "Buổi tối (17:00 – 20:00)" },
+  { value: "sang", label: "Buổi sáng (09:00 - 12:00)" },
+  { value: "chieu", label: "Buổi chiều (13:00 - 17:00)" },
+  { value: "toi", label: "Buổi tối (17:00 - 20:00)" },
   { value: "cuoi-tuan", label: "Cuối tuần" },
   { value: "linh-hoat", label: "Linh hoạt theo lịch của tư vấn viên" },
 ] as const;
@@ -41,33 +39,40 @@ export type BookingFormData = {
   message: string;
 };
 
+function fallback(value: string, label = "chưa nhập") {
+  return value.trim() || `(${label})`;
+}
+
 function topicLabel(value: string) {
   return TOPICS.find((t) => t.value === value)?.label ?? value;
 }
+
 function timeLabel(value: string) {
   return TIME_SLOTS.find((t) => t.value === value)?.label ?? value;
 }
 
 export function buildEmailBody(d: BookingFormData) {
   return [
-    `Họ tên: ${d.name}`,
-    `Email: ${d.email}`,
-    `Số điện thoại: ${d.phone}`,
+    `Họ tên: ${fallback(d.name)}`,
+    `Email: ${fallback(d.email)}`,
+    `Số điện thoại: ${fallback(d.phone)}`,
     `Chủ đề quan tâm: ${topicLabel(d.topic)}`,
     `Thời gian thuận tiện: ${timeLabel(d.timeSlot)}`,
     "",
     "Lời nhắn:",
-    d.message || "(không có)",
+    d.message.trim() || "(không có)",
     "",
-    "—",
+    "--",
     "Gửi từ taichinh.de",
   ].join("\n");
 }
 
 export function buildMailtoUrl(d: BookingFormData) {
-  const subject = `Đặt lịch tư vấn taichinh.de — ${d.name}`;
-  const body = buildEmailBody(d);
-  const params = new URLSearchParams({ subject, body });
+  const senderName = d.name.trim();
+  const subject = senderName
+    ? `Đặt lịch tư vấn taichinh.de - ${senderName}`
+    : "Đặt lịch tư vấn taichinh.de";
+  const params = new URLSearchParams({ subject, body: buildEmailBody(d) });
   return `mailto:${CONTACT.email}?${params.toString()}`;
 }
 
@@ -77,16 +82,17 @@ export function buildWhatsAppUrl(d: BookingFormData) {
     "",
     "Tôi muốn đặt lịch tư vấn tài chính qua taichinh.de.",
     "",
-    `• Họ tên: ${d.name}`,
-    `• Email: ${d.email}`,
-    `• Số điện thoại: ${d.phone}`,
+    `• Họ tên: ${fallback(d.name)}`,
+    `• Email: ${fallback(d.email)}`,
+    `• Số điện thoại: ${fallback(d.phone)}`,
     `• Chủ đề: ${topicLabel(d.topic)}`,
     `• Thời gian thuận tiện: ${timeLabel(d.timeSlot)}`,
     "",
-    d.message ? `Lời nhắn: ${d.message}` : "",
+    d.message.trim() ? `Lời nhắn: ${d.message.trim()}` : "",
     "Cảm ơn anh/chị!",
   ]
     .filter(Boolean)
     .join("\n");
+
   return `https://wa.me/${CONTACT.mobileWhatsApp}?text=${encodeURIComponent(text)}`;
 }

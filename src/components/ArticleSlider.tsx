@@ -35,8 +35,8 @@ export function ArticleSlider() {
       <div className="dvag-container">
         <div className="flex items-end justify-between gap-4 sm:gap-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
-              Tin tức tài chính
+            <p className="text-sm font-bold text-text-strong">
+              Tin mới
             </p>
             <h2 className="mt-3 text-2xl font-bold leading-[1.15] text-text-strong dark:text-foreground sm:text-4xl lg:text-[40px]">
               Bài viết tài chính đáng đọc

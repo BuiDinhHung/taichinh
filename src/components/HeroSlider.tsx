@@ -50,7 +50,7 @@ export function HeroSlider({
   const currentSlide = slides[currentIndex];
 
   return (
-    <section className="relative isolate overflow-hidden bg-brand-gold">
+    <section className="relative isolate overflow-hidden bg-[#efe7c9]">
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
           <div
@@ -66,27 +66,28 @@ export function HeroSlider({
               fill
               priority={index === 0}
               sizes="100vw"
-              className="object-cover object-center"
+              className="scale-[0.96] object-contain object-center"
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-white/20" />
-        <div className="absolute inset-y-0 left-0 hidden w-2/5 bg-white/45 backdrop-blur-[1px] sm:block" />
+        <div className="absolute inset-0 bg-black/0" />
       </div>
 
-      <div className="dvag-container relative min-h-[520px] py-8 sm:min-h-[620px] sm:py-10 lg:min-h-[680px] lg:py-16">
-        <div className="flex min-h-[420px] items-end sm:min-h-[540px] lg:min-h-[560px] lg:items-center">
-          <div className="relative w-full max-w-[720px] bg-brand-gold/90 px-5 py-8 text-white shadow-[0_18px_40px_rgba(0,0,0,0.12)] sm:px-10 sm:py-12 lg:px-14 lg:py-14 lg:[clip-path:polygon(0_0,100%_0,100%_88%,0_100%)]">
-            <div className="flex flex-col gap-4 sm:gap-5">
-              <p className="text-xs font-bold uppercase tracking-wider text-white/95 sm:text-sm">
-                {currentSlide.eyebrow}
-              </p>
-              <h1 className="max-w-[13ch] text-3xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-[56px]">
+      <div className="dvag-container pointer-events-none relative min-h-[430px] py-6 sm:min-h-[520px] lg:min-h-[600px]">
+        <div className="flex min-h-[350px] items-end pb-0 sm:min-h-[440px] sm:pb-5 lg:min-h-[510px]">
+          <div className="pointer-events-auto relative w-[78vw] max-w-[255px] bg-brand-gold/78 px-4 py-4 text-white sm:max-w-[360px] sm:px-7 sm:py-6 lg:max-w-[390px] lg:bg-brand-gold/82 lg:[clip-path:polygon(0_0,100%_0,100%_88%,0_100%)]">
+            <div className="flex flex-col gap-2.5 sm:gap-3">
+              {currentSlide.eyebrow && (
+                <p className="text-xs font-bold uppercase tracking-wider text-white/95 sm:text-sm">
+                  {currentSlide.eyebrow}
+                </p>
+              )}
+              <h1 className="max-w-[12ch] text-[25px] font-bold leading-[1.08] text-white sm:text-3xl sm:leading-[1.12] lg:text-[34px]">
                 {currentSlide.headline}
               </h1>
               <Link
                 href={currentSlide.cta.href}
-                className="inline-flex items-center gap-2 self-start text-sm font-bold text-white underline decoration-2 underline-offset-4 hover:no-underline sm:text-base"
+                className="inline-flex items-center gap-2 self-start bg-brand-gold-dark px-3 py-2 text-xs font-bold text-white transition-colors hover:bg-brand-gold-darker sm:text-sm"
               >
                 {currentSlide.cta.label}
                 <ArrowRightIcon className="h-4 w-4" />
@@ -96,7 +97,7 @@ export function HeroSlider({
         </div>
 
         {slides.length > 1 && (
-          <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center justify-center gap-4 rounded-full bg-white/85 px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md lg:bottom-6 lg:left-8 lg:translate-x-0">
+          <div className="absolute bottom-4 right-6 flex items-center justify-center gap-4 rounded-full bg-white/85 px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md sm:bottom-5 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 lg:bottom-6 lg:left-8 lg:translate-x-0">
             {!isEmbedded && (
               <div className="hidden gap-3 lg:flex">
                 <button

@@ -13,7 +13,7 @@
   --brand-gold-dark: #a0881b;
   --brand-gold-darker: #786614;
   --brand-gold-deepest: #50440d;
-  --brand-gold-tint: #f9f6e9;
+  --brand-gold-tint: #fbf8e9;
   --brand-gold-tint-2: #f4eed2;
 
   /* Brand red */
@@ -44,8 +44,8 @@
   --focus-ring: #569ff7;
 
   /* Layout */
-  --header-height: 72px;
-  --container-max: 1216px;
+  --header-height: 80px;
+  --container-max: 1440px;
 
   /* shadcn token mapping */
   --background: #ffffff;
@@ -122,8 +122,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-dvag), "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-heading: var(--font-dvag), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Brand utilities */
   --color-brand-gold: var(--brand-gold);
@@ -190,7 +190,7 @@
     @apply border-border outline-ring/50;
   }
   html {
-    font-family: var(--font-dvag), "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-default);
   }
   body {
@@ -212,7 +212,7 @@
     color: var(--text-strong);
     font-weight: 700;
     line-height: 1.15;
-    letter-spacing: -0.005em;
+    letter-spacing: 0;
   }
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
     color: var(--foreground);

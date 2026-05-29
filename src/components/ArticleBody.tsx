@@ -1,6 +1,30 @@
 import Image from "next/image";
 import type { Block } from "@/types/content";
 
+const localImageFallbacks = [
+  "/images/gallery-01.jpeg",
+  "/images/gallery-02.jpeg",
+  "/images/gallery-03.jpeg",
+  "/images/gallery-04.jpeg",
+  "/images/gallery-05.jpeg",
+  "/images/gallery-06.jpeg",
+  "/images/gallery-07.jpeg",
+  "/images/gallery-08.jpeg",
+  "/images/gallery-09.jpeg",
+  "/images/ql1.jpeg",
+  "/images/ql2.jpeg",
+  "/images/ql3.jpeg",
+  "/images/ql4.jpeg",
+  "/images/sl1.png",
+  "/images/sl2.png",
+  "/images/sl3.png",
+];
+
+function getImageSrc(src: string, index: number) {
+  if (!src.includes("cdn.hashnode.com")) return src;
+  return localImageFallbacks[index % localImageFallbacks.length];
+}
+
 function renderInline(text: string, key: string) {
   // Split on **bold** markers
   const parts = text.split(/(\*\*[^*]+\*\*)/g);
@@ -73,15 +97,16 @@ export function ArticleBody({
               </ol>
             );
           case "img":
+            const imageSrc = getImageSrc(block.src, idx);
             return (
               <figure key={key} className="my-8">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-muted">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-brand-gold-tint">
                   <Image
-                    src={block.src}
+                    src={imageSrc}
                     alt={block.alt ?? ""}
                     fill
                     sizes="(min-width: 768px) 768px, 100vw"
-                    className="object-cover"
+                    className="object-contain"
                     unoptimized={unoptimizedImages}
                   />
                 </div>

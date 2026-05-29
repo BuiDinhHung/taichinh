@@ -10,18 +10,18 @@ const ICON_MAP: Record<AdvantageColumn["icon"], string> = {
 
 export function AdvantagesSection() {
   return (
-    <section className="bg-surface-soft py-16 lg:py-24">
+    <section className="bg-brand-gold-tint py-16 lg:py-24">
       <div className="dvag-container">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
-            Lợi ích của bạn
+            LỢI ÍCH CỦA BẠN
           </p>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-[40px] leading-[1.15] font-bold text-text-strong dark:text-foreground">
-            Vì sao chọn taichinh.de?
+          <h2 className="mt-3 text-3xl font-bold leading-[1.15] text-text-strong dark:text-foreground sm:text-4xl lg:text-[40px]">
+            Giải pháp tài chính toàn diện
           </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8 lg:gap-12">
+        <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-12">
           {advantages.map((adv) => (
             <article key={adv.icon} className="flex flex-col items-center text-center md:items-start md:text-left">
               <Image
@@ -32,7 +32,7 @@ export function AdvantagesSection() {
                 height={120}
                 className="h-24 w-24 lg:h-28 lg:w-28"
               />
-              <h3 className="mt-5 text-xl lg:text-2xl font-bold leading-snug text-text-strong dark:text-foreground">
+              <h3 className="mt-5 text-lg font-bold leading-snug text-text-strong dark:text-foreground">
                 {adv.headline}
               </h3>
               <p className="mt-3 text-base leading-relaxed text-text-default dark:text-foreground/80">

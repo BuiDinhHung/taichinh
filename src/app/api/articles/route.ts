@@ -3,8 +3,12 @@ import { listDbArticles, saveDbArticle } from "@/lib/server/articles";
 import { requireAdmin } from "@/lib/server/auth";
 
 export async function GET() {
-  const articles = await listDbArticles();
-  return NextResponse.json({ articles });
+  try {
+    const articles = await listDbArticles();
+    return NextResponse.json({ articles });
+  } catch {
+    return NextResponse.json({ articles: [] });
+  }
 }
 
 export async function POST(request: Request) {

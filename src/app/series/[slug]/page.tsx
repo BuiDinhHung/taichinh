@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SeriesArticleGrid } from "@/components/SeriesArticleGrid";
+import { ProductSeriesPage } from "@/components/ProductSeriesPage";
 import { articles } from "@/lib/content";
 import { seriesList } from "@/lib/series";
 import { articleAsFeedItem, type FeedItem } from "@/lib/feed";
@@ -34,6 +35,7 @@ export default async function SeriesPage({
   const { slug } = await params;
   const series = seriesList.find((s) => s.slug === slug);
   if (!series) notFound();
+  const productSeriesSlugs = new Set(["invest", "bauspar", "energy", "insurance"]);
 
   const staticItems: FeedItem[] = series.articleSlugs
     .map((s) => articles.find((a) => a.slug === s))
@@ -44,35 +46,39 @@ export default async function SeriesPage({
     <>
       <Header />
       <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
-        <section className="py-10 lg:py-14">
-          <div className="tc-container">
-            <header className="max-w-2xl">
-              <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
-                Chủ đề
-              </p>
-              <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-                {series.name}
-              </h1>
-              <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
-                {series.description}
-              </p>
-            </header>
+        {productSeriesSlugs.has(series.slug) ? (
+          <ProductSeriesPage seriesSlug={series.slug} />
+        ) : (
+          <section className="py-10 lg:py-14">
+            <div className="tc-container">
+              <header className="max-w-2xl">
+                <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
+                  Chủ đề
+                </p>
+                <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+                  {series.name}
+                </h1>
+                <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+                  {series.description}
+                </p>
+              </header>
 
-            <SeriesArticleGrid
-              staticItems={staticItems}
-              seriesSlug={series.slug}
-            />
+              <SeriesArticleGrid
+                staticItems={staticItems}
+                seriesSlug={series.slug}
+              />
 
-            <div className="mt-12">
-              <Link
-                href="/"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                ← Tất cả bài viết
-              </Link>
+              <div className="mt-12">
+                <Link
+                  href="/"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  ← Tất cả bài viết
+                </Link>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
       </main>
       <Footer />
     </>

@@ -4,6 +4,66 @@ import type { Block } from "@/types/content";
 // All inline images reference cdn.hashnode.com directly (allowed in next.config.ts)
 
 export const articleBodies: Record<string, Block[]> = {
+  "cai-cach-che-do-huu-tri-tu-nhan-riester": [
+    { type: "h2", text: "Chính phủ Liên bang Đức thông qua chương trình cải cách Hưu trí Riester" },
+    {
+      type: "p",
+      text:
+        "Từ năm 2027, tài khoản tiết kiệm hưu trí được nhà nước hỗ trợ sẽ thay thế lương hưu Riester và mang đến các sản phẩm hưu trí linh hoạt hơn, sinh lời tốt hơn và tiết kiệm chi phí hơn.",
+    },
+    { type: "h3", text: "Những điểm chính của cải cách" },
+    {
+      type: "p",
+      text:
+        "Chương trình lương hưu Riester hiện tại sẽ được thay thế từ năm 2027 bằng một mô hình tài khoản hưu trí mới. Mô hình này tập trung nhiều hơn vào đầu tư thị trường vốn như quỹ đầu tư và ETF, đồng thời cung cấp các cơ chế đảm bảo linh hoạt hơn.",
+    },
+    {
+      type: "p",
+      text:
+        "Mục tiêu là làm cho việc tích lũy hưu trí tư nhân trở nên hấp dẫn hơn, đặc biệt đối với người có thu nhập thấp và trung bình, các gia đình và người lao động tự do.",
+    },
+    {
+      type: "p",
+      text:
+        "**Trang web tham khảo:** https://www.deutsche-rentenversicherung.de/DRV/DE/Ueber-uns-und-Presse/Presse/Meldungen/2026/260508-bundesrat-reform-private-altersvorsorge.html",
+    },
+  ],
+
+  "bao-hiem-mat-suc-lao-dong": [
+    { type: "h2", text: "Bảo hiểm mất sức lao động - Arbeitskraftabsicherung" },
+    { type: "h3", text: "Bảo vệ giá trị sức lao động của bạn" },
+    {
+      type: "p",
+      text:
+        "Nhiều người đi làm chỉ nhận ra quá muộn rằng khả năng lao động của mình thực sự quý giá đến mức nào. Nếu vì lý do sức khỏe mà không còn có thể tiếp tục công việc, bạn rất dễ rơi vào khủng hoảng tài chính.",
+    },
+    {
+      type: "p",
+      text:
+        "Gia đình, tiền thuê nhà hay các khoản trả góp mua nhà sẽ ra sao nếu nguồn thu nhập đột ngột mất đi? Khoảng cách từ thiếu hụt tài chính đến khó khăn sinh tồn thực sự không xa. Vì vậy, hãy bảo vệ giá trị sức lao động của bạn theo đúng nhu cầu cá nhân.",
+    },
+    {
+      type: "p",
+      text:
+        "Bảo hiểm mất khả năng lao động của Generali Deutschland Lebensversicherung mang đến nhiều quyền lợi như: đảm bảo điều chỉnh phạm vi bảo hiểm mà không cần kiểm tra sức khỏe lại, bảo vệ trước sự mất giá do lạm phát thông qua kế hoạch tăng động hoặc điều chỉnh quyền lợi, cùng mức phí khởi điểm hấp dẫn dành cho người mới đi làm.",
+    },
+    { type: "h3", text: "Bảo hiểm mất khả năng lao động" },
+    {
+      type: "ul",
+      items: [
+        "Bảo vệ thu nhập hàng tháng dưới hình thức trợ cấp hưu trí nếu bạn không còn có thể làm công việc của mình do bệnh tật hoặc tai nạn.",
+        "Áp dụng khi bị suy giảm khả năng lao động ít nhất 50% trong thời gian tối thiểu sáu tháng.",
+        "Có thể kết hợp với trợ cấp ngày nghỉ bệnh từ Generali Deutschland Krankenversicherung trong khuôn khổ kế hoạch tích lũy tài sản và an toàn tài chính.",
+      ],
+    },
+    { type: "h3", text: "Bảo hiểm năng lực cơ bản" },
+    {
+      type: "p",
+      text:
+        "Gói cơ bản bảo vệ thu nhập hàng tháng nếu mất một trong các năng lực như nhìn, nói, nghe, đi lại, ngồi, đứng, viết, cầm nắm, sử dụng tay, quỳ/gập người, nâng/mang vác hoặc leo cầu thang. Gói cao cấp có thể mở rộng thêm các năng lực như lái xe, hành động tự chủ, giữ thăng bằng và năng lực trí tuệ.",
+    },
+  ],
+
   "quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban": [
     {
       type: "h3",

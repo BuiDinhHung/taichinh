@@ -4,7 +4,7 @@ import { FinanzcoachingSection } from "@/components/FinanzcoachingSection";
 import { AdvantagesSection } from "@/components/AdvantagesSection";
 import { TeaserSlider } from "@/components/TeaserSlider";
 import { RatingsSection } from "@/components/RatingsSection";
-import { KloppSection } from "@/components/KloppSection";
+import { AboutContactSection } from "@/components/AboutContactSection";
 import { ArticleSlider } from "@/components/ArticleSlider";
 import { Footer } from "@/components/Footer";
 
@@ -17,9 +17,9 @@ export default function Home() {
         <FinanzcoachingSection />
         <AdvantagesSection />
         <TeaserSlider />
-        <RatingsSection />
-        <KloppSection />
         <ArticleSlider />
+        <AboutContactSection />
+        <RatingsSection />
       </main>
       <Footer />
     </>
