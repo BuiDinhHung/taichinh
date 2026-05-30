@@ -78,15 +78,6 @@ export const headerCTAs: { primary: CTA; secondary: CTA } = {
 export const heroSlides = [
   {
     eyebrow: "",
-    headline: "Tư vấn tài chính chuyên nghiệp của bạn",
-    cta: { label: "Đặt lịch tư vấn", href: "/dat-lich" } as CTA,
-    image: {
-      src: "/images/cong-dong-desktop.png",
-      alt: "Tư vấn tài chính chuyên nghiệp tại văn phòng",
-    },
-  },
-  {
-    eyebrow: "",
     headline: "Những sản phẩm và giải pháp độc quyền của các đối tác hàng đầu phù hợp với nhu cầu của bạn",
     cta: { label: "Đặt lịch tư vấn", href: "/dat-lich" } as CTA,
     image: {
