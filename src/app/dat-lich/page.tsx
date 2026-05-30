@@ -45,7 +45,7 @@ export default function DatLichPage() {
                 Để lại thông tin
               </h2>
               <p className="mt-2 text-sm text-text-muted">
-                Các trường có dấu <span className="text-brand-red">*</span> là bắt buộc.
+                Nhập ít nhất một thông tin liên hệ để văn phòng có thể phản hồi.
               </p>
               <div className="mt-6">
                 <BookingForm />
