@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const legalBenefits = [
   "Tư vấn pháp lý qua điện thoại và trực tuyến miễn phí",
   "Tư vấn pháp lý phòng ngừa và luật sư tốt nhất trong trường hợp cần bảo vệ pháp lý",
@@ -10,21 +12,15 @@ const legalBenefits = [
 
 function AdvocardBadge() {
   return (
-    <div className="mx-auto flex aspect-[1.55] w-full max-w-sm items-center justify-center rounded-[28px] bg-[#6fbe2b] p-6 text-center text-white shadow-sm">
-      <div>
-        <div className="relative mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-white text-[#6fbe2b]">
-          <div className="h-16 w-20 border-b-[6px] border-current">
-            <div className="mx-auto h-16 w-1.5 bg-current" />
-            <div className="mx-auto -mt-11 h-12 w-16 border-l-[5px] border-r-[5px] border-current [clip-path:polygon(50%_0,0_100%,100%_100%)]" />
-          </div>
-          <span className="absolute inset-x-[-32px] top-1/2 h-10 -translate-y-1/2 rounded-[50%] border-b-[8px] border-[#5e7383]" />
-        </div>
-        <p className="mt-7 text-2xl font-bold tracking-wide">ADVOCARD - 360° - PRIVAT</p>
-      </div>
-    </div>
+    <Image
+      src="/images/image_new/advocard-360-private.jpeg"
+      alt="ADVOCARD 360 PRIVAT"
+      width={248}
+      height={161}
+      className="mx-auto h-auto w-full max-w-sm object-contain"
+    />
   );
 }
-
 export function LegalInsuranceArticle() {
   return (
     <article className="bg-neutral-100 text-black">

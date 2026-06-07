@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CONTACT } from "@/lib/booking";
-import { FacebookIcon, MailIcon, PhoneIcon, WhatsAppIcon } from "@/components/icons";
+import { MailIcon, PhoneIcon, WhatsAppIcon } from "@/components/icons";
 
 export function QuickContact() {
   const items = [
@@ -22,23 +22,17 @@ export function QuickContact() {
       href: `mailto:${CONTACT.email}`,
       Icon: MailIcon,
     },
-    {
-      label: "Facebook",
-      value: "facebook.com/61575996313092",
-      href: "https://facebook.com/61575996313092/",
-      Icon: FacebookIcon,
-    },
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:gap-5">
       {items.map(({ label, value, href, Icon }) => (
         <Link
           key={label}
           href={href}
           target={href.startsWith("http") ? "_blank" : undefined}
           rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-          className="group flex items-center gap-3 rounded-xl border border-border-default bg-white p-4 transition-colors hover:border-brand-gold hover:bg-brand-gold-tint dark:bg-card dark:hover:bg-accent"
+          className="group flex min-h-20 items-center gap-3 rounded-lg border border-border-default bg-white p-4 transition-colors hover:border-brand-gold hover:bg-brand-gold-tint dark:bg-card dark:hover:bg-accent"
         >
           <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-gold-tint text-brand-gold-darker group-hover:bg-brand-gold group-hover:text-white transition-colors dark:bg-accent dark:text-primary dark:group-hover:bg-primary dark:group-hover:text-primary-foreground">
             <Icon className="h-5 w-5" />

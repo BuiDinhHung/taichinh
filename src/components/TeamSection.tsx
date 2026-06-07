@@ -30,14 +30,16 @@ const teamMembers = [
 
 export function TeamSection() {
   return (
-    <section className="bg-white py-16 lg:py-20">
+    <section className="bg-white py-14 lg:py-16">
       <div className="dvag-container">
-        <h2 className="text-center text-3xl font-bold text-brand-gold">Chúng tôi là</h2>
+        <h2 className="text-center text-xl font-bold uppercase text-brand-gold sm:text-2xl">
+          Chúng tôi luôn đồng hành cùng bạn
+        </h2>
 
-        <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-16">
+        <div className="mt-12 grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-12">
           {teamMembers.map((member) => (
             <article key={member.email} className="text-center text-brand-gold">
-              <div className="mx-auto h-40 w-40 overflow-hidden rounded-full border-2 border-brand-gold bg-white shadow-[0_2px_3px_rgba(0,0,0,0.28)]">
+              <div className="mx-auto h-28 w-28 overflow-hidden rounded-full border border-brand-gold bg-white shadow-[0_2px_3px_rgba(0,0,0,0.18)] sm:h-32 sm:w-32">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -46,17 +48,17 @@ export function TeamSection() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <h3 className="mt-5 text-base font-bold italic leading-tight">{member.name}</h3>
-              <p className="text-sm italic leading-tight">Tel.: {member.phone}</p>
-              <p className="text-sm italic leading-tight">Mail: {member.email}</p>
+              <h3 className="mt-4 text-xs font-bold italic leading-tight sm:text-sm">{member.name}</h3>
+              <p className="text-[11px] italic leading-tight sm:text-xs">Tel.: {member.phone}</p>
+              <p className="text-[11px] italic leading-tight sm:text-xs">Mail: {member.email}</p>
             </article>
           ))}
         </div>
 
-        <div className="mt-16 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <Link
             href="/dat-lich"
-            className="inline-flex min-h-20 w-full max-w-[490px] items-center justify-center bg-brand-gold px-8 py-5 text-xl font-bold text-white transition-colors hover:bg-brand-gold-dark"
+            className="inline-flex min-h-14 w-full max-w-[380px] items-center justify-center bg-brand-gold px-7 py-4 text-sm font-bold text-white transition-colors hover:bg-brand-gold-dark"
           >
             Đặt lịch hẹn tư vấn
           </Link>

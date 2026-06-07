@@ -1,16 +1,12 @@
-"use client";
-
-import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useIsEmbedded } from "@/lib/use-is-embedded";
-import { ChevronLeftIcon, ChevronRightIcon, ArrowRightIcon } from "@/components/icons";
 
 export interface HeroSlide {
   eyebrow: string;
   headline: string;
   cta: { label: string; href: string };
   image: { src: string; alt: string };
+  imagePosition?: string;
 }
 
 interface HeroSliderProps {
@@ -22,118 +18,101 @@ export function HeroSlider({
   slides,
   autoPlayInterval = 6000,
 }: HeroSliderProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const isEmbedded = useIsEmbedded();
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
-
-  const goToNext = useCallback(() => {
-    setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  }, [slides.length]);
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  useEffect(() => {
-    if (autoPlayInterval <= 0 || slides.length <= 1) return;
-
-    autoPlayRef.current = setInterval(goToNext, autoPlayInterval);
-    return () => {
-      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    };
-  }, [autoPlayInterval, goToNext, slides.length]);
-
-  const currentSlide = slides[currentIndex];
+  const slideDuration = Math.max(3500, autoPlayInterval);
+  const totalDuration = slideDuration * Math.max(1, slides.length);
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#efe7c9]">
-      <div className="absolute inset-0">
+    <section
+      className="hero-css-slider relative isolate w-full overflow-hidden bg-black"
+      style={
+        {
+          "--hero-slide-count": slides.length,
+          "--hero-slide-duration": `${slideDuration}ms`,
+          "--hero-total-duration": `${totalDuration}ms`,
+        } as React.CSSProperties
+      }
+    >
+      <style>
+        {`
+          @keyframes heroSlideFade {
+            0%, 27% { opacity: 1; z-index: 2; }
+            33%, 94% { opacity: 0; z-index: 1; }
+            100% { opacity: 1; z-index: 2; }
+          }
+
+          .hero-css-slider .hero-css-slide {
+            opacity: 0;
+            animation-name: heroSlideFade;
+            animation-duration: var(--hero-total-duration);
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+
+          .hero-css-slider .hero-css-slide:first-child {
+            opacity: 1;
+          }
+        `}
+      </style>
+
+      <div className="relative h-[clamp(430px,58vw,760px)] w-full">
         {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-            aria-hidden={index !== currentIndex}
+          <article
+            key={`${slide.image.src}-${index}`}
+            className="hero-css-slide absolute inset-0"
+            style={{
+              animationDelay: `${index * slideDuration}ms`,
+            }}
           >
             <Image
               src={slide.image.src}
               alt=""
+              aria-hidden="true"
+              fill
+              sizes="100vw"
+              className="scale-110 object-cover opacity-55 blur-md"
+              style={{ objectPosition: slide.imagePosition ?? "center center" }}
+            />
+            <Image
+              src={slide.image.src}
+              alt={slide.image.alt}
               fill
               priority={index === 0}
               sizes="100vw"
-              className="scale-[0.96] object-contain object-center"
+              className="z-[1] object-contain"
+              style={{ objectPosition: slide.imagePosition ?? "center center" }}
             />
-          </div>
-        ))}
-        <div className="absolute inset-0 bg-black/0" />
-      </div>
 
-      <div className="dvag-container pointer-events-none relative min-h-[430px] py-6 sm:min-h-[520px] lg:min-h-[600px]">
-        <div className="flex min-h-[350px] items-end pb-0 sm:min-h-[440px] sm:pb-5 lg:min-h-[510px]">
-          <div className="pointer-events-auto relative w-[78vw] max-w-[255px] bg-brand-gold/78 px-4 py-4 text-white sm:max-w-[360px] sm:px-7 sm:py-6 lg:max-w-[390px] lg:bg-brand-gold/82 lg:[clip-path:polygon(0_0,100%_0,100%_88%,0_100%)]">
-            <div className="flex flex-col gap-2.5 sm:gap-3">
-              {currentSlide.eyebrow && (
-                <p className="text-xs font-bold uppercase tracking-wider text-white/95 sm:text-sm">
-                  {currentSlide.eyebrow}
-                </p>
-              )}
-              <h1 className="max-w-[12ch] text-[25px] font-bold leading-[1.08] text-white sm:text-3xl sm:leading-[1.12] lg:text-[34px]">
-                {currentSlide.headline}
-              </h1>
-              <Link
-                href={currentSlide.cta.href}
-                className="inline-flex items-center gap-2 self-start bg-brand-gold-dark px-3 py-2 text-xs font-bold text-white transition-colors hover:bg-brand-gold-darker sm:text-sm"
-              >
-                {currentSlide.cta.label}
-                <ArrowRightIcon className="h-4 w-4" />
-              </Link>
+            <div className="absolute inset-x-4 bottom-5 z-10 sm:inset-x-auto sm:bottom-[7%] sm:left-0">
+              <div className="relative w-full bg-brand-gold/85 px-5 py-5 text-white shadow-[0_12px_36px_rgba(0,0,0,0.16)] backdrop-blur-[1px] sm:w-[min(36vw,390px)] sm:min-w-[270px] sm:px-7 sm:py-6 sm:[clip-path:polygon(0_0,100%_0,100%_82%,0_100%)] lg:w-[min(31vw,420px)]">
+                <div className="flex flex-col items-start gap-3 sm:gap-4">
+                  {slide.eyebrow && (
+                    <p className="text-[0.7rem] font-bold uppercase text-white/95">
+                      {slide.eyebrow}
+                    </p>
+                  )}
+                  <h1 className="max-w-[16ch] text-[1.55rem] font-normal leading-[1.18] text-white sm:max-w-[13ch] sm:text-[1.75rem] lg:text-[2.15rem]">
+                    {slide.headline}
+                  </h1>
+                  <Link
+                    href={slide.cta.href}
+                    className="inline-flex min-h-10 items-center justify-center bg-brand-gold-dark px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-brand-gold-darker"
+                  >
+                    {slide.cta.label}
+                  </Link>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </article>
+        ))}
 
         {slides.length > 1 && (
-          <div className="absolute bottom-4 right-6 flex items-center justify-center gap-4 rounded-full bg-white/85 px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md sm:bottom-5 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 lg:bottom-6 lg:left-8 lg:translate-x-0">
-            {!isEmbedded && (
-              <div className="hidden gap-3 lg:flex">
-                <button
-                  type="button"
-                  aria-label="Slide trước"
-                  onClick={goToPrevious}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-gold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint"
-                >
-                  <ChevronLeftIcon className="h-5 w-5" />
-                </button>
-                <button
-                  type="button"
-                  aria-label="Slide tiếp"
-                  onClick={goToNext}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-gold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint"
-                >
-                  <ChevronRightIcon className="h-5 w-5" />
-                </button>
-              </div>
-            )}
-
-            <div className="flex gap-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  aria-label={`Đi tới slide ${index + 1}`}
-                  onClick={() => goToSlide(index)}
-                  className={`rounded-full transition-all ${
-                    index === currentIndex
-                      ? "h-2.5 w-8 bg-brand-gold"
-                      : "h-2.5 w-2.5 bg-brand-gold/40 hover:bg-brand-gold/60"
-                  }`}
-                />
-              ))}
-            </div>
+          <div className="absolute bottom-4 right-4 z-10 flex items-center justify-center gap-2 rounded-full bg-white/80 px-3 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md">
+            {slides.map((_, index) => (
+              <span
+                key={index}
+                className="block h-2 w-2 rounded-full bg-brand-gold/55"
+              />
+            ))}
           </div>
         )}
       </div>

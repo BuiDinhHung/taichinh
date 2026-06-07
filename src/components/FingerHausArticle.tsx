@@ -26,6 +26,19 @@ function AwardStack() {
   return (
     <div className="flex w-full flex-wrap items-end justify-center gap-8 lg:flex-nowrap lg:gap-14">
       <FingerHausLogoMark className="min-w-[280px]" />
+      <Image
+        src="/images/image_new/kunden-awards.jpeg"
+        alt="Giáº£i thÆ°á»Ÿng FingerHaus"
+        width={1267}
+        height={404}
+        className="h-auto w-full max-w-3xl object-contain"
+      />
+    </div>
+  );
+
+  return (
+    <div className="flex w-full flex-wrap items-end justify-center gap-8 lg:flex-nowrap lg:gap-14">
+      <FingerHausLogoMark className="min-w-[280px]" />
 
       <div className="flex h-72 w-48 flex-col items-center justify-center rounded-full border-4 border-sky-500 bg-white text-center text-sky-600 shadow-sm">
         <p className="text-lg font-bold">CrefoZert</p>

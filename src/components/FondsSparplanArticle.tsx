@@ -14,6 +14,18 @@ function PartnerLogos() {
 function CostAverageDiagram() {
   return (
     <section className="mt-16">
+      <Image
+        src="/images/image_new/fonds-monthly-shares-chart.jpeg"
+        alt="Hiệu ứng Cost-Average"
+        width={720}
+        height={407}
+        className="mx-auto h-auto w-full max-w-6xl object-contain"
+      />
+    </section>
+  );
+
+  return (
+    <section className="mt-16">
       <h2 className="text-center text-3xl font-normal text-black">Lợi ích của đầu tư dài hạn</h2>
       <h3 className="mx-auto mt-10 max-w-3xl text-center text-3xl font-bold leading-tight text-black">
         Hiệu ứng Cost-Average - tận dụng lợi ích từ việc tiết kiệm đều đặn

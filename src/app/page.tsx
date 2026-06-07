@@ -5,7 +5,10 @@ import { AdvantagesSection } from "@/components/AdvantagesSection";
 import { TeaserSlider } from "@/components/TeaserSlider";
 import { RatingsSection } from "@/components/RatingsSection";
 import { AboutContactSection } from "@/components/AboutContactSection";
-import { ArticleSlider } from "@/components/ArticleSlider";
+import { FeaturedNewsSection } from "@/components/FeaturedNewsSection";
+import { TeamSection } from "@/components/TeamSection";
+import { AwardsSection } from "@/components/AwardsSection";
+import { HomePartnersSection } from "@/components/HomePartnersSection";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -17,9 +20,12 @@ export default function Home() {
         <FinanzcoachingSection />
         <AdvantagesSection />
         <TeaserSlider />
-        <ArticleSlider />
+        <FeaturedNewsSection />
         <AboutContactSection />
+        <TeamSection />
         <RatingsSection />
+        <AwardsSection />
+        <HomePartnersSection />
       </main>
       <Footer />
     </>

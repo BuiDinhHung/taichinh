@@ -47,6 +47,7 @@ export default async function StaticPageRoute({
       : slug === "gioi-thieu" && aboutTeamStartIndex > -1
         ? page.blocks.slice(0, aboutTeamStartIndex)
       : page.blocks;
+  const isAboutPage = slug === "gioi-thieu";
 
   return (
     <>
@@ -57,16 +58,16 @@ export default async function StaticPageRoute({
         ) : (
           <article className="py-10 lg:py-14">
             <div className="tc-container">
-              <header className="mx-auto max-w-4xl text-center">
+              <header className={isAboutPage ? "text-center" : "mx-auto max-w-4xl text-center"}>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-foreground">
                   {page.title}
                 </h1>
               </header>
-              <div className="mx-auto mt-8 max-w-4xl">
+              <div className={isAboutPage ? "mt-8" : "mx-auto mt-8 max-w-4xl"}>
                 <ArticleBody blocks={blocks} />
               </div>
             </div>
-            {slug === "gioi-thieu" && (
+            {isAboutPage && (
               <div className="mt-14">
                 <AboutContactSection />
                 <TeamSection />

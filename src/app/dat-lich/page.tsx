@@ -15,16 +15,16 @@ export default function DatLichPage() {
     <>
       <Header />
       <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
-        <section className="bg-surface py-10 lg:py-14">
+        <section className="bg-surface py-8 sm:py-10 lg:py-14">
           <div className="dvag-container">
-            <header className="max-w-3xl">
+            <header className="max-w-4xl">
               <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
                 Đặt lịch tư vấn
               </p>
-              <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-text-strong dark:text-foreground">
+              <h1 className="mt-2 text-3xl font-bold leading-tight tracking-tight text-text-strong sm:text-4xl lg:text-5xl dark:text-foreground">
                 Tư vấn miễn phí, không ràng buộc
               </h1>
-              <p className="mt-4 text-base sm:text-lg leading-relaxed text-text-default dark:text-foreground/85">
+              <p className="mt-4 text-base leading-relaxed text-text-default sm:text-lg dark:text-foreground/85">
                 Để lại thông tin liên hệ — văn phòng tư vấn{" "}
                 <span className="font-bold text-text-strong dark:text-foreground">Vũ Thế Bảo</span>{" "}
                 sẽ phản hồi trong vòng 24 giờ. Bạn cũng có thể liên hệ trực tiếp qua điện thoại,
@@ -40,7 +40,7 @@ export default function DatLichPage() {
 
         <section className="bg-surface-soft py-12 lg:py-16">
           <div className="dvag-container">
-            <div className="mx-auto max-w-3xl rounded-2xl border border-border-default bg-white p-6 shadow-[0_2px_12px_rgba(0,0,0,0.04)] sm:p-10 dark:bg-card">
+            <div className="mx-auto max-w-4xl rounded-lg border border-border-default bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] sm:p-8 lg:p-10 dark:bg-card">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-strong dark:text-foreground">
                 Để lại thông tin
               </h2>
@@ -56,7 +56,7 @@ export default function DatLichPage() {
 
         <section className="bg-surface py-12 lg:py-16">
           <div className="dvag-container">
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:gap-6">
               {[
                 {
                   title: "Tư vấn cá nhân hóa",
@@ -71,10 +71,10 @@ export default function DatLichPage() {
                 {
                   title: "Miễn phí, không ràng buộc",
                   body:
-                    "Buổi tư vấn đầu tiên hoàn toàn miễn phí. Bạn chỉ quyết định khi đã hiểu rõ và an tâm với phương án đề xuất.",
+                    "Tư vấn luôn luôn luôn miễn phí. Bạn không bị ràng buộc và chỉ quyết định khi đã hiểu rõ, an tâm với phương án đề xuất.",
                 },
               ].map((item) => (
-                <div key={item.title} className="rounded-xl border border-border-default bg-white p-6 dark:bg-card">
+                <div key={item.title} className="rounded-lg border border-border-default bg-white p-5 dark:bg-card">
                   <h3 className="text-lg font-bold text-text-strong dark:text-foreground">
                     {item.title}
                   </h3>

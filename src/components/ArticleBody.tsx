@@ -105,7 +105,7 @@ export function ArticleBody({
                     src={imageSrc}
                     alt={block.alt ?? ""}
                     fill
-                    sizes="(min-width: 768px) 768px, 100vw"
+                    sizes="(min-width: 1440px) 1376px, (min-width: 768px) calc(100vw - 4rem), calc(100vw - 2.5rem)"
                     className="object-contain"
                     unoptimized={unoptimizedImages}
                   />

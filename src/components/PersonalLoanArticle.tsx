@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FlexibleChoiceIcon, HandEuroIcon, ProfileCircleIcon } from "./MarketingAssets";
 
 const benefits = [
@@ -19,6 +20,16 @@ const benefits = [
 ];
 
 function SmartEffectDiagram() {
+  return (
+    <Image
+      src="/images/image_new/credit-consolidation-diagram.jpeg"
+      alt="SmartEffekt tối ưu hóa khoản vay"
+      width={790}
+      height={446}
+      className="mx-auto h-auto w-full max-w-2xl object-contain"
+    />
+  );
+
   return (
     <div className="relative mx-auto h-[430px] w-full max-w-[720px]">
       <div className="absolute bottom-2 left-0 h-72 w-72 rounded-full bg-[conic-gradient(from_-70deg,#c7ad18_0_45deg,#5c5c5c_45deg_160deg,#7c7c7c_160deg_250deg,#9b9b9b_250deg_335deg,#c7ad18_335deg_360deg)] shadow-sm sm:h-80 sm:w-80">

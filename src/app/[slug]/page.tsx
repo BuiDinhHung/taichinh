@@ -30,6 +30,7 @@ import { WealthProtectionArticle } from "@/components/WealthProtectionArticle";
 import { WorkAbilityInsuranceArticle } from "@/components/WorkAbilityInsuranceArticle";
 import { articles } from "@/lib/content";
 import { articleBodies } from "@/lib/articles-content";
+import { seriesList } from "@/lib/series";
 import { ChevronLeftIcon } from "@/components/icons";
 import { getDbArticleBySlug } from "@/lib/server/articles";
 import { parseMarkdown } from "@/lib/markdown";
@@ -38,6 +39,63 @@ export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
+}
+
+function getRelatedArticles(slug: string) {
+  const series = seriesList.find((item) => item.articleSlugs.includes(slug));
+  const relatedSlugs = series
+    ? series.articleSlugs.filter((item) => item !== slug)
+    : [];
+
+  const related = relatedSlugs
+    .map((item) => articles.find((article) => article.slug === item))
+    .filter((article): article is (typeof articles)[number] => Boolean(article))
+    .slice(0, 4);
+
+  if (related.length > 0) return related;
+  return articles.filter((article) => article.slug !== slug).slice(0, 4);
+}
+
+function RelatedArticles({
+  currentSlug,
+  title = "Bài viết khác trong cùng thể loại",
+}: {
+  currentSlug: string;
+  title?: string;
+}) {
+  const related = getRelatedArticles(currentSlug);
+  if (related.length === 0) return null;
+
+  return (
+    <section className="border-t border-border bg-surface-soft py-10 lg:py-14">
+      <div className="tc-container">
+        <h2 className="text-xl font-bold tracking-tight text-text-strong dark:text-foreground sm:text-2xl">
+          {title}
+        </h2>
+        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {related.map((article) => (
+            <Link key={article.slug} href={`/${article.slug}`} className="group block">
+              <article className="h-full rounded-sm border border-border bg-white p-3 transition-colors hover:bg-brand-gold-tint/45 dark:bg-card dark:hover:bg-accent/50">
+                <div className="relative aspect-[16/9] overflow-hidden rounded-sm bg-muted">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <h3 className="mt-3 text-sm font-bold leading-snug text-text-strong transition-colors group-hover:text-brand-gold-darker dark:text-foreground dark:group-hover:text-primary">
+                  {article.title}
+                </h3>
+                <p className="mt-2 text-xs text-text-muted">{article.date}</p>
+              </article>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -93,7 +151,7 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <article className="py-10 lg:py-14">
             <div className="tc-container">
               <Link
@@ -146,14 +204,15 @@ export default async function ArticlePage({
   const idx = articles.findIndex((a) => a.slug === slug);
   const prev = idx > 0 ? articles[idx - 1] : null;
   const next = idx < articles.length - 1 ? articles[idx + 1] : null;
-  const related = articles.filter((a) => a.slug !== slug).slice(0, 3);
+  const related = getRelatedArticles(slug).slice(0, 3);
 
   if (slug === "dau-tu-vao-quy-fonds-sparsplan") {
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <FondsSparplanArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -164,8 +223,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <GoldGeigerArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -176,8 +236,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <WealthProtectionArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -188,8 +249,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <ChildFutureArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -200,8 +262,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <BuildingSavingsArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -212,8 +275,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <FingerHausArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -224,8 +288,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <RealEstateLoanArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -236,8 +301,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <PersonalLoanArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -248,8 +314,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <RiesterPensionArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -260,8 +327,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <BasicPensionArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -272,8 +340,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <CorporatePensionArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -284,8 +353,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <BusinessInsuranceArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -296,8 +366,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <EnergySupplierArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -308,8 +379,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <RenewableEnergyArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -320,8 +392,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <PropertyInsuranceArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -332,8 +405,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <PersonalLiabilityArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -344,8 +418,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <GlassInsuranceArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -356,8 +431,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <HomeBuildingInsuranceArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -368,8 +444,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <SolarInsuranceArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -380,8 +457,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <LegalInsuranceArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -392,8 +470,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <HealthInsuranceArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -404,8 +483,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <AccidentInsuranceArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -416,8 +496,9 @@ export default async function ArticlePage({
     return (
       <>
         <Header />
-        <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <WorkAbilityInsuranceArticle />
+          <RelatedArticles currentSlug={slug} />
         </main>
         <Footer />
       </>
@@ -427,7 +508,7 @@ export default async function ArticlePage({
   return (
     <>
       <Header />
-      <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
+      <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
         <article className="py-10 lg:py-14">
           <div className="tc-container">
             <Link

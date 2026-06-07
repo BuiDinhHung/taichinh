@@ -3,25 +3,25 @@ import Link from "next/link";
 
 export function AboutContactSection() {
   return (
-    <section className="bg-white py-8 lg:py-10">
-      <div className="dvag-container grid gap-8 lg:grid-cols-[270px_minmax(0,1fr)] lg:gap-10 xl:grid-cols-[300px_minmax(0,1fr)]">
-        <aside className="text-brand-blue-deep">
+    <section className="bg-white py-6 sm:py-8 lg:py-10">
+      <div className="dvag-container grid gap-6 sm:gap-8 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-12 xl:grid-cols-[360px_minmax(0,1fr)]">
+        <aside className="max-w-[420px] text-brand-blue-deep lg:max-w-none">
           <Image
             src="/images/logo-dark.png"
             alt="taichinh.de"
             width={300}
             height={78}
-            className="h-auto w-[220px] max-w-full"
+            className="h-auto w-[150px] max-w-full sm:w-[190px]"
           />
-          <p className="mt-3 text-lg font-bold leading-tight text-brand-gold">
+          <p className="mt-2.5 text-sm font-bold leading-tight text-brand-gold sm:mt-3 sm:text-base">
             Büro für Deutsche
             <br />
             Vermögensberatung
           </p>
 
-          <div className="mt-8 space-y-5 text-[17px] leading-snug">
+          <div className="mt-5 space-y-3 text-[0.86rem] leading-relaxed sm:mt-7 sm:space-y-4 sm:text-sm sm:leading-snug">
             <div>
-              <h2 className="text-2xl font-bold">Bao Vu The</h2>
+              <h2 className="text-[0.95rem] font-bold sm:text-base">Bao Vu The</h2>
               <p className="mt-1">Vermögensberater</p>
             </div>
 
@@ -45,7 +45,7 @@ export function AboutContactSection() {
               Webseite: www.taichinh.de
             </p>
 
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col gap-3 min-[380px]:flex-row min-[380px]:items-start">
               <div className="min-w-0">
                 <p>Links & QR Online:</p>
                 <Link href="https://bit.ly/vuthebao" className="break-words underline">
@@ -57,33 +57,21 @@ export function AboutContactSection() {
                 alt="QR Online https://bit.ly/vuthebao"
                 width={112}
                 height={112}
-                className="h-auto w-24 shrink-0"
+                className="h-auto w-20 shrink-0"
               />
             </div>
           </div>
-
-          <Link
-            href="/dat-lich"
-            className="mt-7 inline-flex min-h-12 items-center justify-center whitespace-nowrap bg-brand-gold px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-gold-dark"
-          >
-            Đặt lịch hẹn tư vấn
-          </Link>
         </aside>
 
-        <div className="min-w-0">
-          <h2 className="mb-5 text-center text-3xl font-bold text-brand-gold sm:text-4xl">
-            Tư vấn tài chính đa diện
-          </h2>
-          <div className="relative mx-auto aspect-[16/9] w-full max-w-[820px] overflow-hidden bg-brand-gold-tint">
-            <Image
-              src="/images/pdf-team-office.jpeg"
-              alt="Đội ngũ tư vấn tài chính đa diện"
-              fill
-              sizes="(min-width: 1280px) 1180px, (min-width: 1024px) calc(100vw - 430px), 100vw"
-              className="object-cover"
-              priority
-            />
-          </div>
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-brand-gold-tint sm:aspect-[16/9]">
+          <Image
+            src="/images/pdf-team-office.jpeg"
+            alt="Đội ngũ tư vấn tài chính đa diện"
+            fill
+            sizes="(min-width: 1440px) 984px, (min-width: 1024px) calc(100vw - 440px), 100vw"
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
     </section>

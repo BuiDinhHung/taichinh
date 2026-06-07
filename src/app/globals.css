@@ -44,7 +44,7 @@
   --focus-ring: #569ff7;
 
   /* Layout */
-  --header-height: 80px;
+  --header-height: 72px;
   --container-max: 1440px;
 
   /* shadcn token mapping */
@@ -231,6 +231,9 @@
     .tc-container,
     .dvag-container { padding-inline: 2rem; }
   }
+  @media (min-width: 1024px) {
+    :root { --header-height: 82px; }
+  }
 
   .dvag-snap-x {
     scroll-snap-type: x mandatory;
@@ -274,5 +277,120 @@
     clip-path: polygon(0 0, 100% 0, 0 100%);
     transform: translateY(99%);
     z-index: 1;
+  }
+
+  .dvag-article-compact article {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .dvag-article-compact article h1,
+  .dvag-article-compact article .text-6xl,
+  .dvag-article-compact article .text-5xl,
+  .dvag-article-compact article .text-4xl {
+    font-size: clamp(1.65rem, 1.25rem + 1.15vw, 2.35rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  .dvag-article-compact article h2,
+  .dvag-article-compact article h3,
+  .dvag-article-compact article .text-3xl {
+    font-size: clamp(1.2rem, 1.05rem + 0.45vw, 1.55rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  .dvag-article-compact article .text-2xl,
+  .dvag-article-compact article .text-xl {
+    font-size: clamp(0.98rem, 0.93rem + 0.2vw, 1.125rem) !important;
+    line-height: 1.6 !important;
+  }
+
+  .dvag-article-compact article p,
+  .dvag-article-compact article li {
+    font-size: clamp(0.95rem, 0.9rem + 0.15vw, 1.05rem);
+    line-height: 1.65;
+  }
+
+  .dvag-article-compact article .mt-20,
+  .dvag-article-compact article .mt-24 {
+    margin-top: 3rem !important;
+  }
+
+  .dvag-article-compact article .mt-16,
+  .dvag-article-compact article .mt-14,
+  .dvag-article-compact article .mt-12 {
+    margin-top: 2.25rem !important;
+  }
+
+  .dvag-article-compact article .space-y-10 > :not(:last-child),
+  .dvag-article-compact article .space-y-12 > :not(:last-child) {
+    margin-bottom: 1.75rem !important;
+  }
+
+  @media (max-width: 640px) {
+    .dvag-article-compact article {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .dvag-article-compact article h1,
+    .dvag-article-compact article .text-6xl,
+    .dvag-article-compact article .text-5xl,
+    .dvag-article-compact article .text-4xl {
+      font-size: 1.45rem !important;
+      line-height: 1.18 !important;
+    }
+
+    .dvag-article-compact article h2,
+    .dvag-article-compact article h3,
+    .dvag-article-compact article .text-3xl {
+      font-size: 1.08rem !important;
+      line-height: 1.25 !important;
+    }
+
+    .dvag-article-compact article .text-2xl,
+    .dvag-article-compact article .text-xl,
+    .dvag-article-compact article .text-lg {
+      font-size: 0.92rem !important;
+      line-height: 1.48 !important;
+    }
+
+    .dvag-article-compact article p,
+    .dvag-article-compact article li {
+      font-size: 0.875rem !important;
+      line-height: 1.52 !important;
+    }
+
+    .dvag-article-compact article ul,
+    .dvag-article-compact article ol {
+      padding-left: 1.1rem !important;
+    }
+
+    .dvag-article-compact article .mt-24,
+    .dvag-article-compact article .mt-20,
+    .dvag-article-compact article .mt-16 {
+      margin-top: 2rem !important;
+    }
+
+    .dvag-article-compact article .mt-14,
+    .dvag-article-compact article .mt-12,
+    .dvag-article-compact article .mt-10,
+    .dvag-article-compact article .mt-8 {
+      margin-top: 1.35rem !important;
+    }
+
+    .dvag-article-compact article .space-y-14 > :not(:last-child),
+    .dvag-article-compact article .space-y-12 > :not(:last-child),
+    .dvag-article-compact article .space-y-10 > :not(:last-child),
+    .dvag-article-compact article .space-y-8 > :not(:last-child) {
+      margin-bottom: 1.25rem !important;
+    }
+
+    .dvag-article-compact article .py-24,
+    .dvag-article-compact article .py-20,
+    .dvag-article-compact article .py-16 {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+    }
   }
 }

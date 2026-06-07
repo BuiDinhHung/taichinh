@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -164,101 +165,37 @@ export const metadata: Metadata = {
   description: "Danh sách các đối tác tài chính, bảo hiểm, ngân hàng, bất động sản và năng lượng của chúng tôi.",
 };
 
-function PartnerLogoMark({ logo, name }: { logo: PartnerLogo; name: string }) {
-  switch (logo) {
-    case "generali":
-      return (
-        <div className="text-center font-serif text-4xl font-bold leading-none text-[#d71920]">
-          <div className="text-6xl leading-none">♌</div>
-          GENERALI
-        </div>
-      );
-    case "dws":
-      return <div className="text-6xl font-bold tracking-tight text-[#9a9a9a]">DWS</div>;
-    case "allianz":
-      return (
-        <div className="text-[#003f96]">
-          <div className="text-4xl font-bold leading-none">Allianz ◯</div>
-          <div className="text-2xl">Global Investors</div>
-        </div>
-      );
-    case "badenia":
-      return (
-        <div className="text-center text-black">
-          <div className="mx-auto mb-2 h-3 w-14 bg-[#e30613]" />
-          <div className="text-sm">Deutsche Bausparkasse</div>
-          <div className="text-4xl font-bold tracking-wide">BADENIA</div>
-        </div>
-      );
-    case "deutsche-bank":
-      return (
-        <div className="flex h-24 w-24 items-center justify-center border-[14px] border-[#0018a8]">
-          <div className="h-16 w-4 rotate-45 bg-[#0018a8]" />
-        </div>
-      );
-    case "advocard":
-      return (
-        <div className="rounded-lg bg-[#79bd43] px-4 py-5 text-3xl font-bold text-white">
-          Advo<span className="text-[#14583d]">CARD</span>
-        </div>
-      );
-    case "santander":
-      return <div className="text-4xl font-bold text-[#e40012]">Santander</div>;
-    case "commerzbank":
-      return (
-        <div className="flex items-center gap-3 text-3xl font-bold text-black">
-          COMMERZBANK <span className="h-8 w-8 rotate-45 bg-[#ffd200]" />
-        </div>
-      );
-    case "geiger":
-      return (
-        <div className="text-center tracking-[0.3em] text-[#9b9b9b]">
-          <div className="text-2xl font-bold">GEIGER EDELMETALLE</div>
-          <div className="mt-2 h-px bg-[#9b9b9b]" />
-          <div className="mt-2 text-xs tracking-[0.2em]">Aktiengesellschaft</div>
-        </div>
-      );
-    case "bkk-linde":
-      return (
-        <div className="rounded-[50%] border-4 border-[#f2d31b] px-6 py-3 text-3xl font-bold text-[#1187c9]">
-          BKK Linde
-        </div>
-      );
-    case "dv":
-      return (
-        <div className="flex items-center gap-3">
-          <span className="flex h-20 w-20 items-center justify-center rounded-full bg-[#00a3d8] text-4xl font-bold text-white">
-            DV
-          </span>
-          <span className="text-2xl font-bold leading-tight text-[#666]">Ihre Liquidität<br />im Mittelpunkt</span>
-        </div>
-      );
-    case "hypovereinsbank":
-      return <div className="text-3xl font-bold text-black"><span className="text-[#e30613]">●</span> HypoVereinsbank</div>;
-    case "fingerhaus":
-      return (
-        <div className="text-[#ff8500]">
-          <div className="text-4xl font-black leading-none">FINGER</div>
-          <div className="text-4xl font-black leading-none text-[#777]">HAUS</div>
-          <div className="mt-1 text-xs font-bold tracking-widest text-[#777]">ALLES RICHTIG GEMACHT.</div>
-        </div>
-      );
-    case "planethome":
-      return <div className="text-4xl font-bold text-[#333]">planeth<span className="text-[#1aa5d8]">O</span>me</div>;
-    case "falc":
-      return (
-        <div className="font-serif text-4xl text-[#f89a1c]">
-          FALC
-          <div className="text-sm tracking-[0.35em] text-[#555]">IMMOBILIEN</div>
-        </div>
-      );
-    case "enpal":
-      return <div className="text-6xl font-black text-[#082f5f]">Enpal<span className="text-[#f7c300]">.</span></div>;
-    default:
-      return <div className="text-xl font-bold">{name}</div>;
-  }
-}
+const partnerLogoImages: Record<PartnerLogo, string> = {
+  generali: "/images/image_new/logo-generali.jpeg",
+  dws: "/images/image_new/logo-dws.jpeg",
+  allianz: "/images/image_new/logo-allianz-global-investors.jpeg",
+  badenia: "/images/image_new/logo-badenia.jpeg",
+  "deutsche-bank": "/images/image_new/logo-deutsche-bank.jpeg",
+  advocard: "/images/image_new/logo-advocard.jpeg",
+  santander: "/images/image_new/logo-santander.jpeg",
+  commerzbank: "/images/image_new/logo-commerzbank.jpeg",
+  geiger: "/images/image_new/logo-geiger.jpeg",
+  "bkk-linde": "/images/image_new/logo-bkk-linde.jpeg",
+  dv: "/images/image_new/logo-dv.jpeg",
+  hypovereinsbank: "/images/image_new/logo-hypovereinsbank.jpeg",
+  fingerhaus: "/images/image_new/logo-fingerhaus.jpeg",
+  planethome: "/images/image_new/logo-planethome.jpeg",
+  falc: "/images/image_new/logo-falc.jpeg",
+  enpal: "/images/image_new/logo-enpal.jpeg",
+};
 
+function PartnerLogoMark({ logo, name }: { logo: PartnerLogo; name: string }) {
+  return (
+    <Image
+      src={partnerLogoImages[logo]}
+      alt={`${name} logo`}
+      width={260}
+      height={120}
+      sizes="260px"
+      className="max-h-24 w-auto object-contain"
+    />
+  );
+}
 export default function RecommendationsPage() {
   return (
     <>

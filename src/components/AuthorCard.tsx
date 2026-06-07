@@ -1,14 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import { author } from "@/lib/content";
-import { FacebookIcon } from "@/components/icons";
 
 export function AuthorCard() {
   return (
-    <section className="py-10 lg:py-14 border-t border-border">
+    <section className="border-t border-border py-10 lg:py-14">
       <div className="tc-container">
         <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 sm:p-8">
-          <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left sm:gap-5">
+          <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:gap-5 sm:text-left">
             <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-muted ring-1 ring-border">
               <Image
                 src={author.avatar}
@@ -22,17 +20,6 @@ export function AuthorCard() {
               <h3 className="text-lg font-bold tracking-tight">{author.name}</h3>
               <p className="mt-0.5 text-sm text-muted-foreground">{author.postCount} posts</p>
               <p className="mt-3 text-sm leading-relaxed text-foreground/80">{author.bio}</p>
-              <div className="mt-4 flex items-center justify-center gap-2 sm:justify-start">
-                <Link
-                  href={author.facebook}
-                  aria-label={`${author.name} trên Facebook`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground/70 transition-colors hover:bg-accent hover:text-foreground"
-                >
-                  <FacebookIcon className="h-4 w-4" />
-                </Link>
-              </div>
             </div>
           </div>
         </div>

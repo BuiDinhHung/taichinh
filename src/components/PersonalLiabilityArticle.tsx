@@ -1,4 +1,17 @@
+import Image from "next/image";
+
 function DamageCycleIcon({ className = "" }: { className?: string }) {
+  return (
+    <Image
+      src="/images/image_new/icon-property-damage.jpeg"
+      alt=""
+      aria-hidden="true"
+      width={160}
+      height={160}
+      className={`object-contain ${className}`}
+    />
+  );
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <path d="M96 28a48 48 0 0 1 4 57" />

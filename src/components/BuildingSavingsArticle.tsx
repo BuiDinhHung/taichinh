@@ -21,6 +21,16 @@ const benefits = [
 
 function ImmoStartDiagram() {
   return (
+    <Image
+      src="/images/image_new/bauspar-immostart-diagram.jpeg"
+      alt="Sơ đồ ImmoStart Badenia"
+      width={962}
+      height={541}
+      className="mx-auto h-auto w-full max-w-4xl object-contain"
+    />
+  );
+
+  return (
     <div className="w-full">
       <div className="mx-auto h-24 max-w-3xl bg-red-700 [clip-path:polygon(50%_0,100%_62%,100%_100%,50%_38%,0_100%,0_62%)]" />
       <div className="text-center">

@@ -3,10 +3,16 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { headerNav, siteName } from "@/lib/content";
+import { siteName } from "@/lib/content";
 import { CloseIcon, MenuIcon, SearchIcon } from "@/components/icons";
 
 const germanProductsUrl = "https://www.dvag.de/dvag/allfinanzberatung/produkte.html";
+const mainNav = [
+  { label: "Về chúng tôi", href: "/page/gioi-thieu" },
+  { label: "Sản phẩm của chúng tôi", href: "/san-pham" },
+  { label: "Liên hệ", href: "/dat-lich" },
+  { label: "Tin mới", href: "/archive" },
+];
 
 function LanguageFlags({ compact = false }: { compact?: boolean }) {
   const flagClass = compact ? "h-6 w-8 text-base" : "h-6 w-8 text-base";
@@ -22,6 +28,8 @@ function LanguageFlags({ compact = false }: { compact?: boolean }) {
       </Link>
       <a
         href={germanProductsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label="Deutsch"
         className={`${flagClass} inline-grid overflow-hidden rounded-[2px] border border-black/15 shadow-sm`}
       >
@@ -56,17 +64,17 @@ export function Header() {
               alt={siteName}
               width={230}
               height={54}
-              className="h-7 w-auto max-w-[170px] sm:h-8 sm:max-w-[210px] lg:h-9 lg:max-w-none xl:h-10"
+              className="h-8 w-auto max-w-[176px] sm:h-9 sm:max-w-[220px] lg:h-10 lg:max-w-none xl:h-11"
               priority
             />
           </Link>
 
-          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-3 lg:flex xl:gap-5">
-            {headerNav.map((item) => (
+          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-4 lg:flex xl:gap-7">
+            {mainNav.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="whitespace-nowrap text-[13px] font-semibold leading-none text-black transition-colors hover:text-brand-gold-darker xl:text-[15px]"
+                className="whitespace-nowrap text-sm font-semibold leading-none text-black transition-colors hover:text-brand-gold-darker xl:text-[15px]"
               >
                 {item.label}
               </Link>
@@ -79,7 +87,7 @@ export function Header() {
 
           <form
             action="/search"
-            className="hidden h-9 w-32 shrink-0 items-center border border-black/25 bg-white text-black xl:flex 2xl:w-48"
+            className="hidden h-10 w-36 shrink-0 items-center border border-black/25 bg-white text-black xl:flex 2xl:w-56"
             role="search"
           >
             <label htmlFor="site-search" className="sr-only">
@@ -101,12 +109,12 @@ export function Header() {
             </button>
           </form>
 
-          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2 lg:hidden">
+          <div className="flex shrink-0 items-center gap-2 lg:hidden">
             <LanguageFlags compact />
             <button
               type="button"
               aria-label="Mở menu"
-              className="inline-flex h-10 w-10 items-center justify-center rounded border border-black/20 bg-white/70 text-black shadow-sm"
+              className="inline-flex h-11 w-11 items-center justify-center rounded border border-black/20 bg-white/80 text-black shadow-sm"
               onClick={() => setMobileOpen(true)}
             >
               <MenuIcon className="h-6 w-6" />
@@ -116,7 +124,7 @@ export function Header() {
       </header>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-[9999] bg-brand-gold-tint text-black lg:hidden">
+        <div className="fixed inset-0 z-[9999] overflow-y-auto bg-brand-gold-tint text-black lg:hidden">
           <div className="dvag-container flex h-[var(--header-height)] items-center justify-between gap-2 border-b border-brand-gold-tint-2">
             <div className="flex min-w-0 items-center gap-2">
               <Image
@@ -124,7 +132,7 @@ export function Header() {
                 alt={siteName}
                 width={200}
                 height={48}
-                className="h-7 w-auto max-w-[170px] sm:h-8 sm:max-w-[210px]"
+                className="h-8 w-auto max-w-[176px] sm:h-9 sm:max-w-[220px]"
                 priority
               />
               <LanguageFlags compact />
@@ -132,7 +140,7 @@ export function Header() {
             <button
               type="button"
               aria-label="Đóng menu"
-              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded border border-black/20 bg-white/70"
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded border border-black/20 bg-white/80"
               onClick={() => setMobileOpen(false)}
             >
               <CloseIcon className="h-6 w-6" />
@@ -156,11 +164,11 @@ export function Header() {
           </form>
 
           <nav className="dvag-container flex flex-col gap-1 py-5">
-            {headerNav.map((item) => (
+            {mainNav.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="border-b border-black/10 py-4 text-xl font-bold"
+                className="border-b border-black/10 py-4 text-lg font-bold sm:text-xl"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}

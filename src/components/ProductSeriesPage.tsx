@@ -9,11 +9,6 @@ type ProductCard = {
   alt: string;
 };
 
-type ProductButton = {
-  label: string;
-  href: string;
-};
-
 const intro = {
   headline:
     "Những sản phẩm và giải pháp độc quyền của các đối tác hàng đầu phù hợp với nhu cầu của bạn",
@@ -64,7 +59,7 @@ const realEstateCards: ProductCard[] = [
   {
     title: "Nhà lắp ghép (Tiền chế)",
     href: "/fingerhaus",
-    image: "/images/article-06-huu-tri-doanh-nghiep.jpeg",
+    image: "/images/prefab-house-fingerhaus.jpeg",
     alt: "Nhà lắp ghép FingerHaus",
   },
 ];
@@ -90,31 +85,25 @@ const energyCards: ProductCard[] = [
   },
 ];
 
-const pensionButtons: ProductButton[] = [
-  { label: "Bảo hiểm Riesterrente", href: "/bao-hiem-huu-tri-riester" },
-  { label: "Bảo hiểm hưu trí cơ bản", href: "/bao-hiem-huu-tri-co-ban" },
-  { label: "Bảo hiểm hưu trí doanh nghiệp", href: "/bao-hiem-huu-tri-doanh-nghiep" },
-];
-
-const propertyButtons: ProductButton[] = [
-  { label: "Bảo hiểm tài sản", href: "/bao-hiem-tai-san" },
-  { label: "Bảo hiểm trách nhiệm", href: "/bao-hiem-trach-nhiem-ca-nhan" },
-  { label: "Bảo hiểm pháp lý", href: "/bao-hiem-phap-ly" },
-  { label: "Bảo hiểm nhà đất", href: "/bao-hiem-nha-dat" },
-];
-
-const businessButtons: ProductButton[] = [
-  { label: "Bảo hiểm doanh nghiệp", href: "/bao-hiem-doanh-nghiep" },
-  { label: "Bảo hiểm kính", href: "/bao-hiem-kinh" },
-  { label: "Bảo hiểm ô tô", href: "/bao-hiem-trach-nhiem-ca-nhan" },
-  { label: "Bảo hiểm du lịch", href: "/bao-hiem-y-te" },
-];
-
-const healthButtons: ProductButton[] = [
-  { label: "Bảo hiểm y tế tư", href: "/bao-hiem-y-te" },
-  { label: "Bảo hiểm y tế du lịch", href: "/bao-hiem-y-te" },
-  { label: "Bảo hiểm mất sức lao động", href: "/bao-hiem-mat-suc-lao-dong" },
-  { label: "Bảo hiểm tai nạn", href: "/bao-hiem-tai-nan" },
+const insuranceCards: ProductCard[] = [
+  {
+    title: "Bảo hiểm hưu trí",
+    href: "/bao-hiem-huu-tri",
+    image: "/images/pdf-field-house.jpeg",
+    alt: "Bảo hiểm hưu trí",
+  },
+  {
+    title: "Bảo hiểm tài sản",
+    href: "/bao-hiem-tai-san-tong-hop",
+    image: "/images/insurance-property-temple.jpg",
+    alt: "Bảo hiểm tài sản",
+  },
+  {
+    title: "Bảo hiểm sức khỏe",
+    href: "/bao-hiem-suc-khoe",
+    image: "/images/gallery-03.jpeg",
+    alt: "Bảo hiểm sức khỏe",
+  },
 ];
 
 function ProductGrid({
@@ -126,12 +115,12 @@ function ProductGrid({
 }) {
   const gridClass =
     columns === 4
-      ? "mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7"
-      : "mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8";
+      ? "mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-7 sm:grid-cols-4 lg:gap-x-10"
+      : "mx-auto grid max-w-6xl grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-3 lg:gap-x-16";
   const titleClass =
     columns === 4
-      ? "text-xl sm:text-2xl lg:text-[1.45rem]"
-      : "text-xl sm:text-2xl lg:text-[1.65rem]";
+      ? "text-[13px] sm:text-sm"
+      : "text-sm sm:text-base lg:text-lg";
 
   return (
     <div className={gridClass}>
@@ -139,23 +128,23 @@ function ProductGrid({
         <Link
           key={card.title}
           href={card.href}
-          className="group flex h-full flex-col rounded-md border border-neutral-200 bg-white p-3 text-center shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+          className="group flex h-full flex-col text-center transition duration-200 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
         >
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded bg-brand-gold-tint">
+          <div className="relative aspect-[16/10] w-full overflow-hidden bg-brand-gold-tint">
             <Image
               src={card.image}
               alt={card.alt}
               fill
               sizes={
                 columns === 4
-                  ? "(min-width: 1280px) 280px, (min-width: 640px) 45vw, 92vw"
-                  : "(min-width: 1280px) 360px, (min-width: 640px) 45vw, 92vw"
+                  ? "(min-width: 1280px) 240px, (min-width: 640px) 24vw, 46vw"
+                  : "(min-width: 1280px) 300px, (min-width: 640px) 30vw, 92vw"
               }
               className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
           </div>
           <h3
-            className={`mt-4 flex min-h-[3.6rem] items-center justify-center whitespace-pre-line px-1 font-bold leading-tight text-black transition-colors group-hover:text-brand-gold ${titleClass}`}
+            className={`mt-3 flex min-h-10 items-start justify-center whitespace-pre-line px-1 font-bold leading-snug text-black transition-colors group-hover:text-brand-gold ${titleClass}`}
           >
             {card.title}
           </h3>
@@ -165,51 +154,13 @@ function ProductGrid({
   );
 }
 
-function InsuranceColumn({
-  title,
-  image,
-  buttons,
-}: {
-  title: string;
-  image: string;
-  buttons: ProductButton[];
-}) {
-  return (
-    <div className="flex h-full flex-col rounded-md border border-neutral-200 bg-white p-3 text-center shadow-sm">
-      <div className="relative aspect-[16/10] w-full overflow-hidden rounded bg-brand-gold-tint">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 92vw"
-          className="object-cover"
-        />
-      </div>
-      <h3 className="mt-4 text-xl font-bold leading-tight text-black sm:text-2xl lg:text-3xl">
-        {title}
-      </h3>
-      <div className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-        {buttons.map((button) => (
-          <Link
-            key={button.label}
-            href={button.href}
-            className="flex min-h-12 items-center justify-center rounded-sm bg-brand-gold px-4 py-3 text-center text-base font-semibold leading-tight text-white transition-colors hover:bg-brand-gold-dark sm:text-lg"
-          >
-            {button.label}
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 function SeriesIntro() {
   return (
-    <header className="mx-auto max-w-5xl text-center lg:text-left">
-      <h1 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+    <header className="mx-auto max-w-5xl text-left">
+      <h1 className="text-xl font-bold leading-tight text-text-muted sm:text-2xl lg:text-3xl">
         {intro.headline}
       </h1>
-      <p className="mt-8 text-lg leading-relaxed text-black sm:text-xl lg:mt-10 lg:text-2xl">
+      <p className="mt-5 max-w-4xl text-sm leading-relaxed text-black sm:text-base">
         {intro.body}
       </p>
     </header>
@@ -218,60 +169,46 @@ function SeriesIntro() {
 
 function SectionTitle({ children }: { children: ReactNode }) {
   return (
-    <h1 className="mb-8 text-center text-3xl font-bold leading-tight text-brand-gold sm:mb-12 sm:text-4xl lg:text-5xl">
+    <h2 className="mb-7 text-center text-2xl font-bold leading-tight text-brand-gold sm:text-3xl">
       {children}
-    </h1>
+    </h2>
   );
 }
 
 export function ProductSeriesPage({ seriesSlug }: { seriesSlug: string }) {
+  const showAll = seriesSlug === "all";
+
   return (
-    <article className="bg-white py-10 lg:py-14">
-      <div className="mx-auto max-w-[1360px] px-4 sm:px-6">
-        {seriesSlug === "invest" && (
+    <article className="bg-white py-8 lg:py-10">
+      <div className="dvag-container">
+        {(showAll || seriesSlug === "invest") && (
           <>
             <SeriesIntro />
-            <section className="mt-12 sm:mt-16 lg:mt-20">
+            <section className="mt-10 pb-8">
               <SectionTitle>Đầu tư - Tiết kiệm</SectionTitle>
               <ProductGrid cards={investCards} columns={4} />
             </section>
           </>
         )}
 
-        {seriesSlug === "bauspar" && (
-          <section>
+        {(showAll || seriesSlug === "bauspar") && (
+          <section className="py-8">
             <SectionTitle>Bất động sản</SectionTitle>
             <ProductGrid cards={realEstateCards} />
           </section>
         )}
 
-        {seriesSlug === "energy" && (
-          <section>
+        {(showAll || seriesSlug === "energy") && (
+          <section className="py-8">
             <SectionTitle>Năng lượng</SectionTitle>
             <ProductGrid cards={energyCards} />
           </section>
         )}
 
-        {seriesSlug === "insurance" && (
-          <section>
+        {(showAll || seriesSlug === "insurance") && (
+          <section className="py-8">
             <SectionTitle>Bảo hiểm</SectionTitle>
-            <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-              <InsuranceColumn
-                title="Bảo hiểm hưu trí"
-                image="/images/pdf-field-house.jpeg"
-                buttons={pensionButtons}
-              />
-              <InsuranceColumn
-                title="Bảo hiểm tài sản"
-                image="/images/insurance-property-temple.jpg"
-                buttons={[...propertyButtons, ...businessButtons]}
-              />
-              <InsuranceColumn
-                title="Bảo hiểm sức khỏe"
-                image="/images/gallery-03.jpeg"
-                buttons={healthButtons}
-              />
-            </div>
+            <ProductGrid cards={insuranceCards} />
           </section>
         )}
       </div>

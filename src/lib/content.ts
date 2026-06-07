@@ -78,21 +78,23 @@ export const headerCTAs: { primary: CTA; secondary: CTA } = {
 export const heroSlides = [
   {
     eyebrow: "",
-    headline: "Những sản phẩm và giải pháp độc quyền của các đối tác hàng đầu phù hợp với nhu cầu của bạn",
+    headline: "Tư vấn tài chính đa diện của bạn",
     cta: { label: "Đặt lịch tư vấn", href: "/dat-lich" } as CTA,
     image: {
       src: "/images/article-03-tu-van-chuyen-nghiep.jpeg",
-      alt: "Giải pháp tài chính từ các đối tác hàng đầu",
+      alt: "Tư vấn tài chính đa diện",
     },
+    imagePosition: "center center",
   },
   {
     eyebrow: "",
-    headline: "Tư vấn tài chính đa diện cho từng giai đoạn cuộc sống",
-    cta: { label: "Đặt lịch tư vấn", href: "/dat-lich" } as CTA,
+    headline: "Hãy để Tiền của bạn sinh lời",
+    cta: { label: "Đặt lịch tư vấn", href: "/san-pham" } as CTA,
     image: {
-      src: "/images/sl3.png",
-      alt: "Tư vấn tài chính đa diện",
+      src: "/images/hero-rooftop-v2.png",
+      alt: "Hãy để Tiền của bạn sinh lời",
     },
+    imagePosition: "center center",
   },
 ];
 
@@ -454,7 +456,6 @@ export const author = {
   postCount: 23,
   bio:
     "Tư vấn tài chính chuyên nghiệp dành cho cộng đồng người Việt tại Đức – Đầu tư, Tiết kiệm, Bảo hiểm, Quỹ xây dựng, Ngân hàng và Năng lượng.",
-  facebook: "https://facebook.com/61575996313092/",
   avatar: "/images/logo-light.png",
 };
 

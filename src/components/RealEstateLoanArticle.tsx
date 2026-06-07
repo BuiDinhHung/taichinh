@@ -26,50 +26,27 @@ const steps = [
 
 function ImmoSmartSeal() {
   return (
-    <div className="relative mx-auto flex h-72 w-72 items-center justify-center rounded-full border-[26px] border-[#b49a45] bg-white text-center shadow-sm">
-      <div className="absolute inset-[-26px] rounded-full border-b-[12px] border-l-[12px] border-b-red-700 border-l-[#ffd200]" />
-      <div className="text-[#0a4b72]">
-        <div className="mx-auto mb-4 h-16 w-20 bg-[#0a4b72] [clip-path:polygon(50%_0,100%_36%,100%_100%,0_100%,0_36%)]" />
-        <div className="font-serif text-5xl text-black">Immo</div>
-        <div className="font-serif text-4xl italic">Smart</div>
-      </div>
-      <p className="absolute top-5 w-full text-center text-[13px] font-bold uppercase tracking-[0.28em] text-white">
-        Immobilienfinanzierung
-      </p>
-      <p className="absolute right-2 top-24 rotate-90 text-xs font-bold uppercase tracking-[0.18em] text-white">
-        für Deutschland
-      </p>
-    </div>
+    <Image
+      src="/images/image_new/badge-immosmart.jpeg"
+      alt="ImmoSmart"
+      width={339}
+      height={339}
+      className="mx-auto h-auto w-64 object-contain sm:w-72"
+    />
   );
 }
 
 function BankLogos() {
   return (
     <div className="mx-auto grid max-w-xl gap-12 text-center">
-      <div className="flex items-center justify-center gap-6 text-[#0c5da8]">
-        <span className="text-4xl font-bold">Deutsche Bank</span>
-        <span className="flex h-16 w-16 items-center justify-center border-[8px] border-[#0018a8]">
-          <span className="h-10 w-2 rotate-45 bg-[#0018a8]" />
-        </span>
-      </div>
-
-      <div className="flex items-center justify-center gap-4 text-4xl font-bold text-black">
-        COMMERZBANK
-        <span className="h-10 w-10 rotate-45 bg-[#ffd200]" />
-      </div>
-
-      <BadeniaLogoMark className="scale-75" />
-
-      <div className="text-3xl font-bold text-black">
-        <span className="text-red-600">●</span> HypoVereinsbank
-        <div className="mt-1 text-base font-normal text-neutral-500">Member of <span className="font-bold text-red-600">●</span> UniCredit</div>
-      </div>
-
-      <div className="text-5xl font-bold text-red-600">Santander</div>
+      <Image src="/images/image_new/logo-deutsche-bank.jpeg" alt="Deutsche Bank" width={265} height={240} className="mx-auto h-auto max-h-28 w-auto object-contain" />
+      <Image src="/images/image_new/logo-commerzbank.jpeg" alt="Commerzbank" width={302} height={85} className="mx-auto h-auto max-h-20 w-auto object-contain" />
+      <BadeniaLogoMark className="mx-auto max-h-24" />
+      <Image src="/images/image_new/logo-hypovereinsbank.jpeg" alt="HypoVereinsbank" width={268} height={76} className="mx-auto h-auto max-h-20 w-auto object-contain" />
+      <Image src="/images/image_new/logo-santander.jpeg" alt="Santander" width={281} height={86} className="mx-auto h-auto max-h-20 w-auto object-contain" />
     </div>
   );
 }
-
 export function RealEstateLoanArticle() {
   return (
     <article className="bg-white text-black">

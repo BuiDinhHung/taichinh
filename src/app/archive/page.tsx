@@ -4,8 +4,8 @@ import { Footer } from "@/components/Footer";
 import { ArchiveList } from "@/components/ArchiveList";
 
 export const metadata: Metadata = {
-  title: "Tất cả bài viết – taichinh.de",
-  description: "Tất cả các bài viết đã được xuất bản trên taichinh.de.",
+  title: "Tin mới - taichinh.de",
+  description: "Tin mới, blog và các bài viết đáng đọc trên taichinh.de.",
 };
 
 export default function ArchivePage() {
@@ -13,12 +13,14 @@ export default function ArchivePage() {
     <>
       <Header />
       <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
-        <section className="py-10 lg:py-14">
+        <section className="py-8 lg:py-10">
           <div className="dvag-container">
             <header className="max-w-2xl">
-              <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">Tất cả bài viết</p>
-              <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-text-strong dark:text-foreground">
-                Tất cả bài viết
+              <p className="text-xs font-bold uppercase tracking-wider text-brand-gold">
+                Tin mới
+              </p>
+              <h1 className="mt-2 text-2xl font-bold tracking-tight text-text-strong dark:text-foreground sm:text-3xl">
+                Tin mới và bài viết đáng đọc
               </h1>
             </header>
             <ArchiveList />

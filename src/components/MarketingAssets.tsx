@@ -1,8 +1,30 @@
 import type { SVGProps } from "react";
+import Image from "next/image";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
+function BitmapIcon({
+  src,
+  className = "",
+}: {
+  src: string;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={src}
+      alt=""
+      aria-hidden="true"
+      width={160}
+      height={160}
+      className={`object-contain ${className}`}
+    />
+  );
+}
+
 export function GrowthChartIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-growth.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="3" {...props}>
       <circle cx="60" cy="60" r="55" />
@@ -15,6 +37,8 @@ export function GrowthChartIcon(props: IconProps) {
 }
 
 export function PiggyBankIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-piggy.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 140 120" fill="none" stroke="currentColor" strokeWidth="3" {...props}>
       <circle cx="72" cy="13" r="12" />
@@ -28,6 +52,8 @@ export function PiggyBankIcon(props: IconProps) {
 }
 
 export function FlexibleChoiceIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-advisor-arrows.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 140 120" fill="none" stroke="currentColor" strokeWidth="3" {...props}>
       <circle cx="70" cy="60" r="18" />
@@ -39,6 +65,8 @@ export function FlexibleChoiceIcon(props: IconProps) {
 }
 
 export function UmbrellaIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-umbrella.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="3" {...props}>
       <path d="M18 61c5-30 27-48 42-48s37 18 42 48" />
@@ -49,6 +77,8 @@ export function UmbrellaIcon(props: IconProps) {
 }
 
 export function DirectionSignIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-signpost.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinejoin="round" {...props}>
       <path d="M58 15v90" />
@@ -59,6 +89,8 @@ export function DirectionSignIcon(props: IconProps) {
 }
 
 export function HandEuroIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-euro-hand.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <circle cx="58" cy="32" r="23" />
@@ -71,6 +103,8 @@ export function HandEuroIcon(props: IconProps) {
 }
 
 export function GovernmentSupportIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-bank.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <circle cx="60" cy="60" r="36" className="fill-[#f3efdc]" stroke="none" />
@@ -85,6 +119,8 @@ export function GovernmentSupportIcon(props: IconProps) {
 }
 
 export function EuroCycleIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-euro-growth.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <circle cx="60" cy="60" r="36" className="fill-[#f3efdc]" stroke="none" />
@@ -98,6 +134,8 @@ export function EuroCycleIcon(props: IconProps) {
 }
 
 export function LockIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-lock.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" {...props}>
       <rect x="24" y="52" width="72" height="54" rx="7" />
@@ -109,6 +147,8 @@ export function LockIcon(props: IconProps) {
 }
 
 export function ProfileCircleIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-advisor-circle.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" {...props}>
       <path d="M27 30a48 48 0 0 1 66 0M93 90a48 48 0 0 1-66 0" />
@@ -119,6 +159,8 @@ export function ProfileCircleIcon(props: IconProps) {
 }
 
 export function DocumentCheckIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-document-check.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinejoin="round" {...props}>
       <path d="M28 14h43l21 21v69H28z" />
@@ -131,6 +173,8 @@ export function DocumentCheckIcon(props: IconProps) {
 }
 
 export function StopwatchIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-stopwatch.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" {...props}>
       <path d="M49 14h22M60 14v12" />
@@ -143,6 +187,8 @@ export function StopwatchIcon(props: IconProps) {
 }
 
 export function CycleIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-flexibility.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <path d="M91 31a43 43 0 0 1 1 57l-12 12" />
@@ -154,6 +200,8 @@ export function CycleIcon(props: IconProps) {
 }
 
 export function BrokenPlateIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-glass.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <CycleIcon />
@@ -163,6 +211,8 @@ export function BrokenPlateIcon(props: IconProps) {
 }
 
 export function SofaIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-chair.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <CycleIcon />
@@ -174,6 +224,8 @@ export function SofaIcon(props: IconProps) {
 }
 
 export function HouseLineIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-house.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <path d="M18 58l42-34 42 34" />
@@ -184,6 +236,8 @@ export function HouseLineIcon(props: IconProps) {
 }
 
 export function HouseCycleIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-house.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <CycleIcon />
@@ -194,6 +248,8 @@ export function HouseCycleIcon(props: IconProps) {
 }
 
 export function SolarPanelIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-solar.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <CycleIcon />
@@ -206,6 +262,8 @@ export function SolarPanelIcon(props: IconProps) {
 }
 
 export function HealthCrossIcon(props: IconProps) {
+  return <BitmapIcon src="/images/image_new/icon-health.jpeg" className={props.className} />;
+
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinejoin="round" {...props}>
       <CycleIcon />
@@ -216,49 +274,60 @@ export function HealthCrossIcon(props: IconProps) {
 
 export function DwsLogoMark({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex items-center gap-4 text-[#9a9a9a] ${className}`}>
-      <span className="h-12 w-20 -skew-x-12 border-l-[10px] border-r-[10px] border-[#9a9a9a]" />
-      <span className="text-6xl font-bold tracking-tight">DWS</span>
-    </div>
+    <Image
+      src="/images/image_new/logo-dws.jpeg"
+      alt="DWS"
+      width={218}
+      height={107}
+      className={`h-auto w-auto object-contain ${className}`}
+    />
   );
 }
 
 export function AllianzLogoMark({ className = "" }: { className?: string }) {
   return (
-    <div className={`text-[#003f96] ${className}`}>
-      <div className="flex items-center gap-3 text-5xl font-bold leading-none">
-        Allianz
-        <span className="inline-flex h-12 w-12 items-end justify-center rounded-full border-4 border-current pb-1">
-          <span className="mx-0.5 h-5 w-1.5 bg-current" />
-          <span className="mx-0.5 h-8 w-1.5 bg-current" />
-          <span className="mx-0.5 h-6 w-1.5 bg-current" />
-        </span>
-      </div>
-      <div className="mt-2 text-3xl">Global Investors</div>
-    </div>
+    <Image
+      src="/images/image_new/logo-allianz-global-investors.jpeg"
+      alt="Allianz Global Investors"
+      width={229}
+      height={101}
+      className={`h-auto w-auto object-contain ${className}`}
+    />
   );
 }
 
 export function BadeniaLogoMark({ className = "" }: { className?: string }) {
   return (
-    <div className={`text-center text-black ${className}`}>
-      <div className="mx-auto h-4 w-28 bg-red-600 [clip-path:polygon(0_100%,50%_0,100%_100%,86%_100%,50%_35%,14%_100%)]" />
-      <div className="mt-3 text-2xl">Deutsche Bausparkasse</div>
-      <div className="text-5xl font-bold tracking-wider">BADENIA</div>
-    </div>
+    <Image
+      src="/images/image_new/logo-badenia.jpeg"
+      alt="Deutsche Bausparkasse Badenia"
+      width={229}
+      height={101}
+      className={`h-auto w-auto object-contain ${className}`}
+    />
   );
 }
 
 export function GeneraliLogoMark({ className = "" }: { className?: string }) {
-  return <div className={`font-serif text-5xl text-red-700 ${className}`}>GENERALI</div>;
+  return (
+    <Image
+      src="/images/image_new/logo-generali.jpeg"
+      alt="Generali"
+      width={113}
+      height={87}
+      className={`h-auto w-auto object-contain ${className}`}
+    />
+  );
 }
 
 export function FingerHausLogoMark({ className = "" }: { className?: string }) {
   return (
-    <div className={`font-bold uppercase tracking-wider ${className}`}>
-      <div className="text-5xl text-orange-500">FINGER</div>
-      <div className="text-5xl text-neutral-700">HAUS</div>
-      <div className="text-sm tracking-[0.35em] text-neutral-500">ALLES RICHTIG GEMACHT.</div>
-    </div>
+    <Image
+      src="/images/image_new/logo-fingerhaus.jpeg"
+      alt="FingerHaus"
+      width={237}
+      height={115}
+      className={`h-auto w-auto object-contain ${className}`}
+    />
   );
 }
