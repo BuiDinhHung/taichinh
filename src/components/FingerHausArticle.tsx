@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { CycleIcon, DocumentCheckIcon, FingerHausLogoMark, HouseLineIcon } from "./MarketingAssets";
 
 const reasons = [
@@ -87,7 +87,7 @@ export function FingerHausArticle() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[560px] lg:grid-cols-[51%_49%]">
-        <div className="flex items-center justify-center bg-[#e8f0f9] px-6 py-12 sm:px-10 lg:px-12 xl:px-16">
+        <div className="flex items-center justify-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="max-w-4xl text-center">
             <p className="text-4xl leading-tight">Ngôi nhà mơ ước của bạn</p>
             <h1 className="mt-20 text-4xl font-bold leading-tight sm:text-5xl">
@@ -111,7 +111,7 @@ export function FingerHausArticle() {
         </div>
       </section>
 
-      <section className="bg-neutral-100 px-6 py-10 text-center">
+      <section className="bg-neutral-100 px-[10%] py-10 text-center">
         <p className="text-4xl leading-tight">Những lý do tuyệt vời</p>
         <h2 className="mt-8 text-4xl font-bold leading-tight">
           Để bạn chọn Công ty FingerHaus xây ngôi nhà theo yêu cầu của bạn
@@ -122,7 +122,7 @@ export function FingerHausArticle() {
         </ul>
       </section>
 
-      <section className="bg-neutral-100 px-6 py-12">
+      <section className="bg-neutral-100 px-[10%] py-12">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
           {reasons.map((reason) => {
             const Icon = reason.icon;

@@ -1,10 +1,10 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 export function ChildFutureArticle() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[520px] lg:grid-cols-[55%_45%]">
-        <div className="flex items-center justify-center bg-[#e8f0f9] px-6 py-12 sm:px-10 lg:px-16 xl:px-20">
+        <div className="flex items-center justify-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="max-w-4xl">
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl">
               Kế hoạch cho tương lai của tôi
@@ -34,7 +34,7 @@ export function ChildFutureArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-10 sm:py-12">
+      <section className="px-[10%] py-10 sm:py-12">
         <div className="mx-auto max-w-7xl text-2xl leading-snug">
           <h2 className="text-center text-4xl font-bold leading-tight">Giải pháp tiết kiệm linh hoạt cho trẻ em</h2>
 
@@ -52,7 +52,7 @@ export function ChildFutureArticle() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden px-6 py-16 sm:py-20">
+      <section className="relative overflow-hidden px-[10%] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <h2 className="mx-auto max-w-4xl text-center text-4xl font-bold leading-tight sm:text-5xl">
             Chỉ với một kế hoạch tài chính thông minh - mọi ước mơ đều trong tầm tay.

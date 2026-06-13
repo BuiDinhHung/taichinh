@@ -1,4 +1,4 @@
-import { HouseCycleIcon } from "./MarketingAssets";
+﻿import { HouseCycleIcon } from "./MarketingAssets";
 
 const homeCoverages = [
   "Quyền lợi vô hạn mà không cần tính toán phức tạp về số tiền bảo hiểm cho các ngôi nhà một và hai gia đình",
@@ -15,7 +15,7 @@ const homeCoverages = [
 export function HomeBuildingInsuranceArticle() {
   return (
     <article className="bg-[#e8f0f9] text-black">
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">

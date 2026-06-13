@@ -1,4 +1,4 @@
-import { DirectionSignIcon, DocumentCheckIcon, PiggyBankIcon } from "./MarketingAssets";
+﻿import { DirectionSignIcon, DocumentCheckIcon, PiggyBankIcon } from "./MarketingAssets";
 
 const coreBenefits = [
   {
@@ -21,7 +21,7 @@ const coreBenefits = [
 export function BasicPensionArticle() {
   return (
     <article className="bg-[#e8f0f9] text-black">
-      <section className="px-6 py-16 sm:py-20">
+      <section className="px-[10%] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             Bảo hiểm hưu trí cơ bản- Basisrente-Rürup Rente
@@ -51,7 +51,7 @@ export function BasicPensionArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:py-20">
+      <section className="px-[10%] py-16 sm:py-20">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-4xl font-bold leading-tight lg:text-5xl">
             Những điều cần biết về hưu trí cơ bản

@@ -1,4 +1,4 @@
-import { BrokenPlateIcon } from "./MarketingAssets";
+﻿import { BrokenPlateIcon } from "./MarketingAssets";
 
 const glassBenefits = [
   "Thiệt hại vỡ màn hình smartphone (chỉ có trong hợp đồng bảo hiểm tài sản)",
@@ -12,7 +12,7 @@ const glassBenefits = [
 export function GlassInsuranceArticle() {
   return (
     <article className="bg-white text-black">
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">

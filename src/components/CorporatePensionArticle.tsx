@@ -1,4 +1,4 @@
-import { DocumentCheckIcon, GeneraliLogoMark, HandEuroIcon, PiggyBankIcon, StopwatchIcon } from "./MarketingAssets";
+﻿import { DocumentCheckIcon, GeneraliLogoMark, HandEuroIcon, PiggyBankIcon, StopwatchIcon } from "./MarketingAssets";
 
 const employeeBenefits = [
   {
@@ -47,7 +47,7 @@ function BenefitSeal() {
 export function CorporatePensionArticle() {
   return (
     <article className="bg-neutral-100 text-black">
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             Bảo hiểm hưu trí doanh nghiệp- Betriebliche Altenvorsorgen (bAV)
@@ -91,7 +91,7 @@ export function CorporatePensionArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-[10%] py-14">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-center text-4xl font-bold">Lợi ích cho bạn là người lao động</h2>
           <div className="mt-12 grid gap-12 text-center lg:grid-cols-3">
@@ -126,7 +126,7 @@ export function CorporatePensionArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-[10%] py-14">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-center text-4xl font-bold">Lợi ích cho doanh nghiệp</h2>
           <div className="mt-12 grid gap-12 text-center lg:grid-cols-3">

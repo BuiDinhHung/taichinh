@@ -1,4 +1,4 @@
-import { ProfileCircleIcon } from "./MarketingAssets";
+﻿import { ProfileCircleIcon } from "./MarketingAssets";
 
 const disabilityTriggers = [
   "Không còn có thể làm công việc của mình do bệnh tật hoặc tai nạn",
@@ -13,7 +13,7 @@ const premiumAbilities = ["lái xe", "khả năng hành động tự chủ", "gi
 export function WorkAbilityInsuranceArticle() {
   return (
     <article className="bg-neutral-100 text-black">
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
@@ -47,7 +47,7 @@ export function WorkAbilityInsuranceArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-5xl text-2xl leading-snug">
           <h2 className="text-3xl font-bold">Bảo hiểm năng lực cơ bản (gói cơ bản)</h2>
           <p className="mt-10">

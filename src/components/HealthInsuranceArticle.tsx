@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { GeneraliLogoMark, HealthCrossIcon } from "./MarketingAssets";
 
@@ -12,7 +12,7 @@ export function HealthInsuranceArticle() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[520px] lg:grid-cols-[48%_52%]">
-        <div className="flex items-center bg-[#e8f0f9] px-6 py-12 sm:px-10 lg:px-16 xl:px-24">
+        <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="mx-auto max-w-2xl">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Bảo hiểm sức khỏe
@@ -41,7 +41,7 @@ export function HealthInsuranceArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
             <h2 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">

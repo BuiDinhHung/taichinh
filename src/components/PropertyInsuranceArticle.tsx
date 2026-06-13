@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { SofaIcon } from "./MarketingAssets";
 
@@ -25,7 +25,7 @@ export function PropertyInsuranceArticle() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[500px] lg:grid-cols-[49%_51%]">
-        <div className="flex items-center bg-[#f7f4e8] px-6 py-12 sm:px-10 lg:px-16 xl:px-24">
+        <div className="flex items-center bg-[#f7f4e8] px-[10%] py-12">
           <div className="mx-auto max-w-3xl">
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Bảo hiểm tài sản
@@ -55,7 +55,7 @@ export function PropertyInsuranceArticle() {
         </div>
       </section>
 
-      <section className="bg-neutral-100 px-6 py-14 sm:py-16">
+      <section className="bg-neutral-100 px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
             <h2 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-left">
@@ -78,7 +78,7 @@ export function PropertyInsuranceArticle() {
         </div>
       </section>
 
-      <section className="bg-neutral-100 px-6 py-14 sm:py-16">
+      <section className="bg-neutral-100 px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl text-2xl leading-snug">
           <h2 className="text-3xl font-bold">
             Các quyền lợi mới Freizeit Plus, Fahrrad Plus và Hausrat Optimal XXL trong VSP:

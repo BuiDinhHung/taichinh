@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { FlexibleChoiceIcon, HandEuroIcon, LockIcon } from "./MarketingAssets";
 
 const pillars = [
@@ -26,7 +26,7 @@ export function WealthProtectionArticle() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[520px] lg:grid-cols-[53%_47%]">
-        <div className="flex items-center justify-center bg-[#e8f0f9] px-6 py-12 sm:px-10 lg:px-16 xl:px-24">
+        <div className="flex items-center justify-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="max-w-3xl text-center lg:text-left">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl lg:text-center">
               Kế hoạch Tích lũy Tài sản<br />& Đảm bảo An toàn
@@ -48,14 +48,14 @@ export function WealthProtectionArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-16 text-center sm:py-20">
+      <section className="px-[10%] py-16 text-center sm:py-20">
         <p className="text-3xl leading-tight">Một sự kết hợp khéo léo</p>
         <h2 className="mx-auto mt-10 max-w-5xl text-4xl font-bold leading-tight sm:text-5xl">
           Lập kế hoạch Tích lũy và Bảo vệ tài chính trong cùng một khái niệm
         </h2>
       </section>
 
-      <section className="px-6 pb-20">
+      <section className="px-[10%] pb-20">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
           {pillars.map((pillar) => {
             const Icon = pillar.icon;
@@ -70,7 +70,7 @@ export function WealthProtectionArticle() {
         </div>
       </section>
 
-      <section className="px-6 pb-24">
+      <section className="px-[10%] pb-24">
         <div className="mx-auto max-w-5xl space-y-10 text-2xl leading-snug">
           <div>
             <h2 className="text-3xl font-bold leading-tight">

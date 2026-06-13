@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { DocumentCheckIcon, HandEuroIcon, StopwatchIcon } from "./MarketingAssets";
 
 const benefits = [
@@ -23,7 +23,7 @@ export function EnergySupplierArticle() {
   return (
     <article className="bg-[#f7f4e8] text-black">
       <section className="grid lg:grid-cols-[52%_48%]">
-        <div className="flex items-center px-6 py-14 sm:px-10 lg:px-20 xl:px-28">
+        <div className="flex items-center px-[10%] py-14">
           <div className="mx-auto max-w-3xl">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Nguồn năng lượng Điện, Gas rẻ
@@ -50,7 +50,7 @@ export function EnergySupplierArticle() {
         </div>
       </section>
 
-      <section className="px-6 pb-16 pt-8 sm:pb-20">
+      <section className="px-[10%] pb-16 pt-8 sm:pb-20">
         <div className="mx-auto grid max-w-6xl gap-12 text-center md:grid-cols-3">
           {benefits.map((item) => {
             const Icon = item.icon;

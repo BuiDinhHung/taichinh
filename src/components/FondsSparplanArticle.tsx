@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { AllianzLogoMark, DwsLogoMark, FlexibleChoiceIcon, GrowthChartIcon, PiggyBankIcon } from "./MarketingAssets";
 
@@ -119,7 +119,7 @@ export function FondsSparplanArticle() {
   return (
     <article className="bg-white">
       <section className="grid min-h-[520px] lg:grid-cols-[44%_56%]">
-        <div className="flex items-center bg-[#e8f0f9] px-8 py-12 lg:px-20">
+        <div className="flex items-center bg-[#e8f0f9] px-8 py-12">
           <div className="max-w-[560px] text-black">
             <h1 className="text-5xl font-bold leading-tight">
               Đầu tư vào Quỹ -<br />Fonds Sparsplan
@@ -144,7 +144,7 @@ export function FondsSparplanArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-16 text-center">
+      <section className="px-[10%] py-16 text-center">
         <h2 className="text-4xl font-bold text-[#0876c7]">Thế giới mới của đầu tư tài chính</h2>
         <p className="mx-auto mt-6 max-w-3xl text-3xl leading-snug text-black">
           Chúng tôi sẽ giúp bạn tận dụng tối đa<br />các cơ hội từ thị trường tài chính.
@@ -152,7 +152,7 @@ export function FondsSparplanArticle() {
         <p className="mt-10 text-3xl font-bold text-black">Hãy để thời gian là vàng của bạn</p>
       </section>
 
-      <section className="px-6 py-12">
+      <section className="px-[10%] py-12">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
           <div className="text-center">
             <GrowthChartIcon className="mx-auto h-40 w-40 text-brand-gold" />
@@ -182,7 +182,7 @@ export function FondsSparplanArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-12">
+      <section className="px-[10%] py-12">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[36%_1fr]">
           <div>
             <h2 className="text-4xl font-bold leading-tight text-black">
@@ -207,7 +207,7 @@ export function FondsSparplanArticle() {
         </div>
       </section>
 
-      <div className="px-6 pb-16">
+      <div className="px-[10%] pb-16">
         <div className="mx-auto max-w-7xl">
           <CostAverageDiagram />
         </div>

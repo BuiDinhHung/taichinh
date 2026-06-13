@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { DirectionSignIcon, HandEuroIcon, UmbrellaIcon } from "./MarketingAssets";
 
 const benefits = [
@@ -36,7 +36,7 @@ export function GoldGeigerArticle() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[520px] lg:grid-cols-[52%_48%]">
-        <div className="flex items-center bg-[#e8f0f9] px-6 py-12 sm:px-10 lg:px-16 xl:px-20">
+        <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Kế hoạch Tiết kiệm Vàng Geiger: Một ý tưởng tuyệt vời cho tương lai.
@@ -58,12 +58,12 @@ export function GoldGeigerArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-16 text-center sm:py-20">
+      <section className="px-[10%] py-16 text-center sm:py-20">
         <p className="text-3xl leading-tight">Lợi ích của bạn</p>
         <h2 className="mt-10 text-4xl font-bold leading-tight">Tại sao nên đầu tư vào vàng?</h2>
       </section>
 
-      <section className="px-6 pb-16">
+      <section className="px-[10%] pb-16">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
@@ -78,7 +78,7 @@ export function GoldGeigerArticle() {
         </div>
       </section>
 
-      <section className="px-6 pb-20">
+      <section className="px-[10%] pb-20">
         <div className="mx-auto max-w-6xl space-y-10 text-2xl leading-snug">
           <div>
             <h2 className="text-3xl font-bold uppercase">Hình thức mua trực tiếp</h2>
@@ -98,7 +98,7 @@ export function GoldGeigerArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-16">
+      <section className="px-[10%] py-16">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[44%_1fr]">
           <div className="relative mx-auto aspect-[1.05] w-full max-w-xl">
             <Image

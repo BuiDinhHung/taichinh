@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 
 const highlights = [
@@ -56,7 +56,7 @@ function TextSection({
   className?: string;
 }) {
   return (
-    <section className={`px-6 py-12 sm:py-14 ${className}`}>
+    <section className={`px-[10%] py-12 sm:py-14 ${className}`}>
       <div className="mx-auto max-w-7xl text-2xl leading-snug">{children}</div>
     </section>
   );
@@ -76,7 +76,7 @@ export function BusinessInsuranceArticle() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[520px] lg:grid-cols-[47%_53%]">
-        <div className="flex items-center bg-[#e8f0f9] px-6 py-12 sm:px-10 lg:px-16 xl:px-20">
+        <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="mx-auto max-w-3xl">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Bảo hiểm doanh nghiệp

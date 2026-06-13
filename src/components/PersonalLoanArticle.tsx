@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { FlexibleChoiceIcon, HandEuroIcon, ProfileCircleIcon } from "./MarketingAssets";
 
 const benefits = [
@@ -64,7 +64,7 @@ function SmartEffectDiagram() {
 export function PersonalLoanArticle() {
   return (
     <article className="bg-[#e8f0f9] text-black">
-      <section className="px-6 py-16 sm:py-24">
+      <section className="px-[10%] py-16 sm:py-24">
         <div className="mx-auto max-w-6xl">
           <h1 className="text-center text-5xl font-bold leading-tight">Vay tín dụng cá nhân</h1>
           <p className="mx-auto mt-16 max-w-5xl text-2xl leading-snug">
@@ -91,7 +91,7 @@ export function PersonalLoanArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:py-20">
+      <section className="px-[10%] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-center text-4xl font-bold leading-tight">Đáp ứng nhu cầu của bạn</h2>
 

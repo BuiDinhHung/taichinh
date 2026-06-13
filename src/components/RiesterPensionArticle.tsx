@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { DirectionSignIcon, EuroCycleIcon, GovernmentSupportIcon } from "./MarketingAssets";
 
 const riesterBenefits = [
@@ -23,7 +23,7 @@ export function RiesterPensionArticle() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[520px] lg:grid-cols-[48%_52%]">
-        <div className="flex items-center bg-[#e8f0f9] px-6 py-12 sm:px-10 lg:px-16 xl:px-20">
+        <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="max-w-2xl">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Chủ động tài chính -<br />An nhiên tuổi già
@@ -45,7 +45,7 @@ export function RiesterPensionArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-4xl font-bold leading-tight sm:text-5xl">
             Bảo hiểm hưu trí Riester - Riesterrente
@@ -59,7 +59,7 @@ export function RiesterPensionArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-12 sm:py-14">
+      <section className="px-[10%] py-12 sm:py-14">
         <div className="mx-auto max-w-7xl">
           <p className="text-center text-2xl font-bold">Nghĩ sớm cho tương lai</p>
           <h2 className="mt-10 text-center text-4xl font-bold leading-tight sm:text-5xl">

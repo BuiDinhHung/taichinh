@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 const partners = [
   {
@@ -150,7 +150,7 @@ export function HomePartnersSection() {
           </div>
         </summary>
 
-        <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+        <div className="mx-auto max-w-6xl px-[10%] py-12 md:py-16">
           <div className="grid gap-x-12 gap-y-10">
             {partners.map((partner) => (
               <article

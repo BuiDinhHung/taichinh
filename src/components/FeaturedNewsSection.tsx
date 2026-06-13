@@ -1,11 +1,11 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 
 export function FeaturedNewsSection() {
   return (
     <section className="bg-white">
       <div className="grid lg:grid-cols-2">
-        <div className="flex items-center bg-[#e8f0f9] px-6 py-12 sm:px-10 lg:px-20">
+        <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="max-w-md">
             <p className="text-xl font-bold text-brand-gold">Tin mới</p>
             <h2 className="mt-8 text-2xl font-bold leading-tight text-text-muted sm:text-3xl">

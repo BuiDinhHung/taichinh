@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { BadeniaLogoMark } from "./MarketingAssets";
 
 const steps = [
@@ -51,7 +51,7 @@ export function RealEstateLoanArticle() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[520px] lg:grid-cols-[51%_49%]">
-        <div className="flex items-center bg-[#e8f0f9] px-6 py-12 sm:px-10 lg:px-16 xl:px-20">
+        <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
               Vay tín dụng mua bất động sản
@@ -73,7 +73,7 @@ export function RealEstateLoanArticle() {
         </div>
       </section>
 
-      <section className="bg-neutral-100 px-6 py-16">
+      <section className="bg-neutral-100 px-[10%] py-16">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_360px]">
           <div>
             <h2 className="text-center text-4xl font-bold leading-tight lg:text-left">
@@ -113,7 +113,7 @@ export function RealEstateLoanArticle() {
         </div>
       </section>
 
-      <section className="bg-neutral-100 px-6 py-16">
+      <section className="bg-neutral-100 px-[10%] py-16">
         <div className="mx-auto max-w-7xl">
           <p className="text-center text-4xl leading-tight">Lợi thế của bạn</p>
           <h2 className="mt-4 text-center text-5xl font-bold leading-tight">

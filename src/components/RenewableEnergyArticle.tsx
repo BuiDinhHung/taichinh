@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 
 const reasons = [
@@ -63,7 +63,7 @@ export function RenewableEnergyArticle() {
   return (
     <article className="bg-[#e8f0f9] text-black">
       <section className="grid lg:grid-cols-[46%_54%]">
-        <div className="flex items-center px-6 py-14 sm:px-10 lg:px-20 xl:px-28">
+        <div className="flex items-center px-[10%] py-14">
           <div className="mx-auto max-w-2xl text-center lg:text-left">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Đầu tư thông minh vào Máy bơm nhiệt & Năng lượng mặt trời
@@ -97,7 +97,7 @@ export function RenewableEnergyArticle() {
             className="object-cover object-center"
           />
         </div>
-        <div className="flex items-center px-6 py-12 sm:px-10 lg:px-20">
+        <div className="flex items-center px-[10%] py-12">
           <div className="max-w-3xl">
             <h2 className="text-4xl font-bold leading-tight sm:text-5xl">Những lý do bạn không nên bỏ lỡ:</h2>
             <ul className="mt-12 list-disc space-y-6 pl-6 text-2xl leading-tight">
@@ -130,7 +130,7 @@ export function RenewableEnergyArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:px-10 lg:px-20">
+      <section className="px-[10%] py-16">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1fr_520px]">
           <div className="text-2xl leading-snug">
             <h2 className="text-4xl font-bold leading-tight sm:text-5xl">Tại sao chọn Enpal:</h2>

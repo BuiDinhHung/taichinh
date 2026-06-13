@@ -1,4 +1,4 @@
-import { SolarPanelIcon } from "./MarketingAssets";
+﻿import { SolarPanelIcon } from "./MarketingAssets";
 
 const protectedParts = [
   "Mô-đun điện mặt trời",
@@ -30,7 +30,7 @@ const solarInsuranceRisks = [
 export function SolarInsuranceArticle() {
   return (
     <article className="bg-white text-black">
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
@@ -56,7 +56,7 @@ export function SolarInsuranceArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl text-2xl leading-snug">
           <h2 className="text-3xl font-bold leading-tight">
             Trường hợp thiệt hại đối với hệ thống điện mặt trời (Photovoltaik):<br />

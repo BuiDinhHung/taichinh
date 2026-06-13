@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { BadeniaLogoMark, DocumentCheckIcon, HandEuroIcon, ProfileCircleIcon } from "./MarketingAssets";
 
 const benefits = [
@@ -103,7 +103,7 @@ function InterestComparisonChart() {
   ];
 
   return (
-    <section className="overflow-x-auto px-6 py-16">
+    <section className="overflow-x-auto px-[10%] py-16">
       <div className="mx-auto min-w-[920px] max-w-7xl">
         <h2 className="text-4xl font-bold">Ví dụ so sánh sự chênh lệch lãi suất giữa 0,95% - 3% - 5% khác biệt thế nào!</h2>
         <p className="mt-6 text-3xl">Mức vay tín dụng xây dựng 200.000 €, thời hạn 15 năm *</p>
@@ -156,7 +156,7 @@ export function BuildingSavingsArticle() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[560px] lg:grid-cols-[54%_46%]">
-        <div className="flex items-center bg-[#e8f0f9] px-6 py-12 sm:px-10 lg:px-12 xl:px-16">
+        <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="max-w-4xl">
             <p className="text-3xl leading-tight">Tích lũy Vốn và Đảm bảo Khoản vay Xây dựng</p>
             <h1 className="mt-16 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
@@ -179,7 +179,7 @@ export function BuildingSavingsArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-16">
+      <section className="px-[10%] py-16">
         <h2 className="text-center text-4xl font-bold">Tiết kiệm xây dựng ở điều kiện tốt nhất</h2>
         <div className="mx-auto mt-10 grid max-w-6xl gap-12 text-center lg:grid-cols-3">
           {benefits.map((benefit) => {
@@ -221,7 +221,7 @@ export function BuildingSavingsArticle() {
         </div>
       </section>
 
-      <section className="grid items-center gap-12 px-6 py-16 lg:grid-cols-[40%_60%]">
+      <section className="grid items-center gap-12 px-[10%] py-16 lg:grid-cols-[40%_60%]">
         <div className="mx-auto max-w-lg text-center lg:text-left">
           <h2 className="text-4xl font-bold leading-tight">Hãy tận dụng cơ hội tốt này!</h2>
           <p className="mt-14 text-3xl font-bold leading-tight text-[#0071bc]">

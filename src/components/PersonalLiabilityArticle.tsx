@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 function DamageCycleIcon({ className = "" }: { className?: string }) {
   return (
@@ -49,7 +49,7 @@ const otherCoverage = [
 export function PersonalLiabilityArticle() {
   return (
     <article className="bg-[#e8f0f9] text-black">
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:pl-20 lg:text-left">
@@ -84,7 +84,7 @@ export function PersonalLiabilityArticle() {
         </div>
       </section>
 
-      <section className="px-6 py-12 sm:py-14">
+      <section className="px-[10%] py-12 sm:py-14">
         <div className="mx-auto max-w-6xl text-2xl leading-snug">
           <h2 className="text-3xl font-bold">Các mục bảo hiểm khác:</h2>
           <ul className="mt-8 list-disc space-y-1 pl-6">

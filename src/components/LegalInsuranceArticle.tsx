@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 const legalBenefits = [
   "Tư vấn pháp lý qua điện thoại và trực tuyến miễn phí",
@@ -24,7 +24,7 @@ function AdvocardBadge() {
 export function LegalInsuranceArticle() {
   return (
     <article className="bg-neutral-100 text-black">
-      <section className="px-6 py-14 sm:py-16">
+      <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             Bảo hiểm pháp lý- Rechtsschutzversicherung

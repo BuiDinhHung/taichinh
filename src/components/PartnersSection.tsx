@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 
 export function PartnersSection() {
@@ -6,7 +6,7 @@ export function PartnersSection() {
     <section className="bg-[#e7eff8]">
       <div className="grid min-h-[430px] bg-white lg:grid-cols-[43%_57%]">
         <div className="flex items-center">
-          <div className="mx-auto w-full max-w-[420px] px-6 py-14 lg:py-16">
+          <div className="mx-auto w-full max-w-[420px] px-[10%] py-14 lg:py-16">
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
               Đối tác của chúng tôi
             </h2>
