@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { siteName } from "@/lib/content";
-import { CloseIcon, MenuIcon, SearchIcon } from "@/components/icons";
+import { ChatIcon, CloseIcon, MenuIcon, SearchIcon } from "@/components/icons";
 
 const germanProductsUrl = "https://www.dvag.de/dvag/allfinanzberatung/produkte.html";
 const mainNav = [
@@ -80,6 +80,14 @@ export function Header() {
               </Link>
             ))}
           </nav>
+
+          <Link
+            href="/dat-lich"
+            className="hidden shrink-0 items-center gap-2 bg-brand-gold px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-gold-dark lg:flex"
+          >
+            <ChatIcon className="h-4 w-4" />
+            Đặt lịch tư vấn
+          </Link>
 
           <div className="hidden lg:block">
             <LanguageFlags />

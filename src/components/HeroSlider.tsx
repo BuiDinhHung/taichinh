@@ -23,7 +23,7 @@ export function HeroSlider({
 
   return (
     <section
-      className="hero-css-slider relative isolate w-full overflow-hidden bg-black"
+      className="hero-css-slider relative isolate w-full bg-[#e2e2e2]"
       style={
         {
           "--hero-slide-count": slides.length,
@@ -54,68 +54,70 @@ export function HeroSlider({
         `}
       </style>
 
-      <div className="relative h-[clamp(430px,58vw,760px)] w-full">
-        {slides.map((slide, index) => (
-          <article
-            key={`${slide.image.src}-${index}`}
-            className="hero-css-slide absolute inset-0"
-            style={{
-              animationDelay: `${index * slideDuration}ms`,
-            }}
-          >
-            <Image
-              src={slide.image.src}
-              alt=""
-              aria-hidden="true"
-              fill
-              sizes="100vw"
-              className="scale-110 object-cover opacity-55 blur-md"
-              style={{ objectPosition: slide.imagePosition ?? "center center" }}
-            />
-            <Image
-              src={slide.image.src}
-              alt={slide.image.alt}
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              className="z-[1] object-contain"
-              style={{ objectPosition: slide.imagePosition ?? "center center" }}
-            />
+      <div className="dvag-container relative">
+        <div className="relative h-[clamp(380px,52vw,720px)] w-full overflow-hidden bg-black">
+          {slides.map((slide, index) => (
+            <article
+              key={`${slide.image.src}-${index}`}
+              className="hero-css-slide absolute inset-0"
+              style={{
+                animationDelay: `${index * slideDuration}ms`,
+              }}
+            >
+              <Image
+                src={slide.image.src}
+                alt=""
+                aria-hidden="true"
+                fill
+                sizes="(max-width: 1440px) 80vw, 1152px"
+                className="scale-110 object-cover opacity-55 blur-md"
+                style={{ objectPosition: slide.imagePosition ?? "center center" }}
+              />
+              <Image
+                src={slide.image.src}
+                alt={slide.image.alt}
+                fill
+                priority={index === 0}
+                sizes="(max-width: 1440px) 80vw, 1152px"
+                className="z-[1] object-contain"
+                style={{ objectPosition: slide.imagePosition ?? "center center" }}
+              />
 
-            <div className="absolute inset-x-4 bottom-5 z-10 sm:inset-x-auto sm:bottom-[7%] sm:left-0">
-              <div className="relative w-full bg-brand-gold/85 px-5 py-5 text-white shadow-[0_12px_36px_rgba(0,0,0,0.16)] backdrop-blur-[1px] sm:w-[min(36vw,390px)] sm:min-w-[270px] sm:px-7 sm:py-6 sm:[clip-path:polygon(0_0,100%_0,100%_82%,0_100%)] lg:w-[min(31vw,420px)]">
-                <div className="flex flex-col items-start gap-3 sm:gap-4">
-                  {slide.eyebrow && (
-                    <p className="text-[0.7rem] font-bold uppercase text-white/95">
-                      {slide.eyebrow}
-                    </p>
-                  )}
-                  <h1 className="max-w-[16ch] text-[1.55rem] font-normal leading-[1.18] text-white sm:max-w-[13ch] sm:text-[1.75rem] lg:text-[2.15rem]">
-                    {slide.headline}
-                  </h1>
-                  <Link
-                    href={slide.cta.href}
-                    className="inline-flex min-h-10 items-center justify-center bg-brand-gold-dark px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-brand-gold-darker"
-                  >
-                    {slide.cta.label}
-                  </Link>
+              <div className="absolute inset-x-4 bottom-5 z-10 sm:inset-x-auto sm:bottom-[7%] sm:left-0">
+                <div className="relative w-full bg-brand-gold/88 px-5 py-5 text-white shadow-[0_12px_36px_rgba(0,0,0,0.18)] backdrop-blur-[1px] sm:w-[min(36vw,390px)] sm:min-w-[270px] sm:px-7 sm:py-7 sm:[clip-path:polygon(0_0,100%_0,100%_82%,0_100%)] lg:w-[min(31vw,420px)]">
+                  <div className="flex flex-col items-start gap-3 sm:gap-4">
+                    {slide.eyebrow && (
+                      <p className="text-[0.68rem] font-bold uppercase tracking-wide text-white/90">
+                        {slide.eyebrow}
+                      </p>
+                    )}
+                    <h1 className="max-w-[16ch] text-[1.5rem] font-light leading-[1.2] text-white sm:max-w-[13ch] sm:text-[1.7rem] lg:text-[2.1rem]">
+                      {slide.headline}
+                    </h1>
+                    <Link
+                      href={slide.cta.href}
+                      className="mt-1 inline-flex min-h-10 items-center justify-center border border-white/60 bg-white/15 px-5 py-2 text-xs font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/25"
+                    >
+                      {slide.cta.label}
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
-        ))}
-
-        {slides.length > 1 && (
-          <div className="absolute bottom-4 right-4 z-10 flex items-center justify-center gap-2 rounded-full bg-white/80 px-3 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md">
-            {slides.map((_, index) => (
-              <span
-                key={index}
-                className="block h-2 w-2 rounded-full bg-brand-gold/55"
-              />
-            ))}
-          </div>
-        )}
+            </article>
+          ))}
+        </div>
       </div>
+
+      {slides.length > 1 && (
+        <div className="flex items-center justify-center gap-3 py-4">
+          {slides.map((_, index) => (
+            <span
+              key={index}
+              className="block h-2 w-2 rounded-full bg-brand-gold/50"
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

@@ -122,8 +122,8 @@
 }
 
 @theme inline {
-  --font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-heading: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-dvag), "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: var(--font-dvag), "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Brand utilities */
   --color-brand-gold: var(--brand-gold);
@@ -190,7 +190,7 @@
     @apply border-border outline-ring/50;
   }
   html {
-    font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-dvag), "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-default);
   }
   body {
