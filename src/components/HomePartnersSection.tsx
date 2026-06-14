@@ -121,7 +121,7 @@ export function HomePartnersSection() {
       <details className="group">
         <summary className="list-none cursor-pointer [&::-webkit-details-marker]:hidden">
           <div className="grid min-h-[420px] bg-white md:grid-cols-2">
-            <div className="flex flex-col justify-center px-8 py-12 md:px-16 lg:px-24">
+            <div className="flex flex-col justify-center py-12 md:py-14" style={{ paddingLeft: 'clamp(1rem, 5vw, 5rem)', paddingRight: '2.5rem' }}>
               <h2 className="text-[1.55rem] font-bold text-[#181818] md:text-[1.85rem]">
                 Đối tác của chúng tôi
               </h2>
@@ -150,7 +150,7 @@ export function HomePartnersSection() {
           </div>
         </summary>
 
-        <div className="mx-auto max-w-6xl px-[10%] py-12 md:py-16">
+        <div className="dvag-container py-12 md:py-16">
           <div className="grid gap-x-12 gap-y-10">
             {partners.map((partner) => (
               <article

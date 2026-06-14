@@ -54,7 +54,7 @@ export function Header() {
   return (
     <>
       <header
-        className="fixed inset-x-0 top-0 z-50 border-b border-brand-gold-tint-2 bg-brand-gold-tint"
+        className="fixed left-1/2 top-0 z-50 w-full max-w-[1440px] -translate-x-1/2 border-b border-brand-gold-tint-2 bg-brand-gold-tint"
         style={{ height: "var(--header-height)" }}
       >
         <div className="dvag-container flex h-full items-center justify-between gap-2 sm:gap-4">
@@ -64,17 +64,17 @@ export function Header() {
               alt={siteName}
               width={230}
               height={54}
-              className="h-8 w-auto max-w-[176px] sm:h-9 sm:max-w-[220px] lg:h-10 lg:max-w-none xl:h-11"
+              className="h-8 w-auto max-w-[160px] sm:h-9 sm:max-w-[200px] lg:h-10 lg:max-w-[210px] xl:h-11 xl:max-w-none"
               priority
             />
           </Link>
 
-          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-4 lg:flex xl:gap-7">
+          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-3 lg:flex xl:gap-5">
             {mainNav.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="whitespace-nowrap text-sm font-semibold leading-none text-black transition-colors hover:text-brand-gold-darker xl:text-[15px]"
+                className="whitespace-nowrap text-sm font-semibold leading-none text-black transition-colors hover:text-brand-gold-darker"
               >
                 {item.label}
               </Link>
@@ -83,19 +83,20 @@ export function Header() {
 
           <Link
             href="/dat-lich"
-            className="hidden shrink-0 items-center gap-2 bg-brand-gold px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-gold-dark lg:flex"
+            className="hidden shrink-0 items-center gap-1.5 bg-brand-gold px-3 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-gold-dark lg:flex xl:px-4 xl:py-2.5"
           >
             <ChatIcon className="h-4 w-4" />
-            Đặt lịch tư vấn
+            <span className="hidden xl:inline">Đặt lịch tư vấn</span>
+            <span className="xl:hidden">Tư vấn</span>
           </Link>
 
-          <div className="hidden lg:block">
+          <div className="hidden shrink-0 lg:block">
             <LanguageFlags />
           </div>
 
           <form
             action="/search"
-            className="hidden h-10 w-36 shrink-0 items-center border border-black/25 bg-white text-black xl:flex 2xl:w-56"
+            className="hidden h-10 w-36 shrink-0 items-center border border-black/25 bg-white text-black 2xl:flex 2xl:w-48"
             role="search"
           >
             <label htmlFor="site-search" className="sr-only">
@@ -132,7 +133,7 @@ export function Header() {
       </header>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-[9999] overflow-y-auto bg-brand-gold-tint text-black lg:hidden">
+        <div className="fixed left-1/2 top-0 z-[9999] h-screen w-full max-w-[1440px] -translate-x-1/2 overflow-y-auto bg-brand-gold-tint text-black lg:hidden">
           <div className="dvag-container flex h-[var(--header-height)] items-center justify-between gap-2 border-b border-brand-gold-tint-2">
             <div className="flex min-w-0 items-center gap-2">
               <Image

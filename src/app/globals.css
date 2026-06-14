@@ -224,7 +224,7 @@
   .dvag-container {
     width: 100%;
     margin-inline: auto;
-    padding-inline: 10%;
+    padding-inline: clamp(1rem, 5vw, 5rem);
     max-width: var(--container-max);
   }
   @media (min-width: 1024px) {
