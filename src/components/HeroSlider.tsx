@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,55 +17,40 @@ interface HeroSliderProps {
   autoPlayInterval?: number;
 }
 
-export function HeroSlider({
-  slides,
-  autoPlayInterval = 6000,
-}: HeroSliderProps) {
-  const slideDuration = Math.max(3500, autoPlayInterval);
-  const totalDuration = slideDuration * Math.max(1, slides.length);
+export function HeroSlider({ slides, autoPlayInterval = 6000 }: HeroSliderProps) {
+  const [current, setCurrent] = useState(0);
+
+  const goNext = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  }, [slides.length]);
+
+  useEffect(() => {
+    const id = setTimeout(goNext, autoPlayInterval);
+    return () => clearTimeout(id);
+  }, [current, goNext, autoPlayInterval]);
+
+  if (slides.length === 0) return null;
+
+  const n = slides.length;
 
   return (
-    <section
-      className="hero-css-slider relative isolate w-full overflow-hidden bg-black"
-      style={
-        {
-          "--hero-slide-count": slides.length,
-          "--hero-slide-duration": `${slideDuration}ms`,
-          "--hero-total-duration": `${totalDuration}ms`,
-        } as React.CSSProperties
-      }
-    >
-      <style>
-        {`
-          @keyframes heroSlideFade {
-            0%, 27% { opacity: 1; z-index: 2; }
-            33%, 94% { opacity: 0; z-index: 1; }
-            100% { opacity: 1; z-index: 2; }
-          }
-
-          .hero-css-slider .hero-css-slide {
-            opacity: 0;
-            animation-name: heroSlideFade;
-            animation-duration: var(--hero-total-duration);
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-          }
-
-          .hero-css-slider .hero-css-slide:first-child {
-            opacity: 1;
-          }
-        `}
-      </style>
-
-      <div className="relative h-[clamp(380px,52vw,720px)] w-full">
+    <section className="relative isolate w-full overflow-hidden bg-black">
+      {/* Horizontal track — all slides side by side */}
+      <div
+        className="flex h-[clamp(380px,52vw,720px)] will-change-transform"
+        style={{
+          width: `${n * 100}%`,
+          transform: `translateX(-${(current * 100) / n}%)`,
+          transition: "transform 700ms cubic-bezier(0.45, 0, 0.15, 1)",
+        }}
+      >
         {slides.map((slide, index) => (
           <article
             key={`${slide.image.src}-${index}`}
-            className="hero-css-slide absolute inset-0"
-            style={{
-              animationDelay: `${index * slideDuration}ms`,
-            }}
+            className="relative h-full shrink-0"
+            style={{ width: `${100 / n}%` }}
           >
+            {/* blurred ambient background */}
             <Image
               src={slide.image.src}
               alt=""
@@ -72,6 +60,7 @@ export function HeroSlider({
               className="scale-110 object-cover opacity-55 blur-md"
               style={{ objectPosition: slide.imagePosition ?? "center center" }}
             />
+            {/* main photo */}
             <Image
               src={slide.image.src}
               alt={slide.image.alt}
@@ -82,6 +71,7 @@ export function HeroSlider({
               style={{ objectPosition: slide.imagePosition ?? "center center" }}
             />
 
+            {/* text overlay */}
             <div className="absolute inset-x-4 bottom-5 z-10 sm:inset-x-auto sm:bottom-[7%] sm:left-0">
               <div className="relative w-full bg-brand-gold/88 px-5 py-5 text-white shadow-[0_12px_36px_rgba(0,0,0,0.18)] backdrop-blur-[1px] sm:w-[min(36vw,390px)] sm:min-w-[270px] sm:px-7 sm:py-7 sm:[clip-path:polygon(0_0,100%_0,100%_82%,0_100%)] lg:w-[min(31vw,420px)]">
                 <div className="flex flex-col items-start gap-3 sm:gap-4">
@@ -104,18 +94,26 @@ export function HeroSlider({
             </div>
           </article>
         ))}
-
-        {slides.length > 1 && (
-          <div className="absolute bottom-4 right-4 z-10 flex items-center justify-center gap-2 rounded-full bg-white/80 px-3 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md">
-            {slides.map((_, index) => (
-              <span
-                key={index}
-                className="block h-2 w-2 rounded-full bg-brand-gold/55"
-              />
-            ))}
-          </div>
-        )}
       </div>
+
+      {/* Navigation dots */}
+      {slides.length > 1 && (
+        <div className="absolute bottom-4 right-4 z-10 flex items-center gap-2 rounded-full bg-white/80 px-3 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              aria-label={`Chuyển sang slide ${index + 1}`}
+              onClick={() => setCurrent(index)}
+              className={`block h-2 w-2 rounded-full transition-colors duration-300 ${
+                index === current
+                  ? "bg-brand-gold scale-125"
+                  : "bg-brand-gold/40 hover:bg-brand-gold/70"
+              }`}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
