@@ -14,98 +14,56 @@ function PartnerLogos() {
 function CostAverageDiagram() {
   return (
     <section className="mt-16">
-      <Image
-        src="/images/image_new/fonds-monthly-shares-chart.jpeg"
-        alt="Hiệu ứng Cost-Average"
-        width={720}
-        height={407}
-        className="mx-auto h-auto w-full max-w-6xl object-contain"
-      />
-    </section>
-  );
-
-  return (
-    <section className="mt-16">
       <h2 className="text-center text-3xl font-normal text-black">Lợi ích của đầu tư dài hạn</h2>
       <h3 className="mx-auto mt-10 max-w-3xl text-center text-3xl font-bold leading-tight text-black">
-        Hiệu ứng Cost-Average - tận dụng lợi ích từ việc tiết kiệm đều đặn
+        Hiệu ứng Cost-Average – tận dụng lợi ích từ việc tiết kiệm đều đặn
       </h3>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-3">
-        <div className="flex flex-col items-center">
-          <div className="relative h-64 w-full max-w-sm">
-            <div className="absolute left-0 top-0 flex gap-3 opacity-45">
-              {["JANUAR", "FEBRUAR", "MÄRZ", "APRIL", "MAI"].map((month, idx) => (
-                <div key={month} className="text-center text-xs text-[#aaa]" style={{ marginTop: `${idx % 2 === 0 ? 12 : 30}px` }}>
-                  <p>{month}</p>
-                  <div className="mt-1 flex h-9 w-16 items-center justify-center bg-[#ddd] text-brand-gold">
-                    €
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="absolute left-1/2 top-20 -translate-x-1/2">
-              <div className="flex h-32 w-24 items-center justify-center bg-brand-gold text-2xl font-bold text-white">
-                FONDS
-              </div>
-              <div className="mx-auto h-0 w-0 border-l-[28px] border-r-[28px] border-t-[36px] border-l-transparent border-r-transparent border-t-[#ffdf3a]" />
-            </div>
-          </div>
-          <div className="relative h-56 w-full max-w-sm border-b-2 border-[#bfbfbf] border-l-2 border-[#bfbfbf]">
-            <svg viewBox="0 0 360 200" className="absolute inset-0 h-full w-full">
-              <polyline points="20,80 60,95 100,120 140,140 180,110 220,70 260,95 310,50 340,40" fill="none" stroke="#999" strokeWidth="4" />
-              {[45, 90, 135, 180, 225].map((x, idx) => (
-                <g key={x}>
-                  <line x1={x} y1="20" x2={x} y2="170" stroke="#c8aa22" strokeWidth="3" />
-                  <text x={x - 18} y="16" fill="#aaa" fontSize="14">100 €</text>
-                  <circle cx={x} cy={[82, 110, 140, 110, 70][idx]} r="7" fill="#c8aa22" />
-                </g>
-              ))}
-            </svg>
-            <div className="absolute bottom-[-70px] left-0 right-0 flex justify-between text-center text-brand-gold">
-              {[4, 8, 10, 6, 2, 30].map((value) => (
-                <div key={value}>
-                  <div className="mx-auto flex h-11 w-8 items-center justify-center bg-brand-gold text-white">{value}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <p className="mt-20 text-center text-xl font-bold text-brand-gold">Monatlich gekaufte Anteile&nbsp;&nbsp;&nbsp;&nbsp; Gesamt</p>
+        <div className="flex flex-col gap-4">
+          <Image
+            src="/images/fonds-monthly-to-fonds.jpeg"
+            alt="Tiết kiệm hàng tháng vào quỹ"
+            width={400}
+            height={280}
+            className="h-auto w-full object-contain"
+          />
+          <Image
+            src="/images/fonds-monthly-shares-chart.jpeg"
+            alt="Biểu đồ cổ phần hàng tháng"
+            width={400}
+            height={280}
+            className="h-auto w-full object-contain"
+          />
         </div>
 
         <div className="space-y-36 text-2xl leading-snug text-black">
           <p>
-            <strong>1.</strong>Là nhà đầu tư, bạn đầu tư một khoản tiền cố định mỗi tháng và mua cổ phần từ một quỹ đầu tư.
+            <strong>1.</strong> Là nhà đầu tư, bạn đầu tư một khoản tiền cố định mỗi tháng và mua cổ phần từ một quỹ đầu tư.
           </p>
           <p>
-            <strong>2.</strong>Tùy vào diễn biến giá, bạn sẽ nhận được nhiều hoặc ít cổ phần quỹ cho số tiền cố định của mình trong một tháng.
+            <strong>2.</strong> Tùy vào diễn biến giá, bạn sẽ nhận được nhiều hoặc ít cổ phần quỹ cho số tiền cố định của mình trong một tháng.
           </p>
         </div>
 
-        <div className="space-y-14 text-2xl leading-snug text-black">
-          <div className="grid grid-cols-2 gap-8 text-center text-brand-gold">
-            <div>
-              <div className="mx-auto flex h-16 w-12 items-center justify-center bg-brand-gold text-2xl text-white">10</div>
-              <p className="mt-3 font-bold">Mehr Anteile</p>
-            </div>
-            <div>
-              <div className="mx-auto flex h-16 w-12 items-center justify-center bg-brand-gold text-2xl text-white">4</div>
-              <p className="mt-3 font-bold">Weniger Anteile</p>
-            </div>
-          </div>
+        <div className="flex flex-col gap-8 text-2xl leading-snug text-black">
+          <Image
+            src="/images/fonds-cost-average.jpeg"
+            alt="Hiệu ứng Cost-Average – nhiều và ít cổ phần"
+            width={400}
+            height={220}
+            className="h-auto w-full object-contain"
+          />
           <p>
-            <strong>3.</strong> Nhờ vậy, bạn có thể đạt được giá mua trung bình thấp hơn đáng kể so với cổ phần quỹ của mình - một hiệu ứng có thể càng mạnh mẽ hơn theo thời gian.
+            <strong>3.</strong> Nhờ vậy, bạn có thể đạt được giá mua trung bình thấp hơn đáng kể so với cổ phần quỹ của mình – một hiệu ứng có thể càng mạnh mẽ hơn theo thời gian.
           </p>
-          <div className="grid grid-cols-2 gap-8 text-center text-brand-gold">
-            <div>
-              <div className="mx-auto flex h-16 w-12 items-center justify-center bg-brand-gold text-2xl text-white">20</div>
-              <p className="mt-3 font-bold">Einmaliger<br />Kauf</p>
-            </div>
-            <div>
-              <div className="mx-auto flex h-16 w-12 items-center justify-center bg-brand-gold text-2xl text-white">30</div>
-              <p className="mt-3 font-bold">Fonds-<br />Sparplan</p>
-            </div>
-          </div>
+          <Image
+            src="/images/fonds-one-time-vs-savings.jpeg"
+            alt="So sánh đầu tư một lần và tiết kiệm định kỳ"
+            width={400}
+            height={220}
+            className="h-auto w-full object-contain"
+          />
           <p>
             <strong>4.</strong> Bằng cách sử dụng hiệu ứng Trung bình Chi phí (Cost-Average), bạn có thể mua được nhiều cổ phần hơn cho số tiền đầu tư của mình theo thời gian.
           </p>
@@ -130,6 +88,12 @@ export function FondsSparplanArticle() {
             <p className="mt-16 text-2xl leading-snug">
               Với các kế hoạch tiết kiệm, bạn hoàn toàn có thể kiến tạo một khối tài sản đáng kể - chỉ với số vốn khởi điểm vỏn vẹn €25 mỗi tháng. Hơn thế nữa, bạn luôn được hưởng sự linh hoạt tuyệt đối trong việc lựa chọn quỹ, mức đóng góp cũng như thời hạn đầu tư.
             </p>
+            <Link
+              href="/dat-lich"
+              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
+            >
+              Đặt lịch tư vấn
+            </Link>
           </div>
         </div>
         <div className="relative min-h-[420px]">

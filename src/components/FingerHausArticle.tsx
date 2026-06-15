@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import Link from "next/link";
 import { CycleIcon, DocumentCheckIcon, FingerHausLogoMark, HouseLineIcon } from "./MarketingAssets";
 
 const reasons = [
@@ -27,7 +28,7 @@ function AwardStack() {
     <div className="flex w-full flex-wrap items-end justify-center gap-8 lg:flex-nowrap lg:gap-14">
       <FingerHausLogoMark className="min-w-[280px]" />
       <Image
-        src="/images/image_new/kunden-awards.jpeg"
+        src="/images/kunden-awards.jpeg"
         alt="Giáº£i thÆ°á»Ÿng FingerHaus"
         width={1267}
         height={404}
@@ -97,11 +98,17 @@ export function FingerHausArticle() {
               <li>FingerHaus thiết kế và xây dựng nhà hoàn toàn theo ý tưởng riêng biệt và mong muốn của bạn</li>
               <li>FingerHaus đại diện cho chất lượng xuất sắc, các khái niệm nhà đa dạng và tất cả đều đến từ một mối duy nhất.</li>
             </ul>
+            <Link
+              href="/dat-lich"
+              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
+            >
+              Đặt lịch tư vấn
+            </Link>
           </div>
         </div>
         <div className="relative min-h-[340px] lg:min-h-[560px]">
           <Image
-            src="/images/article-10-tin-dung-bat-dong-san.jpeg"
+            src="/images/prefab-house-fingerhaus.jpeg"
             alt="Nhà ở tiền chế FingerHaus"
             fill
             priority

@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import Link from "next/link";
 
 export function ChildFutureArticle() {
   return (
@@ -19,6 +20,12 @@ export function ChildFutureArticle() {
                 <li><strong>25 tuổi</strong> - con bạn cần <strong>15.000 €</strong> để <strong>mua ô tô</strong> và xây dựng cuộc sống riêng?</li>
               </ul>
             </div>
+            <Link
+              href="/dat-lich"
+              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
+            >
+              Đặt lịch tư vấn
+            </Link>
           </div>
         </div>
 
@@ -29,7 +36,7 @@ export function ChildFutureArticle() {
             fill
             priority
             sizes="(min-width: 1024px) 45vw, 100vw"
-            className="object-cover"
+            className="object-cover object-top"
           />
         </div>
       </section>
@@ -87,7 +94,7 @@ export function ChildFutureArticle() {
 
             <div className="pointer-events-none absolute bottom-0 right-0 hidden w-[42%] max-w-[620px] lg:block">
               <Image
-                src="/images/article-01-tuong-lai-con-tre.jpeg"
+                src="/images/child-toy-train.jpeg"
                 alt=""
                 width={720}
                 height={520}

@@ -166,22 +166,22 @@ export const metadata: Metadata = {
 };
 
 const partnerLogoImages: Record<PartnerLogo, string> = {
-  generali: "/images/image_new/logo-generali.jpeg",
-  dws: "/images/image_new/logo-dws.jpeg",
-  allianz: "/images/image_new/logo-allianz-global-investors.jpeg",
-  badenia: "/images/image_new/logo-badenia.jpeg",
-  "deutsche-bank": "/images/image_new/logo-deutsche-bank.jpeg",
-  advocard: "/images/image_new/logo-advocard.jpeg",
-  santander: "/images/image_new/logo-santander.jpeg",
-  commerzbank: "/images/image_new/logo-commerzbank.jpeg",
-  geiger: "/images/image_new/logo-geiger.jpeg",
-  "bkk-linde": "/images/image_new/logo-bkk-linde.jpeg",
-  dv: "/images/image_new/logo-dv.jpeg",
-  hypovereinsbank: "/images/image_new/logo-hypovereinsbank.jpeg",
-  fingerhaus: "/images/image_new/logo-fingerhaus.jpeg",
-  planethome: "/images/image_new/logo-planethome.jpeg",
-  falc: "/images/image_new/logo-falc.jpeg",
-  enpal: "/images/image_new/logo-enpal.jpeg",
+  generali: "/images/logo-generali.png",
+  dws: "/images/logo-dws.png",
+  allianz: "/images/logo-allianz-global-investors.png",
+  badenia: "/images/logo-badenia.png",
+  "deutsche-bank": "/images/logo-deutsche-bank.png",
+  advocard: "/images/logo-advocard.png",
+  santander: "/images/logo-santander.png",
+  commerzbank: "/images/logo-commerzbank.png",
+  geiger: "/images/logo-geiger.png",
+  "bkk-linde": "/images/logo-bkk-linde.png",
+  dv: "/images/logo-dv.png",
+  hypovereinsbank: "/images/logo-hypovereinsbank.png",
+  fingerhaus: "/images/logo-fingerhaus.png",
+  planethome: "/images/logo-planethome.png",
+  falc: "/images/logo-falc.png",
+  enpal: "/images/logo-enpal.png",
 };
 
 function PartnerLogoMark({ logo, name }: { logo: PartnerLogo; name: string }) {
@@ -192,7 +192,7 @@ function PartnerLogoMark({ logo, name }: { logo: PartnerLogo; name: string }) {
       width={260}
       height={120}
       sizes="260px"
-      className="max-h-24 w-auto object-contain"
+      className="max-h-24 w-auto bg-transparent object-contain"
     />
   );
 }

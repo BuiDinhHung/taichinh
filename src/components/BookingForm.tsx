@@ -4,11 +4,12 @@ import { useState } from "react";
 import {
   buildMailtoUrl,
   buildWhatsAppUrl,
+  CONTACT,
   TIME_SLOTS,
   TOPICS,
   type BookingFormData,
 } from "@/lib/booking";
-import { ArrowRightIcon, MailIcon, WhatsAppIcon } from "@/components/icons";
+import { ArrowRightIcon, FacebookIcon, MailIcon, WhatsAppIcon } from "@/components/icons";
 
 const EMPTY: BookingFormData = {
   name: "",
@@ -150,7 +151,7 @@ export function BookingForm() {
         </p>
       )}
 
-      <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+      <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
         <a
           href={whatsappUrl}
           target="_blank"
@@ -160,6 +161,16 @@ export function BookingForm() {
         >
           <WhatsAppIcon className="h-5 w-5" />
           Gửi qua WhatsApp
+        </a>
+        <a
+          href={CONTACT.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setTouched(true)}
+          className={`${actionBase} bg-[#1877F2] hover:bg-[#0866FF]`}
+        >
+          <FacebookIcon className="h-5 w-5" />
+          Gửi qua Facebook
         </a>
         <a
           href={mailtoUrl}

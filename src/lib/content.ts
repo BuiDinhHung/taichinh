@@ -18,7 +18,7 @@ export const headerNav: NavItem[] = [
     href: "/page/gioi-thieu",
     items: [
       { label: "Đối tác", href: "/recommendations" },
-      { label: "Tin mới", href: "/archive" },
+      { label: "Lĩnh vực tư vấn", href: "/archive" },
     ],
   },
   {
@@ -245,7 +245,7 @@ export const articles: Article[] = [
     slug: "ke-hoach-cho-tuong-lai-con-yeu",
     title: "Kế hoạch Tài chính cho tương lai con trẻ",
     date: "May 5, 2025",
-    image: "/images/article-01-tuong-lai-con-tre.jpeg",
+    image: "/images/gallery-04.jpeg",
   },
   {
     slug: "tich-luy-tai-chinh-and-bao-hiem-ho-tro-fondspolice",
@@ -265,13 +265,13 @@ export const articles: Article[] = [
     slug: "tiet-kiem-xay-dung",
     title: "Tiết kiệm xây dựng - Bauspar",
     date: "Mar 31, 2025",
-    image: "/images/article-04-bauspar.jpeg",
+    image: "/images/pdf-field-child.jpeg",
   },
   {
     slug: "dau-tu-vao-quy-fonds-sparsplan",
     title: "Tiết kiệm vào Quỹ đầu tư - Fonds Sparsplan",
     date: "Mar 31, 2025",
-    image: "/images/article-05-fonds-sparplan.jpeg",
+    image: "/images/gallery-05.jpeg",
   },
   {
     slug: "bao-hiem-huu-tri-doanh-nghiep",
@@ -283,25 +283,25 @@ export const articles: Article[] = [
     slug: "bao-hiem-huu-tri-riester",
     title: "Bảo hiểm hưu trí Riester - Rente",
     date: "Mar 30, 2025",
-    image: "/images/article-07-riester.png",
+    image: "/images/pdf-field-house.jpeg",
   },
   {
     slug: "bao-hiem-doanh-nghiep",
     title: "Bảo hiểm doanh nghiệp",
     date: "Mar 30, 2025",
-    image: "/images/article-08-bao-hiem-doanh-nghiep.jpeg",
+    image: "/images/gallery-06.jpeg",
   },
   {
     slug: "dau-tu-vao-vang-gold",
     title: "Đầu tư vàng - Goldsparplan",
     date: "Mar 30, 2025",
-    image: "/images/article-09-vang-goldsparplan.jpeg",
+    image: "/images/pdf-field-retirement.jpeg",
   },
   {
     slug: "tin-dung-bat-dong-san",
     title: "Tín dụng bất động sản - Immobilienfinanzierung",
     date: "Mar 30, 2025",
-    image: "/images/article-10-tin-dung-bat-dong-san.jpeg",
+    image: "/images/house-with-euros.jpeg",
   },
   {
     slug: "bao-hiem-huu-tri-co-ban",
@@ -314,6 +314,12 @@ export const articles: Article[] = [
     title: "Máy bơm nhiệt & Năng lượng mặt trời",
     date: "Mar 28, 2025",
     image: "/images/gallery-07.jpeg",
+  },
+  {
+    slug: "dien-mat-troi-solaranlage",
+    title: "Hệ thống điện mặt trời có hỗ trợ của nhà nước",
+    date: "Mar 28, 2025",
+    image: "/images/gallery-08.jpeg",
   },
   {
     slug: "tin-dung-ca-nhan",
@@ -331,7 +337,7 @@ export const articles: Article[] = [
     slug: "fingerhaus",
     title: "Nhà ở tiền chế - FingerHaus",
     date: "Mar 24, 2025",
-    image: "/images/article-06-huu-tri-doanh-nghiep.jpeg",
+    image: "/images/prefab-house-fingerhaus.jpeg",
   },
   {
     slug: "bao-hiem-phap-ly",
@@ -465,7 +471,7 @@ export const footerColumns: FooterColumn[] = [
     title: "Về chúng tôi",
     links: [
       { label: "Đối tác", href: "/recommendations" },
-      { label: "Tin mới", href: "/archive" },
+      { label: "Lĩnh vực tư vấn", href: "/archive" },
     ],
   },
   {

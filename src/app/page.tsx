@@ -3,7 +3,7 @@ import { HeroTeaser } from "@/components/HeroTeaser";
 import { FinanzcoachingSection } from "@/components/FinanzcoachingSection";
 import { AdvantagesSection } from "@/components/AdvantagesSection";
 import { TeaserSlider } from "@/components/TeaserSlider";
-import { RatingsSection } from "@/components/RatingsSection";
+import { RatingsSection } from "@/components/RatingsSectionWrapper";
 import { AboutContactSection } from "@/components/AboutContactSection";
 import { FeaturedNewsSection } from "@/components/FeaturedNewsSection";
 import { TeamSection } from "@/components/TeamSection";

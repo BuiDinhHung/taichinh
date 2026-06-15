@@ -41,7 +41,20 @@ export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
 }
 
+const customRelatedSlugs: Record<string, string[]> = {
+  "tiet-kiem-xay-dung": ["tin-dung-bat-dong-san", "fingerhaus"],
+  "fingerhaus": ["tiet-kiem-xay-dung", "tin-dung-bat-dong-san"],
+  "tin-dung-bat-dong-san": ["tiet-kiem-xay-dung", "fingerhaus"],
+  "tin-dung-ca-nhan": ["tiet-kiem-xay-dung", "fingerhaus"],
+};
+
 function getRelatedArticles(slug: string) {
+  if (customRelatedSlugs[slug]) {
+    return customRelatedSlugs[slug]
+      .map((s) => articles.find((a) => a.slug === s))
+      .filter((a): a is (typeof articles)[number] => Boolean(a));
+  }
+
   const series = seriesList.find((item) => item.articleSlugs.includes(slug));
   const relatedSlugs = series
     ? series.articleSlugs.filter((item) => item !== slug)
@@ -59,36 +72,77 @@ function getRelatedArticles(slug: string) {
 function RelatedArticles({
   currentSlug,
   title = "Bài viết khác trong cùng thể loại",
+  productStyle = false,
 }: {
   currentSlug: string;
   title?: string;
+  productStyle?: boolean;
 }) {
   const related = getRelatedArticles(currentSlug);
   if (related.length === 0) return null;
 
+  const displayedArticles = productStyle ? related.slice(0, 3) : related;
+
+  if (productStyle) {
+    const isTwo = displayedArticles.length === 2;
+    return (
+      <section className="bg-white py-12 lg:py-16">
+        <div className="tc-container">
+          <h2 className="text-center text-2xl font-bold text-brand-gold sm:text-3xl">
+            {title}
+          </h2>
+          <div className={`mt-8 ${isTwo ? "flex flex-wrap justify-center gap-8" : "grid grid-cols-1 gap-8 sm:grid-cols-3"}`}>
+            {displayedArticles.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/${article.slug}`}
+                className={`group block ${isTwo ? "w-full sm:w-[calc(33.333%-1rem)]" : ""}`}
+              >
+                <div className="relative aspect-[3/2] w-full overflow-hidden">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <h3 className="mt-3 text-sm font-bold leading-snug text-black transition-colors group-hover:text-brand-gold sm:text-base">
+                  {article.title}
+                </h3>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section className="border-t border-border bg-surface-soft py-10 lg:py-14">
+    <section className="bg-[#edf2f7] py-12 lg:py-16">
       <div className="tc-container">
-        <h2 className="text-xl font-bold tracking-tight text-text-strong dark:text-foreground sm:text-2xl">
+        <h2 className="text-xl font-bold tracking-tight text-text-strong sm:text-2xl">
           {title}
         </h2>
-        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {related.map((article) => (
             <Link key={article.slug} href={`/${article.slug}`} className="group block">
-              <article className="h-full rounded-sm border border-border bg-white p-3 transition-colors hover:bg-brand-gold-tint/45 dark:bg-card dark:hover:bg-accent/50">
-                <div className="relative aspect-[16/9] overflow-hidden rounded-sm bg-muted">
+              <article className="h-full overflow-hidden rounded-sm border border-black/10 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_18px_rgba(0,0,0,0.10)]">
+                <div className="relative aspect-[3/2] overflow-hidden bg-brand-gold-tint">
                   <Image
                     src={article.image}
                     alt={article.title}
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
-                <h3 className="mt-3 text-sm font-bold leading-snug text-text-strong transition-colors group-hover:text-brand-gold-darker dark:text-foreground dark:group-hover:text-primary">
-                  {article.title}
-                </h3>
-                <p className="mt-2 text-xs text-text-muted">{article.date}</p>
+                <div className="p-4">
+                  <h3 className="text-sm font-bold leading-snug text-text-strong transition-colors group-hover:text-brand-gold-darker">
+                    {article.title}
+                  </h3>
+                  <p className="mt-2 text-xs text-text-muted">{article.date}</p>
+                </div>
               </article>
             </Link>
           ))}
@@ -192,8 +246,6 @@ export default async function ArticlePage({
               </div>
             </div>
           </article>
-
-          <AuthorCard />
         </main>
         <Footer />
       </>
@@ -212,7 +264,7 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <FondsSparplanArticle />
-          <RelatedArticles currentSlug={slug} />
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>
@@ -225,7 +277,7 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <GoldGeigerArticle />
-          <RelatedArticles currentSlug={slug} />
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>
@@ -238,7 +290,7 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <WealthProtectionArticle />
-          <RelatedArticles currentSlug={slug} />
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>
@@ -251,7 +303,7 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <ChildFutureArticle />
-          <RelatedArticles currentSlug={slug} />
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>
@@ -264,7 +316,7 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <BuildingSavingsArticle />
-          <RelatedArticles currentSlug={slug} />
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>
@@ -277,7 +329,7 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <FingerHausArticle />
-          <RelatedArticles currentSlug={slug} />
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>
@@ -290,7 +342,8 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <RealEstateLoanArticle />
-          <RelatedArticles currentSlug={slug} />
+          <PersonalLoanArticle />
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>
@@ -303,7 +356,7 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <PersonalLoanArticle />
-          <RelatedArticles currentSlug={slug} />
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>
@@ -355,7 +408,76 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <BusinessInsuranceArticle />
-          <RelatedArticles currentSlug={slug} />
+          <section className="bg-white py-12 lg:py-16">
+            <div className="dvag-container">
+              <h2 className="text-center text-2xl font-bold text-brand-gold sm:text-3xl">
+                Những lĩnh vực có thể bạn quan tâm
+              </h2>
+              <div className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-3 lg:gap-x-16">
+                <div className="flex flex-col text-center">
+                  <Link href="/bao-hiem-huu-tri" className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+                    <div className="relative aspect-[3/2] w-full overflow-hidden bg-brand-gold-tint">
+                      <Image src="/images/pdf-field-house.jpeg" alt="Bảo hiểm hưu trí" fill sizes="(min-width: 1280px) 300px, (min-width: 640px) 30vw, 92vw" className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                    <h3 className="mt-3 px-1 text-sm font-bold leading-snug text-black transition-colors group-hover:text-brand-gold sm:text-base lg:text-lg">
+                      Bảo hiểm Hưu trí
+                    </h3>
+                  </Link>
+                  <ul className="mt-2 flex flex-col gap-1.5">
+                    {[
+                      { label: "Bảo hiểm Riesterrente", href: "/bao-hiem-huu-tri-riester" },
+                      { label: "Bảo hiểm hưu trí cơ bản", href: "/bao-hiem-huu-tri-co-ban" },
+                      { label: "Bảo hiểm hưu trí doanh nghiệp", href: "/bao-hiem-huu-tri-doanh-nghiep" },
+                    ].map((sub) => (
+                      <li key={sub.label}>
+                        <Link href={sub.href} className="block w-full rounded bg-brand-gold px-2 py-2 text-center text-[12px] font-medium leading-snug text-white transition-colors hover:bg-brand-gold-dark">
+                          {sub.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex flex-col text-center">
+                  <Link href="/bao-hiem-tai-san-tong-hop" className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+                    <div className="relative aspect-[3/2] w-full overflow-hidden bg-brand-gold-tint">
+                      <Image src="/images/insurance-property-temple.jpg" alt="Bảo hiểm tài sản" fill sizes="(min-width: 1280px) 300px, (min-width: 640px) 30vw, 92vw" className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                    <h3 className="mt-3 px-1 text-sm font-bold leading-snug text-black transition-colors group-hover:text-brand-gold sm:text-base lg:text-lg">
+                      Bảo hiểm Tài sản
+                    </h3>
+                  </Link>
+                  <ul className="mt-2 flex flex-col gap-1.5">
+                    {["Bảo hiểm tài sản", "Bảo hiểm trách nhiệm", "Bảo hiểm pháp lý", "Bảo hiểm nhà đất", "Bảo hiểm kính", "Bảo hiểm Ô tô"].map((label) => (
+                      <li key={label}>
+                        <Link href="/bao-hiem-tai-san-tong-hop" className="block w-full rounded bg-brand-gold px-2 py-2 text-center text-[12px] font-medium leading-snug text-white transition-colors hover:bg-brand-gold-dark">
+                          {label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex flex-col text-center">
+                  <Link href="/bao-hiem-suc-khoe" className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+                    <div className="relative aspect-[3/2] w-full overflow-hidden bg-brand-gold-tint">
+                      <Image src="/images/gallery-03.jpeg" alt="Bảo hiểm sức khỏe" fill sizes="(min-width: 1280px) 300px, (min-width: 640px) 30vw, 92vw" className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                    <h3 className="mt-3 px-1 text-sm font-bold leading-snug text-black transition-colors group-hover:text-brand-gold sm:text-base lg:text-lg">
+                      Bảo hiểm Sức khỏe
+                    </h3>
+                  </Link>
+                  <ul className="mt-2 flex flex-col gap-1.5">
+                    {["Bảo hiểm y tế tư", "Bảo hiểm mất sức lao động", "Bảo hiểm tai nạn"].map((label) => (
+                      <li key={label}>
+                        <Link href="/bao-hiem-suc-khoe" className="block w-full rounded bg-brand-gold px-2 py-2 text-center text-[12px] font-medium leading-snug text-white transition-colors hover:bg-brand-gold-dark">
+                          {label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
         <Footer />
       </>
@@ -363,25 +485,50 @@ export default async function ArticlePage({
   }
 
   if (slug === "nguon-dien-gas-re") {
+    const energyCards = [
+      { src: "/images/gallery-04.jpeg", alt: "Kế hoạch cho tương lai con yêu", title: "Vì tương lai con em chúng ta", href: "/ke-hoach-cho-tuong-lai-con-yeu" },
+      { src: "/images/pdf-field-retirement.jpeg", alt: "Đầu tư vàng", title: "Đầu tư vàng, bạc – Một ý tưởng sáng giá", href: "/dau-tu-vao-vang-gold" },
+      { src: "/images/prefab-house-fingerhaus.jpeg", alt: "FingerHaus", title: "Đặt nền móng cho Ngôi nhà mơ ước của bạn", href: "/fingerhaus" },
+      { src: "/images/pdf-field-house.jpeg", alt: "Bảo hiểm hưu trí", title: "Tài chính chủ động – An nhiên tuổi già", href: "/bao-hiem-huu-tri" },
+    ];
     return (
       <>
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <EnergySupplierArticle />
-          <RelatedArticles currentSlug={slug} />
+          <RenewableEnergyArticle />
+          <section className="bg-white py-12 lg:py-16">
+            <div className="dvag-container">
+              <h2 className="text-center text-2xl font-bold uppercase tracking-wide text-black sm:text-3xl">
+                Những lĩnh vực tài chính đáng quan tâm
+              </h2>
+              <div className="mx-auto mt-8 grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4 lg:gap-x-10">
+                {energyCards.map((card) => (
+                  <Link key={card.href} href={card.href} className="group block text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+                    <div className="relative aspect-[3/2] w-full overflow-hidden bg-brand-gold-tint">
+                      <Image src={card.src} alt={card.alt} fill sizes="(min-width: 1280px) 240px, (min-width: 640px) 25vw, 48vw" className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                    <p className="mt-3 px-1 text-sm font-bold leading-snug text-black transition-colors group-hover:text-brand-gold sm:text-base">
+                      {card.title}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
         </main>
         <Footer />
       </>
     );
   }
 
-  if (slug === "he-thong-dien-mat-troi-solaranlage") {
+  if (slug === "he-thong-dien-mat-troi-solaranlage" || slug === "dien-mat-troi-solaranlage") {
     return (
       <>
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <RenewableEnergyArticle />
-          <RelatedArticles currentSlug={slug} />
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>
@@ -526,7 +673,7 @@ export default async function ArticlePage({
               <p className="mt-4 text-sm text-muted-foreground">{article.date}</p>
             </header>
 
-            <div className="mt-8 relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-muted">
+            <div className="mt-8 relative aspect-[3/2] w-full overflow-hidden rounded-2xl bg-muted">
               <Image
                 src={article.image}
                 alt={article.title}
@@ -586,13 +733,13 @@ export default async function ArticlePage({
                 <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
                   {related.map((r) => (
                     <Link key={r.slug} href={`/${r.slug}`} className="group block">
-                      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-muted">
+                      <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-muted">
                         <Image
                           src={r.image}
                           alt={r.title}
                           fill
                           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                         />
                       </div>
                       <h3 className="mt-3 text-base font-bold leading-snug group-hover:text-primary transition-colors">
@@ -606,8 +753,6 @@ export default async function ArticlePage({
             )}
           </div>
         </article>
-
-        <AuthorCard />
       </main>
       <Footer />
     </>

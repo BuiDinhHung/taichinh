@@ -7,7 +7,7 @@ import { ContactHero } from "@/components/ContactHero";
 import { AboutContactSection } from "@/components/AboutContactSection";
 import { TeamSection } from "@/components/TeamSection";
 import { AwardsSection } from "@/components/AwardsSection";
-import { PartnersSection } from "@/components/PartnersSection";
+import { HomePartnersSection } from "@/components/HomePartnersSection";
 import { staticPages } from "@/lib/static-pages";
 
 export function generateStaticParams() {
@@ -58,12 +58,14 @@ export default async function StaticPageRoute({
         ) : (
           <article className="py-10 lg:py-14">
             <div className="tc-container">
-              <header className={isAboutPage ? "text-center" : "mx-auto max-w-4xl text-center"}>
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-foreground">
-                  {page.title}
-                </h1>
-              </header>
-              <div className={isAboutPage ? "mt-8" : "mx-auto mt-8 max-w-4xl"}>
+              {!isAboutPage && (
+                <header className="mx-auto max-w-4xl text-center">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-foreground">
+                    {page.title}
+                  </h1>
+                </header>
+              )}
+              <div className={isAboutPage ? "mt-0" : "mx-auto mt-8 max-w-4xl"}>
                 <ArticleBody blocks={blocks} />
               </div>
             </div>
@@ -72,7 +74,7 @@ export default async function StaticPageRoute({
                 <AboutContactSection />
                 <TeamSection />
                 <AwardsSection />
-                <PartnersSection />
+                <HomePartnersSection />
               </div>
             )}
           </article>

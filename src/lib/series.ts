@@ -63,7 +63,7 @@ export const seriesList: Series[] = [
     slug: "energy",
     name: "Năng lượng",
     description: "Hệ thống điện mặt trời, máy bơm nhiệt và các nguồn năng lượng giá rẻ.",
-    articleSlugs: ["he-thong-dien-mat-troi-solaranlage", "nguon-dien-gas-re"],
+    articleSlugs: ["he-thong-dien-mat-troi-solaranlage", "dien-mat-troi-solaranlage", "nguon-dien-gas-re"],
   },
   {
     slug: "partner",

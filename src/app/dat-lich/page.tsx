@@ -15,7 +15,7 @@ export default function DatLichPage() {
     <>
       <Header />
       <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
-        <section className="bg-surface py-8 sm:py-10 lg:py-14">
+        <section className="bg-white py-8 sm:py-10 lg:py-14">
           <div className="dvag-container">
             <header className="max-w-4xl">
               <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
@@ -38,7 +38,7 @@ export default function DatLichPage() {
           </div>
         </section>
 
-        <section className="bg-surface-soft py-12 lg:py-16">
+        <section className="bg-brand-gold-tint py-12 lg:py-16">
           <div className="dvag-container">
             <div className="mx-auto max-w-4xl rounded-lg border border-border-default bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] sm:p-8 lg:p-10 dark:bg-card">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-strong dark:text-foreground">
@@ -54,7 +54,7 @@ export default function DatLichPage() {
           </div>
         </section>
 
-        <section className="bg-surface py-12 lg:py-16">
+        <section className="bg-[#edf2f7] py-12 lg:py-16">
           <div className="dvag-container">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:gap-6">
               {[

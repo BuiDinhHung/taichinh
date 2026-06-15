@@ -3,7 +3,7 @@
 function AccidentIcon({ className = "" }: { className?: string }) {
   return (
     <Image
-      src="/images/image_new/icon-person.jpeg"
+      src="/images/icon-person.png"
       alt=""
       aria-hidden="true"
       width={160}

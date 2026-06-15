@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import Link from "next/link";
 import { DirectionSignIcon, HandEuroIcon, UmbrellaIcon } from "./MarketingAssets";
 
 const benefits = [
@@ -44,6 +45,12 @@ export function GoldGeigerArticle() {
             <p className="mt-8 max-w-2xl text-xl leading-snug sm:text-2xl">
               Chỉ với mức khởi điểm từ 25 Euro, bạn cũng có thể trở thành chủ sở hữu của vàng thật. Với Kế hoạch Tiết kiệm Vàng Geiger, bạn sẽ sở hữu vàng vật chất nguyên chất ngay từ đồng Euro đầu tiên. Bạn tích lũy để sở hữu một thỏi vàng 50 gram với chất lượng cao nhất. Bạn hoàn toàn tự quyết định các điều khoản và điều kiện áp dụng.
             </p>
+            <Link
+              href="/dat-lich"
+              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
+            >
+              Đặt lịch tư vấn
+            </Link>
           </div>
         </div>
         <div className="relative min-h-[340px] lg:min-h-[520px]">

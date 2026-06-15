@@ -9,6 +9,7 @@ export const CONTACT = {
   mobileDisplay: "+49 176 10178768",
   mobileWhatsApp: "4917610178768",
   email: "bao.vu-the.3625100@dvag.de",
+  facebook: "https://www.facebook.com/profile.php?id=61575996313092",
 };
 
 export const TOPICS = [

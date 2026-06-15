@@ -30,7 +30,7 @@ const teamMembers = [
 
 export function TeamSection() {
   return (
-    <section className="bg-white py-14 lg:py-16">
+    <section className="bg-[#f0f4f8] py-14 lg:py-16">
       <div className="dvag-container">
         <h2 className="text-center text-xl font-bold uppercase text-brand-gold sm:text-2xl">
           Chúng tôi luôn đồng hành cùng bạn
@@ -38,8 +38,8 @@ export function TeamSection() {
 
         <div className="mt-12 grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-12">
           {teamMembers.map((member) => (
-            <article key={member.email} className="text-center text-brand-gold">
-              <div className="mx-auto h-28 w-28 overflow-hidden rounded-full border border-brand-gold bg-white shadow-[0_2px_3px_rgba(0,0,0,0.18)] sm:h-32 sm:w-32">
+            <article key={member.email} className="text-center">
+              <div className="mx-auto h-28 w-28 overflow-hidden rounded-full border-2 border-brand-gold bg-white shadow-[0_4px_12px_rgba(0,0,0,0.12)] sm:h-32 sm:w-32">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -48,9 +48,9 @@ export function TeamSection() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <h3 className="mt-4 text-xs font-bold italic leading-tight sm:text-sm">{member.name}</h3>
-              <p className="text-[11px] italic leading-tight sm:text-xs">Tel.: {member.phone}</p>
-              <p className="text-[11px] italic leading-tight sm:text-xs">Mail: {member.email}</p>
+              <h3 className="mt-4 text-xs font-bold leading-tight text-text-strong sm:text-sm">{member.name}</h3>
+              <p className="mt-1 text-[11px] leading-tight text-text-muted sm:text-xs">Tel.: {member.phone}</p>
+              <p className="text-[11px] leading-tight text-text-muted sm:text-xs">Mail: {member.email}</p>
             </article>
           ))}
         </div>

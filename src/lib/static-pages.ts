@@ -33,7 +33,7 @@ export const staticPages: Record<string, StaticPage> = {
     slug: "gioi-thieu",
     title: "Về chúng tôi",
     blocks: [
-      { type: "img", src: "/images/pdf-hero-office.jpeg" },
+      { type: "img", src: "/images/hero-ve-chung-toi.jpeg" },
       {
         type: "h2",
         text: "Tư vấn tài chính chuyên nghiệp. Giá trị bền vững cho tương lai",

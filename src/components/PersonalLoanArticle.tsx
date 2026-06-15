@@ -22,7 +22,7 @@ const benefits = [
 function SmartEffectDiagram() {
   return (
     <Image
-      src="/images/image_new/credit-consolidation-diagram.jpeg"
+      src="/images/credit-consolidation-diagram.jpeg"
       alt="SmartEffekt tối ưu hóa khoản vay"
       width={790}
       height={446}

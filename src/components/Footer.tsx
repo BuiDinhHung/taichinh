@@ -1,27 +1,66 @@
 import Link from "next/link";
+import Image from "next/image";
 import { copyright, footerColumns } from "@/lib/content";
 
 export function Footer() {
   return (
-    <footer className="bg-surface-soft py-12 text-black">
-      <div className="dvag-container grid grid-cols-1 gap-10 md:grid-cols-3">
-        {footerColumns.map((col) => (
-          <div key={col.title}>
-            <h3 className="text-base font-bold">{col.title}</h3>
-            <ul className="mt-5 flex flex-col gap-3">
-              {col.links.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-sm hover:text-brand-gold-darker">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+    <footer className="bg-[#f5f2eb] text-[#333]">
+      <div className="dvag-container py-12 lg:py-16">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+          {/* Brand + contact column */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <Image
+              src="/images/logo-dark.png"
+              alt="taichinh.de"
+              width={200}
+              height={48}
+              className="h-auto w-[160px]"
+            />
+            <p className="mt-5 text-sm leading-relaxed text-[#555]">
+              Tư vấn tài chính chuyên nghiệp cho cộng đồng người Việt tại Đức.
+            </p>
+            <div className="mt-4 space-y-1.5 text-sm text-[#666]">
+              <p>Tel: +49 30-4268859</p>
+              <p>WhatsApp: 0176-10178768</p>
+              <p>bao.vu-the.3625100@dvag.de</p>
+            </div>
           </div>
-        ))}
+
+          {/* Nav columns */}
+          {footerColumns.map((col) => (
+            <div key={col.title}>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-brand-gold-darker">
+                {col.title}
+              </h3>
+              <ul className="mt-5 flex flex-col gap-3">
+                {col.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-[#555] transition-colors hover:text-[#111]"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="dvag-container mt-10 border-t border-black/10 pt-6 text-xs text-text-muted">
-        {copyright}
+
+      <div className="border-t border-black/10">
+        <div className="dvag-container flex flex-wrap items-center justify-between gap-4 py-5 text-xs text-[#999]">
+          <p>{copyright}</p>
+          <div className="flex gap-5">
+            <Link href="/page/impressum" className="transition-colors hover:text-[#555]">
+              Impressum
+            </Link>
+            <Link href="https://hashnode.com/privacy-policy" className="transition-colors hover:text-[#555]">
+              Bảo mật
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

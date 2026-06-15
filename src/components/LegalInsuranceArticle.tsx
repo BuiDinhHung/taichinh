@@ -13,7 +13,7 @@ const legalBenefits = [
 function AdvocardBadge() {
   return (
     <Image
-      src="/images/image_new/advocard-360-private.jpeg"
+      src="/images/advocard-360-private.jpeg"
       alt="ADVOCARD 360 PRIVAT"
       width={248}
       height={161}

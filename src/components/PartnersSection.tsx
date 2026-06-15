@@ -1,5 +1,5 @@
-﻿import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image";
+import { partners } from "@/lib/partners";
 
 export function PartnersSection() {
   return (
@@ -18,12 +18,6 @@ export function PartnersSection() {
                 Vì vậy, bạn có thể yên tâm rằng mọi thứ bạn xây dựng với sự hỗ trợ của chúng tôi sẽ bền vững.
               </p>
             </div>
-            <Link
-              href="/recommendations"
-              className="mt-16 inline-flex text-xl font-bold text-brand-gold transition-colors hover:text-brand-gold-dark"
-            >
-              Xem tiếp
-            </Link>
           </div>
         </div>
 
@@ -35,6 +29,43 @@ export function PartnersSection() {
             sizes="(min-width: 1024px) 57vw, 100vw"
             className="object-cover"
           />
+        </div>
+      </div>
+
+      <div className="dvag-container py-12 md:py-16">
+        <div className="grid gap-x-12 gap-y-10">
+          {partners.map((partner) => (
+            <article
+              key={partner.name}
+              className="grid items-center gap-5 md:grid-cols-[280px_1fr]"
+            >
+              <div className="relative h-28 w-full max-w-[280px]">
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  fill
+                  sizes="280px"
+                  className="bg-transparent object-contain object-left"
+                />
+              </div>
+              <div>
+                <h3 className="text-[0.95rem] font-bold text-[#1f1f1f]">
+                  {partner.name}
+                </h3>
+                <p className="mt-1 text-[0.9rem] leading-6 text-[#333]">
+                  {partner.description}{" "}
+                  <a
+                    href={partner.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[#1d5f8f] underline underline-offset-2"
+                  >
+                    {partner.url.replace("https://", "")}
+                  </a>
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

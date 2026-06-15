@@ -122,8 +122,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-dvag), "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-heading: var(--font-dvag), "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-be-vietnam), "Be Vietnam Pro", "Inter", "Segoe UI", sans-serif;
+  --font-heading: var(--font-be-vietnam), "Be Vietnam Pro", "Inter", "Segoe UI", sans-serif;
 
   /* Brand utilities */
   --color-brand-gold: var(--brand-gold);
@@ -190,7 +190,7 @@
     @apply border-border outline-ring/50;
   }
   html {
-    font-family: var(--font-dvag), "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-be-vietnam), "Be Vietnam Pro", "Inter", "Segoe UI", sans-serif;
     color: var(--text-default);
   }
   body {
@@ -213,10 +213,37 @@
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: 0;
+    text-wrap: balance;
+  }
+  p, li {
+    text-wrap: pretty;
   }
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
     color: var(--foreground);
   }
+}
+
+/* Swiper core */
+@import "swiper/css";
+@import "swiper/css/scrollbar";
+@import "swiper/css/autoplay";
+
+/* Swiper ratings scrollbar */
+.ratings-scrollbar {
+  position: static !important;
+  height: 6px !important;
+  border-radius: 9999px;
+  background: var(--border-default) !important;
+}
+.ratings-scrollbar .swiper-scrollbar-drag {
+  background: var(--brand-gold) !important;
+  border-radius: 9999px;
+  cursor: grab;
+  top: 0 !important;
+  height: 100% !important;
+}
+.ratings-scrollbar .swiper-scrollbar-drag:active {
+  cursor: grabbing;
 }
 
 @layer components {

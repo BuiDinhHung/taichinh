@@ -23,7 +23,7 @@ function BitmapIcon({
 }
 
 export function GrowthChartIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-growth.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-growth.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="3" {...props}>
@@ -37,7 +37,7 @@ export function GrowthChartIcon(props: IconProps) {
 }
 
 export function PiggyBankIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-piggy.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-piggy.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 140 120" fill="none" stroke="currentColor" strokeWidth="3" {...props}>
@@ -52,7 +52,7 @@ export function PiggyBankIcon(props: IconProps) {
 }
 
 export function FlexibleChoiceIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-advisor-arrows.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-advisor-arrows.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 140 120" fill="none" stroke="currentColor" strokeWidth="3" {...props}>
@@ -65,7 +65,7 @@ export function FlexibleChoiceIcon(props: IconProps) {
 }
 
 export function UmbrellaIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-umbrella.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-umbrella.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="3" {...props}>
@@ -77,7 +77,7 @@ export function UmbrellaIcon(props: IconProps) {
 }
 
 export function DirectionSignIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-signpost.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-signpost.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinejoin="round" {...props}>
@@ -89,7 +89,7 @@ export function DirectionSignIcon(props: IconProps) {
 }
 
 export function HandEuroIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-euro-hand.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-euro-hand.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -103,7 +103,7 @@ export function HandEuroIcon(props: IconProps) {
 }
 
 export function GovernmentSupportIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-bank.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-bank.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -119,7 +119,7 @@ export function GovernmentSupportIcon(props: IconProps) {
 }
 
 export function EuroCycleIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-euro-growth.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-euro-growth.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -134,7 +134,7 @@ export function EuroCycleIcon(props: IconProps) {
 }
 
 export function LockIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-lock.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-lock.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" {...props}>
@@ -147,7 +147,7 @@ export function LockIcon(props: IconProps) {
 }
 
 export function ProfileCircleIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-advisor-circle.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-advisor-circle.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" {...props}>
@@ -159,7 +159,7 @@ export function ProfileCircleIcon(props: IconProps) {
 }
 
 export function DocumentCheckIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-document-check.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-document-check.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinejoin="round" {...props}>
@@ -173,7 +173,7 @@ export function DocumentCheckIcon(props: IconProps) {
 }
 
 export function StopwatchIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-stopwatch.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-stopwatch.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" {...props}>
@@ -187,7 +187,7 @@ export function StopwatchIcon(props: IconProps) {
 }
 
 export function CycleIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-flexibility.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-flexibility.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -200,7 +200,7 @@ export function CycleIcon(props: IconProps) {
 }
 
 export function BrokenPlateIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-glass.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-glass.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -211,7 +211,7 @@ export function BrokenPlateIcon(props: IconProps) {
 }
 
 export function SofaIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-chair.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-chair.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -224,7 +224,7 @@ export function SofaIcon(props: IconProps) {
 }
 
 export function HouseLineIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-house.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-house.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -236,7 +236,7 @@ export function HouseLineIcon(props: IconProps) {
 }
 
 export function HouseCycleIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-house.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-house.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -248,7 +248,7 @@ export function HouseCycleIcon(props: IconProps) {
 }
 
 export function SolarPanelIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-solar.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-solar.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -262,7 +262,7 @@ export function SolarPanelIcon(props: IconProps) {
 }
 
 export function HealthCrossIcon(props: IconProps) {
-  return <BitmapIcon src="/images/image_new/icon-health.jpeg" className={props.className} />;
+  return <BitmapIcon src="/images/icon-health.png" className={props.className} />;
 
   return (
     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="4" strokeLinejoin="round" {...props}>
@@ -275,11 +275,11 @@ export function HealthCrossIcon(props: IconProps) {
 export function DwsLogoMark({ className = "" }: { className?: string }) {
   return (
     <Image
-      src="/images/image_new/logo-dws.jpeg"
+      src="/images/logo-dws.png"
       alt="DWS"
       width={218}
       height={107}
-      className={`h-auto w-auto object-contain ${className}`}
+      className={`h-auto w-auto bg-transparent object-contain ${className}`}
     />
   );
 }
@@ -287,11 +287,11 @@ export function DwsLogoMark({ className = "" }: { className?: string }) {
 export function AllianzLogoMark({ className = "" }: { className?: string }) {
   return (
     <Image
-      src="/images/image_new/logo-allianz-global-investors.jpeg"
+      src="/images/logo-allianz-global-investors.png"
       alt="Allianz Global Investors"
       width={229}
       height={101}
-      className={`h-auto w-auto object-contain ${className}`}
+      className={`h-auto w-auto bg-transparent object-contain ${className}`}
     />
   );
 }
@@ -299,11 +299,11 @@ export function AllianzLogoMark({ className = "" }: { className?: string }) {
 export function BadeniaLogoMark({ className = "" }: { className?: string }) {
   return (
     <Image
-      src="/images/image_new/logo-badenia.jpeg"
+      src="/images/logo-badenia.png"
       alt="Deutsche Bausparkasse Badenia"
       width={229}
       height={101}
-      className={`h-auto w-auto object-contain ${className}`}
+      className={`h-auto w-auto bg-transparent object-contain ${className}`}
     />
   );
 }
@@ -311,11 +311,11 @@ export function BadeniaLogoMark({ className = "" }: { className?: string }) {
 export function GeneraliLogoMark({ className = "" }: { className?: string }) {
   return (
     <Image
-      src="/images/image_new/logo-generali.jpeg"
+      src="/images/logo-generali.png"
       alt="Generali"
       width={113}
       height={87}
-      className={`h-auto w-auto object-contain ${className}`}
+      className={`h-auto w-auto bg-transparent object-contain ${className}`}
     />
   );
 }
@@ -323,11 +323,11 @@ export function GeneraliLogoMark({ className = "" }: { className?: string }) {
 export function FingerHausLogoMark({ className = "" }: { className?: string }) {
   return (
     <Image
-      src="/images/image_new/logo-fingerhaus.jpeg"
+      src="/images/logo-fingerhaus.png"
       alt="FingerHaus"
       width={237}
       height={115}
-      className={`h-auto w-auto object-contain ${className}`}
+      className={`h-auto w-auto bg-transparent object-contain ${className}`}
     />
   );
 }

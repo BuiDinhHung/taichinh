@@ -3,26 +3,31 @@ import Link from "next/link";
 
 export function AboutContactSection() {
   return (
-    <section className="bg-white py-6 sm:py-8 lg:py-10">
-      <div className="dvag-container grid gap-6 sm:gap-8 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-12 xl:grid-cols-[360px_minmax(0,1fr)]">
-        <aside className="max-w-[420px] text-brand-blue-deep lg:max-w-none">
-          <Image
-            src="/images/logo-dark.png"
-            alt="taichinh.de"
-            width={300}
-            height={78}
-            className="h-auto w-[150px] max-w-full sm:w-[190px]"
-          />
-          <p className="mt-2.5 text-sm font-bold leading-tight text-brand-gold sm:mt-3 sm:text-base">
-            Büro für Deutsche
-            <br />
-            Vermögensberatung
-          </p>
+    <section className="bg-white">
+      <div className="grid min-h-[420px] lg:grid-cols-[2fr_3fr]">
+        <aside
+          className="flex flex-col justify-center py-10 lg:py-14"
+          style={{ paddingLeft: "clamp(1rem, 5vw, 5rem)", paddingRight: "clamp(1rem, 3vw, 3rem)" }}
+        >
+          <div className="flex items-center gap-4">
+            <Image
+              src="/images/dvag-emblem.png"
+              alt="DVAG Emblem"
+              width={80}
+              height={80}
+              className="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20"
+            />
+            <p className="text-base font-bold leading-snug text-brand-gold sm:text-lg">
+              Büro für Deutsche
+              <br />
+              Vermögensberatung
+            </p>
+          </div>
 
-          <div className="mt-5 space-y-3 text-[0.86rem] leading-relaxed sm:mt-7 sm:space-y-4 sm:text-sm sm:leading-snug">
+          <div className="mt-8 space-y-4 text-[0.88rem] leading-relaxed text-brand-blue-deep sm:text-sm">
             <div>
-              <h2 className="text-[0.95rem] font-bold sm:text-base">Bao Vu The</h2>
-              <p className="mt-1">Vermögensberater</p>
+              <h2 className="text-[0.95rem] font-bold text-brand-blue-deep sm:text-base">Bao Vu The</h2>
+              <p>Vermögensberater</p>
             </div>
 
             <p>
@@ -40,21 +45,27 @@ export function AboutContactSection() {
             </p>
 
             <p>
-              Mail: bao.vu-the.3625100@dvag.de
+              Mail:{" "}
+              <a href="mailto:bao.vu-the.3625100@dvag.de" className="hover:underline">
+                bao.vu-the.3625100@dvag.de
+              </a>
               <br />
-              Webseite: www.taichinh.de
+              Webseite:{" "}
+              <a href="https://www.taichinh.de" className="hover:underline">
+                www.taichinh.de
+              </a>
             </p>
 
             <div className="flex flex-col gap-3 min-[380px]:flex-row min-[380px]:items-start">
               <div className="min-w-0">
-                <p>Links & QR Online:</p>
-                <Link href="https://bit.ly/vuthebao" className="break-words underline">
+                <p>Links &amp; QR Online:</p>
+                <Link href="https://bit.ly/vuthebao" className="break-all underline hover:text-brand-gold-darker">
                   https://bit.ly/vuthebao
                 </Link>
               </div>
               <Image
                 src="/images/qr-vuthebao.png"
-                alt="QR Online https://bit.ly/vuthebao"
+                alt="QR https://bit.ly/vuthebao"
                 width={112}
                 height={112}
                 className="h-auto w-20 shrink-0"
@@ -63,12 +74,12 @@ export function AboutContactSection() {
           </div>
         </aside>
 
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-brand-gold-tint sm:aspect-[16/9]">
+        <div className="relative min-h-[280px] lg:min-h-full">
           <Image
-            src="/images/pdf-team-office.jpeg"
-            alt="Đội ngũ tư vấn tài chính đa diện"
+            src="/images/advisor-dvag-banner.jpeg"
+            alt="Tư vấn viên Vũ Thế Bảo - Büro für Deutsche Vermögensberatung"
             fill
-            sizes="(min-width: 1440px) 984px, (min-width: 1024px) calc(100vw - 440px), 100vw"
+            sizes="(min-width: 1024px) 60vw, 100vw"
             className="object-cover"
             priority
           />

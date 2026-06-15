@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import Link from "next/link";
 import { DirectionSignIcon, EuroCycleIcon, GovernmentSupportIcon } from "./MarketingAssets";
 
 const riesterBenefits = [
@@ -31,6 +32,12 @@ export function RiesterPensionArticle() {
             <p className="mt-16 text-2xl font-bold leading-snug">
               Các chương trình Hưu trí có hỗ trợ của nhà nước
             </p>
+            <Link
+              href="/dat-lich"
+              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
+            >
+              Đặt lịch tư vấn
+            </Link>
           </div>
         </div>
         <div className="relative min-h-[320px] lg:min-h-[520px]">

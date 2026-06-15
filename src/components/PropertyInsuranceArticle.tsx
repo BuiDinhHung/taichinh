@@ -21,7 +21,7 @@ const leisureItems = [
   "Súng săn và súng thể thao",
 ];
 
-export function PropertyInsuranceArticle() {
+export function PropertyInsuranceHero() {
   return (
     <article className="bg-white text-black">
       <section className="grid min-h-[500px] lg:grid-cols-[49%_51%]">
@@ -38,7 +38,7 @@ export function PropertyInsuranceArticle() {
             </p>
             <div className="mt-16 text-center">
               <Link href="/dat-lich" className="text-2xl font-bold text-brand-gold transition-colors hover:text-brand-gold/80">
-                Hẹn lịch tư vấn
+                Đặt lịch hẹn tư vấn
               </Link>
             </div>
           </div>
@@ -54,7 +54,13 @@ export function PropertyInsuranceArticle() {
           />
         </div>
       </section>
+    </article>
+  );
+}
 
+export function PropertyInsuranceBody() {
+  return (
+    <article className="bg-white text-black">
       <section className="bg-neutral-100 px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
@@ -113,5 +119,14 @@ export function PropertyInsuranceArticle() {
         </div>
       </section>
     </article>
+  );
+}
+
+export function PropertyInsuranceArticle() {
+  return (
+    <>
+      <PropertyInsuranceHero />
+      <PropertyInsuranceBody />
+    </>
   );
 }

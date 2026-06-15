@@ -11,7 +11,7 @@ const glassBenefits = [
 
 export function GlassInsuranceArticle() {
   return (
-    <article className="bg-white text-black">
+    <article className="bg-[#edf2f7] text-black">
       <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">

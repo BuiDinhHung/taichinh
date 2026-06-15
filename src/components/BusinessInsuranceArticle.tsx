@@ -91,7 +91,7 @@ export function BusinessInsuranceArticle() {
             </p>
             <div className="mt-10 text-center">
               <Link href="/dat-lich" className="text-2xl font-bold text-brand-gold hover:text-brand-gold/80">
-                Hẹn lịch tư vấn
+                Đặt lịch hẹn tư vấn
               </Link>
             </div>
           </div>

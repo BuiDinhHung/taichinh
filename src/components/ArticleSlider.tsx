@@ -74,7 +74,7 @@ export function ArticleSlider() {
               data-article-card
               className="group flex shrink-0 basis-[86%] flex-col overflow-hidden rounded-sm bg-white shadow-[0_2px_8px_rgba(0,0,0,0.06)] min-[420px]:basis-[78%] sm:basis-[58%] md:basis-[42%] lg:basis-[30%] dark:bg-card"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[3/2] overflow-hidden">
                 {item.unoptimizedImage ? (
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.04]"
@@ -88,7 +88,7 @@ export function ArticleSlider() {
                     alt={item.title}
                     fill
                     sizes="(min-width: 1024px) 30vw, (min-width: 640px) 58vw, 86vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 )}
               </div>

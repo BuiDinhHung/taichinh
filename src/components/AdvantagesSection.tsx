@@ -3,9 +3,9 @@ import { advantages } from "@/lib/content";
 import type { AdvantageColumn } from "@/types/content";
 
 const ICON_MAP: Record<AdvantageColumn["icon"], string> = {
-  wuensche: "/images/image_new/icon-shield.jpeg",
-  ganzheitlich: "/images/image_new/icon-euro-hand.jpeg",
-  gemeinsam: "/images/image_new/icon-handshake.jpeg",
+  wuensche: "/images/icon-shield.png",
+  ganzheitlich: "/images/icon-euro-hand.png",
+  gemeinsam: "/images/icon-handshake.png",
 };
 
 export function AdvantagesSection() {

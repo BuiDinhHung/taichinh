@@ -14,7 +14,7 @@ const homeCoverages = [
 
 export function HomeBuildingInsuranceArticle() {
   return (
-    <article className="bg-[#e8f0f9] text-black">
+    <article className="bg-brand-gold-tint text-black">
       <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">

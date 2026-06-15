@@ -9,7 +9,7 @@ import { ChatIcon, CloseIcon, MenuIcon, SearchIcon } from "@/components/icons";
 const germanProductsUrl = "https://www.dvag.de/dvag/allfinanzberatung/produkte.html";
 const mainNav = [
   { label: "Về chúng tôi", href: "/page/gioi-thieu" },
-  { label: "Sản phẩm của chúng tôi", href: "/san-pham" },
+  { label: "Lĩnh vực tư vấn", href: "/san-pham" },
   { label: "Liên hệ", href: "/dat-lich" },
   { label: "Tin mới", href: "/archive" },
 ];

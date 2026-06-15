@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import Link from "next/link";
 import { FlexibleChoiceIcon, HandEuroIcon, LockIcon } from "./MarketingAssets";
 
 const pillars = [
@@ -34,6 +35,12 @@ export function WealthProtectionArticle() {
             <p className="mt-10 text-xl leading-snug sm:text-2xl">
               Với sản phẩm bảo hiểm linh hoạt này, quý khách có thể xây dựng khối tài sản dài hạn cho mình. Kết hợp cùng một gói giải pháp toàn diện - bao gồm quyền lợi bảo vệ trước rủi ro mất khả năng lao động và quyền lợi cho người thụ hưởng, tùy chọn chăm sóc dài hạn (hoặc niên kim chăm sóc dài hạn), cùng sự bảo vệ trước các bệnh hiểm nghèo - Generali Deutschland Lebensversicherung mang đến sự che chở và bảo vệ cho quý khách ở mọi giai đoạn của cuộc đời.
             </p>
+            <Link
+              href="/dat-lich"
+              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
+            >
+              Đặt lịch tư vấn
+            </Link>
           </div>
         </div>
         <div className="relative min-h-[340px] lg:min-h-[520px]">

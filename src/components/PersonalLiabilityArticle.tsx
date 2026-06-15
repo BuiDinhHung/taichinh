@@ -3,7 +3,7 @@
 function DamageCycleIcon({ className = "" }: { className?: string }) {
   return (
     <Image
-      src="/images/image_new/icon-property-damage.jpeg"
+      src="/images/icon-property-damage.png"
       alt=""
       aria-hidden="true"
       width={160}

@@ -100,7 +100,7 @@ export function ArticleBody({
             const imageSrc = getImageSrc(block.src, idx);
             return (
               <figure key={key} className="my-8">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-brand-gold-tint">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-transparent">
                   <Image
                     src={imageSrc}
                     alt={block.alt ?? ""}

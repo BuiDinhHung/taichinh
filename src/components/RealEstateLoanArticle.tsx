@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import Link from "next/link";
 import { BadeniaLogoMark } from "./MarketingAssets";
 
 const steps = [
@@ -27,7 +28,7 @@ const steps = [
 function ImmoSmartSeal() {
   return (
     <Image
-      src="/images/image_new/badge-immosmart.jpeg"
+      src="/images/badge-immosmart.png"
       alt="ImmoSmart"
       width={339}
       height={339}
@@ -39,11 +40,11 @@ function ImmoSmartSeal() {
 function BankLogos() {
   return (
     <div className="mx-auto grid max-w-xl gap-12 text-center">
-      <Image src="/images/image_new/logo-deutsche-bank.jpeg" alt="Deutsche Bank" width={265} height={240} className="mx-auto h-auto max-h-28 w-auto object-contain" />
-      <Image src="/images/image_new/logo-commerzbank.jpeg" alt="Commerzbank" width={302} height={85} className="mx-auto h-auto max-h-20 w-auto object-contain" />
+      <Image src="/images/logo-deutsche-bank.png" alt="Deutsche Bank" width={265} height={240} className="mx-auto h-auto max-h-28 w-auto bg-transparent object-contain" />
+      <Image src="/images/logo-commerzbank.png" alt="Commerzbank" width={302} height={85} className="mx-auto h-auto max-h-20 w-auto bg-transparent object-contain" />
       <BadeniaLogoMark className="mx-auto max-h-24" />
-      <Image src="/images/image_new/logo-hypovereinsbank.jpeg" alt="HypoVereinsbank" width={268} height={76} className="mx-auto h-auto max-h-20 w-auto object-contain" />
-      <Image src="/images/image_new/logo-santander.jpeg" alt="Santander" width={281} height={86} className="mx-auto h-auto max-h-20 w-auto object-contain" />
+      <Image src="/images/logo-hypovereinsbank.png" alt="HypoVereinsbank" width={268} height={76} className="mx-auto h-auto max-h-20 w-auto bg-transparent object-contain" />
+      <Image src="/images/logo-santander.png" alt="Santander" width={281} height={86} className="mx-auto h-auto max-h-20 w-auto bg-transparent object-contain" />
     </div>
   );
 }
@@ -59,16 +60,22 @@ export function RealEstateLoanArticle() {
             <p className="mt-20 text-2xl leading-snug">
               Đối với nhiều người, mua bất động sản là một trong những quyết định quan trọng nhất trong cuộc đời. Chúng tôi luôn sát cánh cùng bạn với kinh nghiệm sâu rộng của mình. Với ImmoSmart - dịch vụ tài chính bất động sản tại Đức.
             </p>
+            <Link
+              href="/dat-lich"
+              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
+            >
+              Đặt lịch tư vấn
+            </Link>
           </div>
         </div>
         <div className="relative min-h-[320px] lg:min-h-[520px]">
           <Image
-            src="/images/article-10-tin-dung-bat-dong-san.jpeg"
+            src="/images/house-with-euros.jpeg"
             alt="Vay tín dụng mua bất động sản"
             fill
             priority
             sizes="(min-width: 1024px) 49vw, 100vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
         </div>
       </section>
@@ -109,6 +116,26 @@ export function RealEstateLoanArticle() {
 
           <div className="flex items-start justify-center pt-8 lg:pt-16">
             <ImmoSmartSeal />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-[10%] py-16">
+        <div className="mx-auto max-w-5xl text-center">
+          <h2 className="text-4xl font-bold leading-tight text-black">
+            Lãi suất ảnh hưởng thế nào đến khoản vay của bạn?
+          </h2>
+          <p className="mx-auto mt-6 max-w-3xl text-2xl leading-snug text-black">
+            Lãi suất thay đổi có thể khiến tổng chi phí vay tín dụng bất động sản tăng đáng kể. Hãy đặt lịch tư vấn sớm để chốt mức lãi suất tốt nhất!
+          </p>
+          <div className="mt-10">
+            <Image
+              src="/images/interest-rate-chart.jpeg"
+              alt="Biểu đồ so sánh lãi suất vay tín dụng bất động sản"
+              width={1100}
+              height={620}
+              className="mx-auto h-auto w-full max-w-4xl object-contain"
+            />
           </div>
         </div>
       </section>

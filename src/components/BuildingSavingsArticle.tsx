@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import Link from "next/link";
 import { BadeniaLogoMark, DocumentCheckIcon, HandEuroIcon, ProfileCircleIcon } from "./MarketingAssets";
 
 const benefits = [
@@ -22,7 +23,7 @@ const benefits = [
 function ImmoStartDiagram() {
   return (
     <Image
-      src="/images/image_new/bauspar-immostart-diagram.jpeg"
+      src="/images/bauspar-immostart-diagram.jpeg"
       alt="Sơ đồ ImmoStart Badenia"
       width={962}
       height={541}
@@ -165,6 +166,12 @@ export function BuildingSavingsArticle() {
             <p className="mt-14 max-w-3xl text-2xl leading-snug">
               Hãy đặt nền móng ngay từ bây giờ cho một giải pháp tài chính ổn định, linh hoạt và an toàn thông qua hợp đồng tiết kiệm xây dựng. Nhờ hình thức tiết kiệm này, bạn có thể chuẩn bị một cách có hệ thống và có chủ đích cho kế hoạch tài chính ngôi nhà của mình, tận dụng các khoản trợ cấp từ chính phủ, đồng thời đảm bảo quyền được hưởng một khoản vay xây dựng với lãi suất ưu đãi.
             </p>
+            <Link
+              href="/dat-lich"
+              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
+            >
+              Đặt lịch tư vấn
+            </Link>
           </div>
         </div>
         <div className="relative min-h-[340px] lg:min-h-[560px]">

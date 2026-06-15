@@ -67,7 +67,7 @@ export function HeroSlider({ slides, autoPlayInterval = 6000 }: HeroSliderProps)
               fill
               priority={index === 0}
               sizes="100vw"
-              className="z-[1] object-contain"
+              className="z-[1] object-cover"
               style={{ objectPosition: slide.imagePosition ?? "center center" }}
             />
 
