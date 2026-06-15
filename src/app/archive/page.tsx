@@ -104,7 +104,7 @@ export default function ArchivePage() {
                   href={item.href}
                   className="group flex gap-5 overflow-hidden rounded-xl border border-brand-gold/20 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5"
                 >
-                  <div className="relative h-28 w-40 shrink-0 overflow-hidden rounded-lg sm:h-32 sm:w-48">
+                  <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-lg sm:h-32 sm:w-48">
                     <Image
                       src={item.image}
                       alt={item.title}

@@ -21,16 +21,16 @@ export function AwardsSection() {
   return (
     <section className="bg-brand-gold-tint py-12 lg:py-14">
       <div className="dvag-container">
-        <div className="space-y-10">
+        <div className="space-y-8">
           {awards.map((award) => (
-            <article key={award.title} className="grid items-center gap-7 md:grid-cols-[180px_minmax(0,1fr)] lg:gap-10">
-              <div className="flex justify-center md:justify-start">
+            <article key={award.title} className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-center sm:gap-7 sm:text-left md:grid md:grid-cols-[180px_minmax(0,1fr)] md:gap-10">
+              <div className="flex shrink-0 justify-center">
                 <Image
                   src={award.image}
                   alt={award.imageAlt}
                   width={160}
                   height={160}
-                  className="max-h-32 w-auto object-contain"
+                  className="max-h-28 w-auto object-contain sm:max-h-32"
                 />
               </div>
               <div>

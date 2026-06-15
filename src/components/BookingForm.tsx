@@ -41,7 +41,7 @@ export function BookingForm() {
   const errorClass = (cond: boolean) =>
     cond && touched ? " border-brand-red focus:ring-brand-red/30" : "";
   const actionBase =
-    "inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-6 py-3 text-base font-bold text-white transition-colors";
+    "inline-flex w-full min-h-12 items-center justify-center gap-2 rounded-md px-6 py-3 text-base font-bold text-white transition-colors sm:w-auto";
 
   return (
     <form className="space-y-5" onSubmit={(e) => e.preventDefault()} noValidate>

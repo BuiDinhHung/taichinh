@@ -5,8 +5,8 @@ import { copyright, footerColumns } from "@/lib/content";
 export function Footer() {
   return (
     <footer className="bg-[#f5f2eb] text-[#333]">
-      <div className="dvag-container py-12 lg:py-16">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+      <div className="dvag-container py-8 sm:py-12 lg:py-16">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4 lg:gap-12">
           {/* Brand + contact column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Image

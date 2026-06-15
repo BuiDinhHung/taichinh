@@ -21,7 +21,7 @@ export default function DatLichPage() {
               <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
                 Đặt lịch tư vấn
               </p>
-              <h1 className="mt-2 text-3xl font-bold leading-tight tracking-tight text-text-strong sm:text-4xl lg:text-5xl dark:text-foreground">
+              <h1 className="mt-2 text-2xl font-bold leading-tight tracking-tight text-text-strong sm:text-4xl lg:text-5xl dark:text-foreground">
                 Tư vấn miễn phí, không ràng buộc
               </h1>
               <p className="mt-4 text-base leading-relaxed text-text-default sm:text-lg dark:text-foreground/85">

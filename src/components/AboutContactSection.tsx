@@ -4,7 +4,7 @@ import Link from "next/link";
 export function AboutContactSection() {
   return (
     <section className="bg-white">
-      <div className="grid min-h-[420px] lg:grid-cols-[2fr_3fr]">
+      <div className="grid lg:min-h-[460px] lg:grid-cols-[2fr_3fr]">
         <aside
           className="flex flex-col justify-center py-10 lg:py-14"
           style={{ paddingLeft: "clamp(1rem, 5vw, 5rem)", paddingRight: "clamp(1rem, 3vw, 3rem)" }}

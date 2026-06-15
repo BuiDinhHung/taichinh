@@ -220,10 +220,10 @@ function ProductGrid({
 function SeriesIntro() {
   return (
     <header className="mx-auto max-w-5xl text-left">
-      <h1 className="text-xl font-bold leading-tight text-text-muted sm:text-2xl lg:text-3xl">
+      <h1 className="text-lg font-bold leading-tight text-text-muted sm:text-xl lg:text-3xl">
         {intro.headline}
       </h1>
-      <p className="mt-5 max-w-4xl text-sm leading-relaxed text-black sm:text-base">
+      <p className="mt-4 max-w-4xl text-sm leading-relaxed text-black sm:text-base">
         {intro.body}
       </p>
     </header>
