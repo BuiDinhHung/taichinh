@@ -32,7 +32,7 @@ export function TeaserSlider() {
               ))}
             </div>
             <p className="text-xs leading-snug text-brand-gold-darker">
-              aus über 115.000 Kundenbewertungen<br />für unsere Vermögensberater/-innen
+              aus über 40.000 Kundenbewertungen<br />für unsere Vermögensberater/-innen
             </p>
           </div>
         </div>
