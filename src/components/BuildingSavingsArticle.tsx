@@ -76,77 +76,23 @@ function ImmoStartDiagram() {
 }
 
 function InterestComparisonChart() {
-  const bars = [
-    {
-      rate: "0,95 %",
-      total: "214.667,35 €",
-      interest: "14.667,35 €",
-      monthly: "1.192,60 €",
-      interestHeight: "h-20",
-      monthlyHeight: "h-24",
-    },
-    {
-      rate: "3,5 %",
-      total: "257.357,71",
-      interest: "57.357,71 €",
-      monthly: "1.429,77 €",
-      interestHeight: "h-32",
-      monthlyHeight: "h-28",
-    },
-    {
-      rate: "5 %",
-      total: "284.685,71 €",
-      interest: "84.685,71 €",
-      monthly: "1.581,59 €",
-      interestHeight: "h-44",
-      monthlyHeight: "h-32",
-    },
-  ];
-
   return (
-    <section className="overflow-x-auto px-[10%] py-16">
-      <div className="mx-auto min-w-[920px] max-w-7xl">
-        <h2 className="text-4xl font-bold">Ví dụ so sánh sự chênh lệch lãi suất giữa 0,95% - 3% - 5% khác biệt thế nào!</h2>
-        <p className="mt-6 text-3xl">Mức vay tín dụng xây dựng 200.000 €, thời hạn 15 năm *</p>
-
-        <div className="relative mt-16 min-h-[620px]">
-          <div className="absolute left-0 top-20 h-[420px] w-px bg-black" />
-          <p className="absolute left-[-64px] top-60 -rotate-90 text-2xl text-neutral-600">Lãi suất trong 15 năm</p>
-
-          <div className="absolute left-10 right-44 top-[500px] h-px bg-black" />
-          <div className="absolute left-10 right-44 top-0 h-[430px]">
-            <div className="absolute left-8 top-28 w-[720px] -rotate-12 border-t-[6px] border-red-700" />
-            <p className="absolute left-8 top-12 -rotate-12 text-4xl text-red-700">
-              Lãi suất tăng = Chịu chi phí cao, Khả năng chi trả khó
-            </p>
-          </div>
-
-          <div className="absolute bottom-20 left-14 right-44 grid grid-cols-3 items-end gap-24">
-            {bars.map((bar) => (
-              <div key={bar.rate} className="relative flex flex-col items-center">
-                <div className="mb-4 rounded-[50%] border-[6px] border-red-600/75 px-8 py-5 text-center">
-                  <p className="text-2xl">Tổng chi phí</p>
-                  <p className="mt-3 text-3xl font-bold text-neutral-600">{bar.total}</p>
-                </div>
-                <div className={`flex w-56 items-center justify-center bg-[#f6c9bb] text-3xl font-bold text-neutral-600 ${bar.interestHeight}`}>
-                  {bar.interest}
-                </div>
-                <div className={`flex w-56 items-center justify-center bg-neutral-300 text-3xl font-bold ${bar.monthlyHeight}`}>
-                  {bar.monthly}
-                </div>
-                <p className="mt-4 text-3xl font-bold text-red-700">{bar.rate}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="absolute bottom-24 right-0 space-y-14 text-3xl">
-            <p>Tổng chi phí</p>
-            <p>Tiền Lãi</p>
-            <p>Mức trả góp<br />hàng tháng</p>
-            <p className="text-neutral-600">Lãi suất %</p>
-          </div>
-
-          <p className="absolute bottom-0 left-[-110px] text-xl">* Đây là ví dụ Annuitätendarlehen không cho một cam kết nào</p>
+    <section className="bg-white px-[10%] py-16">
+      <div className="mx-auto max-w-5xl text-center">
+        <h2 className="text-4xl font-bold leading-tight text-black">
+          Lãi suất ảnh hưởng thế nào đến khoản vay của bạn?
+        </h2>
+        <p className="mx-auto mt-6 max-w-3xl text-2xl leading-snug text-black">
+          Lãi suất thay đổi có thể khiến tổng chi phí vay tín dụng bất động sản tăng đáng kể. Hãy đặt lịch tư vấn sớm để chốt mức lãi suất tốt nhất!
+        </p>
+        <div className="mt-10">
+          <Image
+            src="/images/interest-rate-chart.jpeg"
+            alt="Biểu đồ so sánh lãi suất vay tín dụng bất động sản"
+            width={1100}
+            height={620}
+            className="mx-auto h-auto w-full max-w-4xl object-contain"
+          />
         </div>
       </div>
     </section>

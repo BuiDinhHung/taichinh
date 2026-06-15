@@ -120,26 +120,6 @@ export function RealEstateLoanArticle() {
         </div>
       </section>
 
-      <section className="bg-white px-[10%] py-16">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-4xl font-bold leading-tight text-black">
-            Lãi suất ảnh hưởng thế nào đến khoản vay của bạn?
-          </h2>
-          <p className="mx-auto mt-6 max-w-3xl text-2xl leading-snug text-black">
-            Lãi suất thay đổi có thể khiến tổng chi phí vay tín dụng bất động sản tăng đáng kể. Hãy đặt lịch tư vấn sớm để chốt mức lãi suất tốt nhất!
-          </p>
-          <div className="mt-10">
-            <Image
-              src="/images/interest-rate-chart.jpeg"
-              alt="Biểu đồ so sánh lãi suất vay tín dụng bất động sản"
-              width={1100}
-              height={620}
-              className="mx-auto h-auto w-full max-w-4xl object-contain"
-            />
-          </div>
-        </div>
-      </section>
-
       <section className="bg-neutral-100 px-[10%] py-16">
         <div className="mx-auto max-w-7xl">
           <p className="text-center text-4xl leading-tight">Lợi thế của bạn</p>
