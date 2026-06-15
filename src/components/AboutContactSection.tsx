@@ -76,8 +76,8 @@ export function AboutContactSection() {
 
         <div className="relative min-h-[280px] lg:min-h-full">
           <Image
-            src="/images/advisor-dvag-banner.jpeg"
-            alt="Tư vấn viên Vũ Thế Bảo - Büro für Deutsche Vermögensberatung"
+            src="/images/pdf-team-office.jpeg"
+            alt="Đội ngũ tư vấn - Büro für Deutsche Vermögensberatung"
             fill
             sizes="(min-width: 1024px) 60vw, 100vw"
             className="object-cover"
