@@ -26,7 +26,7 @@ function SmartEffectDiagram() {
       alt="SmartEffekt tối ưu hóa khoản vay"
       width={790}
       height={446}
-      className="mx-auto h-auto w-full max-w-2xl object-contain"
+      className="mx-auto h-auto w-full max-w-2xl object-contain mix-blend-multiply"
     />
   );
 

@@ -6,17 +6,19 @@ type IconProps = SVGProps<SVGSVGElement>;
 function BitmapIcon({
   src,
   className = "",
+  size = 160,
 }: {
   src: string;
   className?: string;
+  size?: number;
 }) {
   return (
     <Image
       src={src}
       alt=""
       aria-hidden="true"
-      width={160}
-      height={160}
+      width={size}
+      height={size}
       className={`object-contain ${className}`}
     />
   );

@@ -485,37 +485,13 @@ export default async function ArticlePage({
   }
 
   if (slug === "nguon-dien-gas-re") {
-    const energyCards = [
-      { src: "/images/gallery-04.jpeg", alt: "Kế hoạch cho tương lai con yêu", title: "Vì tương lai con em chúng ta", href: "/ke-hoach-cho-tuong-lai-con-yeu" },
-      { src: "/images/pdf-field-retirement.jpeg", alt: "Đầu tư vàng", title: "Đầu tư vàng, bạc – Một ý tưởng sáng giá", href: "/dau-tu-vao-vang-gold" },
-      { src: "/images/prefab-house-fingerhaus.jpeg", alt: "FingerHaus", title: "Đặt nền móng cho Ngôi nhà mơ ước của bạn", href: "/fingerhaus" },
-      { src: "/images/pdf-field-house.jpeg", alt: "Bảo hiểm hưu trí", title: "Tài chính chủ động – An nhiên tuổi già", href: "/bao-hiem-huu-tri" },
-    ];
     return (
       <>
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <EnergySupplierArticle />
           <RenewableEnergyArticle />
-          <section className="bg-white py-12 lg:py-16">
-            <div className="dvag-container">
-              <h2 className="text-center text-2xl font-bold uppercase tracking-wide text-black sm:text-3xl">
-                Những lĩnh vực tài chính đáng quan tâm
-              </h2>
-              <div className="mx-auto mt-8 grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4 lg:gap-x-10">
-                {energyCards.map((card) => (
-                  <Link key={card.href} href={card.href} className="group block text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
-                    <div className="relative aspect-[3/2] w-full overflow-hidden bg-brand-gold-tint">
-                      <Image src={card.src} alt={card.alt} fill sizes="(min-width: 1280px) 240px, (min-width: 640px) 25vw, 48vw" className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
-                    </div>
-                    <p className="mt-3 px-1 text-sm font-bold leading-snug text-black transition-colors group-hover:text-brand-gold sm:text-base">
-                      {card.title}
-                    </p>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>

@@ -184,7 +184,9 @@ export function BuildingSavingsArticle() {
           <p className="mt-10 text-xl text-neutral-500">
             Deutsche Bausparkasse Badenia AG<br />Badeniaplatz 1, 76189 Karlsruhe
           </p>
-          <BadeniaLogoMark className="mx-auto mt-8 max-w-sm lg:mx-0" />
+          <div className="mx-auto mt-8 w-[344px] max-w-full lg:mx-0">
+            <BadeniaLogoMark className="!w-full" />
+          </div>
         </div>
         <ImmoStartDiagram />
       </section>

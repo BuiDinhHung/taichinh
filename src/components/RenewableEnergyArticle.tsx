@@ -75,7 +75,7 @@ export function RenewableEnergyArticle() {
             </div>
           </div>
         </div>
-        <div className="relative min-h-[280px] lg:min-h-[470px]">
+        <div className="relative min-h-[252px] lg:min-h-[423px]">
           <Image
             src="/images/gallery-07.jpeg"
             alt="Máy bơm nhiệt"
@@ -88,7 +88,7 @@ export function RenewableEnergyArticle() {
       </section>
 
       <section className="grid lg:grid-cols-[48%_52%]">
-        <div className="relative min-h-[280px] lg:min-h-[470px]">
+        <div className="relative min-h-[252px] lg:min-h-[423px]">
           <Image
             src="/images/gallery-08.jpeg"
             alt="Năng lượng mặt trời cho nhà ở"

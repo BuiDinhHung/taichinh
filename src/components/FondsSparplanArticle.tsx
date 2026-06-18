@@ -5,8 +5,8 @@ import { AllianzLogoMark, DwsLogoMark, FlexibleChoiceIcon, GrowthChartIcon, Pigg
 function PartnerLogos() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-16 lg:gap-24">
-      <DwsLogoMark />
-      <AllianzLogoMark />
+      <DwsLogoMark className="h-16 lg:h-24" />
+      <AllianzLogoMark className="h-14 lg:h-20" />
     </div>
   );
 }
@@ -19,55 +19,50 @@ function CostAverageDiagram() {
         Hiệu ứng Cost-Average – tận dụng lợi ích từ việc tiết kiệm đều đặn
       </h3>
 
-      <div className="mt-10 grid gap-10 lg:grid-cols-3">
-        <div className="flex flex-col gap-4">
-          <Image
-            src="/images/fonds-monthly-to-fonds.jpeg"
-            alt="Tiết kiệm hàng tháng vào quỹ"
-            width={400}
-            height={280}
-            className="h-auto w-full object-contain"
-          />
-          <Image
-            src="/images/fonds-monthly-shares-chart.jpeg"
-            alt="Biểu đồ cổ phần hàng tháng"
-            width={400}
-            height={280}
-            className="h-auto w-full object-contain"
-          />
-        </div>
+      <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4">
+        {/* Hàng 1 */}
+        <Image
+          src="/images/fonds-monthly-to-fonds.jpeg"
+          alt="Tiết kiệm hàng tháng vào quỹ"
+          width={400}
+          height={280}
+          className="h-auto w-full object-contain"
+        />
+        <p className="self-center text-xl leading-snug text-black">
+          <strong>1.</strong> Là nhà đầu tư, bạn đầu tư một khoản tiền cố định mỗi tháng và mua cổ phần từ một quỹ đầu tư.
+        </p>
+        <Image
+          src="/images/fonds-cost-average.jpeg"
+          alt="Hiệu ứng Cost-Average – nhiều và ít cổ phần"
+          width={400}
+          height={220}
+          className="h-auto w-full object-contain"
+        />
+        <p className="self-center text-xl leading-snug text-black">
+          <strong>3.</strong> Nhờ vậy, bạn có thể đạt được giá mua trung bình thấp hơn đáng kể so với cổ phần quỹ của mình – một hiệu ứng có thể càng mạnh mẽ hơn theo thời gian.
+        </p>
 
-        <div className="space-y-36 text-2xl leading-snug text-black">
-          <p>
-            <strong>1.</strong> Là nhà đầu tư, bạn đầu tư một khoản tiền cố định mỗi tháng và mua cổ phần từ một quỹ đầu tư.
-          </p>
-          <p>
-            <strong>2.</strong> Tùy vào diễn biến giá, bạn sẽ nhận được nhiều hoặc ít cổ phần quỹ cho số tiền cố định của mình trong một tháng.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-8 text-2xl leading-snug text-black">
-          <Image
-            src="/images/fonds-cost-average.jpeg"
-            alt="Hiệu ứng Cost-Average – nhiều và ít cổ phần"
-            width={400}
-            height={220}
-            className="h-auto w-full object-contain"
-          />
-          <p>
-            <strong>3.</strong> Nhờ vậy, bạn có thể đạt được giá mua trung bình thấp hơn đáng kể so với cổ phần quỹ của mình – một hiệu ứng có thể càng mạnh mẽ hơn theo thời gian.
-          </p>
-          <Image
-            src="/images/fonds-one-time-vs-savings.jpeg"
-            alt="So sánh đầu tư một lần và tiết kiệm định kỳ"
-            width={400}
-            height={220}
-            className="h-auto w-full object-contain"
-          />
-          <p>
-            <strong>4.</strong> Bằng cách sử dụng hiệu ứng Trung bình Chi phí (Cost-Average), bạn có thể mua được nhiều cổ phần hơn cho số tiền đầu tư của mình theo thời gian.
-          </p>
-        </div>
+        {/* Hàng 2 */}
+        <Image
+          src="/images/fonds-monthly-shares-chart.jpeg"
+          alt="Biểu đồ cổ phần hàng tháng"
+          width={400}
+          height={280}
+          className="h-auto w-full object-contain"
+        />
+        <p className="self-center text-xl leading-snug text-black">
+          <strong>2.</strong> Tùy vào diễn biến giá, bạn sẽ nhận được nhiều hoặc ít cổ phần quỹ cho số tiền cố định của mình trong một tháng.
+        </p>
+        <Image
+          src="/images/fonds-one-time-vs-savings.jpeg"
+          alt="So sánh đầu tư một lần và tiết kiệm định kỳ"
+          width={400}
+          height={220}
+          className="h-auto w-full object-contain"
+        />
+        <p className="self-center text-xl leading-snug text-black">
+          <strong>4.</strong> Bằng cách sử dụng hiệu ứng Trung bình Chi phí (Cost-Average), bạn có thể mua được nhiều cổ phần hơn cho số tiền đầu tư của mình theo thời gian.
+        </p>
       </div>
     </section>
   );
@@ -162,9 +157,9 @@ export function FondsSparplanArticle() {
             <div className="flex justify-center lg:justify-end">
               <Link
                 href="/archive"
-                className="inline-flex min-h-20 w-full max-w-lg items-center justify-center bg-brand-gold px-6 text-center text-2xl leading-snug text-white transition-colors hover:bg-brand-gold-dark"
+                className="inline-flex min-h-10 w-full max-w-xs items-center justify-center rounded bg-brand-gold px-4 py-2 text-center text-sm leading-snug text-white transition-colors hover:bg-brand-gold-dark"
               >
-                Tìm hiểu: Quỹ đầu tư (Fonds) là gì?<br />Sự khác biệt giữa ETF và Fonds
+                Tìm hiểu: Quỹ đầu tư (Fonds) là gì? Sự khác biệt giữa ETF và Fonds
               </Link>
             </div>
           </div>

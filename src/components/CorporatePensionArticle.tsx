@@ -85,7 +85,7 @@ export function CorporatePensionArticle() {
 
             <aside className="grid content-start justify-center gap-20 pt-2">
               <BenefitSeal />
-              <GeneraliLogoMark className="text-center text-6xl" />
+              <GeneraliLogoMark className="w-64 max-w-full" />
             </aside>
           </div>
         </div>

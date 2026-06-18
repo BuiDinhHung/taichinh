@@ -39,12 +39,12 @@ function ImmoSmartSeal() {
 
 function BankLogos() {
   return (
-    <div className="mx-auto grid max-w-xl gap-12 text-center">
-      <Image src="/images/logo-deutsche-bank.png" alt="Deutsche Bank" width={265} height={240} className="mx-auto h-auto max-h-28 w-auto bg-transparent object-contain" />
-      <Image src="/images/logo-commerzbank.png" alt="Commerzbank" width={302} height={85} className="mx-auto h-auto max-h-20 w-auto bg-transparent object-contain" />
-      <BadeniaLogoMark className="mx-auto max-h-24" />
-      <Image src="/images/logo-hypovereinsbank.png" alt="HypoVereinsbank" width={268} height={76} className="mx-auto h-auto max-h-20 w-auto bg-transparent object-contain" />
-      <Image src="/images/logo-santander.png" alt="Santander" width={281} height={86} className="mx-auto h-auto max-h-20 w-auto bg-transparent object-contain" />
+    <div className="flex flex-col gap-8">
+      <Image src="/images/logo-deutsche-bank.png" alt="Deutsche Bank" width={265} height={240} className="h-auto w-auto max-h-[468px] self-start bg-transparent object-contain" />
+      <Image src="/images/logo-commerzbank.png" alt="Commerzbank" width={302} height={85} className="h-auto w-auto max-h-[336px] self-start ml-[15%] bg-transparent object-contain" />
+      <BadeniaLogoMark className="self-start max-h-[336px]" />
+      <Image src="/images/logo-hypovereinsbank.png" alt="HypoVereinsbank" width={268} height={76} className="h-auto w-auto max-h-72 self-start ml-[15%] bg-transparent object-contain" />
+      <Image src="/images/logo-santander.png" alt="Santander" width={281} height={86} className="h-auto w-auto max-h-72 self-start bg-transparent object-contain" />
     </div>
   );
 }

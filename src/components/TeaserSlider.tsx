@@ -23,7 +23,7 @@ export function TeaserSlider() {
           </div>
 
           <div className="flex flex-col items-center gap-2 rounded border border-divider bg-white px-6 py-4 text-center shadow-sm">
-            <p className="text-sm font-semibold leading-tight text-text-strong">4,89 von 5 Sternen</p>
+            <p className="text-sm font-semibold leading-tight text-text-strong">4,89 trên 5 sao</p>
             <div className="flex gap-1 text-brand-gold">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="h-7 w-7 fill-current" viewBox="0 0 20 20" aria-hidden="true">
@@ -32,7 +32,7 @@ export function TeaserSlider() {
               ))}
             </div>
             <p className="text-xs leading-snug text-brand-gold-darker">
-              aus über 40.000 Kundenbewertungen<br />für unsere Vermögensberater/-innen
+              từ hơn 40.000 đánh giá của khách hàng<br />dành cho các chuyên gia tư vấn tài chính của chúng tôi
             </p>
           </div>
         </div>

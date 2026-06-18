@@ -71,7 +71,9 @@ export function HealthInsuranceArticle() {
                 Adenauerring 7, 81737 München
               </p>
             </div>
-            <GeneraliLogoMark className="text-center text-6xl" />
+            <div className="w-[220px] max-w-full">
+              <GeneraliLogoMark className="!w-full" />
+            </div>
           </div>
         </div>
       </section>

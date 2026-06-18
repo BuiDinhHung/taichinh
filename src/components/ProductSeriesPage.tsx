@@ -243,11 +243,33 @@ export function ProductSeriesPage({ seriesSlug }: { seriesSlug: string }) {
 
   return (
     <article>
+      {showAll && (
+        <>
+          {/* Hero image */}
+          <div className="relative w-full" style={{ aspectRatio: "16/6" }}>
+            <Image
+              src="/images/hero-rooftop-v2.png"
+              alt="Lĩnh vực tư vấn tài chính"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-top"
+            />
+          </div>
+
+          {/* Intro text */}
+          <section className="bg-brand-gold-tint py-10 lg:py-14">
+            <div className="dvag-container">
+              <SeriesIntro />
+            </div>
+          </section>
+        </>
+      )}
+
       {(showAll || seriesSlug === "invest") && (
         <section className="bg-white py-8 lg:py-10">
           <div className="dvag-container">
-            {showAll && <SeriesIntro />}
-            <div className={showAll ? "mt-10" : ""}>
+            <div>
               <SectionTitle>Đầu tư - Tiết kiệm</SectionTitle>
               <ProductGrid cards={investCards} columns={4} />
             </div>
@@ -255,17 +277,8 @@ export function ProductSeriesPage({ seriesSlug }: { seriesSlug: string }) {
         </section>
       )}
 
-      {(showAll || seriesSlug === "insurance") && (
-        <section className="bg-brand-gold-tint py-10 lg:py-14">
-          <div className="dvag-container">
-            <SectionTitle>Bảo Hiểm</SectionTitle>
-            <ProductGrid cards={insuranceCards} columns={4} />
-          </div>
-        </section>
-      )}
-
       {(showAll || seriesSlug === "bauspar") && (
-        <section className="bg-[#edf2f7] py-10 lg:py-14">
+        <section className="bg-brand-gold-tint py-10 lg:py-14">
           <div className="dvag-container">
             <SectionTitle>Bất động sản</SectionTitle>
             <ProductGrid cards={realEstateCards} />
@@ -274,10 +287,19 @@ export function ProductSeriesPage({ seriesSlug }: { seriesSlug: string }) {
       )}
 
       {(showAll || seriesSlug === "energy") && (
-        <section className="bg-white py-10 lg:py-14">
+        <section className="bg-[#edf2f7] py-10 lg:py-14">
           <div className="dvag-container">
             <SectionTitle>Năng lượng</SectionTitle>
             <ProductGrid cards={energyCards} />
+          </div>
+        </section>
+      )}
+
+      {(showAll || seriesSlug === "insurance") && (
+        <section className="bg-white py-10 lg:py-14">
+          <div className="dvag-container">
+            <SectionTitle>Bảo Hiểm</SectionTitle>
+            <ProductGrid cards={insuranceCards} columns={4} />
           </div>
         </section>
       )}

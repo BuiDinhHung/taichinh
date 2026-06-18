@@ -65,7 +65,7 @@ export function ChildFutureArticle() {
             Chỉ với một kế hoạch tài chính thông minh - mọi ước mơ đều trong tầm tay.
           </h2>
 
-          <div className="relative mt-14 min-h-[520px]">
+          <div className="relative mt-14 min-h-[620px]">
             <div className="max-w-4xl text-2xl leading-snug">
               <h3 className="text-3xl font-bold">Tiết kiệm chỉ từ 25,00 € mỗi tháng - từ tiền trợ cấp trẻ em (Kindergeld)</h3>
 
@@ -92,12 +92,12 @@ export function ChildFutureArticle() {
               </div>
             </div>
 
-            <div className="pointer-events-none absolute bottom-0 right-0 hidden w-[42%] max-w-[620px] lg:block">
+            <div className="pointer-events-none absolute bottom-0 right-0 hidden w-[55%] max-w-[860px] lg:block">
               <Image
                 src="/images/child-toy-train.jpeg"
                 alt=""
-                width={720}
-                height={520}
+                width={860}
+                height={620}
                 className="h-auto w-full object-contain"
               />
             </div>

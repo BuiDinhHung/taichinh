@@ -8,41 +8,29 @@ import type { Swiper as SwiperType } from "swiper";
 import { StarIcon, CloseIcon } from "@/components/icons";
 import type { RatingMock } from "@/types/content";
 
-function NavBtn({ dir, btnRef }: { dir: "prev" | "next"; btnRef: React.RefObject<HTMLButtonElement | null> }) {
-  return (
-    <button
-      ref={btnRef}
-      aria-label={dir === "prev" ? "Trước" : "Tiếp"}
-      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border-default bg-white text-text-muted shadow-sm transition hover:border-brand-gold hover:text-brand-gold disabled:cursor-not-allowed disabled:opacity-30"
-    >
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
-        {dir === "prev"
-          ? <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-          : <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />}
-      </svg>
-    </button>
-  );
-}
-
-function RatingsSlider({ ratings, title }: { ratings: RatingMock[]; title: string }) {
+function RatingsSlider({ ratings }: { ratings: RatingMock[] }) {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
     <div>
-      {/* Title + arrows on same row */}
-      <div className="mb-6 flex items-center justify-between gap-4">
-        <h2 className="text-2xl font-bold text-text-strong sm:text-3xl">{title}</h2>
-        <div className="flex shrink-0 gap-2">
-          <NavBtn dir="prev" btnRef={prevRef} />
-          <NavBtn dir="next" btnRef={nextRef} />
-        </div>
+      {/* Header */}
+      <div className="mb-10 text-center">
+        <p className="text-xs font-bold uppercase tracking-wider text-brand-gold">
+          Đánh giá khách hàng
+        </p>
+        <h2 className="mt-3 text-3xl font-bold text-text-strong sm:text-4xl">
+          Khách hàng nói gì về chúng tôi
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-text-muted sm:text-base">
+          Lắng nghe chia sẻ thật từ cộng đồng người Việt tại Đức trong hành trình tài chính của họ.
+        </p>
       </div>
 
       {/* Swiper */}
       <Swiper
         modules={[Navigation, Scrollbar, A11y, Autoplay]}
-        spaceBetween={32}
+        spaceBetween={24}
         slidesPerView="auto"
         grabCursor
         loop
@@ -59,11 +47,11 @@ function RatingsSlider({ ratings, title }: { ratings: RatingMock[]; title: strin
       >
         {ratings.map((rating, i) => (
           <SwiperSlide key={`${rating.name}-${i}`} style={{ width: "300px" }}>
-            <article className="flex h-full flex-col gap-4 rounded-xl border border-border-default bg-white p-5">
+            <article className="flex h-full flex-col gap-4 rounded-xl border border-border-default bg-white p-5 shadow-sm">
               {/* Stars */}
-              <div className="flex gap-0.5">
+              <div className="flex gap-1">
                 {Array.from({ length: 5 }).map((_, j) => (
-                  <StarIcon key={j} className={`h-4 w-4 ${j < rating.stars ? "text-brand-gold" : "text-border-default"}`} />
+                  <StarIcon key={j} className={`h-5 w-5 ${j < rating.stars ? "text-brand-gold" : "text-border-default"}`} />
                 ))}
               </div>
               {/* Body */}
@@ -71,14 +59,9 @@ function RatingsSlider({ ratings, title }: { ratings: RatingMock[]; title: strin
                 &ldquo;{rating.body}&rdquo;
               </p>
               {/* Author */}
-              <div className="flex items-center gap-3 border-t border-divider pt-4">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-gold-tint text-sm font-bold text-brand-gold-darker">
-                  {rating.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-text-strong">{rating.name}</p>
-                  <p className="text-xs text-text-muted">{rating.location} · {rating.date}</p>
-                </div>
+              <div className="border-t border-divider pt-4">
+                <p className="text-sm font-bold text-text-strong">{rating.name}</p>
+                <p className="mt-0.5 text-xs text-text-muted">{rating.location} · {rating.date}</p>
               </div>
             </article>
           </SwiperSlide>
@@ -86,7 +69,7 @@ function RatingsSlider({ ratings, title }: { ratings: RatingMock[]; title: strin
       </Swiper>
 
       {/* Scrollbar */}
-      <div className="ratings-scrollbar mt-5 h-1.5 w-full overflow-hidden rounded-full bg-border-default" />
+      <div className="ratings-scrollbar mt-6 h-1.5 w-full overflow-hidden rounded-full bg-border-default" />
     </div>
   );
 }
@@ -94,9 +77,9 @@ function RatingsSlider({ ratings, title }: { ratings: RatingMock[]; title: strin
 /* ------------------------------------------------------------------ */
 export function RatingsSectionClient({ ratings }: { ratings: RatingMock[] }) {
   return (
-    <section id="danh-gia-khach-hang" className="bg-white py-12 sm:py-16 lg:py-20">
+    <section id="danh-gia-khach-hang" className="bg-[#f5f7fa] py-12 sm:py-16 lg:py-20">
       <div className="dvag-container">
-        <RatingsSlider ratings={ratings} title="Khách hàng nói gì về chúng tôi" />
+        <RatingsSlider ratings={ratings} />
 
         {/* CTA */}
         <div className="mt-10 text-center">

@@ -38,7 +38,7 @@ export function EnergySupplierArticle() {
             </p>
           </div>
         </div>
-        <div className="relative min-h-[320px] lg:min-h-[520px]">
+        <div className="relative min-h-[288px] lg:min-h-[468px]">
           <Image
             src="/images/gallery-09.jpeg"
             alt="Nguồn năng lượng Điện, Gas rẻ"
@@ -56,7 +56,7 @@ export function EnergySupplierArticle() {
             const Icon = item.icon;
             return (
               <div key={item.title} className="mx-auto max-w-sm">
-                <Icon className="mx-auto h-36 w-36 text-brand-gold lg:h-44 lg:w-44" />
+                <Icon className="mx-auto !h-[115px] !w-[115px] text-brand-gold lg:!h-[141px] lg:!w-[141px]" />
                 <h3 className="mt-6 text-2xl font-bold">{item.title}</h3>
                 <p className="mt-2 text-2xl leading-tight">{item.body}</p>
               </div>

@@ -6,7 +6,7 @@ export function AboutContactSection() {
     <section className="bg-white">
       <div className="grid lg:min-h-[460px] lg:grid-cols-[2fr_3fr]">
         <aside
-          className="flex flex-col justify-center py-10 lg:py-14"
+          className="flex flex-col justify-center bg-[#e8f0f9] py-10 lg:py-14"
           style={{ paddingLeft: "clamp(1rem, 5vw, 5rem)", paddingRight: "clamp(1rem, 3vw, 3rem)" }}
         >
           <div className="flex items-center gap-4">
@@ -24,12 +24,12 @@ export function AboutContactSection() {
             </p>
           </div>
 
-          <div className="mt-8 space-y-4 text-[0.88rem] leading-relaxed text-brand-blue-deep sm:text-sm">
-            <div>
-              <h2 className="text-[0.95rem] font-bold text-brand-blue-deep sm:text-base">Bao Vu The</h2>
-              <p>Vermögensberater</p>
-            </div>
+          <div className="mt-3 pl-20 text-[0.88rem] leading-relaxed text-brand-blue-deep sm:pl-24 sm:text-sm">
+            <h2 className="text-[0.95rem] font-bold text-brand-blue-deep sm:text-base">Bao Vu The</h2>
+            <p>Vermögensberater</p>
+          </div>
 
+          <div className="mt-6 space-y-4 text-[0.88rem] leading-relaxed text-brand-blue-deep sm:text-sm">
             <p>
               Proskauer Str. 13
               <br />
@@ -56,7 +56,7 @@ export function AboutContactSection() {
               </a>
             </p>
 
-            <div className="flex flex-col gap-3 min-[380px]:flex-row min-[380px]:items-start">
+            <div className="flex items-start gap-2">
               <div className="min-w-0">
                 <p>Links &amp; QR Online:</p>
                 <Link href="https://bit.ly/vuthebao" className="break-all underline hover:text-brand-gold-darker">

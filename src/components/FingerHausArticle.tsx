@@ -87,8 +87,8 @@ function AwardStack() {
 export function FingerHausArticle() {
   return (
     <article className="bg-white text-black">
-      <section className="grid min-h-[560px] lg:grid-cols-[51%_49%]">
-        <div className="flex items-center justify-center bg-[#e8f0f9] px-[10%] py-12">
+      <section className="grid min-h-[560px] lg:grid-cols-[63%_37%]">
+        <div className="flex items-center justify-center bg-[#e8f0f9] px-[6%] py-12">
           <div className="max-w-4xl text-center">
             <p className="text-4xl leading-tight">Ngôi nhà mơ ước của bạn</p>
             <h1 className="mt-20 text-4xl font-bold leading-tight sm:text-5xl">
@@ -120,7 +120,7 @@ export function FingerHausArticle() {
 
       <section className="bg-neutral-100 px-[10%] py-10 text-center">
         <p className="text-4xl leading-tight">Những lý do tuyệt vời</p>
-        <h2 className="mt-8 text-4xl font-bold leading-tight">
+        <h2 className="mt-8 text-3xl font-bold leading-tight sm:text-4xl">
           Để bạn chọn Công ty FingerHaus xây ngôi nhà theo yêu cầu của bạn
         </h2>
         <ul className="mx-auto mt-8 inline-block list-disc text-left text-2xl leading-snug">
@@ -134,7 +134,7 @@ export function FingerHausArticle() {
           {reasons.map((reason) => {
             const Icon = reason.icon;
             return (
-              <div key={reason.title} className="text-left">
+              <div key={reason.title} className="flex flex-col items-center text-center">
                 <Icon className="h-36 w-36 text-brand-gold" />
                 <h3 className="mt-8 text-2xl font-bold leading-tight">{reason.title}</h3>
                 <p className="mt-8 max-w-md text-2xl leading-snug">{reason.text}</p>
