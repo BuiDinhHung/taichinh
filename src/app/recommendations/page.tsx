@@ -189,10 +189,10 @@ function PartnerLogoMark({ logo, name }: { logo: PartnerLogo; name: string }) {
     <Image
       src={partnerLogoImages[logo]}
       alt={`${name} logo`}
-      width={260}
-      height={120}
-      sizes="260px"
-      className="max-h-24 w-auto bg-transparent object-contain"
+      width={280}
+      height={112}
+      sizes="280px"
+      className="max-h-28 max-w-[280px] bg-transparent object-contain"
     />
   );
 }
@@ -211,7 +211,7 @@ export default function RecommendationsPage() {
                   key={partner.name}
                   className="grid items-center gap-6 md:grid-cols-[260px_minmax(0,1fr)] lg:grid-cols-[300px_minmax(0,1fr)]"
                 >
-                  <div className="flex min-h-24 items-center justify-center md:justify-start">
+                  <div className="flex min-h-28 items-center justify-center md:justify-start">
                     <PartnerLogoMark logo={partner.logo} name={partner.name} />
                   </div>
                   <div className="max-w-[820px] text-black">

@@ -490,8 +490,6 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <EnergySupplierArticle />
-          <RenewableEnergyArticle />
-          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
       </>

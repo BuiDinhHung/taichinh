@@ -64,7 +64,7 @@ export function Header() {
               alt={siteName}
               width={230}
               height={54}
-              className="h-8 w-auto max-w-[160px] sm:h-9 sm:max-w-[200px] lg:h-10 lg:max-w-[210px] xl:h-11 xl:max-w-none"
+              className="h-6 w-auto max-w-[120px] sm:h-7 sm:max-w-[150px] lg:h-7 lg:max-w-[158px] xl:h-8 xl:max-w-none"
               priority
             />
           </Link>
@@ -141,7 +141,7 @@ export function Header() {
                 alt={siteName}
                 width={200}
                 height={48}
-                className="h-8 w-auto max-w-[176px] sm:h-9 sm:max-w-[220px]"
+                className="h-6 w-auto max-w-[132px] sm:h-7 sm:max-w-[165px]"
                 priority
               />
               <LanguageFlags compact />

@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="bg-[#f5f2eb] text-[#333]">
       <div className="dvag-container py-8 sm:py-12 lg:py-16">
         {/* 4-column balanced grid */}
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="relative left-[10%] grid w-[90%] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {/* Brand + contact column */}
           <div>
             <Image
@@ -51,7 +51,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-black/10">
-        <div className="dvag-container flex flex-wrap items-center justify-center gap-6 py-5 text-xs text-[#999]">
+        <div className="dvag-container relative left-[10%] flex w-[90%] flex-wrap items-center justify-center gap-6 py-5 text-xs text-[#999]">
           <p>{copyright}</p>
           <div className="flex gap-5">
             <Link href="/page/impressum" className="transition-colors hover:text-[#555]">
