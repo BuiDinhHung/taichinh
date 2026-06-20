@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ArticleBody } from "@/components/ArticleBody";
@@ -41,13 +42,19 @@ export default async function StaticPageRoute({
   const aboutTeamStartIndex = page.blocks.findIndex(
     (block) => block.type === "h2" && block.text === "Chúng tôi là",
   );
-  const blocks =
+
+  // For the about page, strip the leading hero image so we can render it full-width separately
+  const isAboutPage = slug === "gioi-thieu";
+  const aboutHeroBlock = isAboutPage && page.blocks[0]?.type === "img" ? page.blocks[0] : null;
+
+  const allBlocks =
     slug === "gioi-thieu" && aboutContactStartIndex > -1
       ? page.blocks.slice(0, aboutContactStartIndex)
       : slug === "gioi-thieu" && aboutTeamStartIndex > -1
         ? page.blocks.slice(0, aboutTeamStartIndex)
       : page.blocks;
-  const isAboutPage = slug === "gioi-thieu";
+
+  const blocks = isAboutPage && aboutHeroBlock ? allBlocks.slice(1) : allBlocks;
 
   return (
     <>
@@ -56,27 +63,42 @@ export default async function StaticPageRoute({
         {slug === "contact" ? (
           <ContactHero />
         ) : (
-          <article className="py-10 lg:py-14">
-            <div className="tc-container">
-              {!isAboutPage && (
-                <header className="mx-auto max-w-4xl text-center">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-foreground">
-                    {page.title}
-                  </h1>
-                </header>
-              )}
-              <div className={isAboutPage ? "mt-0" : "mx-auto mt-8 max-w-4xl"}>
-                <ArticleBody blocks={blocks} />
-              </div>
-            </div>
-            {isAboutPage && (
-              <div className="mt-14">
-                <AboutContactSection />
-                <TeamSection />
-                <AwardsSection />
-                <HomePartnersSection />
+          <article className="py-0">
+            {/* Full-width hero image for about page */}
+            {isAboutPage && aboutHeroBlock && (
+              <div className="relative w-full" style={{ aspectRatio: "21/9" }}>
+                <Image
+                  src={aboutHeroBlock.src}
+                  alt={aboutHeroBlock.alt ?? "Về chúng tôi"}
+                  fill
+                  priority
+                  sizes="100vw"
+                  className="object-cover object-top"
+                />
               </div>
             )}
+            <div className={isAboutPage ? "py-10 lg:py-14" : "py-10 lg:py-14"}>
+              <div className="tc-container">
+                {!isAboutPage && (
+                  <header className="mx-auto max-w-4xl text-center">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-foreground">
+                      {page.title}
+                    </h1>
+                  </header>
+                )}
+                <div className={isAboutPage ? "mt-0" : "mx-auto mt-8 max-w-4xl"}>
+                  <ArticleBody blocks={blocks} />
+                </div>
+              </div>
+              {isAboutPage && (
+                <div className="mt-14">
+                  <AboutContactSection />
+                  <TeamSection />
+                  <AwardsSection />
+                  <HomePartnersSection />
+                </div>
+              )}
+            </div>
           </article>
         )}
       </main>

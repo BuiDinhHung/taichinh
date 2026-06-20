@@ -6,48 +6,47 @@ export function Footer() {
   return (
     <footer className="bg-[#f5f2eb] text-[#333]">
       <div className="dvag-container py-8 sm:py-12 lg:py-16">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
-          {/* Brand + contact column — left */}
-          <div className="lg:max-w-[280px] lg:shrink-0">
+        {/* 4-column balanced grid */}
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          {/* Brand + contact column */}
+          <div>
             <Image
               src="/images/logo-dark.png"
               alt="taichinh.de"
               width={200}
               height={48}
-              className="h-auto w-[160px]"
+              className="h-auto w-[140px]"
             />
-            <p className="mt-5 text-sm leading-relaxed text-[#555]">
+            <p className="mt-4 text-sm leading-relaxed text-[#555]">
               Tư vấn tài chính chuyên nghiệp cho cộng đồng người Việt tại Đức.
             </p>
             <div className="mt-4 space-y-1.5 text-sm text-[#666]">
               <p>Tel: +49 30-4268859</p>
               <p>WhatsApp: 0176-10178768</p>
-              <p>bao.vu-the.3625100@dvag.de</p>
+              <p className="break-all">bao.vu-the.3625100@dvag.de</p>
             </div>
           </div>
 
-          {/* Nav columns — right */}
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-10 lg:gap-12">
-            {footerColumns.map((col) => (
-              <div key={col.title}>
-                <h3 className="text-xs font-bold uppercase tracking-widest text-brand-gold-darker">
-                  {col.title}
-                </h3>
-                <ul className="mt-5 flex flex-col gap-3">
-                  {col.links.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-[#555] transition-colors hover:text-[#111]"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          {/* Nav columns */}
+          {footerColumns.map((col) => (
+            <div key={col.title}>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-brand-gold-darker">
+                {col.title}
+              </h3>
+              <ul className="mt-5 flex flex-col gap-3">
+                {col.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-[#555] transition-colors hover:text-[#111]"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
 

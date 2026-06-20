@@ -30,8 +30,13 @@ function RatingsSlider({ ratings }: { ratings: RatingMock[] }) {
       {/* Swiper */}
       <Swiper
         modules={[Navigation, Scrollbar, A11y, Autoplay]}
-        spaceBetween={24}
-        slidesPerView="auto"
+        spaceBetween={28}
+        slidesPerView={1.15}
+        breakpoints={{
+          520:  { slidesPerView: 2,    spaceBetween: 24 },
+          768:  { slidesPerView: 3,    spaceBetween: 28 },
+          1024: { slidesPerView: 4,    spaceBetween: 32 },
+        }}
         grabCursor
         loop
         autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
@@ -46,7 +51,7 @@ function RatingsSlider({ ratings }: { ratings: RatingMock[] }) {
         scrollbar={{ el: ".ratings-scrollbar", draggable: true, hide: false }}
       >
         {ratings.map((rating, i) => (
-          <SwiperSlide key={`${rating.name}-${i}`} style={{ width: "300px" }}>
+          <SwiperSlide key={`${rating.name}-${i}`}>
             <article className="flex h-full flex-col gap-4 rounded-xl border border-border-default bg-white p-5 shadow-sm">
               {/* Stars */}
               <div className="flex gap-1">

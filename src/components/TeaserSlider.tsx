@@ -14,12 +14,6 @@ export function TeaserSlider() {
             >
               Đặt lịch tư vấn miễn phí
             </Link>
-            <Link
-              href="/quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban"
-              className="inline-flex min-h-9 items-center justify-center rounded-sm border border-brand-gold px-4 py-2 text-xs font-bold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint"
-            >
-              Tìm hiểu dịch vụ
-            </Link>
           </div>
 
           <div className="flex flex-col items-center gap-2 rounded border border-divider bg-white px-6 py-4 text-center shadow-sm">
@@ -32,7 +26,7 @@ export function TeaserSlider() {
               ))}
             </div>
             <p className="text-xs leading-snug text-brand-gold-darker">
-              từ hơn 40.000 đánh giá của khách hàng<br />dành cho các chuyên gia tư vấn tài chính của chúng tôi
+              từ 445 đánh giá của khách hàng<br />dành cho các chuyên gia tư vấn tài chính của chúng tôi
             </p>
           </div>
         </div>

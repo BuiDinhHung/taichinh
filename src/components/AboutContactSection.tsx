@@ -17,16 +17,16 @@ export function AboutContactSection() {
               height={80}
               className="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20"
             />
-            <p className="text-base font-bold leading-snug text-brand-gold sm:text-lg">
+            <p className="text-xl font-bold leading-snug text-brand-gold sm:text-2xl">
               Büro für Deutsche
               <br />
               Vermögensberatung
             </p>
           </div>
 
-          <div className="mt-3 pl-20 text-[0.88rem] leading-relaxed text-brand-blue-deep sm:pl-24 sm:text-sm">
-            <h2 className="text-[0.95rem] font-bold text-brand-blue-deep sm:text-base">Bao Vu The</h2>
-            <p>Vermögensberater</p>
+          <div className="mt-3 pl-20 leading-relaxed text-brand-blue-deep sm:pl-24">
+            <h2 className="text-lg font-bold text-brand-blue-deep sm:text-xl">Bao Vu The</h2>
+            <p className="text-base sm:text-lg">Vermögensberater</p>
           </div>
 
           <div className="mt-6 space-y-4 text-[0.88rem] leading-relaxed text-brand-blue-deep sm:text-sm">

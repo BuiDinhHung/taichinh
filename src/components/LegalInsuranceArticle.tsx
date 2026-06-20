@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 
 const legalBenefits = [
   "Tư vấn pháp lý qua điện thoại và trực tuyến miễn phí",
@@ -21,10 +21,12 @@ function AdvocardBadge() {
     />
   );
 }
+
 export function LegalInsuranceArticle() {
   return (
-    <article className="bg-neutral-100 text-black">
-      <section className="px-[10%] py-14 sm:py-16">
+    <article className="text-black">
+      {/* Hero section - light blue */}
+      <section className="bg-[#e8f0f9] px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             Bảo hiểm pháp lý- Rechtsschutzversicherung
@@ -39,8 +41,14 @@ export function LegalInsuranceArticle() {
             </div>
             <AdvocardBadge />
           </div>
+        </div>
+      </section>
 
-          <ul className="mt-14 max-w-6xl list-disc pl-6 text-2xl leading-snug">
+      {/* Benefits section - white */}
+      <section className="bg-white px-[10%] py-14 sm:py-16">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-3xl font-bold text-[#1a1a1a]">Quyền lợi bảo hiểm</h2>
+          <ul className="mt-10 max-w-6xl list-disc pl-6 text-2xl leading-snug space-y-3">
             {legalBenefits.map((item) => (
               <li key={item}>{item}</li>
             ))}

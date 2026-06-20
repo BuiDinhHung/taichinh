@@ -62,48 +62,48 @@ export function WealthProtectionArticle() {
         </h2>
       </section>
 
-      <section className="px-[10%] pb-20">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
+      <section className="px-[10%] pb-16">
+        <div className="mx-auto grid max-w-3xl gap-10 lg:grid-cols-3">
           {pillars.map((pillar) => {
             const Icon = pillar.icon;
             return (
               <div key={pillar.title} className="text-center">
-                <Icon className="mx-auto h-32 w-32 text-brand-gold sm:h-40 sm:w-40" />
-                <h3 className="mt-8 text-2xl font-bold leading-tight sm:text-3xl">{pillar.title}</h3>
-                <p className="mx-auto mt-8 max-w-sm text-2xl leading-snug">{pillar.text}</p>
+                <Icon className="mx-auto h-20 w-20 text-brand-gold" />
+                <h3 className="mt-5 text-lg font-bold leading-tight">{pillar.title}</h3>
+                <p className="mx-auto mt-3 max-w-xs text-sm leading-relaxed sm:text-base">{pillar.text}</p>
               </div>
             );
           })}
         </div>
       </section>
 
-      <section className="px-[10%] pb-24">
-        <div className="mx-auto max-w-5xl space-y-10 text-2xl leading-snug">
+      <section className="px-[10%] pb-20">
+        <div className="mx-auto max-w-2xl space-y-8 text-sm leading-relaxed sm:text-base">
           <div>
-            <h2 className="text-3xl font-bold leading-tight">
+            <h2 className="text-base font-bold leading-snug sm:text-lg">
               Tiết kiệm dài hạn với lãi suất cao, linh hoạt, an toàn và có giá trị thế chấp để vay tiền mua bất động sản
             </h2>
-            <ul className="mt-8 list-disc space-y-1 pl-6">
-              <li>Đầu tư toàn bộ hoặc một phần tiền đóng vào quỹ đầu tư (Fonds)</li>
-              <li>Được phép chọn 10 trong 50 Quỹ (Fonds) và có thể thay đổi Quỹ</li>
-              <li>Thay đổi mức đóng hàng tháng, hoặc đóng thêm bất kỳ</li>
-              <li>Cho tạm ứng đến 8 lần trong thời gian hợp đồng</li>
-              <li>Lấy tiền ra bất cứ lúc nào</li>
-              <li>Có thể lấy bằng vàng</li>
-              <li>Có thể lấy hàng tháng dưới dạng lương hưu, một lần hoặc kết hợp cả hai</li>
-            </ul>
+            <div className="mt-4 space-y-1">
+              <p>• Đầu tư toàn bộ hoặc một phần tiền đóng vào quỹ đầu tư (Fonds)</p>
+              <p>• Được phép chọn 10 trong 50 Quỹ (Fonds) và có thể thay đổi Quỹ</p>
+              <p>• Thay đổi mức đóng hàng tháng, hoặc đóng thêm bất kỳ</p>
+              <p>• Cho tạm ứng đến 8 lần trong thời gian hợp đồng</p>
+              <p>• Lấy tiền ra bất cứ lúc nào</p>
+              <p>• Có thể lấy bằng vàng</p>
+              <p>• Có thể lấy hàng tháng dưới dạng lương hưu, một lần hoặc kết hợp cả hai</p>
+            </div>
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold leading-tight">
+            <h2 className="text-base font-bold leading-snug sm:text-lg">
               Kết hợp linh hoạt với các giải pháp tối ưu để đảm bảo quyền lợi không bị ảnh hưởng khi rủi ro xảy ra trong đời sống như:
             </h2>
-            <ul className="mt-8 list-disc space-y-1 pl-6">
-              <li>Mất sức lao động</li>
-              <li>Mắc bệnh hiểm nghèo</li>
-              <li>Tình trạng cần chăm sóc</li>
-              <li>Trường hợp rủi ro</li>
-            </ul>
+            <div className="mt-4 space-y-1">
+              <p>• Mất sức lao động</p>
+              <p>• Mắc bệnh hiểm nghèo</p>
+              <p>• Tình trạng cần chăm sóc</p>
+              <p>• Trường hợp rủi ro</p>
+            </div>
           </div>
         </div>
       </section>

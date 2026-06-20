@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,17 +17,33 @@ interface HeroSliderProps {
   autoPlayInterval?: number;
 }
 
-export function HeroSlider({ slides, autoPlayInterval = 6000 }: HeroSliderProps) {
+export function HeroSlider({ slides, autoPlayInterval = 5000 }: HeroSliderProps) {
   const [current, setCurrent] = useState(0);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const goNext = useCallback(() => {
     setCurrent((prev) => (prev + 1) % slides.length);
   }, [slides.length]);
 
+  const goPrev = useCallback(() => {
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+  }, [slides.length]);
+
+  const goTo = useCallback((index: number) => {
+    setCurrent(index);
+  }, []);
+
+  const resetInterval = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(goNext, autoPlayInterval);
+  }, [goNext, autoPlayInterval]);
+
   useEffect(() => {
-    const id = setTimeout(goNext, autoPlayInterval);
-    return () => clearTimeout(id);
-  }, [current, goNext, autoPlayInterval]);
+    resetInterval();
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [resetInterval]);
 
   if (slides.length === 0) return null;
 
@@ -96,16 +112,38 @@ export function HeroSlider({ slides, autoPlayInterval = 6000 }: HeroSliderProps)
         ))}
       </div>
 
+      {/* Prev / Next arrows */}
+      {slides.length > 1 && (
+        <>
+          <button
+            type="button"
+            aria-label="Slide trước"
+            onClick={() => { goPrev(); resetInterval(); }}
+            className="absolute left-3 top-1/2 z-10 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-black shadow-md backdrop-blur-sm transition hover:bg-white sm:left-5"
+          >
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+          </button>
+          <button
+            type="button"
+            aria-label="Slide tiếp theo"
+            onClick={() => { goNext(); resetInterval(); }}
+            className="absolute right-3 top-1/2 z-10 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-black shadow-md backdrop-blur-sm transition hover:bg-white sm:right-5"
+          >
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+          </button>
+        </>
+      )}
+
       {/* Navigation dots */}
       {slides.length > 1 && (
-        <div className="absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full bg-white/80 px-3 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md sm:bottom-4 sm:top-auto">
+        <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 flex items-center gap-2 rounded-full bg-white/80 px-3 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md">
           {slides.map((_, index) => (
             <button
               key={index}
               type="button"
               aria-label={`Chuyển sang slide ${index + 1}`}
-              onClick={() => setCurrent(index)}
-              className={`block h-2 w-2 rounded-full transition-colors duration-300 ${
+              onClick={() => { goTo(index); resetInterval(); }}
+              className={`block h-2 w-2 rounded-full transition-all duration-300 ${
                 index === current
                   ? "bg-brand-gold scale-125"
                   : "bg-brand-gold/40 hover:bg-brand-gold/70"

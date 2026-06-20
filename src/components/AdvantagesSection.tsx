@@ -30,7 +30,7 @@ export function AdvantagesSection() {
                 aria-hidden="true"
                 width={120}
                 height={120}
-                className="mx-auto h-16 w-16 object-contain"
+                className="mx-auto h-24 w-24 object-contain"
               />
               <h3 className="mt-5 text-base font-bold leading-snug text-text-strong">
                 {adv.headline}

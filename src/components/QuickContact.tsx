@@ -11,8 +11,8 @@ export function QuickContact() {
       Icon: PhoneIcon,
     },
     {
-      label: "WhatsApp / Zalo",
-      value: CONTACT.mobileDisplay,
+      label: "WhatsApp / Zalo · Di động",
+      value: `${CONTACT.mobileDisplay} / 0176-10178768`,
       href: `https://wa.me/${CONTACT.mobileWhatsApp}`,
       Icon: WhatsAppIcon,
     },

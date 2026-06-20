@@ -15,14 +15,14 @@ export function KloppSection() {
               height={78}
               className="h-auto w-[280px] max-w-full sm:w-[320px]"
             />
-            <p className="text-xl font-bold leading-tight text-brand-gold">
+            <p className="text-2xl font-bold leading-tight text-brand-gold sm:text-3xl">
               Büro für Deutsche
               <br />
               Vermögensberatung
             </p>
           </div>
-          <h2 className="text-2xl font-bold text-brand-blue-deep">Bao Vu The</h2>
-          <p className="mt-1 text-base">Vermögensberater</p>
+          <h2 className="text-3xl font-bold text-brand-blue-deep sm:text-4xl">Bao Vu The</h2>
+          <p className="mt-1 text-lg sm:text-xl">Vermögensberater</p>
           <div className="mt-7 space-y-5 text-lg leading-snug">
             <p>
               Proskauer Str. 13

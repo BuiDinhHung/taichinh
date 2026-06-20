@@ -96,6 +96,16 @@ export const heroSlides = [
     },
     imagePosition: "center center",
   },
+  {
+    eyebrow: "",
+    headline: "Giá trị bền vững cho tương lai",
+    cta: { label: "Về chúng tôi", href: "/page/gioi-thieu" } as CTA,
+    image: {
+      src: "/images/hero-ve-chung-toi.jpeg",
+      alt: "Về chúng tôi - taichinh.de",
+    },
+    imagePosition: "center center",
+  },
 ];
 
 export const heroContent = heroSlides[0];
@@ -104,15 +114,12 @@ export const finanzcoachingSection = {
   eyebrow: "",
   headline: "Tư vấn tài chính chuyên nghiệp. Giá trị bền vững cho tương lai",
   bodyParagraphs: [
-    "Một nền tảng tài chính vững mạnh là tiền đề quan trọng giúp mỗi cá nhân chủ động xây dựng tương lai ổn định và bền vững.",
-    "Văn phòng Tư vấn Tài chính Vũ Thế Bảo trực thuộc Deutsche Vermögensberatung (DVAG) - là tập đoàn tư vấn tài chính uy tín hàng đầu tại Đức.",
-    "Với hơn 50 năm kinh nghiệm hoạt động cùng đội ngũ gần 20.000 chuyên viên tư vấn trên toàn quốc, DVAG hiện đang đồng hành cùng khoảng 8 triệu khách hàng tại Đức trong việc hoạch định và bảo vệ tương lai tài chính của họ.",
-    "Chúng tôi cung cấp các giải pháp tư vấn tài chính toàn diện và chuyên sâu trong các lĩnh vực: Đầu tư - Tiết kiệm, Bảo hiểm, Bất động sản, lập kế hoạch hưu trí và hoạch định tài chính dài hạn.",
-    "Thông qua quy trình tư vấn cá nhân hóa, minh bạch và định hướng dài hạn, chúng tôi hỗ trợ khách hàng đưa ra những quyết định tài chính phù hợp, hiệu quả và bền vững theo từng giai đoạn của cuộc sống.",
-    "Với tinh thần trách nhiệm, tính chuyên nghiệp và cam kết đồng hành lâu dài, chúng tôi hướng tới mục tiêu xây dựng những giá trị tài chính ổn định và bền vững cho mỗi khách hàng và gia đình của họ.",
+    "Văn phòng Tư vấn Tài chính Vũ Thế Bảo trực thuộc Deutsche Vermögensberatung (DVAG) — tập đoàn tư vấn tài chính uy tín hàng đầu tại Đức với hơn 50 năm kinh nghiệm và gần 20.000 chuyên viên tư vấn trên toàn quốc.",
+    "Chúng tôi cung cấp giải pháp toàn diện trong các lĩnh vực: Đầu tư - Tiết kiệm, Bảo hiểm, Bất động sản, lập kế hoạch hưu trí và hoạch định tài chính dài hạn cho cộng đồng người Việt tại Đức.",
+    "Với quy trình tư vấn cá nhân hóa, minh bạch và định hướng dài hạn, chúng tôi đồng hành cùng khách hàng xây dựng nền tảng tài chính ổn định và bền vững cho mỗi giai đoạn của cuộc sống.",
   ],
   primaryCta: { label: "Đặt lịch tư vấn miễn phí", href: "/dat-lich" } as CTA,
-  secondaryCta: { label: "Tìm hiểu dịch vụ", href: "/quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban" } as CTA,
+  secondaryCta: { label: "Tìm hiểu dịch vụ", href: "/archive" } as CTA,
   ratingsBadgeAlt: "Đánh giá khách hàng 5 sao",
 };
 
@@ -254,14 +261,6 @@ export const articles: Article[] = [
     image: "/images/article-02-tich-luy-fondspolice.jpeg",
   },
   {
-    slug: "quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban",
-    title: "Tư vấn chuyên nghiệp tài chính của bạn",
-    date: "May 6, 2025",
-    excerpt:
-      "Chào mừng bạn đến với trang web taichinh.de của chúng tôi. Trang taichinh.de cung cấp thông tin chính xác và cập nhật về các lĩnh vực ĐẦU TƯ – TIẾT KIỆM, BẢO HIỂM, QUỸ XÂY DỰNG, NGÂN HÀNG và NĂNG LƯỢNG (ga, điện) dành cho cộng đồng người Việt tại Đức.",
-    image: "/images/article-03-tu-van-chuyen-nghiep.jpeg",
-  },
-  {
     slug: "tiet-kiem-xay-dung",
     title: "Tiết kiệm xây dựng - Bauspar",
     date: "Mar 31, 2025",
@@ -325,7 +324,7 @@ export const articles: Article[] = [
     slug: "tin-dung-ca-nhan",
     title: "Tín dụng cá nhân - Privatkredit",
     date: "Mar 27, 2025",
-    image: "/images/4.jpeg",
+    image: "/images/4.png",
   },
   {
     slug: "bao-hiem-y-te",
@@ -379,7 +378,7 @@ export const articles: Article[] = [
     slug: "bao-hiem-tai-nan",
     title: "Bảo hiểm tai nạn",
     date: "Mar 21, 2025",
-    image: "/images/3.jpeg",
+    image: "/images/3.png",
   },
   {
     slug: "bao-hiem-mat-suc-lao-dong",
@@ -403,7 +402,6 @@ export const articles: Article[] = [
  */
 const SLUG_TO_CATEGORY: Record<string, string> = {
   "cai-cach-che-do-huu-tri-tu-nhan-riester": "Bảo hiểm",
-  "quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban": "Đầu tư – Tiết kiệm",
   "ke-hoach-cho-tuong-lai-con-yeu": "Đầu tư – Tiết kiệm",
   "tich-luy-tai-chinh-and-bao-hiem-ho-tro-fondspolice": "Đầu tư – Tiết kiệm",
   "dau-tu-vao-quy-fonds-sparsplan": "Đầu tư – Tiết kiệm",

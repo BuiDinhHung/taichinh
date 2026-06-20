@@ -1,35 +1,34 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export function ChildFutureArticle() {
   return (
     <article className="bg-white text-black">
-      <section className="grid min-h-[520px] lg:grid-cols-[55%_45%]">
+      {/* Section 1: hero split */}
+      <section className="grid min-h-[460px] lg:grid-cols-[55%_45%]">
         <div className="flex items-center justify-center bg-[#e8f0f9] px-[10%] py-12">
-          <div className="max-w-4xl">
-            <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl">
+          <div className="w-full max-w-lg">
+            <h1 className="text-center text-3xl font-bold leading-tight sm:text-4xl">
               Kế hoạch cho tương lai của tôi
             </h1>
-
-            <div className="mt-20 text-2xl leading-snug">
-              <h2 className="text-3xl font-bold">Bạn đã chuẩn bị tài chính cho tương lai của con chưa?</h2>
-              <ul className="mt-10 list-disc space-y-2 pl-6">
-                <li><strong>16 tuổi</strong> - con bạn cần <strong>4.000 €</strong> để <strong>học lái xe?</strong></li>
-                <li><strong>18 tuổi</strong> - con bạn cần <strong>10.000 €</strong> để <strong>du học</strong> hoặc nâng cao kiến thức tại Mỹ hay Anh?</li>
-                <li><strong>20 tuổi</strong> - con bạn cần <strong>12.000 €</strong> để <strong>bắt đầu sống tự lập</strong> với căn hộ riêng?</li>
-                <li><strong>25 tuổi</strong> - con bạn cần <strong>15.000 €</strong> để <strong>mua ô tô</strong> và xây dựng cuộc sống riêng?</li>
-              </ul>
+            <div className="mt-8 text-sm leading-relaxed sm:text-base">
+              <p className="font-bold">Bạn đã chuẩn bị tài chính cho tương lai của con chưa?</p>
+              <div className="mt-3 space-y-1">
+                <p>• <strong>16 tuổi</strong> – con bạn cần <strong>4.000 €</strong> để <strong>học lái xe</strong>?</p>
+                <p>• <strong>18 tuổi</strong> – con bạn cần <strong>10.000 €</strong> để <strong>du học</strong> hoặc nâng cao kiến thức tại Mỹ hay Anh?</p>
+                <p>• <strong>20 tuổi</strong> – con bạn cần <strong>12.000 €</strong> để <strong>bắt đầu sống tự lập</strong> với căn hộ riêng?</p>
+                <p>• <strong>25 tuổi</strong> – con bạn cần <strong>15.000 €</strong> để <strong>mua ô tô</strong> và xây dựng cuộc sống riêng?</p>
+              </div>
             </div>
             <Link
               href="/dat-lich"
-              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
+              className="mt-8 inline-flex items-center justify-center bg-brand-gold px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-gold-dark"
             >
               Đặt lịch tư vấn
             </Link>
           </div>
         </div>
-
-        <div className="relative min-h-[340px] lg:min-h-[520px]">
+        <div className="relative min-h-[280px] lg:min-h-[460px]">
           <Image
             src="/images/gallery-04.jpeg"
             alt="Kế hoạch tài chính cho tương lai của con trẻ"
@@ -41,13 +40,15 @@ export function ChildFutureArticle() {
         </div>
       </section>
 
+      {/* Section 2: centered narrow text */}
       <section className="px-[10%] py-10 sm:py-12">
-        <div className="mx-auto max-w-7xl text-2xl leading-snug">
-          <h2 className="text-center text-4xl font-bold leading-tight">Giải pháp tiết kiệm linh hoạt cho trẻ em</h2>
-
-          <div className="mt-10 space-y-8">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-xl font-bold leading-tight sm:text-2xl">
+            Giải pháp tiết kiệm linh hoạt cho trẻ em
+          </h2>
+          <div className="mt-5 space-y-4 text-sm leading-relaxed sm:text-base">
             <p>
-              Điều quan trọng nhất đối với cha mẹ là con cái của mình. Với <strong><em>“Kế hoạch tương lai của tôi”</em></strong>, bạn có thể bắt đầu sớm việc tích lũy cho con - hiện nay còn có thể thông qua đầu tư vào vàng.
+              Điều quan trọng nhất đối với cha mẹ là con cái của mình. Với <strong><em>"Kế hoạch tương lai của tôi"</em></strong>, bạn có thể bắt đầu sớm việc tích lũy cho con – hiện nay còn có thể thông qua đầu tư vào vàng.
             </p>
             <p>
               Đồng thời, bạn cũng bảo vệ cho con trước những hệ quả của bệnh tật hoặc tai nạn, trong trường hợp xấu nhất có thể dẫn đến nhu cầu chăm sóc dài hạn, không thể đi học, thậm chí suy giảm khả năng lao động hoặc mất khả năng làm việc.
@@ -59,48 +60,52 @@ export function ChildFutureArticle() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden px-[10%] py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="mx-auto max-w-4xl text-center text-4xl font-bold leading-tight sm:text-5xl">
-            Chỉ với một kế hoạch tài chính thông minh - mọi ước mơ đều trong tầm tay.
-          </h2>
+      {/* Section 3: text left, image bottom-right */}
+      <section className="px-[10%] pb-16 pt-10">
+        <h2 className="text-center text-xl font-bold leading-tight sm:text-2xl">
+          Chỉ với một kế hoạch tài chính thông minh –<br />
+          mọi ước mơ đều trong tầm tay.
+        </h2>
 
-          <div className="relative mt-14 min-h-[620px]">
-            <div className="max-w-4xl text-2xl leading-snug">
-              <h3 className="text-3xl font-bold">Tiết kiệm chỉ từ 25,00 € mỗi tháng - từ tiền trợ cấp trẻ em (Kindergeld)</h3>
+        <div className="mt-8 grid items-end gap-6 lg:grid-cols-[52%_48%]">
+          {/* Text left */}
+          <div className="text-sm leading-relaxed sm:text-base">
+            <p className="font-bold">
+              Tiết kiệm chỉ từ 25,00 € mỗi tháng – từ tiền trợ cấp trẻ em (Kindergeld)
+            </p>
 
-              <div className="mt-12">
-                <h3 className="text-3xl font-bold">Linh hoạt và hiệu quả - kế hoạch đầu tư cho con bạn:</h3>
-                <ul className="mt-4 list-disc space-y-1 pl-6">
-                  <li>Đầu tư toàn bộ hoặc một phần số tiền đóng vào các quỹ đầu tư (Fonds) lãi suất từ 6% trở lên</li>
-                  <li>Lựa chọn tới 10 trong số 50 quỹ, có thể thay đổi quỹ bất kỳ lúc nào</li>
-                  <li>Điều chỉnh số tiền đóng hàng tháng hoặc đóng thêm bất kỳ lúc nào</li>
-                  <li>Tạm ứng lên đến 8 lần trong thời gian hợp đồng có hiệu lực</li>
-                  <li>Rút tiền bất cứ lúc nào, theo nhu cầu</li>
-                  <li>Có thể quy đổi thành vàng</li>
-                  <li>Nhận tiền dưới dạng lương hưu hàng tháng, một lần, hoặc kết hợp cả hai</li>
-                </ul>
-              </div>
-
-              <div className="mt-12">
-                <h3 className="text-3xl font-bold">Tăng cường bảo vệ tài chính với các lựa chọn kết hợp:</h3>
-                <ul className="mt-4 list-disc space-y-1 pl-6">
-                  <li>Bảo hiểm mất sức lao động</li>
-                  <li>Bảo hiểm tai nạn</li>
-                  <li>Bảo hiểm rủi ro</li>
-                </ul>
+            <div className="mt-5">
+              <p className="font-bold">Linh hoạt và hiệu quả – kế hoạch đầu tư cho con bạn:</p>
+              <div className="mt-2 space-y-1">
+                <p>• Đầu tư toàn bộ hoặc một phần số tiền đóng vào các quỹ đầu tư (Fonds) lãi suất từ 6% trở lên</p>
+                <p>• Lựa chọn tới 10 trong số 50 quỹ, có thể thay đổi quỹ bất kỳ lúc nào</p>
+                <p>• Điều chỉnh số tiền đóng hàng tháng hoặc đóng thêm bất kỳ lúc nào</p>
+                <p>• Tạm ứng lên đến 8 lần trong thời gian hợp đồng có hiệu lực</p>
+                <p>• Rút tiền bất cứ lúc nào, theo nhu cầu</p>
+                <p>• Có thể quy đổi thành vàng</p>
+                <p>• Nhận tiền dưới dạng lương hưu hàng tháng, một lần, hoặc kết hợp cả hai</p>
               </div>
             </div>
 
-            <div className="pointer-events-none absolute bottom-0 right-0 hidden w-[55%] max-w-[860px] lg:block">
-              <Image
-                src="/images/child-toy-train.jpeg"
-                alt=""
-                width={860}
-                height={620}
-                className="h-auto w-full object-contain"
-              />
+            <div className="mt-5">
+              <p className="font-bold">Tăng cường bảo vệ tài chính với các lựa chọn kết hợp:</p>
+              <div className="mt-2 space-y-1">
+                <p>• Bảo hiểm mất sức lao động</p>
+                <p>• Bảo hiểm tai nạn</p>
+                <p>• Bảo hiểm rủi ro</p>
+              </div>
             </div>
+          </div>
+
+          {/* Image right, aligned to bottom */}
+          <div className="hidden lg:block">
+            <Image
+              src="/images/child-toy-train.jpeg"
+              alt="Bé chơi đùa – kế hoạch tương lai cho con"
+              width={560}
+              height={480}
+              className="h-auto w-full object-contain"
+            />
           </div>
         </div>
       </section>

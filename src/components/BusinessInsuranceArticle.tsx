@@ -56,15 +56,15 @@ function TextSection({
   className?: string;
 }) {
   return (
-    <section className={`px-[10%] py-12 sm:py-14 ${className}`}>
-      <div className="mx-auto max-w-7xl text-2xl leading-snug">{children}</div>
+    <section className={`px-[10%] py-8 sm:py-10 ${className}`}>
+      <div className="mx-auto max-w-7xl text-xl leading-snug">{children}</div>
     </section>
   );
 }
 
 function BulletList({ items }: { items: string[] }) {
   return (
-    <ul className="list-disc space-y-1 pl-6">
+    <ul className="list-disc space-y-0.5 pl-6">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}

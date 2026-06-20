@@ -1,22 +1,22 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import { CycleIcon, DocumentCheckIcon, FingerHausLogoMark, HouseLineIcon } from "./MarketingAssets";
+import { FingerHausLogoMark } from "./MarketingAssets";
 
 const reasons = [
   {
-    icon: DocumentCheckIcon,
+    img: "/images/fingerhaus-chat-luong.png",
     title: "Chất lượng vượt trội",
     text:
       "Chất lượng tốt nhất luôn được lan truyền rộng rãi: 96% chủ đầu tư sẵn sàng giới thiệu FingerHaus mà không hề do dự.",
   },
   {
-    icon: CycleIcon,
+    img: "/images/fingerhaus-tiet-kiem-nang-luong.png",
     title: "Phương pháp xây dựng tiết kiệm năng lượng",
     text:
       "Vật liệu gỗ tự nhiên cùng kết cấu tường thông minh, kết hợp với công nghệ nhà ở và hệ thống sưởi hiện đại, tạo nên không gian sống trong lành và thoải mái, đồng thời bảo vệ môi trường cũng như giúp tiết kiệm chi phí.",
   },
   {
-    icon: HouseLineIcon,
+    img: "/images/fingerhaus-on-dinh-gia.png",
     title: "Ổn định giá cả & tính cá nhân hóa",
     text:
       "Chính sách đảm bảo giá trong 24 tháng mang lại sự an tâm tối đa về chi phí. Sự đa dạng của các mẫu nhà giúp đáp ứng mức độ cá nhân hóa cao nhất. Toàn bộ quá trình lên kế hoạch và thực hiện đều được cung cấp trọn gói từ một đơn vị duy nhất.",
@@ -131,16 +131,21 @@ export function FingerHausArticle() {
 
       <section className="bg-neutral-100 px-[10%] py-12">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
-          {reasons.map((reason) => {
-            const Icon = reason.icon;
-            return (
-              <div key={reason.title} className="flex flex-col items-center text-center">
-                <Icon className="h-36 w-36 text-brand-gold" />
-                <h3 className="mt-8 text-2xl font-bold leading-tight">{reason.title}</h3>
-                <p className="mt-8 max-w-md text-2xl leading-snug">{reason.text}</p>
+          {reasons.map((reason) => (
+            <div key={reason.title} className="flex flex-col items-center text-center">
+              <div className="flex h-28 items-center justify-center">
+                <Image
+                  src={reason.img}
+                  alt={reason.title}
+                  width={200}
+                  height={112}
+                  className="h-full w-auto object-contain"
+                />
               </div>
-            );
-          })}
+              <h3 className="mt-6 text-2xl font-bold leading-tight">{reason.title}</h3>
+              <p className="mt-4 max-w-md text-2xl leading-snug">{reason.text}</p>
+            </div>
+          ))}
         </div>
 
         <div className="mx-auto mt-20 max-w-7xl text-center">

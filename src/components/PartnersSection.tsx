@@ -7,10 +7,10 @@ export function PartnersSection() {
       <div className="grid min-h-[430px] bg-white lg:grid-cols-[43%_57%]">
         <div className="flex items-center">
           <div className="mx-auto w-full max-w-[420px] px-[10%] py-14 lg:py-16">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
+            <h2 className="text-xl font-bold leading-tight text-black sm:text-2xl">
               Đối tác của chúng tôi
             </h2>
-            <div className="mt-14 space-y-6 text-xl leading-snug text-black">
+            <div className="mt-6 space-y-4 text-sm leading-relaxed text-black sm:text-base">
               <p>
                 Đối tác của chúng tôi là những công ty hàng đầu trong ngành tài chính.
               </p>
