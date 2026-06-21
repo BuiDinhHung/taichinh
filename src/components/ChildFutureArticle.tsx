@@ -33,23 +33,21 @@ export function ChildFutureArticle() {
         </div>
       </section>
 
-      {/* Section 2: centered narrow text */}
+      {/* Section 2: full-width text */}
       <section className="px-[10%] py-10 sm:py-12">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-xl font-bold leading-tight sm:text-2xl">
-            Giải pháp tiết kiệm linh hoạt cho trẻ em
-          </h2>
-          <div className="mt-5 space-y-4 text-sm leading-relaxed sm:text-base">
-            <p>
-              Điều quan trọng nhất đối với cha mẹ là con cái của mình. Với <strong><em>&ldquo;Kế hoạch tương lai của tôi&rdquo;</em></strong>, bạn có thể bắt đầu sớm việc tích lũy cho con – hiện nay còn có thể thông qua đầu tư vào vàng.
-            </p>
-            <p>
-              Đồng thời, bạn cũng bảo vệ cho con trước những hệ quả của bệnh tật hoặc tai nạn, trong trường hợp xấu nhất có thể dẫn đến nhu cầu chăm sóc dài hạn, không thể đi học, thậm chí suy giảm khả năng lao động hoặc mất khả năng làm việc.
-            </p>
-            <p>
-              <strong>Đặc biệt:</strong> Giá trị tích lũy trong hợp đồng còn có thể được dùng làm tài sản thế chấp để vay tiền ngân hàng khi cần thiết.
-            </p>
-          </div>
+        <h2 className="text-center text-xl font-bold leading-tight sm:text-2xl">
+          Giải pháp tiết kiệm linh hoạt cho trẻ em
+        </h2>
+        <div className="mt-5 space-y-4 text-sm leading-relaxed sm:text-base">
+          <p>
+            Điều quan trọng nhất đối với cha mẹ là con cái của mình. Với <strong><em>&ldquo;Kế hoạch tương lai của tôi&rdquo;</em></strong>, bạn có thể bắt đầu sớm việc tích lũy cho con – hiện nay còn có thể thông qua đầu tư vào vàng.
+          </p>
+          <p>
+            Đồng thời, bạn cũng bảo vệ cho con trước những hệ quả của bệnh tật hoặc tai nạn, trong trường hợp xấu nhất có thể dẫn đến nhu cầu chăm sóc dài hạn, không thể đi học, thậm chí suy giảm khả năng lao động hoặc mất khả năng làm việc.
+          </p>
+          <p>
+            <strong>Đặc biệt:</strong> Giá trị tích lũy trong hợp đồng còn có thể được dùng làm tài sản thế chấp để vay tiền ngân hàng khi cần thiết.
+          </p>
         </div>
       </section>
 
