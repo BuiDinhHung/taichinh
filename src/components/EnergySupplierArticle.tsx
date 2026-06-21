@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { DocumentCheckIcon, HandEuroIcon, StopwatchIcon } from "./MarketingAssets";
 
 const benefits = [
@@ -98,23 +97,23 @@ export function EnergySupplierArticle() {
             </ul>
           </div>
         </div>
-        <div className="grid">
-          <div className="relative aspect-[771/353]">
+        <div className="grid grid-rows-2">
+          <div className="relative min-h-[220px]">
             <Image
               src="/images/gallery-07.jpeg"
               alt="Máy bơm nhiệt"
               fill
               sizes="(min-width: 1024px) 36vw, 100vw"
-              className="object-contain"
+              className="object-cover object-center"
             />
           </div>
-          <div className="relative aspect-[771/400]">
+          <div className="relative min-h-[220px]">
             <Image
               src="/images/gallery-08.jpeg"
               alt="Năng lượng mặt trời"
               fill
               sizes="(min-width: 1024px) 36vw, 100vw"
-              className="object-contain"
+              className="object-cover object-center"
             />
           </div>
         </div>
@@ -180,12 +179,6 @@ export function EnergySupplierArticle() {
                 Vermögensberatung
               </p>
             </div>
-            <Link
-              href="/dat-lich"
-              className="inline-flex min-h-14 items-center justify-center bg-brand-gold px-7 font-semibold text-white transition-colors hover:bg-brand-gold-dark"
-            >
-              Đặt hẹn tư vấn
-            </Link>
           </div>
         </div>
       </section>

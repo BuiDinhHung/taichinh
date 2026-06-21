@@ -54,7 +54,7 @@ export function CorporatePensionArticle() {
           </h1>
 
           <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_280px]">
-            <div>
+            <div className="min-w-0">
               <div className="text-center">
                 <p className="text-3xl font-bold">Chiến lược cộng hưởng:</p>
                 <h2 className="mt-10 text-4xl font-bold leading-tight">
@@ -77,17 +77,20 @@ export function CorporatePensionArticle() {
                   <li>và tối đa mỗi tháng 676,00 € hoặc mỗi năm là 8.112,00€ được miễn vào thuế thu nhập và được tính vào chi phí kinh doanh theo Mục 3 số 63 của luật thuế thu nhập (EStG)</li>
                 </ul>
 
-                <p className="mt-16 text-3xl font-bold italic">
-                  Đối với một GmbH và giám đốc điều hành cũng được hưởng quyền lợi về thuế này
-                </p>
               </div>
             </div>
 
             <aside className="grid content-start justify-center gap-20 pt-2">
               <BenefitSeal />
-              <GeneraliLogoMark className="w-64 max-w-full" />
+              <div className="w-64 max-w-full">
+                <GeneraliLogoMark className="!h-auto !w-full" />
+              </div>
             </aside>
           </div>
+
+          <p className="mt-16 whitespace-nowrap text-3xl font-bold italic">
+            Đối với một GmbH và giám đốc điều hành cũng được hưởng quyền lợi về thuế này
+          </p>
         </div>
       </section>
 

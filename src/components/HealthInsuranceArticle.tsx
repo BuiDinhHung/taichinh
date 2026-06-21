@@ -1,5 +1,4 @@
 ﻿import Image from "next/image";
-import Link from "next/link";
 import { GeneraliLogoMark, HealthCrossIcon } from "./MarketingAssets";
 
 const healthBenefits = [
@@ -22,11 +21,6 @@ export function HealthInsuranceArticle() {
               <li>Bảo hiểm tai nạn</li>
               <li>Bảo hiểm mất sức lao động</li>
             </ul>
-            <div className="mt-24 text-center">
-              <Link href="/dat-lich" className="text-2xl font-bold text-brand-gold transition-colors hover:text-brand-gold/80">
-                Đặt lịch hẹn tư vấn
-              </Link>
-            </div>
           </div>
         </div>
         <div className="relative min-h-[320px] lg:min-h-[520px]">

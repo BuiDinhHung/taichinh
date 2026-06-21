@@ -1,6 +1,5 @@
 ﻿import Image from "next/image";
-import Link from "next/link";
-import { DirectionSignIcon, EuroCycleIcon, GovernmentSupportIcon } from "./MarketingAssets";
+import { EuroCycleIcon, GovernmentSupportIcon } from "./MarketingAssets";
 
 const riesterBenefits = [
   {
@@ -13,12 +12,12 @@ const riesterBenefits = [
     title: "Lợi nhuận và sự an toàn",
     text: "Bạn có thể linh hoạt quyết định cách phân bổ khoản đóng góp của mình giữa mức độ an toàn và khả năng sinh lời theo nhu cầu cá nhân. Các khoản tiền bạn đã đóng cùng với trợ cấp từ nhà nước được đảm bảo giữ nguyên 100%. Với bảo hiểm bổ sung mất khả năng lao động, bạn còn có thể bảo vệ mục tiêu tiết kiệm của mình một cách toàn diện hơn.",
   },
-  {
-    icon: DirectionSignIcon,
-    title: "Tính linh hoạt cao",
-    text: "Bạn có thể nhận tối đa 30% số vốn đã tích lũy dưới dạng thanh toán một lần khi bắt đầu nhận lương hưu. Ngoài ra, với chương trình \"Wohn-Riester\", bạn cũng có thể sử dụng khoản hỗ trợ này để tài trợ cho việc mua hoặc xây dựng nhà ở riêng của mình.",
-  },
 ];
+
+const flexibilityBenefit = {
+  title: "Tính linh hoạt cao",
+  text: "Bạn có thể nhận tối đa 30% số vốn đã tích lũy dưới dạng thanh toán một lần khi bắt đầu nhận lương hưu. Ngoài ra, với chương trình \"Wohn-Riester\", bạn cũng có thể sử dụng khoản hỗ trợ này để tài trợ cho việc mua hoặc xây dựng nhà ở riêng của mình.",
+};
 
 export function RiesterPensionArticle() {
   return (
@@ -32,12 +31,6 @@ export function RiesterPensionArticle() {
             <p className="mt-16 text-2xl font-bold leading-snug">
               Các chương trình Hưu trí có hỗ trợ của nhà nước
             </p>
-            <Link
-              href="/dat-lich"
-              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
-            >
-              Đặt lịch tư vấn
-            </Link>
           </div>
         </div>
         <div className="relative min-h-[320px] lg:min-h-[520px]">
@@ -80,7 +73,7 @@ export function RiesterPensionArticle() {
               Chỉ với lương hưu Riester, bạn mới có thể nhận được khoản hỗ trợ cao từ nhà nước với mức đóng góp cá nhân thấp như vậy. Hãy tận dụng cơ hội này - đầu tư cho tương lai của chính bạn.
             </p>
             <p>
-              Gói "Riesterrente Strategie Plus" của Generali Deutschland Lebensversicherung AG là giải pháp lương hưu tư nhân dành cho những ai muốn tự quyết định cách tiền của mình được đầu tư. Đồng thời, bạn còn được hưởng các khoản trợ cấp từ nhà nước và những ưu đãi thuế phù hợp với từng cá nhân.
+              Gói &ldquo;Riesterrente Strategie Plus&rdquo; của Generali Deutschland Lebensversicherung AG là giải pháp lương hưu tư nhân dành cho những ai muốn tự quyết định cách tiền của mình được đầu tư. Đồng thời, bạn còn được hưởng các khoản trợ cấp từ nhà nước và những ưu đãi thuế phù hợp với từng cá nhân.
             </p>
           </div>
 
@@ -92,12 +85,23 @@ export function RiesterPensionArticle() {
               const Icon = benefit.icon;
               return (
                 <div key={benefit.title}>
-                  <Icon className="mx-auto h-32 w-32 text-brand-gold" />
+                  <Icon className="mx-auto h-60 w-60 text-brand-gold" />
                   <h3 className="mt-8 text-2xl font-bold">{benefit.title}</h3>
                   <p className="mx-auto mt-8 max-w-sm text-xl leading-snug">{benefit.text}</p>
                 </div>
               );
             })}
+            <div>
+              <Image
+                src="/images/icon-flexibility.png"
+                alt="Tính linh hoạt cao"
+                width={240}
+                height={240}
+                className="mx-auto h-60 w-60 object-contain"
+              />
+              <h3 className="mt-8 text-2xl font-bold">{flexibilityBenefit.title}</h3>
+              <p className="mx-auto mt-8 max-w-sm text-xl leading-snug">{flexibilityBenefit.text}</p>
+            </div>
           </div>
         </div>
       </section>

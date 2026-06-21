@@ -1,5 +1,4 @@
 ﻿import Image from "next/image";
-import Link from "next/link";
 import { FingerHausLogoMark } from "./MarketingAssets";
 
 const reasons = [
@@ -98,12 +97,6 @@ export function FingerHausArticle() {
               <li>FingerHaus thiết kế và xây dựng nhà hoàn toàn theo ý tưởng riêng biệt và mong muốn của bạn</li>
               <li>FingerHaus đại diện cho chất lượng xuất sắc, các khái niệm nhà đa dạng và tất cả đều đến từ một mối duy nhất.</li>
             </ul>
-            <Link
-              href="/dat-lich"
-              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
-            >
-              Đặt lịch tư vấn
-            </Link>
           </div>
         </div>
         <div className="relative min-h-[340px] lg:min-h-[560px]">
@@ -125,7 +118,7 @@ export function FingerHausArticle() {
         </h2>
         <ul className="mx-auto mt-8 inline-block list-disc text-left text-2xl leading-snug">
           <li>Hiệu quả năng lượng và tính bền vững với hỗ trợ từ nhà nước</li>
-          <li>Chất lượng „Made in Germany"</li>
+          <li>Chất lượng &ldquo;Made in Germany&rdquo;</li>
         </ul>
       </section>
 

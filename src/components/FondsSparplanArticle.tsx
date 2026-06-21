@@ -83,12 +83,6 @@ export function FondsSparplanArticle() {
             <p className="mt-16 text-2xl leading-snug">
               Với các kế hoạch tiết kiệm, bạn hoàn toàn có thể kiến tạo một khối tài sản đáng kể - chỉ với số vốn khởi điểm vỏn vẹn €25 mỗi tháng. Hơn thế nữa, bạn luôn được hưởng sự linh hoạt tuyệt đối trong việc lựa chọn quỹ, mức đóng góp cũng như thời hạn đầu tư.
             </p>
-            <Link
-              href="/dat-lich"
-              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
-            >
-              Đặt lịch tư vấn
-            </Link>
           </div>
         </div>
         <div className="relative min-h-[420px]">

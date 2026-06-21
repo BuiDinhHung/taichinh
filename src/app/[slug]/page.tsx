@@ -342,7 +342,6 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <RealEstateLoanArticle />
-          <PersonalLoanArticle />
           <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
@@ -640,7 +639,7 @@ export default async function ArticlePage({
               Tất cả bài viết
             </Link>
 
-            <header className="mt-6 max-w-3xl">
+            <header className="mt-6">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.15] tracking-tight text-foreground">
                 {article.title}
               </h1>
@@ -658,7 +657,7 @@ export default async function ArticlePage({
               />
             </div>
 
-            <div className="mt-10 max-w-3xl">
+            <div className="mt-10">
               {body.length > 0 ? (
                 <ArticleBody blocks={body} />
               ) : (

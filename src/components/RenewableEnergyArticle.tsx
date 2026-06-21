@@ -1,5 +1,4 @@
 ﻿import Image from "next/image";
-import Link from "next/link";
 
 const reasons = [
   "Tiết kiệm đến 70% chi phí sưởi ấm và điện dùng hằng tháng",
@@ -68,11 +67,6 @@ export function RenewableEnergyArticle() {
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Đầu tư thông minh vào Máy bơm nhiệt & Năng lượng mặt trời
             </h1>
-            <div className="mt-16 text-center">
-              <Link href="/dat-lich" className="text-2xl font-bold text-brand-gold hover:text-brand-gold/80">
-                Đặt lịch hẹn tư vấn
-              </Link>
-            </div>
           </div>
         </div>
         <div className="relative min-h-[252px] lg:min-h-[423px]">

@@ -1,5 +1,4 @@
 ﻿import Image from "next/image";
-import Link from "next/link";
 import { SofaIcon } from "./MarketingAssets";
 
 const houseBenefits = [
@@ -36,21 +35,16 @@ export function PropertyInsuranceHero() {
             <p className="mt-20 text-2xl leading-snug">
               Gói bảo hiểm bảo toàn tài sản (gọi tắt là VSP) của đối tác Generali mang đến giải pháp bảo vệ toàn diện vượt trội cho việc bảo vệ tài sản cá nhân. Các quyền lợi được phối hợp hoàn hảo với nhau. Tùy theo sự kết hợp, bạn có thể nhận được mức giảm giá hấp dẫn.
             </p>
-            <div className="mt-16 text-center">
-              <Link href="/dat-lich" className="text-2xl font-bold text-brand-gold transition-colors hover:text-brand-gold/80">
-                Đặt lịch hẹn tư vấn
-              </Link>
-            </div>
           </div>
         </div>
         <div className="relative min-h-[320px] lg:min-h-[500px]">
           <Image
-            src="/images/insurance-property-temple.jpg"
+            src="/images/gallery-02.jpeg"
             alt="Bảo hiểm tài sản"
             fill
             priority
             sizes="(min-width: 1024px) 51vw, 100vw"
-            className="object-cover object-center"
+            className="scale-[1.08] object-contain object-center"
           />
         </div>
       </section>
@@ -61,7 +55,7 @@ export function PropertyInsuranceHero() {
 export function PropertyInsuranceBody() {
   return (
     <article className="bg-white text-black">
-      <section className="bg-neutral-100 px-[10%] py-14 sm:py-16">
+      <section className="bg-neutral-100 px-[10%] py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
             <h2 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-left">
@@ -70,12 +64,12 @@ export function PropertyInsuranceBody() {
             <SofaIcon className="mx-auto h-36 w-36 text-brand-gold lg:h-44 lg:w-44" />
           </div>
 
-          <div className="mt-10 max-w-6xl text-2xl leading-snug">
+          <div className="mt-6 max-w-6xl text-2xl leading-snug">
             <h3 className="text-3xl font-bold">Bảo vệ vô hạn cho tài sản của bạn</h3>
-            <p className="mt-8">
-              Điều gì sẽ xảy ra nếu bạn mất tất cả vì một vụ hỏa hoạn hoặc trộm cắp? Bảo hiểm tài sản gia đình của Generali sẽ bảo vệ bạn khỏi những mối nguy hiểm như vậy và những nguy cơ khác - và điều này được thực hiện với mức bảo vệ vô hạn, thường xuyên.
+            <p className="mt-4">
+              Điều gì sẽ xảy ra nếu bạn mất tất cả vì một vụ hỏa hoạn hoặc trộm cắp? Bảo hiểm tài sản gia đình của Generali sẽ bảo vệ bạn khỏi những mối nguy hiểm như vậy và những nguy cơ khác – và điều này được thực hiện với mức bảo vệ vô hạn, thường xuyên.
             </p>
-            <ul className="mt-12 list-disc space-y-8 pl-6">
+            <ul className="mt-6 list-disc space-y-2 pl-6">
               {houseBenefits.map((item) => (
                 <li key={item}>{item}</li>
               ))}
@@ -84,22 +78,22 @@ export function PropertyInsuranceBody() {
         </div>
       </section>
 
-      <section className="bg-neutral-100 px-[10%] py-14 sm:py-16">
+      <section className="bg-neutral-100 px-[10%] py-8 sm:py-10">
         <div className="mx-auto max-w-7xl text-2xl leading-snug">
           <h2 className="text-3xl font-bold">
             Các quyền lợi mới Freizeit Plus, Fahrrad Plus và Hausrat Optimal XXL trong VSP:
           </h2>
-          <p className="mt-10">
+          <p className="mt-4">
             Với hai thành phần mới Freizeit Plus và Fahrrad Plus, bạn có thể mở rộng bảo vệ tài sản gia đình trong VSP cho xe đạp và thiết bị giải trí của mình, bao gồm nhiều mối nguy hiểm khác. Điều này mang lại cho bạn sự bảo vệ bảo hiểm gần như toàn diện với rất ít ngoại lệ.
           </p>
 
-          <div className="mt-12 grid gap-x-10 gap-y-6 lg:grid-cols-[180px_1fr]">
+          <div className="mt-6 grid gap-x-10 gap-y-4 lg:grid-cols-[180px_1fr]">
             <h3 className="text-3xl font-bold">Freizeit Plus:</h3>
             <div>
               <p>
                 Với thành phần Freizeit Plus, bạn mở rộng bảo vệ tài sản gia đình cho các thiết bị giải trí, thể thao và sở thích của mình khỏi sự hư hỏng, thiệt hại và mất mát. Thành phần này bao gồm các thiết bị từ các lĩnh vực sau:
               </p>
-              <ul className="mt-10 list-disc pl-6">
+              <ul className="mt-4 list-disc pl-6">
                 {leisureItems.map((item) => (
                   <li key={item}>{item}</li>
                 ))}

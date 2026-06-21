@@ -27,6 +27,7 @@ type Partner = {
   description: string;
   url: string;
   urlLabel: string;
+  logoClass?: string;
 };
 
 const partners: Partner[] = [
@@ -37,6 +38,7 @@ const partners: Partner[] = [
       "Generali tại Đức là tập đoàn bảo hiểm lớn thứ hai trên thị trường bảo hiểm Đức và là một phần của Tập đoàn Generali quốc tế, một yếu tố quan trọng trong ngành bảo hiểm toàn cầu.",
     url: "https://www.generali.de",
     urlLabel: "www.generali.de",
+    logoClass: "max-h-48 max-w-[320px]",
   },
   {
     name: "DWS",
@@ -184,15 +186,15 @@ const partnerLogoImages: Record<PartnerLogo, string> = {
   enpal: "/images/logo-enpal.png",
 };
 
-function PartnerLogoMark({ logo, name }: { logo: PartnerLogo; name: string }) {
+function PartnerLogoMark({ logo, name, logoClass }: { logo: PartnerLogo; name: string; logoClass?: string }) {
   return (
     <Image
       src={partnerLogoImages[logo]}
       alt={`${name} logo`}
-      width={280}
-      height={112}
-      sizes="280px"
-      className="max-h-28 max-w-[280px] bg-transparent object-contain"
+      width={320}
+      height={192}
+      sizes="320px"
+      className={`bg-transparent object-contain ${logoClass ?? "max-h-28 max-w-[280px]"}`}
     />
   );
 }
@@ -205,14 +207,14 @@ export default function RecommendationsPage() {
           <div className="mx-auto max-w-[1180px] px-5">
             <h1 className="sr-only">Đối tác của chúng tôi</h1>
 
-            <div className="space-y-16">
+            <div className="divide-y divide-gray-300">
               {partners.map((partner) => (
                 <article
                   key={partner.name}
-                  className="grid items-center gap-6 md:grid-cols-[260px_minmax(0,1fr)] lg:grid-cols-[300px_minmax(0,1fr)]"
+                  className="grid items-center gap-6 py-8 md:grid-cols-[260px_minmax(0,1fr)] lg:grid-cols-[300px_minmax(0,1fr)]"
                 >
-                  <div className="flex min-h-28 items-center justify-center md:justify-start">
-                    <PartnerLogoMark logo={partner.logo} name={partner.name} />
+                  <div className="flex items-center justify-center md:justify-start">
+                    <PartnerLogoMark logo={partner.logo} name={partner.name} logoClass={partner.logoClass} />
                   </div>
                   <div className="max-w-[820px] text-black">
                     <h2 className="text-base font-bold leading-tight">{partner.name}</h2>

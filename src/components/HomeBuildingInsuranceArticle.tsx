@@ -15,22 +15,22 @@ const homeCoverages = [
 export function HomeBuildingInsuranceArticle() {
   return (
     <article className="bg-brand-gold-tint text-black">
-      <section className="px-[10%] py-14 sm:py-16">
+      <section className="px-[10%] py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-              Bảo hiểm nhà đất -<br />Gebäude Grundstück Versicherung
+              Bảo hiểm nhà đất –<br />Gebäude Grundstück Versicherung
             </h1>
             <HouseCycleIcon className="mx-auto h-36 w-36 text-brand-gold lg:h-44 lg:w-44" />
           </div>
 
-          <div className="mt-12 max-w-6xl text-2xl leading-snug">
+          <div className="mt-6 max-w-6xl text-2xl leading-snug">
             <h2 className="text-3xl font-bold">Bảo vệ cho ngôi nhà của bạn</h2>
-            <p className="mt-10">
+            <p className="mt-6">
               Nhiều người đầu tư tất cả thành quả của cả cuộc đời làm việc để thực hiện ước mơ sở hữu ngôi nhà riêng. Vì vậy, ngôi nhà thường là tài sản quý giá nhất. Một vụ hỏa hoạn có thể phá hủy hoàn toàn tài sản này. Đó là lý do bạn nên bảo vệ tài sản nhà ở của mình một cách vô hạn thông qua bảo hiểm nhà ở của Generali.
             </p>
 
-            <ul className="mt-10 list-disc pl-6">
+            <ul className="mt-4 list-disc pl-6">
               {homeCoverages.map((item) => (
                 <li key={item}>{item}</li>
               ))}

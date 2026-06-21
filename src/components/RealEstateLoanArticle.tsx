@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { BadeniaLogoMark } from "./MarketingAssets";
 
 const steps = [
   {
@@ -26,10 +24,11 @@ const steps = [
 ];
 
 const bankLogos = [
-  { src: "/images/logo-deutsche-bank.png", alt: "Deutsche Bank", width: 265, height: 240 },
-  { src: "/images/logo-commerzbank.png", alt: "Commerzbank", width: 302, height: 85 },
-  { src: "/images/logo-hypovereinsbank.png", alt: "HypoVereinsbank", width: 268, height: 76 },
-  { src: "/images/logo-santander.png", alt: "Santander", width: 281, height: 86 },
+  { src: "/images/logo-deutsche-bank.png", alt: "Deutsche Bank", align: "self-start", bgSize: "auto 101px", bgPos: "center center", height: "h-14" },
+  { src: "/images/logo-commerzbank.png", alt: "Commerzbank", align: "self-end", bgSize: "contain", bgPos: "center center", height: "h-14" },
+  { src: "/images/logo-badenia.png", alt: "Deutsche Bausparkasse Badenia", align: "self-start", bgSize: "contain", bgPos: "center center", height: "h-20" },
+  { src: "/images/logo-hypovereinsbank.png", alt: "HypoVereinsbank", align: "self-end", bgSize: "auto 179px", bgPos: "center center", height: "h-14" },
+  { src: "/images/logo-santander.png", alt: "Santander", align: "self-start", bgSize: "contain", bgPos: "center center", height: "h-14" },
 ];
 
 export function RealEstateLoanArticle() {
@@ -45,12 +44,6 @@ export function RealEstateLoanArticle() {
             <p className="mt-6 text-sm leading-relaxed sm:text-base">
               Đối với nhiều người, mua bất động sản là một trong những quyết định quan trọng nhất trong cuộc đời. Chúng tôi luôn sát cánh cùng bạn với kinh nghiệm sâu rộng của mình. Với ImmoSmart – dịch vụ tài chính bất động sản tại Đức.
             </p>
-            <Link
-              href="/dat-lich"
-              className="mt-8 inline-flex items-center justify-center bg-brand-gold px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-gold-dark"
-            >
-              Đặt lịch tư vấn
-            </Link>
           </div>
         </div>
         <div className="relative min-h-[300px] lg:min-h-[480px]">
@@ -143,19 +136,60 @@ export function RealEstateLoanArticle() {
           </div>
 
           {/* Bank logos */}
-          <div className="flex flex-col justify-center gap-6">
+          <div className="mx-auto flex w-full max-w-[380px] flex-col justify-center gap-5">
             {bankLogos.map((logo) => (
-              <Image
+              <div
                 key={logo.alt}
-                src={logo.src}
-                alt={logo.alt}
-                width={logo.width}
-                height={logo.height}
-                className="h-10 w-auto object-contain"
+                className={`${logo.height} w-[80%] ${logo.align}`}
+                style={{
+                  backgroundImage: `url(${logo.src})`,
+                  backgroundSize: logo.bgSize,
+                  backgroundPosition: logo.bgPos,
+                  backgroundRepeat: "no-repeat",
+                }}
+                role="img"
+                aria-label={logo.alt}
               />
             ))}
-            <BadeniaLogoMark className="h-16 w-auto" />
           </div>
+        </div>
+      </section>
+
+      {/* Meet your needs */}
+      <section className="bg-[#e8f0f9] px-[10%] py-16 sm:py-20">
+        <h2 className="text-center text-4xl font-bold leading-tight">Đáp ứng nhu cầu của bạn</h2>
+
+        {/* Section 1 — full width */}
+        <div className="mt-16 text-2xl leading-snug">
+          <h3 className="text-3xl font-bold">
+            Tạo không gian tài chính cho những khoản chi cần thiết
+          </h3>
+          <p className="mt-10">
+            Bạn mong muốn có không gian tài chính để thực hiện các khoản mua sắm cần thiết? Việc lập kế hoạch có trách nhiệm càng trở nên quan trọng. Khoản vay cá nhân Smart từ Deutsche Bank là một phần trong dịch vụ tư vấn tài chính toàn diện của chúng tôi. Để tăng thêm sự tin cậy, bạn có thể lựa chọn gói bảo hiểm bổ sung nhằm bảo vệ thu nhập và gia đình.
+          </p>
+        </div>
+
+        {/* Section 2 — text left, diagram right */}
+        <div className="mt-16 grid items-center gap-12 lg:grid-cols-[52%_48%]">
+          <div className="text-2xl leading-snug">
+            <h3 className="text-3xl font-bold">
+              Tối ưu hóa các khoản vay trả góp của bạn
+            </h3>
+            <p className="mt-10">
+              Hơn 30% người Đức có một hoặc nhiều khoản vay trả góp. Bạn có thuộc nhóm đó không? Nếu có, đây là thời điểm thích hợp để kiểm tra các hợp đồng hiện tại của bạn.
+            </p>
+            <p className="mt-4">
+              Nhiều khoản vay trả góp và vay thấu chi có thể được hợp nhất thành một hợp đồng mới với điều kiện tốt hơn. Điều này không chỉ giúp bạn dễ dàng quản lý tài chính mà còn cải thiện khả năng tín dụng của bạn. Những khoản lãi suất mà bạn tiết kiệm được sẽ mang lại tự do tài chính và tạo cơ hội cho việc xây dựng tài sản. Hãy tận dụng <strong>#SmartEffekt</strong> ngay hôm nay.
+            </p>
+          </div>
+
+          <Image
+            src="/images/credit-consolidation-diagram.jpeg"
+            alt="Hợp nhất khoản vay - SmartEffekt"
+            width={790}
+            height={446}
+            className="mx-auto h-auto w-full max-w-2xl object-contain mix-blend-multiply"
+          />
         </div>
       </section>
     </article>

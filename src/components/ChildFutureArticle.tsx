@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export function ChildFutureArticle() {
   return (
@@ -20,12 +19,6 @@ export function ChildFutureArticle() {
                 <p>• <strong>25 tuổi</strong> – con bạn cần <strong>15.000 €</strong> để <strong>mua ô tô</strong> và xây dựng cuộc sống riêng?</p>
               </div>
             </div>
-            <Link
-              href="/dat-lich"
-              className="mt-8 inline-flex items-center justify-center bg-brand-gold px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-gold-dark"
-            >
-              Đặt lịch tư vấn
-            </Link>
           </div>
         </div>
         <div className="relative min-h-[280px] lg:min-h-[460px]">
@@ -48,7 +41,7 @@ export function ChildFutureArticle() {
           </h2>
           <div className="mt-5 space-y-4 text-sm leading-relaxed sm:text-base">
             <p>
-              Điều quan trọng nhất đối với cha mẹ là con cái của mình. Với <strong><em>"Kế hoạch tương lai của tôi"</em></strong>, bạn có thể bắt đầu sớm việc tích lũy cho con – hiện nay còn có thể thông qua đầu tư vào vàng.
+              Điều quan trọng nhất đối với cha mẹ là con cái của mình. Với <strong><em>&ldquo;Kế hoạch tương lai của tôi&rdquo;</em></strong>, bạn có thể bắt đầu sớm việc tích lũy cho con – hiện nay còn có thể thông qua đầu tư vào vàng.
             </p>
             <p>
               Đồng thời, bạn cũng bảo vệ cho con trước những hệ quả của bệnh tật hoặc tai nạn, trong trường hợp xấu nhất có thể dẫn đến nhu cầu chăm sóc dài hạn, không thể đi học, thậm chí suy giảm khả năng lao động hoặc mất khả năng làm việc.
@@ -98,13 +91,13 @@ export function ChildFutureArticle() {
           </div>
 
           {/* Image right, aligned to bottom */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex lg:items-end lg:justify-center lg:overflow-visible">
             <Image
-              src="/images/child-toy-train.jpeg"
+              src="/images/child-toy-train.png"
               alt="Bé chơi đùa – kế hoạch tương lai cho con"
               width={560}
               height={480}
-              className="h-auto w-full object-contain"
+              className="h-auto w-[125%] max-w-none -translate-x-8 object-contain"
             />
           </div>
         </div>

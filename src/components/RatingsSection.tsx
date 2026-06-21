@@ -1,17 +1,12 @@
 "use client";
 
-import { useRef } from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar, A11y, Autoplay } from "swiper/modules";
-import type { Swiper as SwiperType } from "swiper";
+import { Scrollbar, A11y, Autoplay } from "swiper/modules";
 import { StarIcon, CloseIcon } from "@/components/icons";
 import type { RatingMock } from "@/types/content";
 
 function RatingsSlider({ ratings }: { ratings: RatingMock[] }) {
-  const prevRef = useRef<HTMLButtonElement>(null);
-  const nextRef = useRef<HTMLButtonElement>(null);
-
   return (
     <div>
       {/* Header */}
@@ -29,29 +24,17 @@ function RatingsSlider({ ratings }: { ratings: RatingMock[] }) {
 
       {/* Swiper */}
       <Swiper
-        modules={[Navigation, Scrollbar, A11y, Autoplay]}
-        spaceBetween={28}
-        slidesPerView={1.15}
-        breakpoints={{
-          520:  { slidesPerView: 2,    spaceBetween: 24 },
-          768:  { slidesPerView: 3,    spaceBetween: 28 },
-          1024: { slidesPerView: 4,    spaceBetween: 32 },
-        }}
+        modules={[Scrollbar, A11y, Autoplay]}
+        spaceBetween={32}
+        slidesPerView="auto"
         grabCursor
         loop
         autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
         speed={1200}
-        onBeforeInit={(swiper: SwiperType) => {
-          if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-          }
-        }}
-        navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
         scrollbar={{ el: ".ratings-scrollbar", draggable: true, hide: false }}
       >
         {ratings.map((rating, i) => (
-          <SwiperSlide key={`${rating.name}-${i}`}>
+          <SwiperSlide key={`${rating.name}-${i}`} style={{ width: "300px" }}>
             <article className="flex h-full flex-col gap-4 rounded-xl border border-border-default bg-white p-5 shadow-sm">
               {/* Stars */}
               <div className="flex gap-1">

@@ -1,5 +1,4 @@
 ﻿import Image from "next/image";
-import Link from "next/link";
 
 const highlights = [
   "Bảo vệ toàn diện mạnh mẽ với các bảo hiểm quan trọng cho doanh nghiệp có doanh thu lên đến 1,5 triệu Euro trong một gói tổng hợp",
@@ -89,11 +88,6 @@ export function BusinessInsuranceArticle() {
               lên đến 1,5 triệu euro. Nhờ cách tiếp cận toàn diện, gói này cung cấp những giải pháp bảo vệ quan
               trọng nhất trong một sản phẩm duy nhất và đó là ở mức tiêu chuẩn hàng đầu trên thị trường.
             </p>
-            <div className="mt-10 text-center">
-              <Link href="/dat-lich" className="text-2xl font-bold text-brand-gold hover:text-brand-gold/80">
-                Đặt lịch hẹn tư vấn
-              </Link>
-            </div>
           </div>
         </div>
         <div className="relative min-h-[320px] lg:min-h-[520px]">
@@ -117,17 +111,15 @@ export function BusinessInsuranceArticle() {
 
       <TextSection>
         <h2 className="text-4xl font-bold sm:text-5xl">Danh mục quyền lợi của khái niệm FirmenSAFE</h2>
-        <div className="mt-10 space-y-8">
+        <ul className="mt-6 list-disc space-y-1 pl-6">
           {benefitCatalog.map((item) => (
-            <p key={item.title}>
-              <span className="font-bold">• {item.title}:</span> {item.body}
-            </p>
+            <li key={item.title} className="font-bold">{item.title}</li>
           ))}
-          <p>
-            Gói bảo hiểm FirmenSAFE giúp doanh nghiệp của bạn phát triển an toàn và bền vững, cung cấp bảo vệ
-            toàn diện và linh hoạt.
-          </p>
-        </div>
+        </ul>
+        <p className="mt-4">
+          Gói bảo hiểm FirmenSAFE giúp doanh nghiệp của bạn phát triển an toàn và bền vững, cung cấp bảo vệ
+          toàn diện và linh hoạt.
+        </p>
       </TextSection>
 
       <TextSection>

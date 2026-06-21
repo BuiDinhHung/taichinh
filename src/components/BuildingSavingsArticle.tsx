@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { BadeniaLogoMark, DocumentCheckIcon, HandEuroIcon, ProfileCircleIcon } from "./MarketingAssets";
 
 const benefits = [
@@ -46,12 +45,6 @@ export function BuildingSavingsArticle() {
             <p className="mt-6 text-sm leading-relaxed sm:text-base">
               Hãy đặt nền móng ngay từ bây giờ cho một giải pháp tài chính ổn định, linh hoạt và an toàn thông qua hợp đồng tiết kiệm xây dựng. Nhờ hình thức tiết kiệm này, bạn có thể chuẩn bị một cách có hệ thống và có chủ đích cho kế hoạch tài chính ngôi nhà của mình, tận dụng các khoản trợ cấp từ chính phủ, đồng thời đảm bảo quyền được hưởng một khoản vay xây dựng với lãi suất ưu đãi.
             </p>
-            <Link
-              href="/dat-lich"
-              className="mt-8 inline-flex items-center justify-center bg-brand-gold px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-gold-dark"
-            >
-              Đặt lịch tư vấn
-            </Link>
           </div>
         </div>
         <div className="relative min-h-[300px] lg:min-h-[480px]">
@@ -68,16 +61,16 @@ export function BuildingSavingsArticle() {
 
       {/* Benefits + ImmoStart info — same px-[10%] container, no inner max-w */}
       <section className="px-[10%] py-12">
-        <h2 className="text-center text-xl font-bold sm:text-2xl">Tiết kiệm xây dựng ở điều kiện tốt nhất</h2>
+        <h2 className="text-center text-3xl font-bold sm:text-4xl">Tiết kiệm xây dựng ở điều kiện tốt nhất</h2>
 
-        <div className="mt-8 grid gap-8 text-center lg:grid-cols-3">
+        <div className="mt-16 grid gap-12 text-center lg:grid-cols-3">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
             return (
               <div key={benefit.title}>
-                <Icon className="mx-auto h-16 w-16 text-brand-gold" />
-                <h3 className="mt-3 text-base font-bold sm:text-lg">{benefit.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed sm:text-base">{benefit.text}</p>
+                <Icon className="mx-auto h-36 w-36 text-brand-gold" />
+                <h3 className="mt-10 text-3xl font-bold">{benefit.title}</h3>
+                <p className="mx-auto mt-10 max-w-sm text-2xl leading-snug">{benefit.text}</p>
               </div>
             );
           })}

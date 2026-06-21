@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { DirectionSignIcon, HandEuroIcon, UmbrellaIcon } from "./MarketingAssets";
 
 const benefits = [
@@ -46,12 +45,6 @@ export function GoldGeigerArticle() {
             <p className="mt-8 max-w-2xl text-xl leading-snug sm:text-2xl">
               Chỉ với mức khởi điểm từ 25 Euro, bạn cũng có thể trở thành chủ sở hữu của vàng thật. Với Kế hoạch Tiết kiệm Vàng Geiger, bạn sẽ sở hữu vàng vật chất nguyên chất ngay từ đồng Euro đầu tiên.
             </p>
-            <Link
-              href="/dat-lich"
-              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
-            >
-              Đặt lịch tư vấn
-            </Link>
           </div>
         </div>
         <div className="relative min-h-[340px] lg:min-h-[520px]">
@@ -74,14 +67,14 @@ export function GoldGeigerArticle() {
 
       {/* 3 benefit columns */}
       <section className="px-[10%] pb-14 pt-8">
-        <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl gap-12 text-center lg:grid-cols-3">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
             return (
               <div key={benefit.title} className="text-center">
-                <Icon className="mx-auto h-20 w-20 text-brand-gold" />
-                <h3 className="mt-5 text-lg font-bold">{benefit.title}</h3>
-                <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-text-default sm:text-base">
+                <Icon className="mx-auto h-36 w-36 text-brand-gold" />
+                <h3 className="mt-10 text-3xl font-bold">{benefit.title}</h3>
+                <p className="mx-auto mt-10 max-w-sm text-2xl leading-snug">
                   {benefit.text}
                 </p>
               </div>
@@ -98,7 +91,7 @@ export function GoldGeigerArticle() {
               Hình thức mua trực tiếp
             </h2>
             <p className="mt-3">
-              • Đầu tư trực tiếp và chính xác vào bất kỳ số lượng nào trong số những thỏi vàng cao cấp 50 gram "Cộng hòa Liên bang Đức" của chúng tôi.
+              • Đầu tư trực tiếp và chính xác vào bất kỳ số lượng nào trong số những thỏi vàng cao cấp 50 gram &ldquo;Cộng hòa Liên bang Đức&rdquo; của chúng tôi.
             </p>
             <p className="mt-1">
               • Không có thời gian chờ đợi khi giao hàng.
@@ -113,7 +106,7 @@ export function GoldGeigerArticle() {
               • Mua định kỳ hàng Tháng, Quý hoặc Năm từ 25 EUR hoặc mua một lần từ 250 EUR trở lên.
             </p>
             <p className="mt-1">
-              • Vàng thỏi cao cấp 50 gram "Cộng hòa Liên bang Đức" độc quyền của hãng Geiger Metall GmbH.
+              • Vàng thỏi cao cấp 50 gram &ldquo;Cộng hòa Liên bang Đức&rdquo; độc quyền của hãng Geiger Metall GmbH.
             </p>
           </div>
         </div>
@@ -121,8 +114,8 @@ export function GoldGeigerArticle() {
 
       {/* Quality / Security section */}
       <section className="px-[10%] py-14">
-        <div className="mx-auto grid max-w-5xl items-start gap-12 lg:grid-cols-[44%_1fr]">
-          <div className="relative mx-auto aspect-[1.05] w-full max-w-lg">
+        <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[44%_1fr]">
+          <div className="relative mx-auto aspect-[1.05] w-full max-w-xl lg:translate-y-4 lg:scale-[1.08]">
             <Image
               src="/images/geiger-gold-security.png"
               alt="Chất lượng và bảo mật thỏi vàng Geiger"

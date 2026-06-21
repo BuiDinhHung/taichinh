@@ -9,6 +9,7 @@ type ProductCard = {
   href: string;
   image: string;
   alt: string;
+  imageFit?: "cover" | "contain";
   subLinks?: SubLink[];
 };
 
@@ -16,7 +17,7 @@ const intro = {
   headline:
     "Những sản phẩm và giải pháp độc quyền của các đối tác hàng đầu phù hợp với nhu cầu của bạn",
   body:
-    "Trong danh mục sản phẩm đa dạng của chúng tôi, chúng tôi luôn sẵn sàng tư vấn để bạn lựa chọn những sản phẩm phù hợp nhất. Nhờ mối quan hệ hợp tác chặt chẽ với các đối tác, chúng tôi có thể mang đến cho bạn những sản phẩm chất lượng, độc đáo và đáp ứng linh hoạt theo nhu cầu, hoàn cảnh riêng của bạn.",
+    "Trong danh mục sản phẩm đa dạng của chúng tôi, chúng tôi luôn sẵn sàng tư vấn để bạn lựa chọn những sản phẩm phù hợp nhất. Nhờ mối quan hệ hợp tác chặt chẽ với các đối tác, chúng tôi có thể mang đến cho bạn những sản phẩm chất lượng, độc đáo và đáp ứng được yêu cầu linh hoạt, tùy theo nhu cầu và hoàn cảnh riêng của bạn.",
 };
 
 const investCards: ProductCard[] = [
@@ -61,8 +62,9 @@ const insuranceCards: ProductCard[] = [
   {
     title: "Bảo hiểm Tài sản",
     href: "/bao-hiem-tai-san-tong-hop",
-    image: "/images/insurance-property-temple.jpg",
+    image: "/images/gallery-02.jpeg",
     alt: "Bảo hiểm tài sản",
+    imageFit: "contain",
     subLinks: [
       { label: "Bảo hiểm tài sản", href: "/bao-hiem-tai-san-tong-hop" },
       { label: "Bảo hiểm trách nhiệm", href: "/bao-hiem-tai-san-tong-hop" },
@@ -164,7 +166,9 @@ function ProductGrid({
                   alt={card.alt}
                   fill
                   sizes="(min-width: 1280px) 240px, (min-width: 640px) 24vw, 46vw"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                  className={`object-top transition-transform duration-500 group-hover:scale-[1.03] ${
+                    card.imageFit === "contain" ? "object-contain" : "object-cover"
+                  }`}
                 />
               </div>
               <h3
@@ -202,7 +206,9 @@ function ProductGrid({
                     ? "(min-width: 1280px) 240px, (min-width: 640px) 24vw, 46vw"
                     : "(min-width: 1280px) 300px, (min-width: 640px) 30vw, 92vw"
                 }
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                className={`object-top transition-transform duration-500 group-hover:scale-[1.03] ${
+                  card.imageFit === "contain" ? "object-contain" : "object-cover"
+                }`}
               />
             </div>
             <h3
@@ -219,20 +225,37 @@ function ProductGrid({
 
 function SeriesIntro() {
   return (
-    <header className="mx-auto max-w-5xl text-left">
-      <h1 className="text-lg font-bold leading-tight text-text-muted sm:text-xl lg:text-3xl">
-        {intro.headline}
+    <header className="mx-auto max-w-5xl px-2 text-left sm:px-4 lg:px-0">
+      <h1 className="text-2xl font-bold leading-[1.15] text-text-muted sm:text-3xl lg:text-[40px]">
+        <span className="lg:block">
+          Những sản phẩm và giải pháp độc quyền của các
+        </span>{" "}
+        <span className="lg:block">
+          đối tác hàng đầu phù hợp với nhu cầu của bạn
+        </span>
       </h1>
-      <p className="mt-4 max-w-4xl text-sm leading-relaxed text-black sm:text-base">
+      <p className="mt-8 text-base leading-[1.25] text-black sm:text-xl lg:mt-16 lg:text-[24px] lg:leading-[1.35]">
         {intro.body}
       </p>
     </header>
   );
 }
 
-function SectionTitle({ children }: { children: ReactNode }) {
+function SectionTitle({
+  children,
+  prominent = false,
+}: {
+  children: ReactNode;
+  prominent?: boolean;
+}) {
   return (
-    <h2 className="mb-7 text-center text-2xl font-bold leading-tight text-brand-gold sm:text-3xl">
+    <h2
+      className={`text-center font-bold leading-tight text-brand-gold ${
+        prominent
+          ? "mb-14 text-3xl sm:text-4xl lg:mb-[76px] lg:text-[44px]"
+          : "mb-7 text-2xl sm:text-3xl"
+      }`}
+    >
       {children}
     </h2>
   );
@@ -258,7 +281,7 @@ export function ProductSeriesPage({ seriesSlug }: { seriesSlug: string }) {
           </div>
 
           {/* Intro text */}
-          <section className="bg-brand-gold-tint py-10 lg:py-14">
+          <section className="bg-brand-gold-tint py-10 lg:pb-[76px] lg:pt-[52px]">
             <div className="dvag-container">
               <SeriesIntro />
             </div>
@@ -267,10 +290,10 @@ export function ProductSeriesPage({ seriesSlug }: { seriesSlug: string }) {
       )}
 
       {(showAll || seriesSlug === "invest") && (
-        <section className="bg-white py-8 lg:py-10">
+        <section className="bg-white pb-8 pt-3 lg:pb-10 lg:pt-2">
           <div className="dvag-container">
             <div>
-              <SectionTitle>Đầu tư - Tiết kiệm</SectionTitle>
+              <SectionTitle prominent>Đầu tư - Tiết kiệm</SectionTitle>
               <ProductGrid cards={investCards} columns={4} />
             </div>
           </div>

@@ -49,7 +49,7 @@ const otherCoverage = [
 export function PersonalLiabilityArticle() {
   return (
     <article className="bg-[#e8f0f9] text-black">
-      <section className="px-[10%] py-14 sm:py-16">
+      <section className="px-[10%] py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:pl-20 lg:text-left">
@@ -58,13 +58,13 @@ export function PersonalLiabilityArticle() {
             <DamageCycleIcon className="mx-auto h-36 w-36 text-brand-gold lg:h-44 lg:w-44" />
           </div>
 
-          <h2 className="mt-12 text-center text-3xl font-bold leading-tight lg:text-4xl">
+          <h2 className="mt-6 text-center text-3xl font-bold leading-tight lg:text-4xl">
             Các thành phần của chính sách bảo hiểm tài sản.
           </h2>
 
-          <div className="mx-auto mt-16 max-w-6xl text-2xl leading-snug">
+          <div className="mx-auto mt-6 max-w-6xl text-2xl leading-snug">
             <h3 className="text-3xl font-bold">Bảo vệ nếu bạn gây thiệt hại cho người khác</h3>
-            <p className="mt-10">
+            <p className="mt-4">
               Tai nạn có thể xảy ra nhanh chóng, có thể dẫn đến hậu quả nghiêm trọng: Khi gây thiệt hại cho người khác, bạn phải bồi thường thiệt hại đó.
             </p>
             <p>
@@ -74,8 +74,8 @@ export function PersonalLiabilityArticle() {
               Bên cạnh đó, bạn cũng được bảo vệ khỏi những yêu cầu không hợp lý từ các vụ việc thiệt hại.
             </p>
 
-            <h3 className="mt-10 text-3xl font-bold">Được bảo hiểm lên đến 50 triệu Euro:</h3>
-            <ul className="mt-8 list-disc space-y-1 pl-6">
+            <h3 className="mt-6 text-3xl font-bold">Được bảo hiểm lên đến 50 triệu Euro:</h3>
+            <ul className="mt-4 list-disc space-y-1 pl-6">
               {mainCoverage.map((item) => (
                 <li key={item}>{item}</li>
               ))}
@@ -84,10 +84,10 @@ export function PersonalLiabilityArticle() {
         </div>
       </section>
 
-      <section className="px-[10%] py-12 sm:py-14">
+      <section className="px-[10%] py-8">
         <div className="mx-auto max-w-6xl text-2xl leading-snug">
           <h2 className="text-3xl font-bold">Các mục bảo hiểm khác:</h2>
-          <ul className="mt-8 list-disc space-y-1 pl-6">
+          <ul className="mt-4 list-disc space-y-1 pl-6">
             {otherCoverage.map((item) => (
               <li key={item}>{item}</li>
             ))}

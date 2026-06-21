@@ -1,5 +1,4 @@
 ﻿import Image from "next/image";
-import Link from "next/link";
 import { FlexibleChoiceIcon, HandEuroIcon, LockIcon } from "./MarketingAssets";
 
 const pillars = [
@@ -35,12 +34,6 @@ export function WealthProtectionArticle() {
             <p className="mt-10 text-xl leading-snug sm:text-2xl">
               Với sản phẩm bảo hiểm linh hoạt này, quý khách có thể xây dựng khối tài sản dài hạn cho mình. Kết hợp cùng một gói giải pháp toàn diện - bao gồm quyền lợi bảo vệ trước rủi ro mất khả năng lao động và quyền lợi cho người thụ hưởng, tùy chọn chăm sóc dài hạn (hoặc niên kim chăm sóc dài hạn), cùng sự bảo vệ trước các bệnh hiểm nghèo - Generali Deutschland Lebensversicherung mang đến sự che chở và bảo vệ cho quý khách ở mọi giai đoạn của cuộc đời.
             </p>
-            <Link
-              href="/dat-lich"
-              className="mt-10 inline-flex items-center justify-center bg-brand-gold px-8 py-3 text-xl font-semibold text-white transition-colors hover:bg-brand-gold-dark"
-            >
-              Đặt lịch tư vấn
-            </Link>
           </div>
         </div>
         <div className="relative min-h-[340px] lg:min-h-[520px]">
@@ -63,27 +56,27 @@ export function WealthProtectionArticle() {
       </section>
 
       <section className="px-[10%] pb-16">
-        <div className="mx-auto grid max-w-3xl gap-10 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl gap-12 text-center md:grid-cols-3">
           {pillars.map((pillar) => {
             const Icon = pillar.icon;
             return (
-              <div key={pillar.title} className="text-center">
-                <Icon className="mx-auto h-20 w-20 text-brand-gold" />
-                <h3 className="mt-5 text-lg font-bold leading-tight">{pillar.title}</h3>
-                <p className="mx-auto mt-3 max-w-xs text-sm leading-relaxed sm:text-base">{pillar.text}</p>
+              <div key={pillar.title} className="flex flex-col items-center text-center">
+                <Icon className="h-36 w-36 text-brand-gold" />
+                <h3 className="mt-10 text-3xl font-bold leading-tight">{pillar.title}</h3>
+                <p className="mx-auto mt-10 max-w-sm text-2xl leading-snug">{pillar.text}</p>
               </div>
             );
           })}
         </div>
       </section>
 
-      <section className="px-[10%] pb-20">
-        <div className="mx-auto max-w-2xl space-y-8 text-sm leading-relaxed sm:text-base">
+      <section className="pb-20 pt-4">
+        <div className="mx-auto w-[calc(100%-2rem)] max-w-3xl space-y-9 text-base leading-[1.3] lg:translate-x-20 lg:text-[20px]">
           <div>
-            <h2 className="text-base font-bold leading-snug sm:text-lg">
+            <h2 className="text-xl font-bold leading-[1.15] lg:text-[26px]">
               Tiết kiệm dài hạn với lãi suất cao, linh hoạt, an toàn và có giá trị thế chấp để vay tiền mua bất động sản
             </h2>
-            <div className="mt-4 space-y-1">
+            <div className="mt-6 space-y-0">
               <p>• Đầu tư toàn bộ hoặc một phần tiền đóng vào quỹ đầu tư (Fonds)</p>
               <p>• Được phép chọn 10 trong 50 Quỹ (Fonds) và có thể thay đổi Quỹ</p>
               <p>• Thay đổi mức đóng hàng tháng, hoặc đóng thêm bất kỳ</p>
@@ -95,10 +88,10 @@ export function WealthProtectionArticle() {
           </div>
 
           <div>
-            <h2 className="text-base font-bold leading-snug sm:text-lg">
+            <h2 className="text-xl font-bold leading-[1.15] lg:text-[26px]">
               Kết hợp linh hoạt với các giải pháp tối ưu để đảm bảo quyền lợi không bị ảnh hưởng khi rủi ro xảy ra trong đời sống như:
             </h2>
-            <div className="mt-4 space-y-1">
+            <div className="mt-6 space-y-0">
               <p>• Mất sức lao động</p>
               <p>• Mắc bệnh hiểm nghèo</p>
               <p>• Tình trạng cần chăm sóc</p>

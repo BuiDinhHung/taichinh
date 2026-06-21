@@ -5,9 +5,9 @@ const legalBenefits = [
   "Tư vấn pháp lý phòng ngừa và luật sư tốt nhất trong trường hợp cần bảo vệ pháp lý",
   "Số tiền bảo hiểm không giới hạn ở châu Âu và lên đến 1 triệu Euro trên toàn thế giới",
   "Bảo vệ chống lại việc lạm dụng danh tính trên internet",
-  "Flightright - Thực thi quyền lợi hành khách",
+  "Flightright – Thực thi quyền lợi hành khách",
   "Công cụ lập kế hoạch (ví dụ: di chúc, ủy quyền y tế) và công cụ lập di chúc",
-  "Bảo hiểm cho doanh nghiệp nhỏ với doanh thu hằng năm lên đến 22.000 Euro (không bao gồm bảo vệ pháp lý hợp đồng)",
+  "Bảo hiểm cho doanh nghiệp nhỏ với doanh thu hàng năm lên đến 22.000 Euro (không bao gồm bảo vệ pháp lý hợp đồng)",
 ];
 
 function AdvocardBadge() {
@@ -26,17 +26,17 @@ export function LegalInsuranceArticle() {
   return (
     <article className="text-black">
       {/* Hero section - light blue */}
-      <section className="bg-[#e8f0f9] px-[10%] py-14 sm:py-16">
+      <section className="bg-[#e8f0f9] px-[10%] py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             Bảo hiểm pháp lý- Rechtsschutzversicherung
           </h1>
 
-          <div className="mt-16 grid items-start gap-12 lg:grid-cols-[58%_42%]">
+          <div className="mt-8 grid items-start gap-12 lg:grid-cols-[58%_42%]">
             <div className="text-2xl leading-snug">
               <h2 className="text-3xl font-bold">Hỗ trợ pháp lý tối đa trên một thẻ</h2>
-              <p className="mt-8">
-                Các tranh chấp pháp lý có thể xảy ra ở bất kỳ đâu - dù là khi tham gia giao thông, trong công việc, với tư cách là người thuê/sở hữu, trong cuộc sống hàng ngày hoặc trên internet. ADVOCARD-360°-PRIVAT cung cấp sự bảo vệ toàn diện cho tất cả các lĩnh vực trong cuộc sống - cả offline lẫn online!
+              <p className="mt-4">
+                Các tranh chấp pháp lý có thể xảy ra ở bất kỳ đâu – dù là khi tham gia giao thông, trong công việc, với tư cách là người thuê/sở hữu, trong cuộc sống hàng ngày hoặc trên internet. ADVOCARD-360°-PRIVAT cung cấp sự bảo vệ toàn diện cho tất cả các lĩnh vực trong cuộc sống – cả offline lẫn online!
               </p>
             </div>
             <AdvocardBadge />
@@ -45,10 +45,10 @@ export function LegalInsuranceArticle() {
       </section>
 
       {/* Benefits section - white */}
-      <section className="bg-white px-[10%] py-14 sm:py-16">
+      <section className="bg-white px-[10%] py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl font-bold text-[#1a1a1a]">Quyền lợi bảo hiểm</h2>
-          <ul className="mt-10 max-w-6xl list-disc pl-6 text-2xl leading-snug space-y-3">
+          <ul className="mt-4 max-w-6xl list-disc pl-6 text-2xl leading-snug space-y-3">
             {legalBenefits.map((item) => (
               <li key={item}>{item}</li>
             ))}
