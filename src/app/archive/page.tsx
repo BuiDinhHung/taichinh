@@ -80,19 +80,8 @@ export default function ArchivePage() {
       <Header />
       <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
 
-        {/* Page header */}
-        <div className="border-b border-border-default bg-white px-[5%] py-10 lg:py-12">
-          <p className="text-xs font-bold uppercase tracking-widest text-brand-gold">taichinh.de</p>
-          <h1 className="mt-2 text-2xl font-bold text-text-strong sm:text-3xl lg:text-4xl">
-            Lĩnh vực tư vấn & Tin mới
-          </h1>
-          <p className="mt-3 max-w-2xl text-sm text-text-muted sm:text-base">
-            Cập nhật tin tức tài chính và các lĩnh vực tư vấn toàn diện dành cho cộng đồng người Việt tại Đức.
-          </p>
-        </div>
-
         {/* Latest news */}
-        <section className="bg-brand-gold-tint px-[5%] py-10 lg:py-12">
+        <section className="bg-[#f7f8fa] px-[5%] py-10 lg:py-12">
           <div className="mx-auto max-w-7xl">
             <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-brand-gold-darker">
               Tin mới nhất

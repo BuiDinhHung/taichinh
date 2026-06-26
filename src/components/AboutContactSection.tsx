@@ -4,10 +4,10 @@ import Link from "next/link";
 export function AboutContactSection() {
   return (
     <section className="bg-white">
-      <div className="grid lg:min-h-[460px] lg:grid-cols-[2fr_3fr]">
+      <div className="grid lg:min-h-[460px] lg:grid-cols-[auto_1fr]">
         <aside
-          className="flex flex-col justify-center bg-[#e8f0f9] py-10 lg:py-14"
-          style={{ paddingLeft: "clamp(1rem, 5vw, 5rem)", paddingRight: "clamp(1rem, 3vw, 3rem)" }}
+          className="flex flex-col justify-center bg-[#EDF4FA] py-10 lg:py-14"
+          style={{ paddingLeft: "clamp(1.5rem, 4.5vw, 4.5rem)", paddingRight: "clamp(1.5rem, 2.5vw, 2.5rem)" }}
         >
           <div className="flex items-center gap-4">
             <Image
@@ -17,7 +17,7 @@ export function AboutContactSection() {
               height={80}
               className="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20"
             />
-            <p className="text-xl font-bold leading-snug text-brand-gold sm:text-2xl">
+            <p className="text-2xl font-bold leading-snug text-brand-gold sm:text-3xl">
               Büro für Deutsche
               <br />
               Vermögensberatung
@@ -25,11 +25,11 @@ export function AboutContactSection() {
           </div>
 
           <div className="mt-3 pl-20 leading-relaxed text-brand-blue-deep sm:pl-24">
-            <h2 className="text-lg font-bold text-brand-blue-deep sm:text-xl">Bao Vu The</h2>
-            <p className="text-base sm:text-lg">Vermögensberater</p>
+            <h2 className="text-xl font-bold text-brand-blue-deep sm:text-2xl">Bao Vu The</h2>
+            <p className="text-lg sm:text-xl">Vermögensberater</p>
           </div>
 
-          <div className="mt-6 space-y-4 text-[0.88rem] leading-relaxed text-brand-blue-deep sm:text-sm">
+          <div className="mt-6 space-y-4 text-lg leading-relaxed text-brand-blue-deep sm:text-xl">
             <p>
               Proskauer Str. 13
               <br />
@@ -79,7 +79,7 @@ export function AboutContactSection() {
             src="/images/pdf-team-office.jpeg"
             alt="Đội ngũ tư vấn - Büro für Deutsche Vermögensberatung"
             fill
-            sizes="(min-width: 1024px) 60vw, 100vw"
+            sizes="(min-width: 1024px) 68vw, 100vw"
             className="object-cover"
             priority
           />

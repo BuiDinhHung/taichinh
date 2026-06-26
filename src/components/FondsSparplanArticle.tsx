@@ -72,12 +72,12 @@ export function FondsSparplanArticle() {
   return (
     <article className="bg-white">
       <section className="grid min-h-[520px] lg:grid-cols-[44%_56%]">
-        <div className="flex items-center bg-[#e8f0f9] px-8 py-12">
+        <div className="flex items-center bg-[#e8f0f9] px-8 py-12 lg:pl-20 lg:pr-10">
           <div className="max-w-[560px] text-black">
-            <h1 className="text-5xl font-bold leading-tight">
+            <h1 className="text-5xl font-bold leading-tight lg:pl-12">
               Đầu tư vào Quỹ -<br />Fonds Sparsplan
             </h1>
-            <p className="mt-6 text-3xl leading-snug">
+            <p className="mt-6 text-3xl leading-snug lg:pl-12">
               Bổ sung thông minh cho<br />Danh mục đầu tư của bạn
             </p>
             <p className="mt-16 text-2xl leading-snug">
@@ -97,7 +97,7 @@ export function FondsSparplanArticle() {
         </div>
       </section>
 
-      <section className="px-[10%] py-16 text-center">
+      <section className="px-[10%] pb-6 pt-16 text-center">
         <h2 className="text-4xl font-bold text-[#0876c7]">Thế giới mới của đầu tư tài chính</h2>
         <p className="mx-auto mt-6 max-w-3xl text-3xl leading-snug text-black">
           Chúng tôi sẽ giúp bạn tận dụng tối đa<br />các cơ hội từ thị trường tài chính.
@@ -105,26 +105,26 @@ export function FondsSparplanArticle() {
         <p className="mt-10 text-3xl font-bold text-black">Hãy để thời gian là vàng của bạn</p>
       </section>
 
-      <section className="px-[10%] py-12">
+      <section className="px-[10%] pb-12 pt-2">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
           <div className="text-center">
-            <GrowthChartIcon className="mx-auto h-40 w-40 text-brand-gold" />
+            <GrowthChartIcon className="mx-auto mb-4 h-40 w-40 text-brand-gold" />
             <h3 className="text-3xl font-bold text-black">Tiết kiệm định kỳ</h3>
-            <p className="mx-auto mt-8 max-w-xs text-left text-2xl leading-snug text-black">
+            <p className="mx-auto mt-4 max-w-xs text-left text-2xl leading-snug text-black">
               Với việc tiết kiệm đều đặn và có kế hoạch, bạn sẽ tạo dựng được quỹ dự phòng cho các mục tiêu và mong muốn tài chính của mình. Hãy đầu tư vào các quỹ hàng đầu bằng cách tận dụng hiệu ứng trung bình chi phí.
             </p>
           </div>
           <div className="text-center">
-            <PiggyBankIcon className="mx-auto h-40 w-48 text-brand-gold" />
+            <PiggyBankIcon className="mx-auto mb-4 h-40 w-48 text-brand-gold" />
             <h3 className="text-3xl font-bold text-black">Mức tiết kiệm tối thiểu thấp</h3>
-            <p className="mx-auto mt-8 max-w-xs text-left text-2xl leading-snug text-black">
+            <p className="mx-auto mt-4 max-w-xs text-left text-2xl leading-snug text-black">
               Chỉ từ 25 Euro mỗi tháng, bạn có thể hiện thực hóa kế hoạch tiết kiệm của mình.
             </p>
           </div>
           <div className="text-center">
-            <FlexibleChoiceIcon className="mx-auto h-40 w-48 text-brand-gold" />
+            <FlexibleChoiceIcon className="mx-auto mb-4 h-40 w-48 text-brand-gold" />
             <h3 className="text-3xl font-bold text-black">Linh hoạt cao</h3>
-            <ul className="mx-auto mt-8 max-w-md list-disc text-left text-2xl leading-snug text-black">
+            <ul className="mx-auto mt-4 max-w-md list-disc text-left text-2xl leading-snug text-black">
               <li>Bạn có nhiều lựa chọn khác nhau để phù hợp với các mục tiêu cá nhân của mình</li>
               <li>Có thể thay đổi quỹ bất cứ lúc nào</li>
               <li>Chọn tần suất tiết kiệm phù hợp với bạn</li>

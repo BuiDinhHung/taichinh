@@ -86,7 +86,7 @@ export default async function StaticPageRoute({
                     </h1>
                   </header>
                 )}
-                <div className={isAboutPage ? "mt-0" : "mx-auto mt-8 max-w-4xl"}>
+                <div className={isAboutPage ? "mx-auto mt-0 max-w-5xl" : "mx-auto mt-8 max-w-4xl"}>
                   <ArticleBody blocks={blocks} />
                 </div>
               </div>

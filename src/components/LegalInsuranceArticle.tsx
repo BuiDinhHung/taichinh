@@ -15,8 +15,8 @@ function AdvocardBadge() {
     <Image
       src="/images/advocard-360-private.jpeg"
       alt="ADVOCARD 360 PRIVAT"
-      width={248}
-      height={161}
+      width={1535}
+      height={1024}
       className="mx-auto h-auto w-full max-w-sm object-contain"
     />
   );
@@ -41,14 +41,8 @@ export function LegalInsuranceArticle() {
             </div>
             <AdvocardBadge />
           </div>
-        </div>
-      </section>
 
-      {/* Benefits section - white */}
-      <section className="bg-white px-[10%] py-8 sm:py-10">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-bold text-[#1a1a1a]">Quyền lợi bảo hiểm</h2>
-          <ul className="mt-4 max-w-6xl list-disc pl-6 text-2xl leading-snug space-y-3">
+          <ul className="mt-2 max-w-6xl list-disc pl-6 text-2xl leading-snug space-y-3">
             {legalBenefits.map((item) => (
               <li key={item}>{item}</li>
             ))}

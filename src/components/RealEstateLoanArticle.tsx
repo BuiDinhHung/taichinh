@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FlexibleChoiceIcon, HandEuroIcon, ProfileCircleIcon } from "./MarketingAssets";
 
 const steps = [
   {
@@ -24,11 +26,29 @@ const steps = [
 ];
 
 const bankLogos = [
-  { src: "/images/logo-deutsche-bank.png", alt: "Deutsche Bank", align: "self-start", bgSize: "auto 101px", bgPos: "center center", height: "h-14" },
-  { src: "/images/logo-commerzbank.png", alt: "Commerzbank", align: "self-end", bgSize: "contain", bgPos: "center center", height: "h-14" },
+  { src: "/images/logo-deutsche-bank.png", alt: "Deutsche Bank", align: "self-start mt-3", bgSize: "contain", bgPos: "center center", height: "h-24" },
+  { src: "/images/logo-commerzbank.png", alt: "Commerzbank", align: "self-end", bgSize: "contain", bgPos: "center center", height: "h-16" },
   { src: "/images/logo-badenia.png", alt: "Deutsche Bausparkasse Badenia", align: "self-start", bgSize: "contain", bgPos: "center center", height: "h-20" },
-  { src: "/images/logo-hypovereinsbank.png", alt: "HypoVereinsbank", align: "self-end", bgSize: "auto 179px", bgPos: "center center", height: "h-14" },
+  { src: "/images/logo-hypovereinsbank.png", alt: "HypoVereinsbank", align: "self-end", bgSize: "contain", bgPos: "center center", height: "h-14" },
   { src: "/images/logo-santander.png", alt: "Santander", align: "self-start", bgSize: "contain", bgPos: "center center", height: "h-14" },
+];
+
+const personalLoanBenefits = [
+  {
+    icon: HandEuroIcon,
+    title: "Điều kiện hấp dẫn",
+    text: "Dành cho những nhu cầu hiện tại và tối ưu hóa các khoản vay trả góp hoặc vay thấu chi hiện có.",
+  },
+  {
+    icon: ProfileCircleIcon,
+    title: "Kế hoạch phù hợp",
+    text: "Lãi suất phù hợp cá nhân và thời gian vay linh hoạt từ 6 đến 120 tháng.",
+  },
+  {
+    icon: FlexibleChoiceIcon,
+    title: "Linh hoạt cao",
+    text: "Khách hàng có thể trả nợ trước hạn bất cứ lúc nào.",
+  },
 ];
 
 export function RealEstateLoanArticle() {
@@ -37,13 +57,21 @@ export function RealEstateLoanArticle() {
       {/* Hero */}
       <section className="grid min-h-[480px] lg:grid-cols-[51%_49%]">
         <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
-          <div className="max-w-xl">
-            <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+          <div className="w-full">
+            <h1 className="text-[clamp(1.75rem,2.4vw,3.25rem)] font-bold leading-tight lg:whitespace-nowrap">
               Vay tín dụng mua bất động sản
             </h1>
-            <p className="mt-6 text-sm leading-relaxed sm:text-base">
+            <p className="mt-6 max-w-xl text-sm leading-relaxed sm:text-base">
               Đối với nhiều người, mua bất động sản là một trong những quyết định quan trọng nhất trong cuộc đời. Chúng tôi luôn sát cánh cùng bạn với kinh nghiệm sâu rộng của mình. Với ImmoSmart – dịch vụ tài chính bất động sản tại Đức.
             </p>
+            <div className="mt-8 flex justify-center">
+              <Link
+                href="/dat-lich"
+                className="inline-flex items-center bg-brand-gold px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-gold-dark"
+              >
+                Đặt lịch tư vấn
+              </Link>
+            </div>
           </div>
         </div>
         <div className="relative min-h-[300px] lg:min-h-[480px]">
@@ -60,12 +88,12 @@ export function RealEstateLoanArticle() {
 
       {/* Steps + ImmoSmart seal */}
       <section className="bg-neutral-100 px-[10%] py-12">
-        <div className="grid gap-10 lg:grid-cols-[1fr_280px]">
+        <h2 className="pl-[3%] text-4xl font-bold leading-tight sm:text-5xl lg:whitespace-nowrap">
+          Chương trình Vay tín dụng mua bất động sản ở Đức
+        </h2>
+        <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_280px]">
           <div>
-            <h2 className="text-xl font-bold leading-tight sm:text-2xl">
-              Chương trình Vay tín dụng mua bất động sản ở Đức
-            </h2>
-            <div className="mt-6 text-sm leading-relaxed sm:text-base">
+            <div className="text-sm leading-relaxed sm:text-base">
               <p>
                 Chúng tôi sẵn sàng hỗ trợ bạn thực hiện mục đích bất động sản của mình. Trước tiên cùng nhau xem xét những yếu tố quan trọng sau:
               </p>
@@ -107,21 +135,23 @@ export function RealEstateLoanArticle() {
 
       {/* Partner banks */}
       <section className="bg-neutral-100 px-[10%] py-12">
-        <div className="grid gap-10 lg:grid-cols-[58%_42%]">
-          <div className="text-sm leading-relaxed sm:text-base">
-            <p className="text-base text-text-muted">Lợi thế của bạn</p>
-            <h2 className="mt-2 text-xl font-bold leading-tight sm:text-2xl">
-              Những sản phẩm của những đối tác hàng đầu
-            </h2>
+        <div className="text-center">
+          <p className="text-base text-text-muted">Lợi thế của bạn</p>
+          <h2 className="mt-2 text-4xl font-bold leading-tight sm:text-5xl lg:whitespace-nowrap">
+            Những sản phẩm của những đối tác hàng đầu
+          </h2>
+        </div>
 
-            <h3 className="mt-8 font-bold">
+        <div className="mt-10 grid gap-10 lg:grid-cols-[58%_42%]">
+          <div className="text-sm leading-relaxed sm:text-base">
+            <h3 className="whitespace-nowrap text-[0.25rem] font-bold sm:text-[0.375rem]">
               Xây dựng, mua, đáo nợ hoặc nâng cấp, hiện đại hóa bất động sản:
             </h3>
             <p className="mt-3">
               Với các giải pháp đa dạng do các đối tác lâu năm của chúng tôi cung cấp, bạn có thể chọn sản phẩm phù hợp nhất cho kế hoạch xây dựng của mình.
             </p>
 
-            <h3 className="mt-6 font-bold">Lợi ích dành cho bạn:</h3>
+            <h3 className="mt-6 text-[0.25rem] font-bold sm:text-[0.375rem]">Lợi ích dành cho bạn:</h3>
             <div className="mt-3 space-y-3">
               <p>
                 <strong>• Mọi giải pháp từ một nguồn duy nhất:</strong> Chúng tôi luôn đồng hành cùng bạn, cung cấp các giải pháp tài chính khả thi từ các đối tác của mình, giúp bạn chọn lựa giải pháp phù hợp nhất.
@@ -151,6 +181,34 @@ export function RealEstateLoanArticle() {
                 aria-label={logo.alt}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Personal loan benefits */}
+      <section className="bg-white px-[10%] py-16 sm:py-24">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-center text-5xl font-bold leading-tight">Vay tín dụng cá nhân</h2>
+          <p className="mx-auto mt-16 max-w-5xl text-2xl leading-snug">
+            Cuộc sống luôn thay đổi, và đôi khi những thay đổi đó đòi hỏi chi phí. Xe không còn hoạt động tốt, bạn sắp phải chuyển nhà, con bạn cần một phòng riêng, hoặc bạn đang lên kế hoạch học thêm. Không phải lúc nào cũng có sẵn nguồn tài chính. Trong trường hợp này, <strong>Tín dụng cá nhân Smart</strong> là giải pháp dành cho bạn.
+          </p>
+
+          <div className="mt-24 text-center">
+            <h3 className="text-3xl font-bold">Lợi ích của bạn</h3>
+            <p className="mt-12 text-3xl">Khoản vay phù hợp với đời sống của bạn.</p>
+          </div>
+
+          <div className="mt-16 grid gap-12 lg:grid-cols-3">
+            {personalLoanBenefits.map((benefit) => {
+              const Icon = benefit.icon;
+              return (
+                <div key={benefit.title} className="text-center">
+                  <Icon className="mx-auto h-36 w-36 text-brand-gold" />
+                  <h4 className="mt-10 text-3xl font-bold">{benefit.title}</h4>
+                  <p className="mx-auto mt-10 max-w-sm text-2xl leading-snug">{benefit.text}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -43,23 +43,27 @@ export function AccidentInsuranceArticle() {
     <article className="bg-[#f7f4e8] text-black">
       <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
+          <div className="grid items-center gap-8 lg:grid-cols-[1fr_160px]">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Bảo hiểm tai nạn- Unfallversicherung
             </h1>
-            <AccidentIcon className="mx-auto h-36 w-36 text-brand-gold lg:h-44 lg:w-44" />
+            <AccidentIcon className="mx-auto h-28 w-28 text-brand-gold lg:h-32 lg:w-32" />
           </div>
 
-          <div className="mt-16 max-w-7xl text-2xl leading-snug">
-            <h2 className="text-3xl font-bold">Bảo vệ trước hậu quả tài chính của một tai nạn</h2>
-            <p className="mt-10">
+          <div className="mt-8 max-w-7xl text-base leading-relaxed sm:text-lg">
+            <h2 className="text-xl font-bold sm:text-2xl">Bảo vệ trước hậu quả tài chính của một tai nạn</h2>
+            <p className="mt-6">
               Có hàng ngàn loại tai nạn và sự cố có thể xảy ra trong cuộc sống hàng ngày. Tại Đức, mỗi năm có gần chín triệu tai nạn xảy ra, phần lớn trong số đó xảy ra tại nhà hoặc trong thời gian giải trí. Bảo hiểm tai nạn của Generali sẽ bảo vệ bạn trước các hậu quả tài chính của một tai nạn:
             </p>
 
-            <h3 className="mt-10 text-3xl font-bold">Các quyền lợi bao gồm:</h3>
-            <ul className="mt-10 list-disc pl-6">
+            <h3 className="mt-8 text-xl font-bold sm:text-2xl">Các quyền lợi bao gồm:</h3>
+            <ul className="mt-5 list-disc space-y-1.5 pl-5">
               {accidentBenefits.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>
+                  {item.split(/(UNFALL AKTIV)/).map((part, i) =>
+                    part === "UNFALL AKTIV" ? <strong key={i}>{part}</strong> : part,
+                  )}
+                </li>
               ))}
             </ul>
           </div>

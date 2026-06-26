@@ -17,7 +17,7 @@ export default function DatLichPage() {
       <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
         <section className="bg-white py-8 sm:py-10 lg:py-14">
           <div className="dvag-container">
-            <header className="max-w-4xl">
+            <header className="mx-auto max-w-4xl">
               <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
                 Đặt lịch tư vấn
               </p>
@@ -32,7 +32,7 @@ export default function DatLichPage() {
               </p>
             </header>
 
-            <div className="mt-8">
+            <div className="mx-auto mt-8 max-w-4xl">
               <QuickContact />
             </div>
           </div>

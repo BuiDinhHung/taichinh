@@ -61,8 +61,8 @@ export function GoldGeigerArticle() {
 
       {/* Benefits header */}
       <section className="px-[10%] pb-6 pt-14 text-center">
-        <p className="text-base leading-tight text-text-muted">Lợi ích của bạn</p>
-        <h2 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">Tại sao nên đầu tư vào vàng?</h2>
+        <p className="text-lg leading-tight text-black">Lợi ích của bạn</p>
+        <h2 className="mt-4 text-3xl font-bold leading-tight">Tại sao nên đầu tư vào vàng?</h2>
       </section>
 
       {/* 3 benefit columns */}

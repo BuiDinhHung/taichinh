@@ -85,7 +85,7 @@ export function RiesterPensionArticle() {
               const Icon = benefit.icon;
               return (
                 <div key={benefit.title}>
-                  <Icon className="mx-auto h-60 w-60 text-brand-gold" />
+                  <Icon className="mx-auto h-28 w-28 text-brand-gold" />
                   <h3 className="mt-8 text-2xl font-bold">{benefit.title}</h3>
                   <p className="mx-auto mt-8 max-w-sm text-xl leading-snug">{benefit.text}</p>
                 </div>
@@ -97,7 +97,7 @@ export function RiesterPensionArticle() {
                 alt="Tính linh hoạt cao"
                 width={240}
                 height={240}
-                className="mx-auto h-60 w-60 object-contain"
+                className="mx-auto h-28 w-28 object-contain"
               />
               <h3 className="mt-8 text-2xl font-bold">{flexibilityBenefit.title}</h3>
               <p className="mx-auto mt-8 max-w-sm text-xl leading-snug">{flexibilityBenefit.text}</p>

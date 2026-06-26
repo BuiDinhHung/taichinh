@@ -72,25 +72,21 @@ export function RenewableEnergyArticle() {
 
       {/* Section 3: VDE + Auszeichnungen */}
       <section className="border-b border-black/5 px-7 py-8 sm:px-12">
-        <div className="mx-auto flex max-w-[720px] flex-wrap items-center justify-center gap-7">
-          <div className="flex h-28 w-36 flex-col justify-center border-2 border-[#2879b9] bg-white px-3 text-[#176cac]">
-            <strong className="text-xl">VDE</strong>
-            <span className="text-xs font-bold leading-tight">zertifizierte Bauausführung</span>
-            <span className="mt-1 text-[9px]">VDEinfo.com</span>
-          </div>
-          <div className="w-full max-w-[480px] bg-[#0d2f4f] p-4 text-white">
-            <strong>Auszeichnungen</strong>
-            <div className="mt-3 grid grid-cols-6 gap-2">
-              {["TÜV", "CHIP", "WELT", "&", "TEST", "ntv"].map((award) => (
-                <span
-                  key={award}
-                  className="flex min-h-12 items-center justify-center bg-white px-1 text-center text-xs font-bold text-[#0d2f4f]"
-                >
-                  {award}
-                </span>
-              ))}
-            </div>
-          </div>
+        <div className="mx-auto flex max-w-[760px] flex-wrap items-center justify-center gap-7">
+          <Image
+            src="/images/vde-certificate.png"
+            alt="Chứng nhận VDE – Standardisiertes PV-Kraftwerk"
+            width={1439}
+            height={1093}
+            className="h-28 w-auto object-contain"
+          />
+          <Image
+            src="/images/energy-awards.png"
+            alt="Các giải thưởng – Auszeichnungen"
+            width={2188}
+            height={719}
+            className="w-full max-w-[520px] object-contain"
+          />
         </div>
       </section>
 

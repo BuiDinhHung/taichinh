@@ -6,10 +6,10 @@ export function Footer() {
   return (
     <footer className="bg-[#f5f2eb] text-[#333]">
       <div className="dvag-container py-8 sm:py-12 lg:py-16">
-        {/* 4-column balanced grid */}
-        <div className="relative left-[10%] grid w-[90%] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        {/* Columns: even visual spacing between content blocks on desktop */}
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:mx-auto lg:flex lg:max-w-5xl lg:justify-between lg:gap-8">
           {/* Brand + contact column */}
-          <div>
+          <div className="lg:max-w-[280px]">
             <Image
               src="/images/logo-dark.png"
               alt="taichinh.de"
@@ -18,7 +18,9 @@ export function Footer() {
               className="h-auto w-[140px]"
             />
             <p className="mt-4 text-sm leading-relaxed text-[#555]">
-              Tư vấn tài chính chuyên nghiệp cho cộng đồng người Việt tại Đức.
+              Tư vấn tài chính chuyên nghiệp cho
+              <br />
+              cộng đồng người Việt tại Đức.
             </p>
             <div className="mt-4 space-y-1.5 text-sm text-[#666]">
               <p>Tel: +49 30-4268859</p>
@@ -51,7 +53,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-black/10">
-        <div className="dvag-container relative left-[10%] flex w-[90%] flex-wrap items-center justify-center gap-6 py-5 text-xs text-[#999]">
+        <div className="dvag-container flex flex-wrap items-center justify-center gap-6 py-5 text-xs text-[#999]">
           <p>{copyright}</p>
           <div className="flex gap-5">
             <Link href="/page/impressum" className="transition-colors hover:text-[#555]">

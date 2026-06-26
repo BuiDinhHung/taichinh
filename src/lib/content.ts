@@ -185,7 +185,7 @@ export const teaserCards: TeaserCard[] = [
 
 export const ratingMocks: RatingMock[] = [
   {
-    name: "Anh Tuấn",
+    name: "Mr. Tuan",
     location: "Berlin",
     stars: 5,
     date: "3 ngày trước",
@@ -193,7 +193,7 @@ export const ratingMocks: RatingMock[] = [
       "Mình được tư vấn rất kỹ về Bauspar và Riester-Rente. Lần đầu tiên hiểu rõ mình đang đóng vào đâu và sẽ nhận được gì. Cảm ơn rất nhiều!",
   },
   {
-    name: "Chị Hương",
+    name: "Mrs. Huong",
     location: "München",
     stars: 5,
     date: "1 tuần trước",
@@ -201,7 +201,7 @@ export const ratingMocks: RatingMock[] = [
       "Tư vấn bằng tiếng Việt nên hai vợ chồng đều hiểu rõ mọi thứ. Kế hoạch tài chính cho con cũng đã được lên rất chi tiết.",
   },
   {
-    name: "Anh Minh",
+    name: "Mr. Minh",
     location: "Frankfurt am Main",
     stars: 5,
     date: "2 tuần trước",
@@ -209,7 +209,7 @@ export const ratingMocks: RatingMock[] = [
       "Rất chuyên nghiệp và minh bạch. Không bị ép mua sản phẩm, mọi quyết định đều dựa trên nhu cầu thực tế của gia đình.",
   },
   {
-    name: "Yến & Daniel",
+    name: "Mrs. Yen & Mr. Daniel",
     location: "Köln",
     stars: 5,
     date: "3 tuần trước",
@@ -217,7 +217,7 @@ export const ratingMocks: RatingMock[] = [
       "Cả hệ thống hưu trí, bảo hiểm và quỹ xây dựng đều được giải thích rõ ràng. Cảm thấy yên tâm hơn rất nhiều về tương lai.",
   },
   {
-    name: "Anh Bình",
+    name: "Mr. Binh",
     location: "Hamburg",
     stars: 4,
     date: "1 tháng trước",
@@ -262,7 +262,7 @@ export const articles: Article[] = [
   },
   {
     slug: "tiet-kiem-xay-dung",
-    title: "Tiết kiệm xây dựng - Bauspar",
+    title: "Tiết kiệm xây dựng",
     date: "Mar 31, 2025",
     image: "/images/pdf-field-child.jpeg",
   },
@@ -298,7 +298,7 @@ export const articles: Article[] = [
   },
   {
     slug: "tin-dung-bat-dong-san",
-    title: "Tín dụng bất động sản - Immobilienfinanzierung",
+    title: "Vay tín dụng xây dựng",
     date: "Mar 30, 2025",
     image: "/images/house-with-euros.jpeg",
   },
@@ -334,7 +334,7 @@ export const articles: Article[] = [
   },
   {
     slug: "fingerhaus",
-    title: "Nhà ở tiền chế - FingerHaus",
+    title: "Nhà lắp ghép (Tiền chế)",
     date: "Mar 24, 2025",
     image: "/images/prefab-house-fingerhaus.jpeg",
   },
@@ -469,7 +469,7 @@ export const footerColumns: FooterColumn[] = [
     title: "Về chúng tôi",
     links: [
       { label: "Đối tác", href: "/recommendations" },
-      { label: "Lĩnh vực tư vấn", href: "/archive" },
+      { label: "Lĩnh vực tư vấn", href: "/san-pham" },
     ],
   },
   {

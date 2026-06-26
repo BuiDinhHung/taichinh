@@ -25,7 +25,7 @@ function RatingsSlider({ ratings }: { ratings: RatingMock[] }) {
       {/* Swiper */}
       <Swiper
         modules={[Scrollbar, A11y, Autoplay]}
-        spaceBetween={32}
+        spaceBetween={64}
         slidesPerView="auto"
         grabCursor
         loop

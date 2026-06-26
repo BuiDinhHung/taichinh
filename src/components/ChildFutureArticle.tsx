@@ -1,22 +1,31 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function ChildFutureArticle() {
   return (
     <article className="bg-white text-black">
       {/* Section 1: hero split */}
       <section className="grid min-h-[460px] lg:grid-cols-[55%_45%]">
-        <div className="flex items-center justify-center bg-[#e8f0f9] px-[10%] py-12">
-          <div className="w-full max-w-lg">
-            <h1 className="text-center text-3xl font-bold leading-tight sm:text-4xl">
+        <div className="flex items-center justify-center bg-[#e8f0f9] px-[7%] py-12">
+          <div className="w-full max-w-2xl">
+            <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl">
               Kế hoạch cho tương lai của tôi
             </h1>
-            <div className="mt-8 text-sm leading-relaxed sm:text-base">
-              <p className="font-bold">Bạn đã chuẩn bị tài chính cho tương lai của con chưa?</p>
-              <div className="mt-3 space-y-1">
+            <div className="mt-10 text-base leading-relaxed sm:text-lg">
+              <p className="text-lg font-bold sm:text-xl">Bạn đã chuẩn bị tài chính cho tương lai của con chưa?</p>
+              <div className="mt-4 space-y-2">
                 <p>• <strong>16 tuổi</strong> – con bạn cần <strong>4.000 €</strong> để <strong>học lái xe</strong>?</p>
                 <p>• <strong>18 tuổi</strong> – con bạn cần <strong>10.000 €</strong> để <strong>du học</strong> hoặc nâng cao kiến thức tại Mỹ hay Anh?</p>
                 <p>• <strong>20 tuổi</strong> – con bạn cần <strong>12.000 €</strong> để <strong>bắt đầu sống tự lập</strong> với căn hộ riêng?</p>
                 <p>• <strong>25 tuổi</strong> – con bạn cần <strong>15.000 €</strong> để <strong>mua ô tô</strong> và xây dựng cuộc sống riêng?</p>
+              </div>
+              <div className="mt-8 flex justify-center">
+                <Link
+                  href="/dat-lich"
+                  className="inline-flex items-center bg-brand-gold px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-gold-dark"
+                >
+                  Đặt lịch tư vấn
+                </Link>
               </div>
             </div>
           </div>
@@ -35,7 +44,7 @@ export function ChildFutureArticle() {
 
       {/* Section 2: full-width text */}
       <section className="px-[10%] py-10 sm:py-12">
-        <h2 className="text-center text-xl font-bold leading-tight sm:text-2xl">
+        <h2 className="text-center text-3xl font-bold leading-tight sm:text-4xl">
           Giải pháp tiết kiệm linh hoạt cho trẻ em
         </h2>
         <div className="mt-5 space-y-4 text-sm leading-relaxed sm:text-base">
@@ -53,7 +62,7 @@ export function ChildFutureArticle() {
 
       {/* Section 3: text left, image bottom-right */}
       <section className="px-[10%] pb-16 pt-10">
-        <h2 className="text-center text-xl font-bold leading-tight sm:text-2xl">
+        <h2 className="text-center text-3xl font-bold leading-tight sm:text-4xl">
           Chỉ với một kế hoạch tài chính thông minh –<br />
           mọi ước mơ đều trong tầm tay.
         </h2>
