@@ -98,7 +98,7 @@ export const heroSlides = [
   },
   {
     eyebrow: "",
-    headline: "Giá trị bền vững cho tương lai",
+    headline: "Chủ động tài chính\nAn nhiên tuổi già",
     cta: { label: "Về chúng tôi", href: "/page/gioi-thieu" } as CTA,
     image: {
       src: "/images/hero-ve-chung-toi.png",
@@ -111,15 +111,24 @@ export const heroSlides = [
 export const heroContent = heroSlides[0];
 
 export const finanzcoachingSection = {
-  eyebrow: "",
+  eyebrow: "Về chúng tôi",
   headline: "Tư vấn tài chính chuyên nghiệp. Giá trị bền vững cho tương lai",
+  headlineHighlight: "Giá trị bền vững",
+  lead: "Một nền tảng tài chính vững mạnh là tiền đề quan trọng giúp mỗi cá nhân chủ động xây dựng tương lai ổn định và bền vững.",
   bodyParagraphs: [
-    "Văn phòng Tư vấn Tài chính Vũ Thế Bảo trực thuộc Deutsche Vermögensberatung (DVAG) — tập đoàn tư vấn tài chính uy tín hàng đầu tại Đức với hơn 50 năm kinh nghiệm và gần 20.000 chuyên viên tư vấn trên toàn quốc.",
-    "Chúng tôi cung cấp giải pháp toàn diện trong các lĩnh vực: Đầu tư - Tiết kiệm, Bảo hiểm, Bất động sản, lập kế hoạch hưu trí và hoạch định tài chính dài hạn cho cộng đồng người Việt tại Đức.",
-    "Với quy trình tư vấn cá nhân hóa, minh bạch và định hướng dài hạn, chúng tôi đồng hành cùng khách hàng xây dựng nền tảng tài chính ổn định và bền vững cho mỗi giai đoạn của cuộc sống.",
+    "Văn phòng Tư vấn Tài chính Vũ Thế Bảo trực thuộc Deutsche Vermögensberatung (DVAG) - là tập đoàn tư vấn tài chính uy tín hàng đầu tại Đức.",
+    "Với hơn 50 năm kinh nghiệm hoạt động cùng đội ngũ gần 20.000 chuyên viên tư vấn trên toàn quốc, DVAG hiện đang đồng hành cùng khoảng 8 triệu khách hàng tại Đức trong việc hoạch định và bảo vệ tương lai tài chính của họ.",
+    "Chúng tôi cung cấp các giải pháp tư vấn tài chính toàn diện và chuyên sâu trong các lĩnh vực: Đầu tư - Tiết kiệm, Bảo hiểm, Bất động sản, lập kế hoạch hưu trí và hoạch định tài chính dài hạn.",
+    "Thông qua quy trình tư vấn cá nhân hóa, minh bạch và định hướng dài hạn, chúng tôi hỗ trợ khách hàng đưa ra những quyết định tài chính phù hợp, hiệu quả và bền vững theo từng giai đoạn của cuộc sống.",
+    "Với tinh thần trách nhiệm, tính chuyên nghiệp và cam kết đồng hành lâu dài, chúng tôi hướng tới mục tiêu xây dựng những giá trị tài chính ổn định và bền vững cho mỗi khách hàng và gia đình của họ.",
+  ],
+  stats: [
+    { value: 50, prefix: "", suffix: "+", label: "Năm kinh nghiệm tại Đức" },
+    { value: 20000, prefix: "", suffix: "", label: "Chuyên viên tư vấn toàn quốc" },
+    { value: 8, prefix: "", suffix: " triệu", label: "Khách hàng tin tưởng đồng hành" },
   ],
   primaryCta: { label: "Đặt lịch tư vấn miễn phí", href: "/dat-lich" } as CTA,
-  secondaryCta: { label: "Tìm hiểu dịch vụ", href: "/archive" } as CTA,
+  secondaryCta: { label: "Tìm hiểu dịch vụ", href: "/san-pham" } as CTA,
   ratingsBadgeAlt: "Đánh giá khách hàng 5 sao",
 };
 
@@ -185,7 +194,7 @@ export const teaserCards: TeaserCard[] = [
 
 export const ratingMocks: RatingMock[] = [
   {
-    name: "Mr. Tuan",
+    name: "Mai Quang Tuấn",
     location: "Berlin",
     stars: 5,
     date: "3 ngày trước",
@@ -193,7 +202,7 @@ export const ratingMocks: RatingMock[] = [
       "Mình được tư vấn rất kỹ về Bauspar và Riester-Rente. Lần đầu tiên hiểu rõ mình đang đóng vào đâu và sẽ nhận được gì. Cảm ơn rất nhiều!",
   },
   {
-    name: "Mrs. Huong",
+    name: "Hồ Thị Hương",
     location: "München",
     stars: 5,
     date: "1 tuần trước",
@@ -201,7 +210,7 @@ export const ratingMocks: RatingMock[] = [
       "Tư vấn bằng tiếng Việt nên hai vợ chồng đều hiểu rõ mọi thứ. Kế hoạch tài chính cho con cũng đã được lên rất chi tiết.",
   },
   {
-    name: "Mr. Minh",
+    name: "Phùng Quang Minh",
     location: "Frankfurt am Main",
     stars: 5,
     date: "2 tuần trước",
@@ -209,7 +218,7 @@ export const ratingMocks: RatingMock[] = [
       "Rất chuyên nghiệp và minh bạch. Không bị ép mua sản phẩm, mọi quyết định đều dựa trên nhu cầu thực tế của gia đình.",
   },
   {
-    name: "Mrs. Yen & Mr. Daniel",
+    name: "Trần Thị Yến & Lê Minh Đức",
     location: "Köln",
     stars: 5,
     date: "3 tuần trước",
@@ -217,7 +226,7 @@ export const ratingMocks: RatingMock[] = [
       "Cả hệ thống hưu trí, bảo hiểm và quỹ xây dựng đều được giải thích rõ ràng. Cảm thấy yên tâm hơn rất nhiều về tương lai.",
   },
   {
-    name: "Mr. Binh",
+    name: "Nguyễn Thanh Bình",
     location: "Hamburg",
     stars: 4,
     date: "1 tháng trước",
@@ -469,7 +478,7 @@ export const footerColumns: FooterColumn[] = [
     title: "Về chúng tôi",
     links: [
       { label: "Đối tác", href: "/recommendations" },
-      { label: "Lĩnh vực tư vấn", href: "/san-pham" },
+      { label: "Tin mới", href: "/archive" },
     ],
   },
   {

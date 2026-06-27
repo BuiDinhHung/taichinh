@@ -25,7 +25,7 @@ export function EnergySupplierArticle() {
       <section className="grid lg:grid-cols-[54%_46%]">
         <div className="flex items-center bg-[#dff3d8] px-7 py-10 sm:px-12 lg:min-h-[405px] lg:px-[8%]">
           <div className="mx-auto max-w-[620px]">
-            <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
+            <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl">
               Nguồn năng lượng Điện, Gas rẻ
             </h1>
             <h2 className="mt-10 text-center text-xl font-bold sm:text-2xl">

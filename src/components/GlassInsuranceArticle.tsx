@@ -14,11 +14,11 @@ export function GlassInsuranceArticle() {
     <article className="bg-[#edf2f7] text-black">
       <section className="px-[10%] py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
+          <div className="grid items-center gap-8 lg:grid-cols-[1fr_140px]">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Bảo hiểm kính - Glasbruch
             </h1>
-            <BrokenPlateIcon className="mx-auto h-36 w-36 text-brand-gold lg:h-44 lg:w-44" />
+            <BrokenPlateIcon className="mx-auto h-24 w-24 text-brand-gold lg:h-28 lg:w-28" />
           </div>
 
           <div className="mt-6 max-w-5xl text-2xl leading-snug">

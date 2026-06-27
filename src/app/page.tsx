@@ -5,7 +5,7 @@ import { AdvantagesSection } from "@/components/AdvantagesSection";
 import { TeaserSlider } from "@/components/TeaserSlider";
 import { RatingsSection } from "@/components/RatingsSectionWrapper";
 import { AboutContactSection } from "@/components/AboutContactSection";
-import { FeaturedNewsSection } from "@/components/FeaturedNewsSection";
+import { HomeNewsSection } from "@/components/HomeNewsSection";
 import { TeamSection } from "@/components/TeamSection";
 import { AwardsSection } from "@/components/AwardsSection";
 import { HomePartnersSection } from "@/components/HomePartnersSection";
@@ -20,7 +20,7 @@ export default function Home() {
         <FinanzcoachingSection />
         <AdvantagesSection />
         <TeaserSlider />
-        <FeaturedNewsSection />
+        <HomeNewsSection />
         <AboutContactSection />
         <TeamSection />
         <RatingsSection />

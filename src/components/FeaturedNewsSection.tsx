@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export function FeaturedNewsSection() {
   return (
@@ -52,15 +51,6 @@ export function FeaturedNewsSection() {
               https://www.deutsche-rentenversicherung.de/DRV/DE/Ueber-uns-und-Presse/Presse/Meldungen/2026/260508-bundesrat-reform-private-altersvorsorge.html
             </a>
           </p>
-
-          <div className="mt-8">
-            <Link
-              href="/archive"
-              className="inline-flex items-center gap-2 text-sm font-bold text-brand-gold-darker underline underline-offset-4 hover:text-brand-gold"
-            >
-              Xem tất cả bài viết →
-            </Link>
-          </div>
         </div>
       </div>
     </section>

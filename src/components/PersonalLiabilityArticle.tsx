@@ -51,11 +51,11 @@ export function PersonalLiabilityArticle() {
     <article className="bg-[#e8f0f9] text-black">
       <section className="px-[10%] py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
+          <div className="grid items-center gap-8 lg:grid-cols-[1fr_140px]">
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:pl-20 lg:text-left">
               Bảo hiểm trách nhiệm cá nhân<br />Privathaftpflichtversicherung
             </h1>
-            <DamageCycleIcon className="mx-auto h-36 w-36 text-brand-gold lg:h-44 lg:w-44" />
+            <DamageCycleIcon className="mx-auto h-24 w-24 text-brand-gold lg:h-28 lg:w-28" />
           </div>
 
           <h2 className="mt-6 text-center text-3xl font-bold leading-tight lg:text-4xl">

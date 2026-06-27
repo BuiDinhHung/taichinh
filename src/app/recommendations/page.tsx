@@ -203,10 +203,35 @@ export default function RecommendationsPage() {
     <>
       <Header />
       <main className="flex-1 bg-[#e8f0f9]" style={{ paddingTop: "var(--header-height)" }}>
+        {/* Header: split text + image */}
+        <section className="grid min-h-[420px] bg-white md:grid-cols-2">
+          <div
+            className="flex flex-col justify-center py-12 md:py-14"
+            style={{ paddingLeft: "clamp(1rem, 5vw, 5rem)", paddingRight: "2.5rem" }}
+          >
+            <h1 className="text-[1.55rem] font-bold text-[#181818] md:text-[1.85rem]">
+              Đối tác của chúng tôi
+            </h1>
+            <p className="mt-7 max-w-[390px] text-[0.98rem] leading-7 text-[#242424]">
+              Đối tác của chúng tôi là những công ty hàng đầu trong ngành tài chính.
+            </p>
+            <p className="mt-5 max-w-[390px] text-[0.98rem] leading-7 text-[#242424]">
+              Vì vậy, bạn có thể yên tâm rằng mọi thứ bạn xây dựng với sự hỗ trợ của chúng tôi sẽ bền vững.
+            </p>
+          </div>
+          <div className="relative min-h-[280px] md:min-h-full">
+            <Image
+              src="/images/partners-tablet.jpeg"
+              alt="Tư vấn cùng các đối tác tài chính"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+        </section>
+
         <section className="py-12 lg:py-16">
           <div className="mx-auto max-w-[1180px] px-5">
-            <h1 className="sr-only">Đối tác của chúng tôi</h1>
-
             <div className="divide-y divide-gray-300">
               {partners.map((partner) => (
                 <article

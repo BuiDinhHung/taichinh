@@ -49,7 +49,7 @@ export function CorporatePensionArticle() {
     <article className="bg-neutral-100 text-black">
       <section className="px-[10%] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
-          <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+          <h1 className="whitespace-nowrap text-center font-bold leading-tight text-[clamp(0.85rem,2.4vw,2.5rem)]">
             Bảo hiểm hưu trí doanh nghiệp- Betriebliche Altenvorsorgen (bAV)
           </h1>
 
@@ -57,7 +57,7 @@ export function CorporatePensionArticle() {
             <div className="min-w-0">
               <div className="text-center">
                 <p className="text-3xl font-bold">Chiến lược cộng hưởng:</p>
-                <h2 className="mt-10 text-4xl font-bold leading-tight">
+                <h2 className="mt-10 text-3xl font-bold leading-tight">
                   Tiết kiệm thuế với Bảo hiểm trực tiếp (bAV)
                 </h2>
               </div>
@@ -96,7 +96,7 @@ export function CorporatePensionArticle() {
 
       <section className="px-[10%] py-14">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-center text-4xl font-bold">Lợi ích cho bạn là người lao động</h2>
+          <h2 className="text-center text-3xl font-bold">Lợi ích cho bạn là người lao động</h2>
           <div className="mt-12 grid gap-12 text-center lg:grid-cols-3">
             {employeeBenefits.map((benefit) => {
               const Icon = benefit.icon;
@@ -131,7 +131,7 @@ export function CorporatePensionArticle() {
 
       <section className="px-[10%] py-14">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-center text-4xl font-bold">Lợi ích cho doanh nghiệp</h2>
+          <h2 className="text-center text-3xl font-bold">Lợi ích cho doanh nghiệp</h2>
           <div className="mt-12 grid gap-12 text-center lg:grid-cols-3">
             {companyBenefits.map((benefit) => {
               const Icon = benefit.icon;

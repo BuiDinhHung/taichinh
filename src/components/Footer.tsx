@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { copyright, footerColumns } from "@/lib/content";
+import { CONTACT } from "@/lib/booking";
+import { FacebookIcon, PhoneIcon, WhatsAppIcon, MailIcon } from "@/components/icons";
 
 export function Footer() {
   return (
@@ -22,10 +24,47 @@ export function Footer() {
               <br />
               cộng đồng người Việt tại Đức.
             </p>
-            <div className="mt-4 space-y-1.5 text-sm text-[#666]">
-              <p>Tel: +49 30-4268859</p>
-              <p>WhatsApp: 0176-10178768</p>
-              <p className="break-all">bao.vu-the.3625100@dvag.de</p>
+            <div className="mt-4 space-y-3 text-sm text-[#666]">
+              <Link
+                href={CONTACT.phoneHref}
+                className="flex items-center gap-3 transition-colors hover:text-[#111]"
+              >
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-gold-tint text-brand-gold-darker">
+                  <PhoneIcon className="h-4 w-4" />
+                </span>
+                +49 30-4268859
+              </Link>
+              <Link
+                href={`https://wa.me/${CONTACT.mobileWhatsApp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 transition-colors hover:text-[#111]"
+              >
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-gold-tint text-brand-gold-darker">
+                  <WhatsAppIcon className="h-4 w-4" />
+                </span>
+                0176-10178768
+              </Link>
+              <Link
+                href={`mailto:${CONTACT.email}`}
+                className="flex items-center gap-3 transition-colors hover:text-[#111]"
+              >
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-gold-tint text-brand-gold-darker">
+                  <MailIcon className="h-4 w-4" />
+                </span>
+                <span className="break-all">{CONTACT.email}</span>
+              </Link>
+              <Link
+                href={CONTACT.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 transition-colors hover:text-[#111]"
+              >
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1877F2] text-white">
+                  <FacebookIcon className="h-4 w-4" />
+                </span>
+                Facebook
+              </Link>
             </div>
           </div>
 

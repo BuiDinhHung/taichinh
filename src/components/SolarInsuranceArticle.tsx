@@ -32,11 +32,11 @@ export function SolarInsuranceArticle() {
     <article className="bg-neutral-100 text-black">
       <section className="px-[10%] py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
+          <div className="grid items-center gap-8 lg:grid-cols-[1fr_140px]">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Bảo hiểm điện tử cho hệ thống điện mặt trời
             </h1>
-            <SolarPanelIcon className="mx-auto h-36 w-36 text-brand-gold lg:h-44 lg:w-44" />
+            <SolarPanelIcon className="mx-auto h-24 w-24 text-brand-gold lg:h-28 lg:w-28" />
           </div>
 
           <div className="mt-6 max-w-5xl text-2xl leading-snug">
@@ -44,7 +44,7 @@ export function SolarInsuranceArticle() {
               Mặt trời của bạn được bảo vệ khỏi nhiều mối nguy hiểm (ví dụ: hỏa hoạn, mưa đá). Với Photovoltaik PLUS, bạn có thể mở rộng sự bảo vệ này bằng bảo hiểm toàn diện và bảo hiểm mất thu nhập.
             </p>
 
-            <h2 className="mt-8 text-4xl leading-tight">
+            <h2 className="mt-8 text-2xl font-normal leading-snug">
               Thông qua Photovoltaik PLUS, các thành phần sau được bảo vệ:
             </h2>
             <ul className="mt-6 list-disc pl-6">

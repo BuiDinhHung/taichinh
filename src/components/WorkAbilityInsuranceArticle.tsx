@@ -13,7 +13,7 @@ const premiumAbilities = ["lái xe", "khả năng hành động tự chủ", "gi
 export function WorkAbilityInsuranceArticle() {
   return (
     <article className="bg-neutral-100 text-black">
-      <section className="px-[10%] py-14 sm:py-16">
+      <section className="px-[10%] pt-6 pb-2 sm:pt-8 sm:pb-2">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-8 lg:grid-cols-[1fr_150px]">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
@@ -47,7 +47,7 @@ export function WorkAbilityInsuranceArticle() {
         </div>
       </section>
 
-      <section className="px-[10%] py-14 sm:py-16">
+      <section className="px-[10%] pt-2 pb-6 sm:pt-2 sm:pb-8">
         <div className="mx-auto max-w-5xl text-2xl leading-snug">
           <h2 className="text-xl font-bold">Bảo hiểm năng lực cơ bản (gói cơ bản)</h2>
           <p className="mt-6">

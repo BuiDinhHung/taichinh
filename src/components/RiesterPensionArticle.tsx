@@ -25,7 +25,7 @@ export function RiesterPensionArticle() {
       <section className="grid min-h-[520px] lg:grid-cols-[48%_52%]">
         <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+            <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Chủ động tài chính -<br />An nhiên tuổi già
             </h1>
             <p className="mt-16 text-2xl font-bold leading-snug">
@@ -62,7 +62,7 @@ export function RiesterPensionArticle() {
       <section className="px-[10%] py-12 sm:py-14">
         <div className="mx-auto max-w-7xl">
           <p className="text-center text-2xl font-bold">Nghĩ sớm cho tương lai</p>
-          <h2 className="mt-10 text-center text-4xl font-bold leading-tight sm:text-5xl">
+          <h2 className="mt-10 text-center text-3xl font-bold leading-tight sm:text-4xl">
             Tại sao phải lo cho tương lai?
           </h2>
           <div className="mx-auto mt-10 max-w-7xl text-2xl leading-snug">
@@ -77,7 +77,7 @@ export function RiesterPensionArticle() {
             </p>
           </div>
 
-          <h2 className="mt-20 text-center text-4xl font-bold leading-tight">
+          <h2 className="mt-20 text-center text-3xl font-bold leading-tight">
             Những lợi ích của lương hưu Riester dành cho bạn.
           </h2>
           <div className="mt-10 grid gap-12 text-center lg:grid-cols-3">

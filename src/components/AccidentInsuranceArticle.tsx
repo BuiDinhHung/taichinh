@@ -41,7 +41,7 @@ const accidentBenefits = [
 export function AccidentInsuranceArticle() {
   return (
     <article className="bg-[#f7f4e8] text-black">
-      <section className="px-[10%] py-14 sm:py-16">
+      <section className="px-[10%] py-6 sm:py-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-8 lg:grid-cols-[1fr_160px]">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">

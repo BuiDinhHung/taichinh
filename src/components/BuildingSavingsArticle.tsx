@@ -26,7 +26,7 @@ function ImmoStartDiagram() {
       alt="Sơ đồ ImmoStart Badenia"
       width={962}
       height={541}
-      className="h-auto w-full object-contain"
+      className="mx-auto h-auto w-[90%] object-contain"
     />
   );
 }
@@ -39,7 +39,7 @@ export function BuildingSavingsArticle() {
         <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="w-full">
             <p className="text-base leading-tight sm:text-lg">Tích lũy Vốn và Đảm bảo Khoản vay Xây dựng</p>
-            <h1 className="mt-6 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+            <h1 className="mt-6 text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">
               Tiết kiệm xây dựng:<br />Nền tảng của Việc sở hữu Nhà
             </h1>
             <p className="mt-6 text-sm leading-relaxed sm:text-base">
@@ -107,7 +107,7 @@ export function BuildingSavingsArticle() {
       <section className="px-[10%] py-14">
         <div className="text-center">
           <h2 className="text-3xl font-bold leading-tight sm:text-4xl">Hãy tận dụng cơ hội tốt này!</h2>
-          <p className="mt-6 inline-block text-left text-3xl font-bold leading-snug text-[#0071bc] sm:text-4xl">
+          <p className="mt-6 inline-block text-left text-4xl font-bold leading-snug text-[#0071bc] sm:text-5xl">
             Chốt một hợp đồng tiết kiệm xây dựng<br />
             để khi vay được lãi suất ưu đãi từ <span className="text-red-600">0,95%</span>
           </p>

@@ -334,6 +334,13 @@
     line-height: 1.65;
   }
 
+  /* Exception: cho phép phóng to vượt cap (vd. danh sách hero bảo hiểm sức khỏe) */
+  .dvag-article-compact article .compact-allow-grow,
+  .dvag-article-compact article .compact-allow-grow li {
+    font-size: clamp(1.1rem, 0.9rem + 0.7vw, 1.5rem) !important;
+    line-height: 1.35 !important;
+  }
+
   .dvag-article-compact article .mt-20,
   .dvag-article-compact article .mt-24 {
     margin-top: 3rem !important;

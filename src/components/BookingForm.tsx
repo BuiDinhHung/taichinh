@@ -1,15 +1,14 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import {
   buildMailtoUrl,
   buildWhatsAppUrl,
-  CONTACT,
   TIME_SLOTS,
   TOPICS,
   type BookingFormData,
 } from "@/lib/booking";
-import { ArrowRightIcon, FacebookIcon, MailIcon, WhatsAppIcon } from "@/components/icons";
+import { ArrowRightIcon, MailIcon, WhatsAppIcon } from "@/components/icons";
 
 const EMPTY: BookingFormData = {
   name: "",
@@ -34,6 +33,13 @@ export function BookingForm() {
 
   const set = <K extends keyof BookingFormData>(key: K, value: BookingFormData[K]) =>
     setData((prev) => ({ ...prev, [key]: value }));
+
+  // Chỉ cho phép gửi khi đã có ít nhất một thông tin liên hệ hợp lệ.
+  const canSend = hasContactInfo && isEmailValid;
+  const handleSend = (e: MouseEvent<HTMLAnchorElement>) => {
+    setTouched(true);
+    if (!canSend) e.preventDefault();
+  };
 
   const inputBase =
     "w-full rounded-md border border-border-default bg-white px-4 py-2.5 text-sm text-text-strong placeholder:text-text-muted transition-colors focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/30 dark:bg-card dark:text-foreground";
@@ -156,25 +162,15 @@ export function BookingForm() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => setTouched(true)}
+          onClick={handleSend}
           className={`${actionBase} bg-[#25D366] hover:bg-[#1ebe5a]`}
         >
           <WhatsAppIcon className="h-5 w-5" />
           Gửi qua WhatsApp
         </a>
         <a
-          href={CONTACT.facebook}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => setTouched(true)}
-          className={`${actionBase} bg-[#1877F2] hover:bg-[#0866FF]`}
-        >
-          <FacebookIcon className="h-5 w-5" />
-          Gửi qua Facebook
-        </a>
-        <a
           href={mailtoUrl}
-          onClick={() => setTouched(true)}
+          onClick={handleSend}
           className={`${actionBase} bg-brand-gold hover:bg-brand-gold-dark`}
         >
           <MailIcon className="h-5 w-5" />

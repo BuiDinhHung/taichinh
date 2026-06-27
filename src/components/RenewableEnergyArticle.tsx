@@ -24,7 +24,7 @@ export function RenewableEnergyArticle() {
       <section className="grid bg-[#dcebf8] lg:grid-cols-[64%_36%]">
         <div className="flex items-center px-7 py-10 sm:px-12 lg:px-[8%]">
           <div className="max-w-[700px]">
-            <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
               Đầu tư thông minh vào<br />Máy bơm nhiệt &amp; Năng lượng mặt trời
             </h1>
             <h2 className="mt-10 text-xl font-bold">Những lý do bạn không nên bỏ lỡ:</h2>
@@ -83,8 +83,8 @@ export function RenewableEnergyArticle() {
           <Image
             src="/images/energy-awards.png"
             alt="Các giải thưởng – Auszeichnungen"
-            width={2188}
-            height={719}
+            width={1536}
+            height={516}
             className="w-full max-w-[520px] object-contain"
           />
         </div>

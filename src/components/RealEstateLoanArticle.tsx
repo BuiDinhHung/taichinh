@@ -186,7 +186,7 @@ export function RealEstateLoanArticle() {
       </section>
 
       {/* Personal loan benefits */}
-      <section className="bg-white px-[10%] py-16 sm:py-24">
+      <section className="bg-white px-[10%] pt-16 pb-8 sm:pt-24 sm:pb-10">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-5xl font-bold leading-tight">Vay tín dụng cá nhân</h2>
           <p className="mx-auto mt-16 max-w-5xl text-2xl leading-snug">
@@ -214,8 +214,8 @@ export function RealEstateLoanArticle() {
       </section>
 
       {/* Meet your needs */}
-      <section className="bg-[#e8f0f9] px-[10%] py-16 sm:py-20">
-        <h2 className="text-center text-4xl font-bold leading-tight">Đáp ứng nhu cầu của bạn</h2>
+      <section className="bg-white px-[10%] pt-4 pb-16 sm:pt-6 sm:pb-20">
+        <h2 className="text-center text-3xl font-bold leading-tight">Đáp ứng nhu cầu của bạn</h2>
 
         {/* Section 1 — full width */}
         <div className="mt-16 text-2xl leading-snug">

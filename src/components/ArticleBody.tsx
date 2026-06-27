@@ -47,10 +47,13 @@ function renderInline(text: string, key: string) {
 export function ArticleBody({
   blocks,
   unoptimizedImages = false,
+  size = "default",
 }: {
   blocks: Block[];
   unoptimizedImages?: boolean;
+  size?: "default" | "sm";
 }) {
+  const bodyText = size === "sm" ? "text-sm sm:text-base" : "text-base sm:text-lg";
   return (
     <div className="space-y-5">
       {blocks.map((block, idx) => {
@@ -76,13 +79,13 @@ export function ArticleBody({
             );
           case "p":
             return (
-              <p key={key} className="text-base sm:text-lg leading-relaxed text-foreground/85">
+              <p key={key} className={`${bodyText} leading-relaxed text-foreground/85`}>
                 {renderInline(block.text, key)}
               </p>
             );
           case "ul":
             return (
-              <ul key={key} className="ml-5 list-disc space-y-2 text-base sm:text-lg leading-relaxed text-foreground/85 marker:text-primary">
+              <ul key={key} className={`ml-5 list-disc space-y-2 ${bodyText} leading-relaxed text-foreground/85 marker:text-primary`}>
                 {block.items.map((item, i) => (
                   <li key={`${key}-${i}`}>{renderInline(item, `${key}-${i}`)}</li>
                 ))}
@@ -90,7 +93,7 @@ export function ArticleBody({
             );
           case "ol":
             return (
-              <ol key={key} className="ml-5 list-decimal space-y-2 text-base sm:text-lg leading-relaxed text-foreground/85 marker:text-primary marker:font-semibold">
+              <ol key={key} className={`ml-5 list-decimal space-y-2 ${bodyText} leading-relaxed text-foreground/85 marker:text-primary marker:font-semibold`}>
                 {block.items.map((item, i) => (
                   <li key={`${key}-${i}`}>{renderInline(item, `${key}-${i}`)}</li>
                 ))}

@@ -13,10 +13,10 @@ export function HealthInsuranceArticle() {
       <section className="grid min-h-[520px] lg:grid-cols-[48%_52%]">
         <div className="flex items-center bg-[#e8f0f9] px-[10%] py-12">
           <div className="mx-auto max-w-2xl">
-            <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+            <h1 className="text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">
               Bảo hiểm sức khỏe
             </h1>
-            <ul className="mt-20 list-disc space-y-2 pl-6 text-3xl leading-tight">
+            <ul className="compact-allow-grow mt-20 list-disc space-y-2 pl-6 leading-tight">
               <li>Bảo hiểm Y tế</li>
               <li>Bảo hiểm tai nạn</li>
               <li>Bảo hiểm mất sức lao động</li>
@@ -35,13 +35,13 @@ export function HealthInsuranceArticle() {
         </div>
       </section>
 
-      <section className="px-[10%] py-14 sm:py-16">
+      <section className="px-[10%] py-6 sm:py-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
+          <div className="grid items-center gap-8 lg:grid-cols-[1fr_140px]">
             <h2 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Bảo hiểm y tế tư - Privatkrankenversicherung
             </h2>
-            <HealthCrossIcon className="mx-auto h-36 w-36 text-brand-gold lg:h-44 lg:w-44" />
+            <HealthCrossIcon className="mx-auto h-24 w-24 text-brand-gold lg:h-28 lg:w-28" />
           </div>
 
           <div className="mt-12 max-w-7xl text-2xl leading-snug">
@@ -57,7 +57,7 @@ export function HealthInsuranceArticle() {
             </ul>
           </div>
 
-          <div className="mt-20 grid items-end gap-10 lg:grid-cols-[1fr_360px]">
+          <div className="mt-10 grid items-end gap-10 lg:grid-cols-[1fr_360px]">
             <div className="text-center text-2xl text-neutral-500 lg:text-left lg:pl-[32%]">
               <p className="font-bold">Sản phẩm của Generali</p>
               <p className="mt-16">

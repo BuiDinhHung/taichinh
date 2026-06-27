@@ -439,7 +439,7 @@ export default async function ArticlePage({
                 <div className="flex flex-col text-center">
                   <Link href="/bao-hiem-tai-san-tong-hop" className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
                     <div className="relative aspect-[3/2] w-full overflow-hidden bg-brand-gold-tint">
-                      <Image src="/images/insurance-property-temple.jpg" alt="Bảo hiểm tài sản" fill sizes="(min-width: 1280px) 300px, (min-width: 640px) 30vw, 92vw" className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+                      <Image src="/images/gallery-02.jpeg" alt="Bảo hiểm tài sản" fill sizes="(min-width: 1280px) 300px, (min-width: 640px) 30vw, 92vw" className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
                     </div>
                     <h3 className="mt-3 px-1 text-sm font-bold leading-snug text-black transition-colors group-hover:text-brand-gold sm:text-base lg:text-lg">
                       Bảo hiểm Tài sản

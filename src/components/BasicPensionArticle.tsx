@@ -53,7 +53,7 @@ export function BasicPensionArticle() {
 
       <section className="px-[10%] py-16 sm:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-4xl font-bold leading-tight lg:text-5xl">
+          <h2 className="text-center text-3xl font-bold leading-tight lg:text-4xl">
             Những điều cần biết về hưu trí cơ bản
           </h2>
 

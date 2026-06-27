@@ -97,7 +97,17 @@ export function HeroSlider({ slides, autoPlayInterval = 5000 }: HeroSliderProps)
                     </p>
                   )}
                   <h1 className="max-w-[16ch] text-[1.5rem] font-light leading-[1.2] text-white sm:max-w-[13ch] sm:text-[1.7rem] lg:text-[2.1rem]">
-                    {slide.headline}
+                    {(() => {
+                      const lines = slide.headline.split("\n");
+                      return lines.map((line, i) => (
+                        <span
+                          key={i}
+                          className={lines.length > 1 ? "block whitespace-nowrap" : "block"}
+                        >
+                          {line}
+                        </span>
+                      ));
+                    })()}
                   </h1>
                   <Link
                     href={slide.cta.href}

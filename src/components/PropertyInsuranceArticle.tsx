@@ -57,11 +57,11 @@ export function PropertyInsuranceBody() {
     <article className="bg-white text-black">
       <section className="bg-neutral-100 px-[10%] py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[1fr_180px]">
+          <div className="grid items-center gap-8 lg:grid-cols-[1fr_140px]">
             <h2 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-left">
               Bảo hiểm tài sản - Hausratversicherung
             </h2>
-            <SofaIcon className="mx-auto h-36 w-36 text-brand-gold lg:h-44 lg:w-44" />
+            <SofaIcon className="mx-auto h-24 w-24 text-brand-gold lg:h-28 lg:w-28" />
           </div>
 
           <div className="mt-6 max-w-6xl text-2xl leading-snug">

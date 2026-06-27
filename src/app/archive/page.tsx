@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FeaturedNewsSection } from "@/components/FeaturedNewsSection";
 
 export const metadata: Metadata = {
   title: "Lĩnh vực tư vấn - taichinh.de",
@@ -17,18 +18,6 @@ type ServiceCategory = {
   seriesHref: string;
   cards: ServiceCard[];
 };
-
-const latestNews = [
-  {
-    tag: "Tin mới",
-    title: "Cải cách chế độ hưu trí tư nhân Riester",
-    excerpt:
-      "Chính phủ Liên bang Đức thông qua chương trình cải cách Hưu trí Riester. Từ năm 2027, tài khoản tiết kiệm hưu trí được nhà nước hỗ trợ sẽ thay thế lương hưu Riester.",
-    href: "/cai-cach-che-do-huu-tri-tu-nhan-riester",
-    image: "/images/pdf-news-riester.jpeg",
-    date: "08.05.2026",
-  },
-];
 
 const categories: ServiceCategory[] = [
   {
@@ -49,7 +38,7 @@ const categories: ServiceCategory[] = [
     cards: [
       { title: "Bảo hiểm hưu trí", href: "/bao-hiem-huu-tri", image: "/images/pdf-field-house.jpeg" },
       { title: "Bảo hiểm sức khỏe", href: "/bao-hiem-suc-khoe", image: "/images/gallery-03.jpeg" },
-      { title: "Bảo hiểm tài sản tổng hợp", href: "/bao-hiem-tai-san-tong-hop", image: "/images/insurance-property-temple.jpg" },
+      { title: "Bảo hiểm tài sản tổng hợp", href: "/bao-hiem-tai-san-tong-hop", image: "/images/gallery-02.jpeg" },
       { title: "Bảo hiểm doanh nghiệp", href: "/bao-hiem-doanh-nghiep", image: "/images/gallery-06.jpeg" },
     ],
   },
@@ -80,45 +69,8 @@ export default function ArchivePage() {
       <Header />
       <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
 
-        {/* Latest news */}
-        <section className="bg-[#f7f8fa] px-[5%] py-10 lg:py-12">
-          <div className="mx-auto max-w-7xl">
-            <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-brand-gold-darker">
-              Tin mới nhất
-            </h2>
-            <div className="grid gap-5 lg:grid-cols-2">
-              {latestNews.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="group flex gap-5 overflow-hidden rounded-xl border border-brand-gold/20 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5"
-                >
-                  <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-lg sm:h-32 sm:w-48">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      sizes="192px"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <span className="inline-block rounded-full bg-brand-gold px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
-                      {item.tag}
-                    </span>
-                    <p className="mt-2 text-base font-bold leading-snug text-text-strong group-hover:text-brand-gold-darker sm:text-lg">
-                      {item.title}
-                    </p>
-                    <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-text-muted">
-                      {item.excerpt}
-                    </p>
-                    <p className="mt-3 text-xs text-text-subtle">{item.date}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Latest news (featured) */}
+        <FeaturedNewsSection />
 
         {/* Service categories */}
         {categories.map((cat, i) => (
