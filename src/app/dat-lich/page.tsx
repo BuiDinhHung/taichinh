@@ -32,7 +32,7 @@ export default function DatLichPage() {
               </p>
             </header>
 
-            <div className="mx-auto mt-8 max-w-4xl">
+            <div className="mx-auto mt-8 max-w-5xl">
               <QuickContact />
             </div>
           </div>

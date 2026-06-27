@@ -6,27 +6,28 @@ export function QuickContact() {
   const items = [
     {
       label: "Gọi điện",
-      value: CONTACT.phoneDisplay,
+      lines: [CONTACT.phoneDisplay],
       href: CONTACT.phoneHref,
       Icon: PhoneIcon,
     },
     {
       label: "WhatsApp / Zalo · Di động",
-      value: `${CONTACT.mobileDisplay} / 0176-10178768`,
+      lines: [CONTACT.mobileDisplay, "0176-10178768"],
       href: `https://wa.me/${CONTACT.mobileWhatsApp}`,
       Icon: WhatsAppIcon,
     },
     {
       label: "Email",
-      value: CONTACT.email,
+      lines: [CONTACT.email],
       href: `mailto:${CONTACT.email}`,
       Icon: MailIcon,
+      nowrap: true,
     },
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:gap-5">
-      {items.map(({ label, value, href, Icon }) => (
+    <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:gap-5">
+      {items.map(({ label, lines, href, Icon, nowrap }) => (
         <Link
           key={label}
           href={href}
@@ -41,9 +42,16 @@ export function QuickContact() {
             <span className="block text-xs font-bold uppercase tracking-wider text-text-muted">
               {label}
             </span>
-            <span className="block truncate text-sm font-bold text-text-strong dark:text-foreground">
-              {value}
-            </span>
+            {lines.map((line) => (
+              <span
+                key={line}
+                className={`block text-sm font-bold text-text-strong dark:text-foreground ${
+                  nowrap ? "whitespace-nowrap" : "break-words"
+                }`}
+              >
+                {line}
+              </span>
+            ))}
           </span>
         </Link>
       ))}
