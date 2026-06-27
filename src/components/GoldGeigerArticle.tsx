@@ -42,7 +42,7 @@ export function GoldGeigerArticle() {
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Kế hoạch Tiết kiệm Vàng Geiger: Một ý tưởng tuyệt vời cho tương lai.
             </h1>
-            <p className="mt-8 max-w-2xl text-xl leading-snug sm:text-2xl">
+            <p className="mt-4 max-w-2xl text-xl leading-snug sm:text-2xl">
               Chỉ với mức khởi điểm từ 25 Euro, bạn cũng có thể trở thành chủ sở hữu của vàng thật. Với Kế hoạch Tiết kiệm Vàng Geiger, bạn sẽ sở hữu vàng vật chất nguyên chất ngay từ đồng Euro đầu tiên.
             </p>
           </div>
@@ -73,8 +73,8 @@ export function GoldGeigerArticle() {
             return (
               <div key={benefit.title} className="text-center">
                 <Icon className="mx-auto h-36 w-36 text-brand-gold" />
-                <h3 className="mt-10 text-3xl font-bold">{benefit.title}</h3>
-                <p className="mx-auto mt-10 max-w-sm text-2xl leading-snug">
+                <h3 className="mt-5 text-3xl font-bold">{benefit.title}</h3>
+                <p className="mx-auto mt-5 max-w-sm text-2xl leading-snug">
                   {benefit.text}
                 </p>
               </div>
@@ -113,7 +113,7 @@ export function GoldGeigerArticle() {
       </section>
 
       {/* Quality / Security section */}
-      <section className="px-[10%] py-14">
+      <section className="px-[10%] py-6 sm:py-8">
         <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[44%_1fr]">
           <div className="relative mx-auto aspect-[1.05] w-full max-w-xl lg:translate-y-4 lg:scale-[1.08]">
             <Image

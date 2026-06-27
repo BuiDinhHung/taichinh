@@ -16,7 +16,7 @@ export function HealthInsuranceArticle() {
             <h1 className="text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">
               Bảo hiểm sức khỏe
             </h1>
-            <ul className="compact-allow-grow mt-20 list-disc space-y-2 pl-6 leading-tight">
+            <ul className="compact-allow-grow mt-8 list-disc space-y-2 pl-6 leading-tight">
               <li>Bảo hiểm Y tế</li>
               <li>Bảo hiểm tai nạn</li>
               <li>Bảo hiểm mất sức lao động</li>
@@ -44,23 +44,23 @@ export function HealthInsuranceArticle() {
             <HealthCrossIcon className="mx-auto h-24 w-24 text-brand-gold lg:h-28 lg:w-28" />
           </div>
 
-          <div className="mt-12 max-w-7xl text-2xl leading-snug">
+          <div className="mt-6 max-w-7xl text-2xl leading-snug">
             <h3 className="text-3xl font-bold">Bảo vệ sức khỏe của bạn tốt hơn</h3>
-            <p className="mt-10">
+            <p className="mt-5">
               Các quyền lợi của bảo hiểm y tế công (GKV) bị giới hạn. Điều đó có thể đồng nghĩa với việc bạn phải tự chi trả một khoản chi phí khá lớn! Bảo hiểm bổ sung y tế của Generali Deutschland Krankenversicherung sẽ giúp bảo vệ bạn trước những chi phí này. Với “Mein Gesundheitsplan”, bạn có thể lấp đầy những thiếu hụt lớn về quyền lợi trong các lĩnh vực quan trọng như nha khoa, hỗ trợ thị lực và du lịch nước ngoài, qua đó bổ sung tối ưu cho gói bảo hiểm y tế công cơ bản của mình.
             </p>
 
-            <ul className="mt-14 list-disc pl-6">
+            <ul className="mt-6 list-disc pl-6">
               {healthBenefits.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
 
-          <div className="mt-10 grid items-end gap-10 lg:grid-cols-[1fr_360px]">
+          <div className="mt-5 grid items-end gap-10 lg:grid-cols-[1fr_360px]">
             <div className="text-center text-2xl text-neutral-500 lg:text-left lg:pl-[32%]">
               <p className="font-bold">Sản phẩm của Generali</p>
-              <p className="mt-16">
+              <p className="mt-8">
                 Generali Deutschland Krankenversicherung AG<br />
                 Adenauerring 7, 81737 München
               </p>

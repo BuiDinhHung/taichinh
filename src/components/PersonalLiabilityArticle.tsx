@@ -49,7 +49,7 @@ const otherCoverage = [
 export function PersonalLiabilityArticle() {
   return (
     <article className="bg-[#e8f0f9] text-black">
-      <section className="px-[10%] py-8 sm:py-10">
+      <section className="px-[10%] py-4 sm:py-5">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-8 lg:grid-cols-[1fr_140px]">
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:pl-20 lg:text-left">

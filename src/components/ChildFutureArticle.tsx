@@ -11,7 +11,7 @@ export function ChildFutureArticle() {
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl">
               Kế hoạch cho tương lai của tôi
             </h1>
-            <div className="mt-10 text-base leading-relaxed sm:text-lg">
+            <div className="mt-5 text-base leading-relaxed sm:text-lg">
               <p className="text-lg font-bold sm:text-xl">Bạn đã chuẩn bị tài chính cho tương lai của con chưa?</p>
               <div className="mt-4 space-y-2">
                 <p>• <strong>16 tuổi</strong> – con bạn cần <strong>4.000 €</strong> để <strong>học lái xe</strong>?</p>
@@ -19,7 +19,7 @@ export function ChildFutureArticle() {
                 <p>• <strong>20 tuổi</strong> – con bạn cần <strong>12.000 €</strong> để <strong>bắt đầu sống tự lập</strong> với căn hộ riêng?</p>
                 <p>• <strong>25 tuổi</strong> – con bạn cần <strong>15.000 €</strong> để <strong>mua ô tô</strong> và xây dựng cuộc sống riêng?</p>
               </div>
-              <div className="mt-8 flex justify-center">
+              <div className="mt-4 flex justify-center">
                 <Link
                   href="/dat-lich"
                   className="inline-flex items-center bg-brand-gold px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-gold-dark"
@@ -43,7 +43,7 @@ export function ChildFutureArticle() {
       </section>
 
       {/* Section 2: full-width text */}
-      <section className="px-[10%] py-10 sm:py-12">
+      <section className="px-[10%] py-5 sm:py-6">
         <h2 className="text-center text-3xl font-bold leading-tight sm:text-4xl">
           Giải pháp tiết kiệm linh hoạt cho trẻ em
         </h2>
@@ -67,7 +67,7 @@ export function ChildFutureArticle() {
           mọi ước mơ đều trong tầm tay.
         </h2>
 
-        <div className="mt-8 grid items-end gap-6 lg:grid-cols-[52%_48%]">
+        <div className="mt-4 grid items-end gap-6 lg:grid-cols-[52%_48%]">
           {/* Text left */}
           <div className="text-sm leading-relaxed sm:text-base">
             <p className="font-bold">

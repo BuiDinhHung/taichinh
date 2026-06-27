@@ -90,10 +90,10 @@ export function FingerHausArticle() {
         <div className="flex items-center justify-center bg-[#e8f0f9] px-[6%] py-12">
           <div className="max-w-4xl text-center">
             <p className="text-4xl leading-tight">Ngôi nhà mơ ước của bạn</p>
-            <h1 className="mt-20 text-4xl font-bold leading-tight sm:text-5xl">
+            <h1 className="mt-8 text-4xl font-bold leading-tight sm:text-5xl">
               FingerHaus - Nhà ở tiền chế<br />Mỗi ngôi nhà là một tác phẩm độc đáo
             </h1>
-            <ul className="mx-auto mt-20 max-w-3xl list-disc space-y-8 text-left text-2xl leading-snug">
+            <ul className="mx-auto mt-8 max-w-3xl list-disc space-y-8 text-left text-2xl leading-snug">
               <li>FingerHaus thiết kế và xây dựng nhà hoàn toàn theo ý tưởng riêng biệt và mong muốn của bạn</li>
               <li>FingerHaus đại diện cho chất lượng xuất sắc, các khái niệm nhà đa dạng và tất cả đều đến từ một mối duy nhất.</li>
             </ul>
@@ -113,10 +113,10 @@ export function FingerHausArticle() {
 
       <section className="bg-neutral-100 px-[10%] py-10 text-center">
         <p className="text-4xl leading-tight">Những lý do tuyệt vời</p>
-        <h2 className="mt-8 text-3xl font-bold leading-tight sm:text-4xl">
+        <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">
           Để bạn chọn Công ty FingerHaus xây ngôi nhà theo yêu cầu của bạn
         </h2>
-        <ul className="mx-auto mt-8 inline-block list-disc text-left text-2xl leading-snug">
+        <ul className="mx-auto mt-4 inline-block list-disc text-left text-2xl leading-snug">
           <li>Hiệu quả năng lượng và tính bền vững với hỗ trợ từ nhà nước</li>
           <li>Chất lượng &ldquo;Made in Germany&rdquo;</li>
         </ul>
@@ -141,10 +141,10 @@ export function FingerHausArticle() {
           ))}
         </div>
 
-        <div className="mx-auto mt-20 max-w-7xl text-center">
+        <div className="mx-auto mt-8 max-w-7xl text-center">
           <h2 className="text-4xl font-bold leading-tight">Giải thưởng của FingerHaus GmbH</h2>
           <p className="mt-2 text-2xl">Đây là những giải thưởng Chất lượng, mà bạn có thể tin cậy.</p>
-          <div className="mt-10">
+          <div className="mt-5">
             <AwardStack />
           </div>
         </div>

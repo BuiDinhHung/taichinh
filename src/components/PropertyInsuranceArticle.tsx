@@ -29,10 +29,10 @@ export function PropertyInsuranceHero() {
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Bảo hiểm tài sản
             </h1>
-            <h2 className="mt-12 text-center text-3xl font-bold leading-tight lg:text-4xl">
+            <h2 className="mt-6 text-center text-3xl font-bold leading-tight lg:text-4xl">
               Giải pháp bảo vệ toàn diện tối ưu
             </h2>
-            <p className="mt-20 text-2xl leading-snug">
+            <p className="mt-8 text-2xl leading-snug">
               Gói bảo hiểm bảo toàn tài sản (gọi tắt là VSP) của đối tác Generali mang đến giải pháp bảo vệ toàn diện vượt trội cho việc bảo vệ tài sản cá nhân. Các quyền lợi được phối hợp hoàn hảo với nhau. Tùy theo sự kết hợp, bạn có thể nhận được mức giảm giá hấp dẫn.
             </p>
           </div>
@@ -55,7 +55,7 @@ export function PropertyInsuranceHero() {
 export function PropertyInsuranceBody() {
   return (
     <article className="bg-white text-black">
-      <section className="bg-neutral-100 px-[10%] py-8 sm:py-10">
+      <section className="bg-neutral-100 px-[10%] py-4 sm:py-5">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-8 lg:grid-cols-[1fr_140px]">
             <h2 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-left">
@@ -78,7 +78,7 @@ export function PropertyInsuranceBody() {
         </div>
       </section>
 
-      <section className="bg-neutral-100 px-[10%] py-8 sm:py-10">
+      <section className="bg-neutral-100 px-[10%] py-4 sm:py-5">
         <div className="mx-auto max-w-7xl text-2xl leading-snug">
           <h2 className="text-3xl font-bold">
             Các quyền lợi mới Freizeit Plus, Fahrrad Plus và Hausrat Optimal XXL trong VSP:

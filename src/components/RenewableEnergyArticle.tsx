@@ -27,7 +27,7 @@ export function RenewableEnergyArticle() {
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
               Đầu tư thông minh vào<br />Máy bơm nhiệt &amp; Năng lượng mặt trời
             </h1>
-            <h2 className="mt-10 text-xl font-bold">Những lý do bạn không nên bỏ lỡ:</h2>
+            <h2 className="mt-5 text-xl font-bold">Những lý do bạn không nên bỏ lỡ:</h2>
             <ul className="mt-5 list-disc pl-5 text-lg leading-snug">
               {reasons.map((r) => (
                 <li key={r}>{r}</li>
@@ -100,7 +100,7 @@ export function RenewableEnergyArticle() {
             <li>Đặt lịch hẹn tư vấn miễn phí</li>
           </ul>
 
-          <div className="mt-10 flex flex-col items-center justify-between gap-7 sm:flex-row">
+          <div className="mt-5 flex flex-col items-center justify-between gap-7 sm:flex-row">
             <div className="flex items-center gap-5">
               <Image
                 src="/images/dvag-emblem.png"

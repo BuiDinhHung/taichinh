@@ -67,23 +67,23 @@ export function PersonalLoanArticle() {
       <section className="px-[10%] py-16 sm:py-24">
         <div className="mx-auto max-w-6xl">
           <h1 className="text-center text-5xl font-bold leading-tight">Vay tín dụng cá nhân</h1>
-          <p className="mx-auto mt-16 max-w-5xl text-2xl leading-snug">
+          <p className="mx-auto mt-8 max-w-5xl text-2xl leading-snug">
             Cuộc sống luôn thay đổi, và đôi khi những thay đổi đó đòi hỏi chi phí. Xe không còn hoạt động tốt, bạn sắp phải chuyển nhà, con bạn cần một phòng riêng, hoặc bạn đang lên kế hoạch học thêm. Không phải lúc nào cũng có sẵn nguồn tài chính. Trong trường hợp này, <strong>Tín dụng cá nhân Smart</strong> là giải pháp dành cho bạn.
           </p>
 
-          <div className="mt-24 text-center">
+          <div className="mt-10 text-center">
             <h2 className="text-3xl font-bold">Lợi ích của bạn</h2>
-            <p className="mt-12 text-3xl">Khoản vay phù hợp với đời sống của bạn.</p>
+            <p className="mt-6 text-3xl">Khoản vay phù hợp với đời sống của bạn.</p>
           </div>
 
-          <div className="mt-16 grid gap-12 lg:grid-cols-3">
+          <div className="mt-8 grid gap-12 lg:grid-cols-3">
             {benefits.map((benefit) => {
               const Icon = benefit.icon;
               return (
                 <div key={benefit.title} className="text-center">
                   <Icon className="mx-auto h-36 w-36 text-brand-gold" />
-                  <h3 className="mt-10 text-3xl font-bold">{benefit.title}</h3>
-                  <p className="mx-auto mt-10 max-w-sm text-2xl leading-snug">{benefit.text}</p>
+                  <h3 className="mt-5 text-3xl font-bold">{benefit.title}</h3>
+                  <p className="mx-auto mt-5 max-w-sm text-2xl leading-snug">{benefit.text}</p>
                 </div>
               );
             })}
@@ -91,19 +91,19 @@ export function PersonalLoanArticle() {
         </div>
       </section>
 
-      <section className="px-[10%] py-16 sm:py-20">
+      <section className="px-[10%] py-6 sm:py-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-center text-4xl font-bold leading-tight">Đáp ứng nhu cầu của bạn</h2>
 
-          <div className="mt-16 grid items-center gap-12 lg:grid-cols-[52%_48%]">
+          <div className="mt-8 grid items-center gap-12 lg:grid-cols-[52%_48%]">
             <div className="text-2xl leading-snug">
               <h3 className="text-3xl font-bold">Tạo không gian tài chính cho những khoản chi cần thiết</h3>
-              <p className="mt-10">
+              <p className="mt-5">
                 Bạn mong muốn có không gian tài chính để thực hiện các khoản mua sắm cần thiết? Việc lập kế hoạch có trách nhiệm càng trở nên quan trọng. Khoản vay cá nhân Smart từ Deutsche Bank là một phần trong dịch vụ tư vấn tài chính toàn diện của chúng tôi. Để tăng thêm sự tin cậy, bạn có thể lựa chọn gói bảo hiểm bổ sung nhằm bảo vệ thu nhập và gia đình.
               </p>
 
-              <h3 className="mt-20 text-3xl font-bold">Tối ưu hóa các khoản vay trả góp của bạn</h3>
-              <p className="mt-10">
+              <h3 className="mt-8 text-3xl font-bold">Tối ưu hóa các khoản vay trả góp của bạn</h3>
+              <p className="mt-5">
                 Hơn 30% người Đức có một hoặc nhiều khoản vay trả góp. Bạn có thuộc nhóm đó không? Nếu có, đây là thời điểm thích hợp để kiểm tra các hợp đồng hiện tại của bạn.
               </p>
               <p className="mt-4">

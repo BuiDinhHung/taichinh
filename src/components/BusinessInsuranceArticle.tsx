@@ -55,7 +55,7 @@ function TextSection({
   className?: string;
 }) {
   return (
-    <section className={`px-[10%] py-8 sm:py-10 ${className}`}>
+    <section className={`px-[10%] py-4 sm:py-5 ${className}`}>
       <div className="mx-auto max-w-7xl text-xl leading-snug">{children}</div>
     </section>
   );
@@ -80,10 +80,10 @@ export function BusinessInsuranceArticle() {
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Bảo hiểm doanh nghiệp
             </h1>
-            <h2 className="mt-16 text-3xl font-bold leading-tight sm:text-4xl">
+            <h2 className="mt-8 text-3xl font-bold leading-tight sm:text-4xl">
               Doanh nghiệp của bạn được bảo vệ toàn diện trong gói bảo hiểm tổng hợp.
             </h2>
-            <p className="mt-12 text-2xl leading-snug">
+            <p className="mt-6 text-2xl leading-snug">
               Khái niệm FirmenSAFE là một gói sản phẩm bảo hiểm mạnh mẽ dành cho các doanh nghiệp có doanh thu
               lên đến 1,5 triệu euro. Nhờ cách tiếp cận toàn diện, gói này cung cấp những giải pháp bảo vệ quan
               trọng nhất trong một sản phẩm duy nhất và đó là ở mức tiêu chuẩn hàng đầu trên thị trường.
@@ -104,7 +104,7 @@ export function BusinessInsuranceArticle() {
 
       <TextSection>
         <h2 className="text-3xl font-bold">Điểm nổi bật của khái niệm FirmenSAFE:</h2>
-        <div className="mt-12">
+        <div className="mt-5">
           <BulletList items={highlights} />
         </div>
       </TextSection>
@@ -123,10 +123,10 @@ export function BusinessInsuranceArticle() {
       </TextSection>
 
       <TextSection>
-        <div className="space-y-12">
+        <div className="space-y-8">
           <section>
             <h2 className="text-3xl font-bold">a. Bảo hiểm trách nhiệm nghề nghiệp/kinh doanh</h2>
-            <div className="mt-10">
+            <div className="mt-5">
               <BulletList
                 items={[
                   "Bảo vệ toàn diện 10 triệu Euro",
@@ -137,8 +137,8 @@ export function BusinessInsuranceArticle() {
                 ]}
               />
             </div>
-            <h3 className="mt-10 text-3xl font-bold">Trường hợp ví dụ: Tai nạn khi bốc dỡ hàng hóa</h3>
-            <p className="mt-8">
+            <h3 className="mt-6 text-3xl font-bold">Trường hợp ví dụ: Tai nạn khi bốc dỡ hàng hóa</h3>
+            <p className="mt-4">
               Một người lái xe nâng trong quá trình bốc dỡ hàng hóa lùi ra ngoài khuôn viên công ty và ra đường.
               Một chiếc xe buýt đang di chuyển phải tránh và va chạm với nhiều chiếc xe khác. Bên cạnh sự hoảng
               sợ, thiệt hại cũng rất lớn: Tổng chi phí cho thiệt hại tài sản và thiệt hại người lên đến khoảng
@@ -149,7 +149,7 @@ export function BusinessInsuranceArticle() {
 
           <section>
             <h2 className="text-3xl font-bold">b. Bảo hiểm tài sản bao gồm thiệt hại do gián đoạn kinh doanh</h2>
-            <div className="mt-10">
+            <div className="mt-5">
               <BulletList
                 items={[
                   "Mức bồi thường tối đa 1 triệu Euro",
@@ -159,7 +159,7 @@ export function BusinessInsuranceArticle() {
                 ]}
               />
             </div>
-            <h3 className="mt-10 text-3xl font-bold">Trường hợp ví dụ: Hỏng hóc đắt đỏ</h3>
+            <h3 className="mt-6 text-3xl font-bold">Trường hợp ví dụ: Hỏng hóc đắt đỏ</h3>
             <p className="mt-3">
               Tại cửa hàng đồ gia dụng Seiler, một ấm đun nước bị hỏng gây ra cháy và gây thiệt hại trị giá
               32.000 € cho nội thất và hàng hóa. Ngoài ra, cửa hàng phải đóng cửa một tháng. Tuy nhiên, nhờ vào
@@ -172,7 +172,7 @@ export function BusinessInsuranceArticle() {
 
           <section>
             <h2 className="text-3xl font-bold">c. Bảo hiểm vận chuyển hàng hóa trong công việc</h2>
-            <div className="mt-10">
+            <div className="mt-5">
               <BulletList
                 items={[
                   "Không giới hạn số lượng xe trong doanh nghiệp",
@@ -181,8 +181,8 @@ export function BusinessInsuranceArticle() {
                 ]}
               />
             </div>
-            <h3 className="mt-10 text-3xl font-bold">Trường hợp ví dụ: Tham quan hội chợ</h3>
-            <p className="mt-8">
+            <h3 className="mt-6 text-3xl font-bold">Trường hợp ví dụ: Tham quan hội chợ</h3>
+            <p className="mt-4">
               Ông Stuber, người kinh doanh rượu vang cao cấp, muốn tham gia một hội chợ rượu vang. Trong xe vận
               chuyển của ông có các thùng rượu vang mà ông dự định bán tại hội chợ. Trong lúc dừng nghỉ ăn tại
               một trạm dừng trên cao tốc, xe của ông bị đột nhập và toàn bộ hàng hóa trong xe bị đánh cắp. Tổng
@@ -193,7 +193,7 @@ export function BusinessInsuranceArticle() {
 
           <section>
             <h2 className="text-3xl font-bold">d. Thiệt hại do hư hỏng hàng hóa lạnh, đông lạnh, thuốc</h2>
-            <div className="mt-10">
+            <div className="mt-5">
               <BulletList
                 items={[
                   "Miễn giảm bồi thường đối với thiệt hại do sơ suất nghiêm trọng gây ra",
@@ -204,8 +204,8 @@ export function BusinessInsuranceArticle() {
                 ]}
               />
             </div>
-            <h3 className="mt-10 text-3xl font-bold">Các hàng hóa được bảo hiểm:</h3>
-            <p className="mt-8">
+            <h3 className="mt-6 text-3xl font-bold">Các hàng hóa được bảo hiểm:</h3>
+            <p className="mt-4">
               Tất cả các hàng hóa và nguyên liệu dự trữ điển hình cho doanh nghiệp, bao gồm cả các bán thành phẩm
               và nguyên liệu thô, được bảo vệ nếu chúng cần phải được làm lạnh hoặc đông lạnh.
             </p>
@@ -213,7 +213,7 @@ export function BusinessInsuranceArticle() {
 
           <section>
             <h2 className="text-3xl font-bold">e. Bảo hiểm kỹ thuật</h2>
-            <div className="mt-10">
+            <div className="mt-5">
               <BulletList
                 items={[
                   "Bảo hiểm điện tử và máy móc bao gồm bảo hiểm mở rộng cho các máy móc di động, đã sẵn sàng để vận hành",
@@ -222,8 +222,8 @@ export function BusinessInsuranceArticle() {
                 ]}
               />
             </div>
-            <h3 className="mt-10 text-3xl font-bold">Trường hợp ví dụ: In ấn với hậu quả</h3>
-            <p className="mt-8">
+            <h3 className="mt-6 text-3xl font-bold">Trường hợp ví dụ: In ấn với hậu quả</h3>
+            <p className="mt-4">
               Do sự cố trong hệ thống kiểm tra hai tờ giấy của máy in, thay vì chỉ một tờ giấy, nhiều tờ giấy đã
               bị cuốn vào máy. Điều này dẫn đến việc máy in dừng đột ngột. Một trục in và một trục chống in bị
               hỏng cơ học. Nhờ vào sự bảo vệ toàn diện của gói bảo hiểm FirmenSAFE, thiệt hại này đã được bồi
@@ -234,7 +234,7 @@ export function BusinessInsuranceArticle() {
 
           <section>
             <h2 className="text-3xl font-bold">g. Bảo hiểm thiên tai / Nguy hiểm không xác định</h2>
-            <div className="mt-10">
+            <div className="mt-5">
               <BulletList
                 items={[
                   "Bao gồm thiệt hại do gián đoạn kinh doanh",
@@ -242,7 +242,7 @@ export function BusinessInsuranceArticle() {
                 ]}
               />
             </div>
-            <p className="mt-8">
+            <p className="mt-4">
               Bảo hiểm này bảo vệ doanh nghiệp của bạn khỏi những rủi ro không thể lường trước, bao gồm các
               thiên tai và các mối nguy hiểm không xác định, đồng thời đảm bảo rằng bạn không phải chịu thiệt hại
               tài chính trong trường hợp gián đoạn kinh doanh.
@@ -251,7 +251,7 @@ export function BusinessInsuranceArticle() {
 
           <section>
             <h2 className="text-3xl font-bold">h. Bảo hiểm dịch vụ mạng (Cyber-Service-Versicherung)</h2>
-            <div className="mt-10">
+            <div className="mt-5">
               <BulletList
                 items={[
                   "Có thể chọn bảo hiểm dịch vụ mạng cho doanh nghiệp có tối đa 20 nhân viên",

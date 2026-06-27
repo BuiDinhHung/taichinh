@@ -50,13 +50,13 @@ export function AccidentInsuranceArticle() {
             <AccidentIcon className="mx-auto h-28 w-28 text-brand-gold lg:h-32 lg:w-32" />
           </div>
 
-          <div className="mt-8 max-w-7xl text-base leading-relaxed sm:text-lg">
+          <div className="mt-4 max-w-7xl text-base leading-relaxed sm:text-lg">
             <h2 className="text-xl font-bold sm:text-2xl">Bảo vệ trước hậu quả tài chính của một tai nạn</h2>
             <p className="mt-6">
               Có hàng ngàn loại tai nạn và sự cố có thể xảy ra trong cuộc sống hàng ngày. Tại Đức, mỗi năm có gần chín triệu tai nạn xảy ra, phần lớn trong số đó xảy ra tại nhà hoặc trong thời gian giải trí. Bảo hiểm tai nạn của Generali sẽ bảo vệ bạn trước các hậu quả tài chính của một tai nạn:
             </p>
 
-            <h3 className="mt-8 text-xl font-bold sm:text-2xl">Các quyền lợi bao gồm:</h3>
+            <h3 className="mt-4 text-xl font-bold sm:text-2xl">Các quyền lợi bao gồm:</h3>
             <ul className="mt-5 list-disc space-y-1.5 pl-5">
               {accidentBenefits.map((item) => (
                 <li key={item}>

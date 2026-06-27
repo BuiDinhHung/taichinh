@@ -28,7 +28,7 @@ export function EnergySupplierArticle() {
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl">
               Nguồn năng lượng Điện, Gas rẻ
             </h1>
-            <h2 className="mt-10 text-center text-xl font-bold sm:text-2xl">
+            <h2 className="mt-5 text-center text-xl font-bold sm:text-2xl">
               Chuyển đổi nhà cung cấp để tiết kiệm
             </h2>
             <p className="mt-6 text-lg leading-snug">

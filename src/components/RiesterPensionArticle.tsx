@@ -28,7 +28,7 @@ export function RiesterPensionArticle() {
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Chủ động tài chính -<br />An nhiên tuổi già
             </h1>
-            <p className="mt-16 text-2xl font-bold leading-snug">
+            <p className="mt-8 text-2xl font-bold leading-snug">
               Các chương trình Hưu trí có hỗ trợ của nhà nước
             </p>
           </div>
@@ -45,27 +45,27 @@ export function RiesterPensionArticle() {
         </div>
       </section>
 
-      <section className="px-[10%] py-14 sm:py-16">
+      <section className="px-[10%] py-6 sm:py-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-4xl font-bold leading-tight sm:text-5xl">
             Bảo hiểm hưu trí Riester - Riesterrente
           </h2>
-          <div className="mx-auto mt-16 max-w-5xl text-2xl leading-snug">
+          <div className="mx-auto mt-8 max-w-5xl text-2xl leading-snug">
             <h3 className="text-3xl font-bold">An tâm nghỉ hưu - được nhà nước hỗ trợ</h3>
-            <p className="mt-10">
+            <p className="mt-5">
               Lương hưu Riester: Vững tâm cho tương lai. Chỉ với lương hưu Riester, bạn mới có thể nhận được khoản hỗ trợ cao từ nhà nước với mức đóng góp cá nhân thấp như vậy. Hãy tận dụng cơ hội này - đầu tư cho tương lai của bạn!
             </p>
           </div>
         </div>
       </section>
 
-      <section className="px-[10%] py-12 sm:py-14">
+      <section className="px-[10%] py-5 sm:py-7">
         <div className="mx-auto max-w-7xl">
           <p className="text-center text-2xl font-bold">Nghĩ sớm cho tương lai</p>
-          <h2 className="mt-10 text-center text-3xl font-bold leading-tight sm:text-4xl">
+          <h2 className="mt-5 text-center text-3xl font-bold leading-tight sm:text-4xl">
             Tại sao phải lo cho tương lai?
           </h2>
-          <div className="mx-auto mt-10 max-w-7xl text-2xl leading-snug">
+          <div className="mx-auto mt-5 max-w-7xl text-2xl leading-snug">
             <p>
               Rất đơn giản: vì lương hưu từ nhà nước thường không còn đủ để đảm bảo cuộc sống. Nhiều người vẫn còn nhiều năm nữa mới đến tuổi nghỉ hưu nhưng đã lo lắng về nguy cơ nghèo khó khi về già. Vì vậy, việc chuẩn bị tài chính từ sớm là vô cùng quan trọng.
             </p>
@@ -77,17 +77,17 @@ export function RiesterPensionArticle() {
             </p>
           </div>
 
-          <h2 className="mt-20 text-center text-3xl font-bold leading-tight">
+          <h2 className="mt-8 text-center text-3xl font-bold leading-tight">
             Những lợi ích của lương hưu Riester dành cho bạn.
           </h2>
-          <div className="mt-10 grid gap-12 text-center lg:grid-cols-3">
+          <div className="mt-5 grid gap-12 text-center lg:grid-cols-3">
             {riesterBenefits.map((benefit) => {
               const Icon = benefit.icon;
               return (
                 <div key={benefit.title}>
                   <Icon className="mx-auto h-28 w-28 text-brand-gold" />
-                  <h3 className="mt-8 text-2xl font-bold">{benefit.title}</h3>
-                  <p className="mx-auto mt-8 max-w-sm text-xl leading-snug">{benefit.text}</p>
+                  <h3 className="mt-4 text-2xl font-bold">{benefit.title}</h3>
+                  <p className="mx-auto mt-4 max-w-sm text-xl leading-snug">{benefit.text}</p>
                 </div>
               );
             })}
@@ -99,8 +99,8 @@ export function RiesterPensionArticle() {
                 height={240}
                 className="mx-auto h-28 w-28 object-contain"
               />
-              <h3 className="mt-8 text-2xl font-bold">{flexibilityBenefit.title}</h3>
-              <p className="mx-auto mt-8 max-w-sm text-xl leading-snug">{flexibilityBenefit.text}</p>
+              <h3 className="mt-4 text-2xl font-bold">{flexibilityBenefit.title}</h3>
+              <p className="mx-auto mt-4 max-w-sm text-xl leading-snug">{flexibilityBenefit.text}</p>
             </div>
           </div>
         </div>

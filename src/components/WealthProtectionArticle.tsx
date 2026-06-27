@@ -31,7 +31,7 @@ export function WealthProtectionArticle() {
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl lg:text-center">
               Kế hoạch Tích lũy Tài sản<br />& Đảm bảo An toàn
             </h1>
-            <p className="mt-10 text-xl leading-snug sm:text-2xl">
+            <p className="mt-5 text-xl leading-snug sm:text-2xl">
               Với sản phẩm bảo hiểm linh hoạt này, quý khách có thể xây dựng khối tài sản dài hạn cho mình. Kết hợp cùng một gói giải pháp toàn diện - bao gồm quyền lợi bảo vệ trước rủi ro mất khả năng lao động và quyền lợi cho người thụ hưởng, tùy chọn chăm sóc dài hạn (hoặc niên kim chăm sóc dài hạn), cùng sự bảo vệ trước các bệnh hiểm nghèo - Generali Deutschland Lebensversicherung mang đến sự che chở và bảo vệ cho quý khách ở mọi giai đoạn của cuộc đời.
             </p>
           </div>
@@ -50,7 +50,7 @@ export function WealthProtectionArticle() {
 
       <section className="px-[10%] py-16 text-center sm:py-20">
         <p className="text-3xl leading-tight">Một sự kết hợp khéo léo</p>
-        <h2 className="mx-auto mt-10 max-w-5xl text-4xl font-bold leading-tight sm:text-5xl">
+        <h2 className="mx-auto mt-5 max-w-5xl text-4xl font-bold leading-tight sm:text-5xl">
           Lập kế hoạch Tích lũy và Bảo vệ tài chính trong cùng một khái niệm
         </h2>
       </section>
@@ -62,8 +62,8 @@ export function WealthProtectionArticle() {
             return (
               <div key={pillar.title} className="flex flex-col items-center text-center">
                 <Icon className="h-36 w-36 text-brand-gold" />
-                <h3 className="mt-10 text-3xl font-bold leading-tight">{pillar.title}</h3>
-                <p className="mx-auto mt-10 max-w-sm text-2xl leading-snug">{pillar.text}</p>
+                <h3 className="mt-5 text-3xl font-bold leading-tight">{pillar.title}</h3>
+                <p className="mx-auto mt-5 max-w-sm text-2xl leading-snug">{pillar.text}</p>
               </div>
             );
           })}

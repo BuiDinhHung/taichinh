@@ -66,7 +66,7 @@ export function WorkAbilityInsuranceArticle() {
             </ul>
           </div>
 
-          <h2 className="mt-8 text-xl font-bold">Bảo hiểm năng lực cơ bản (gói cao cấp)</h2>
+          <h2 className="mt-4 text-xl font-bold">Bảo hiểm năng lực cơ bản (gói cao cấp)</h2>
           <p className="mt-4">Ngoài các quyền lợi của gói cơ bản, còn bảo hiểm thêm các năng lực:</p>
           <ul className="mt-4 list-disc pl-6">
             {premiumAbilities.map((item) => (
@@ -74,7 +74,7 @@ export function WorkAbilityInsuranceArticle() {
             ))}
           </ul>
 
-          <h2 className="mt-8 text-xl font-bold">Bảo hiểm mất khả năng lao động (gói cao cấp)</h2>
+          <h2 className="mt-4 text-xl font-bold">Bảo hiểm mất khả năng lao động (gói cao cấp)</h2>
           <p className="mt-4">
             Gói bảo hiểm này bảo vệ thu nhập của bạn nếu do bệnh tật hoặc tai nạn mà bạn không còn có thể thực hiện công việc ít nhất 50%, hoặc khi mất một trong 13 năng lực cơ bản được bảo hiểm (xem bảo hiểm năng lực cơ bản).
           </p>

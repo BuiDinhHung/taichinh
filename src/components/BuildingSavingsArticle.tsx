@@ -63,25 +63,25 @@ export function BuildingSavingsArticle() {
       <section className="px-[10%] py-12">
         <h2 className="text-center text-3xl font-bold sm:text-4xl">Tiết kiệm xây dựng ở điều kiện tốt nhất</h2>
 
-        <div className="mt-16 grid gap-12 text-center lg:grid-cols-3">
+        <div className="mt-8 grid gap-12 text-center lg:grid-cols-3">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
             return (
               <div key={benefit.title}>
                 <Icon className="mx-auto h-36 w-36 text-brand-gold" />
-                <h3 className="mt-10 text-3xl font-bold">{benefit.title}</h3>
-                <p className="mx-auto mt-10 max-w-sm text-2xl leading-snug">{benefit.text}</p>
+                <h3 className="mt-5 text-3xl font-bold">{benefit.title}</h3>
+                <p className="mx-auto mt-5 max-w-sm text-2xl leading-snug">{benefit.text}</p>
               </div>
             );
           })}
         </div>
 
-        <div className="mt-14">
+        <div className="mt-6">
           <h2 className="text-center text-lg font-bold leading-snug sm:text-xl">
             ImmoStart – một sản phẩm hoàn hảo để chuẩn bị cho việc xây dựng, mua hoặc tái cấp vốn (đáo nợ) cho bất động sản nhà ở
           </h2>
 
-          <div className="mt-8 text-sm leading-relaxed sm:text-base">
+          <div className="mt-4 text-sm leading-relaxed sm:text-base">
             <h3 className="font-bold">Tất cả các lợi thế trong một sản phẩm</h3>
             <div className="mt-3 space-y-1">
               <p>• Tích lũy vốn chủ sở hữu có mục tiêu</p>
@@ -92,7 +92,7 @@ export function BuildingSavingsArticle() {
             </div>
           </div>
 
-          <div className="mt-8 text-sm leading-relaxed sm:text-base">
+          <div className="mt-4 text-sm leading-relaxed sm:text-base">
             <h3 className="font-bold">Lợi ích hấp dẫn</h3>
             <div className="mt-3 space-y-1">
               <p>• Với tư cách là khách hàng của Deutsche Vermögensberatung, bạn sẽ nhận được ưu đãi <strong>lãi suất 0,25%</strong> cho khoản tài trợ trước và tài trợ tạm thời</p>
@@ -104,7 +104,7 @@ export function BuildingSavingsArticle() {
       </section>
 
       {/* Badenia / ImmoStart diagram — same px-[10%] */}
-      <section className="px-[10%] py-14">
+      <section className="px-[10%] py-6 sm:py-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold leading-tight sm:text-4xl">Hãy tận dụng cơ hội tốt này!</h2>
           <p className="mt-6 inline-block text-left text-4xl font-bold leading-snug text-[#0071bc] sm:text-5xl">
@@ -113,13 +113,13 @@ export function BuildingSavingsArticle() {
           </p>
         </div>
 
-        <div className="mt-20 grid items-center gap-10 lg:grid-cols-[48%_52%]">
+        <div className="mt-8 grid items-center gap-10 lg:grid-cols-[48%_52%]">
           <div className="text-neutral-500">
             <p className="text-xl font-bold sm:text-2xl">Một sản phẩm của Badenia</p>
             <p className="mt-4 text-lg leading-relaxed sm:text-xl">
               Deutsche Bausparkasse Badenia AG<br />Badeniaplatz 1, 76189 Karlsruhe
             </p>
-            <div className="mt-10 w-[320px] max-w-full">
+            <div className="mt-5 w-[320px] max-w-full">
               <BadeniaLogoMark className="!w-full" />
             </div>
           </div>

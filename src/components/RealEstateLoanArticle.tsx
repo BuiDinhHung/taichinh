@@ -64,7 +64,7 @@ export function RealEstateLoanArticle() {
             <p className="mt-6 max-w-xl text-sm leading-relaxed sm:text-base">
               Đối với nhiều người, mua bất động sản là một trong những quyết định quan trọng nhất trong cuộc đời. Chúng tôi luôn sát cánh cùng bạn với kinh nghiệm sâu rộng của mình. Với ImmoSmart – dịch vụ tài chính bất động sản tại Đức.
             </p>
-            <div className="mt-8 flex justify-center">
+            <div className="mt-4 flex justify-center">
               <Link
                 href="/dat-lich"
                 className="inline-flex items-center bg-brand-gold px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-gold-dark"
@@ -91,7 +91,7 @@ export function RealEstateLoanArticle() {
         <h2 className="pl-[3%] text-4xl font-bold leading-tight sm:text-5xl lg:whitespace-nowrap">
           Chương trình Vay tín dụng mua bất động sản ở Đức
         </h2>
-        <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_280px]">
+        <div className="mt-4 grid gap-10 lg:grid-cols-[1fr_280px]">
           <div>
             <div className="text-sm leading-relaxed sm:text-base">
               <p>
@@ -142,7 +142,7 @@ export function RealEstateLoanArticle() {
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-[58%_42%]">
+        <div className="mt-5 grid gap-10 lg:grid-cols-[58%_42%]">
           <div className="text-sm leading-relaxed sm:text-base">
             <h3 className="whitespace-nowrap text-[0.25rem] font-bold sm:text-[0.375rem]">
               Xây dựng, mua, đáo nợ hoặc nâng cấp, hiện đại hóa bất động sản:
@@ -189,23 +189,23 @@ export function RealEstateLoanArticle() {
       <section className="bg-white px-[10%] pt-16 pb-8 sm:pt-24 sm:pb-10">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-5xl font-bold leading-tight">Vay tín dụng cá nhân</h2>
-          <p className="mx-auto mt-16 max-w-5xl text-2xl leading-snug">
+          <p className="mx-auto mt-8 max-w-5xl text-2xl leading-snug">
             Cuộc sống luôn thay đổi, và đôi khi những thay đổi đó đòi hỏi chi phí. Xe không còn hoạt động tốt, bạn sắp phải chuyển nhà, con bạn cần một phòng riêng, hoặc bạn đang lên kế hoạch học thêm. Không phải lúc nào cũng có sẵn nguồn tài chính. Trong trường hợp này, <strong>Tín dụng cá nhân Smart</strong> là giải pháp dành cho bạn.
           </p>
 
-          <div className="mt-24 text-center">
+          <div className="mt-10 text-center">
             <h3 className="text-3xl font-bold">Lợi ích của bạn</h3>
-            <p className="mt-12 text-3xl">Khoản vay phù hợp với đời sống của bạn.</p>
+            <p className="mt-6 text-3xl">Khoản vay phù hợp với đời sống của bạn.</p>
           </div>
 
-          <div className="mt-16 grid gap-12 lg:grid-cols-3">
+          <div className="mt-8 grid gap-12 lg:grid-cols-3">
             {personalLoanBenefits.map((benefit) => {
               const Icon = benefit.icon;
               return (
                 <div key={benefit.title} className="text-center">
                   <Icon className="mx-auto h-36 w-36 text-brand-gold" />
-                  <h4 className="mt-10 text-3xl font-bold">{benefit.title}</h4>
-                  <p className="mx-auto mt-10 max-w-sm text-2xl leading-snug">{benefit.text}</p>
+                  <h4 className="mt-5 text-3xl font-bold">{benefit.title}</h4>
+                  <p className="mx-auto mt-5 max-w-sm text-2xl leading-snug">{benefit.text}</p>
                 </div>
               );
             })}
@@ -218,22 +218,22 @@ export function RealEstateLoanArticle() {
         <h2 className="text-center text-3xl font-bold leading-tight">Đáp ứng nhu cầu của bạn</h2>
 
         {/* Section 1 — full width */}
-        <div className="mt-16 text-2xl leading-snug">
+        <div className="mt-8 text-2xl leading-snug">
           <h3 className="text-3xl font-bold">
             Tạo không gian tài chính cho những khoản chi cần thiết
           </h3>
-          <p className="mt-10">
+          <p className="mt-5">
             Bạn mong muốn có không gian tài chính để thực hiện các khoản mua sắm cần thiết? Việc lập kế hoạch có trách nhiệm càng trở nên quan trọng. Khoản vay cá nhân Smart từ Deutsche Bank là một phần trong dịch vụ tư vấn tài chính toàn diện của chúng tôi. Để tăng thêm sự tin cậy, bạn có thể lựa chọn gói bảo hiểm bổ sung nhằm bảo vệ thu nhập và gia đình.
           </p>
         </div>
 
         {/* Section 2 — text left, diagram right */}
-        <div className="mt-16 grid items-center gap-12 lg:grid-cols-[52%_48%]">
+        <div className="mt-8 grid items-center gap-12 lg:grid-cols-[52%_48%]">
           <div className="text-2xl leading-snug">
             <h3 className="text-3xl font-bold">
               Tối ưu hóa các khoản vay trả góp của bạn
             </h3>
-            <p className="mt-10">
+            <p className="mt-5">
               Hơn 30% người Đức có một hoặc nhiều khoản vay trả góp. Bạn có thuộc nhóm đó không? Nếu có, đây là thời điểm thích hợp để kiểm tra các hợp đồng hiện tại của bạn.
             </p>
             <p className="mt-4">

@@ -26,13 +26,13 @@ export function LegalInsuranceArticle() {
   return (
     <article className="text-black">
       {/* Hero section - light blue */}
-      <section className="bg-[#e8f0f9] px-[10%] py-8 sm:py-10">
+      <section className="bg-[#e8f0f9] px-[10%] py-4 sm:py-5">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             Bảo hiểm pháp lý- Rechtsschutzversicherung
           </h1>
 
-          <div className="mt-8 grid items-start gap-12 lg:grid-cols-[58%_42%]">
+          <div className="mt-4 grid items-start gap-12 lg:grid-cols-[58%_42%]">
             <div className="text-2xl leading-snug">
               <h2 className="text-3xl font-bold">Hỗ trợ pháp lý tối đa trên một thẻ</h2>
               <p className="mt-4">

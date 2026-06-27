@@ -13,13 +13,13 @@ function PartnerLogos() {
 
 function CostAverageDiagram() {
   return (
-    <section className="mt-16">
+    <section className="mt-8">
       <h2 className="text-center text-3xl font-normal text-black">Lợi ích của đầu tư dài hạn</h2>
-      <h3 className="mx-auto mt-10 max-w-3xl text-center text-3xl font-bold leading-tight text-black">
+      <h3 className="mx-auto mt-5 max-w-3xl text-center text-3xl font-bold leading-tight text-black">
         Hiệu ứng Cost-Average – tận dụng lợi ích từ việc tiết kiệm đều đặn
       </h3>
 
-      <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4">
+      <div className="mt-5 grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4">
         {/* Hàng 1 */}
         <Image
           src="/images/fonds-monthly-to-fonds.jpeg"
@@ -80,7 +80,7 @@ export function FondsSparplanArticle() {
             <p className="mt-6 text-3xl leading-snug lg:pl-12">
               Bổ sung thông minh cho<br />Danh mục đầu tư của bạn
             </p>
-            <p className="mt-16 text-2xl leading-snug">
+            <p className="mt-8 text-2xl leading-snug">
               Với các kế hoạch tiết kiệm, bạn hoàn toàn có thể kiến tạo một khối tài sản đáng kể - chỉ với số vốn khởi điểm vỏn vẹn €25 mỗi tháng. Hơn thế nữa, bạn luôn được hưởng sự linh hoạt tuyệt đối trong việc lựa chọn quỹ, mức đóng góp cũng như thời hạn đầu tư.
             </p>
           </div>
@@ -102,7 +102,7 @@ export function FondsSparplanArticle() {
         <p className="mx-auto mt-6 max-w-3xl text-3xl leading-snug text-black">
           Chúng tôi sẽ giúp bạn tận dụng tối đa<br />các cơ hội từ thị trường tài chính.
         </p>
-        <p className="mt-10 text-3xl font-bold text-black">Hãy để thời gian là vàng của bạn</p>
+        <p className="mt-5 text-3xl font-bold text-black">Hãy để thời gian là vàng của bạn</p>
       </section>
 
       <section className="px-[10%] pb-12 pt-2">
@@ -141,12 +141,12 @@ export function FondsSparplanArticle() {
             <h2 className="text-4xl font-bold leading-tight text-black">
               Các đối tác tài chính hàng<br />đầu bên các bạn:
             </h2>
-            <ul className="mt-14 text-3xl leading-snug text-black">
+            <ul className="mt-6 text-3xl leading-snug text-black">
               <li>• DWS Investment Deutschland</li>
               <li>• Allianz Global Investors</li>
             </ul>
           </div>
-          <div className="space-y-12">
+          <div className="space-y-8">
             <PartnerLogos />
             <div className="flex justify-center lg:justify-end">
               <Link
