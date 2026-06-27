@@ -8,7 +8,7 @@ export function ContactHero() {
   return (
     <section className="relative min-h-[720px] overflow-hidden bg-black text-white lg:min-h-[760px]">
       <Image
-        src="/images/article-03-tu-van-chuyen-nghiep.jpeg"
+        src="/images/article-03-tu-van-chuyen-nghiep.png"
         alt="Văn phòng tư vấn tài chính Bao Vu The"
         fill
         priority

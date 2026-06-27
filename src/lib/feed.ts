@@ -40,7 +40,7 @@ export function articleAsFeedItem(
   };
 }
 
-const FALLBACK_ARTICLE_IMAGE = "/images/article-03-tu-van-chuyen-nghiep.jpeg";
+const FALLBACK_ARTICLE_IMAGE = "/images/article-03-tu-van-chuyen-nghiep.png";
 
 export function dbArticleAsFeedItem(article: DbArticle): FeedItem {
   const image = article.image?.trim() || extractFirstImage(article.content) || FALLBACK_ARTICLE_IMAGE;

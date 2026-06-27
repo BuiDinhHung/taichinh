@@ -9,7 +9,7 @@ const ASSETS = [
   // Article thumbnails (in feed order)
   ["https://cdn.hashnode.com/res/hashnode/image/upload/v1746487234347/85f32b0a-26b9-4c9c-8a48-2b7f2c2f9e98.jpeg", "article-01-tuong-lai-con-tre.jpeg"],
   ["https://cdn.hashnode.com/res/hashnode/image/upload/v1746695906092/70dcd451-57ae-4552-9787-4e25eeddb462.jpeg", "article-02-tich-luy-fondspolice.jpeg"],
-  ["https://cdn.hashnode.com/res/hashnode/image/upload/v1746304102841/d4084b33-cae5-4640-8671-8e246b7e93a4.jpeg", "article-03-tu-van-chuyen-nghiep.jpeg"],
+  ["https://cdn.hashnode.com/res/hashnode/image/upload/v1746304102841/d4084b33-cae5-4640-8671-8e246b7e93a4.jpeg", "article-03-tu-van-chuyen-nghiep.png"],
   ["https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/jnSIb2sfg58/upload/1283c9df9e98cab5128920950ea4b34e.jpeg", "article-04-bauspar.jpeg"],
   ["https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/QqAkoMIN5Jk/upload/d0b0ebcd9801760ea9ad500a32970ac8.jpeg", "article-05-fonds-sparplan.jpeg"],
   ["https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/ymf4_9Y9S_A/upload/6ae53a2db639e2e54d6c77998bdc553b.jpeg", "article-06-huu-tri-doanh-nghiep.jpeg"],

@@ -146,10 +146,8 @@ function ProductGrid({
     columns === 4
       ? "mx-auto grid max-w-6xl grid-cols-2 items-start gap-x-6 gap-y-7 sm:grid-cols-4 lg:gap-x-10"
       : "mx-auto grid max-w-6xl grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-3 lg:gap-x-16";
-  const titleClass =
-    columns === 4
-      ? "text-[13px] sm:text-sm"
-      : "text-sm sm:text-base lg:text-lg";
+  // Đồng bộ cỡ chữ tiêu đề cho cả layout 3 cột và 4 cột
+  const titleClass = "text-sm sm:text-base lg:text-lg";
 
   return (
     <div className={gridClass}>

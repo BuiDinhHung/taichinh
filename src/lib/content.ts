@@ -81,7 +81,7 @@ export const heroSlides = [
     headline: "Tư vấn tài chính đa diện của bạn",
     cta: { label: "Đặt lịch tư vấn", href: "/dat-lich" } as CTA,
     image: {
-      src: "/images/article-03-tu-van-chuyen-nghiep.jpeg",
+      src: "/images/article-03-tu-van-chuyen-nghiep.png",
       alt: "Tư vấn tài chính đa diện",
     },
     imagePosition: "center center",
@@ -101,7 +101,7 @@ export const heroSlides = [
     headline: "Giá trị bền vững cho tương lai",
     cta: { label: "Về chúng tôi", href: "/page/gioi-thieu" } as CTA,
     image: {
-      src: "/images/hero-ve-chung-toi.jpeg",
+      src: "/images/hero-ve-chung-toi.png",
       alt: "Về chúng tôi - taichinh.de",
     },
     imagePosition: "center center",
