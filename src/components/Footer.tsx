@@ -8,8 +8,8 @@ export function Footer() {
   return (
     <footer className="bg-[#f5f2eb] text-[#333]">
       <div className="dvag-container py-8 sm:py-12 lg:py-16">
-        {/* Columns: even visual spacing between content blocks on desktop */}
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:mx-auto lg:flex lg:max-w-5xl lg:justify-between lg:gap-8">
+        {/* Mobile: stacked brand + 2-col nav. Desktop: single flex row (lg:contents). */}
+        <div className="lg:mx-auto lg:flex lg:max-w-5xl lg:justify-between lg:gap-8">
           {/* Brand + contact column */}
           <div className="lg:max-w-[280px]">
             <Image
@@ -68,26 +68,28 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Nav columns */}
-          {footerColumns.map((col) => (
-            <div key={col.title}>
-              <h3 className="text-xs font-bold uppercase tracking-widest text-brand-gold-darker">
-                {col.title}
-              </h3>
-              <ul className="mt-5 flex flex-col gap-3">
-                {col.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-[#555] transition-colors hover:text-[#111]"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Nav columns — 2-col grid on mobile, dissolves into flex row on desktop */}
+          <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-9 border-t border-black/10 pt-8 sm:grid-cols-3 lg:mt-0 lg:gap-8 lg:border-0 lg:pt-0 lg:contents">
+            {footerColumns.map((col) => (
+              <div key={col.title}>
+                <h3 className="text-xs font-bold uppercase tracking-widest text-brand-gold-darker">
+                  {col.title}
+                </h3>
+                <ul className="mt-4 flex flex-col gap-3 lg:mt-5">
+                  {col.links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-[#555] transition-colors hover:text-[#111]"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

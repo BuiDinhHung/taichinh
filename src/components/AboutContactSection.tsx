@@ -7,7 +7,7 @@ export function AboutContactSection() {
       <div className="grid lg:min-h-[460px] lg:grid-cols-[auto_1fr]">
         <aside
           className="flex flex-col justify-center bg-brand-gold-tint py-10 lg:py-14"
-          style={{ paddingLeft: "clamp(1.5rem, 4.5vw, 4.5rem)", paddingRight: "clamp(1.5rem, 2.5vw, 2.5rem)" }}
+          style={{ paddingLeft: "clamp(2.75rem, 4.5vw, 4.5rem)", paddingRight: "clamp(1rem, 2.5vw, 2.5rem)" }}
         >
           <div className="flex items-center gap-4">
             <Image
