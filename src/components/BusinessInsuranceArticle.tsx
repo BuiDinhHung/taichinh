@@ -103,7 +103,7 @@ export function BusinessInsuranceArticle() {
       </section>
 
       <TextSection>
-        <h2 className="text-4xl font-bold">Điểm nổi bật của khái niệm FirmenSAFE:</h2>
+        <h2 className="text-3xl font-bold">Điểm nổi bật của khái niệm FirmenSAFE:</h2>
         <div className="mt-12">
           <BulletList items={highlights} />
         </div>
@@ -125,7 +125,7 @@ export function BusinessInsuranceArticle() {
       <TextSection>
         <div className="space-y-12">
           <section>
-            <h2 className="text-4xl font-bold">a. Bảo hiểm trách nhiệm nghề nghiệp/kinh doanh</h2>
+            <h2 className="text-3xl font-bold">a. Bảo hiểm trách nhiệm nghề nghiệp/kinh doanh</h2>
             <div className="mt-10">
               <BulletList
                 items={[
@@ -148,7 +148,7 @@ export function BusinessInsuranceArticle() {
           </section>
 
           <section>
-            <h2 className="text-4xl font-bold">b. Bảo hiểm tài sản bao gồm thiệt hại do gián đoạn kinh doanh</h2>
+            <h2 className="text-3xl font-bold">b. Bảo hiểm tài sản bao gồm thiệt hại do gián đoạn kinh doanh</h2>
             <div className="mt-10">
               <BulletList
                 items={[
@@ -171,7 +171,7 @@ export function BusinessInsuranceArticle() {
           </section>
 
           <section>
-            <h2 className="text-4xl font-bold">c. Bảo hiểm vận chuyển hàng hóa trong công việc</h2>
+            <h2 className="text-3xl font-bold">c. Bảo hiểm vận chuyển hàng hóa trong công việc</h2>
             <div className="mt-10">
               <BulletList
                 items={[
@@ -192,7 +192,7 @@ export function BusinessInsuranceArticle() {
           </section>
 
           <section>
-            <h2 className="text-4xl font-bold">d. Thiệt hại do hư hỏng hàng hóa lạnh, đông lạnh, thuốc</h2>
+            <h2 className="text-3xl font-bold">d. Thiệt hại do hư hỏng hàng hóa lạnh, đông lạnh, thuốc</h2>
             <div className="mt-10">
               <BulletList
                 items={[
@@ -212,7 +212,7 @@ export function BusinessInsuranceArticle() {
           </section>
 
           <section>
-            <h2 className="text-4xl font-bold">e. Bảo hiểm kỹ thuật</h2>
+            <h2 className="text-3xl font-bold">e. Bảo hiểm kỹ thuật</h2>
             <div className="mt-10">
               <BulletList
                 items={[
@@ -233,7 +233,7 @@ export function BusinessInsuranceArticle() {
           </section>
 
           <section>
-            <h2 className="text-4xl font-bold">g. Bảo hiểm thiên tai / Nguy hiểm không xác định</h2>
+            <h2 className="text-3xl font-bold">g. Bảo hiểm thiên tai / Nguy hiểm không xác định</h2>
             <div className="mt-10">
               <BulletList
                 items={[
@@ -250,7 +250,7 @@ export function BusinessInsuranceArticle() {
           </section>
 
           <section>
-            <h2 className="text-4xl font-bold">h. Bảo hiểm dịch vụ mạng (Cyber-Service-Versicherung)</h2>
+            <h2 className="text-3xl font-bold">h. Bảo hiểm dịch vụ mạng (Cyber-Service-Versicherung)</h2>
             <div className="mt-10">
               <BulletList
                 items={[

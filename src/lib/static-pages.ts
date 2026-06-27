@@ -37,30 +37,37 @@ export const staticPages: Record<string, StaticPage> = {
       {
         type: "h2",
         text: "Tư vấn tài chính chuyên nghiệp. Giá trị bền vững cho tương lai",
+        align: "center",
       },
       {
         type: "p",
         text: "Một nền tảng tài chính vững mạnh là tiền đề quan trọng giúp mỗi cá nhân chủ động xây dựng tương lai ổn định và bền vững.",
+        align: "justify",
       },
       {
         type: "p",
         text: "Văn phòng Tư vấn Tài chính Vũ Thế Bảo trực thuộc Deutsche Vermögensberatung (DVAG) - là tập đoàn tư vấn tài chính uy tín hàng đầu tại Đức.",
+        align: "justify",
       },
       {
         type: "p",
         text: "Với hơn 50 năm kinh nghiệm hoạt động cùng đội ngũ gần 20.000 chuyên viên tư vấn trên toàn quốc, DVAG hiện đang đồng hành cùng khoảng 8 triệu khách hàng tại Đức trong việc hoạch định và bảo vệ tương lai tài chính của họ.",
+        align: "justify",
       },
       {
         type: "p",
         text: "Chúng tôi cung cấp các giải pháp tư vấn tài chính toàn diện và chuyên sâu trong các lĩnh vực: Đầu tư - Tiết kiệm, Bảo hiểm, Bất động sản, lập kế hoạch hưu trí và hoạch định tài chính dài hạn.",
+        align: "justify",
       },
       {
         type: "p",
         text: "Thông qua quy trình tư vấn cá nhân hóa, minh bạch và định hướng dài hạn, chúng tôi hỗ trợ khách hàng đưa ra những quyết định tài chính phù hợp, hiệu quả và bền vững theo từng giai đoạn của cuộc sống.",
+        align: "justify",
       },
       {
         type: "p",
         text: "Với tinh thần trách nhiệm, tính chuyên nghiệp và cam kết đồng hành lâu dài, chúng tôi hướng tới mục tiêu xây dựng những giá trị tài chính ổn định và bền vững cho mỗi khách hàng và gia đình của họ.",
+        align: "justify",
       },
       { type: "img", src: "/images/pdf-team-office.jpeg" },
       { type: "h2", text: "Tư vấn tài chính đa diện" },

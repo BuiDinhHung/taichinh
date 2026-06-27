@@ -37,7 +37,7 @@ export function PropertyInsuranceHero() {
             </p>
           </div>
         </div>
-        <div className="relative min-h-[320px] lg:min-h-[500px]">
+        <div className="relative min-h-[320px] overflow-hidden lg:min-h-[500px]">
           <Image
             src="/images/gallery-02.jpeg"
             alt="Bảo hiểm tài sản"

@@ -63,7 +63,9 @@ export function ArticleBody({
             return (
               <h2
                 key={key}
-                className="mt-10 text-2xl sm:text-3xl font-bold tracking-tight text-foreground"
+                className={`mt-10 text-2xl sm:text-3xl font-bold tracking-tight text-foreground${
+                  block.align === "center" ? " text-center" : ""
+                }`}
               >
                 {block.text}
               </h2>
@@ -79,7 +81,12 @@ export function ArticleBody({
             );
           case "p":
             return (
-              <p key={key} className={`${bodyText} leading-relaxed text-foreground/85`}>
+              <p
+                key={key}
+                className={`${bodyText} leading-relaxed text-foreground/85${
+                  block.align === "justify" ? " text-justify" : ""
+                }`}
+              >
                 {renderInline(block.text, key)}
               </p>
             );

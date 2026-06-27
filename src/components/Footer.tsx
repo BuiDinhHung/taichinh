@@ -29,27 +29,40 @@ export function Footer() {
                 href={CONTACT.phoneHref}
                 className="flex items-center gap-3 transition-colors hover:text-[#111]"
               >
-                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-gold-tint text-brand-gold-darker">
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center text-brand-gold">
                   <PhoneIcon className="h-4 w-4" />
                 </span>
                 +49 30-4268859
               </Link>
-              <Link
-                href={`https://wa.me/${CONTACT.mobileWhatsApp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 transition-colors hover:text-[#111]"
-              >
-                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-gold-tint text-brand-gold-darker">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center text-brand-gold">
                   <WhatsAppIcon className="h-4 w-4" />
                 </span>
-                0176-10178768
-              </Link>
+                <span className="flex flex-wrap items-center gap-x-2">
+                  <Link
+                    href={`https://wa.me/${CONTACT.mobileWhatsApp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-[#111]"
+                  >
+                    0176-10178768
+                  </Link>
+                  <span className="text-[#bbb]">/</span>
+                  <Link
+                    href={`https://wa.me/${CONTACT.landlineWhatsApp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-[#111]"
+                  >
+                    030-4268859
+                  </Link>
+                </span>
+              </div>
               <Link
                 href={`mailto:${CONTACT.email}`}
                 className="flex items-center gap-3 transition-colors hover:text-[#111]"
               >
-                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-gold-tint text-brand-gold-darker">
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center text-brand-gold">
                   <MailIcon className="h-4 w-4" />
                 </span>
                 <span className="break-all">{CONTACT.email}</span>
@@ -60,10 +73,10 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 transition-colors hover:text-[#111]"
               >
-                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1877F2] text-white">
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center text-brand-gold">
                   <FacebookIcon className="h-4 w-4" />
                 </span>
-                Facebook
+                Taichinh.de
               </Link>
             </div>
           </div>
@@ -96,14 +109,6 @@ export function Footer() {
       <div className="border-t border-black/10">
         <div className="dvag-container flex flex-wrap items-center justify-center gap-6 py-5 text-xs text-[#999]">
           <p>{copyright}</p>
-          <div className="flex gap-5">
-            <Link href="/page/impressum" className="transition-colors hover:text-[#555]">
-              Impressum
-            </Link>
-            <Link href="https://hashnode.com/privacy-policy" className="transition-colors hover:text-[#555]">
-              Bảo mật
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

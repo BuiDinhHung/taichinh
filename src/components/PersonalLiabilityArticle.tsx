@@ -58,7 +58,7 @@ export function PersonalLiabilityArticle() {
             <DamageCycleIcon className="mx-auto h-24 w-24 text-brand-gold lg:h-28 lg:w-28" />
           </div>
 
-          <h2 className="mt-6 text-center text-3xl font-bold leading-tight lg:text-4xl">
+          <h2 className="mt-6 text-center text-3xl font-bold leading-tight">
             Các thành phần của chính sách bảo hiểm tài sản.
           </h2>
 

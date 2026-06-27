@@ -6,6 +6,7 @@ export const CONTACT = {
   address: "Proskauer Str. 13, 10247 Berlin",
   phoneDisplay: "+49 30 4268859",
   phoneHref: "tel:+49304268859",
+  landlineWhatsApp: "49304268859",
   mobileDisplay: "+49 176 10178768",
   mobileWhatsApp: "4917610178768",
   email: "bao.vu-the.3625100@dvag.de",

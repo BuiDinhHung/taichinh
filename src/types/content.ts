@@ -7,9 +7,9 @@ export type NavItem = {
 };
 
 export type Block =
-  | { type: "h2"; text: string }
+  | { type: "h2"; text: string; align?: "center" }
   | { type: "h3"; text: string }
-  | { type: "p"; text: string }
+  | { type: "p"; text: string; align?: "justify" }
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
   | { type: "img"; src: string; alt?: string }
