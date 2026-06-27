@@ -73,8 +73,11 @@ export function buildMailtoUrl(d: BookingFormData) {
   const subject = senderName
     ? `Đặt lịch tư vấn taichinh.de - ${senderName}`
     : "Đặt lịch tư vấn taichinh.de";
-  const params = new URLSearchParams({ subject, body: buildEmailBody(d) });
-  return `mailto:${CONTACT.email}?${params.toString()}`;
+  // encodeURIComponent dùng %20 cho dấu cách (mail client hiểu đúng),
+  // tránh URLSearchParams biến dấu cách thành "+".
+  const subjectEnc = encodeURIComponent(subject);
+  const bodyEnc = encodeURIComponent(buildEmailBody(d));
+  return `mailto:${CONTACT.email}?subject=${subjectEnc}&body=${bodyEnc}`;
 }
 
 export function buildWhatsAppUrl(d: BookingFormData) {
