@@ -11,8 +11,9 @@ function renderHeadline(headline: string, highlight?: string) {
   const [before, after] = headline.split(highlight);
   return (
     <>
-      {before}
-      <span className="dvag-h-marker">{highlight}</span>
+      {before.trimEnd()}
+      <br />
+      {highlight}
       {after}
     </>
   );
@@ -115,7 +116,7 @@ export function FinanzcoachingSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-white py-16 lg:py-24"
+      className="relative overflow-hidden bg-white py-10 lg:py-12"
     >
       {/* Nền chấm bi mờ + vầng sáng vàng */}
       <div
@@ -133,7 +134,7 @@ export function FinanzcoachingSection() {
 
       <div className="dvag-container relative">
         {/* Bố cục bất đối xứng: trái giới thiệu — phải nội dung */}
-        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-16">
           {/* Cột trái */}
           <div>
             {eyebrow ? (
@@ -148,7 +149,7 @@ export function FinanzcoachingSection() {
 
             <h2
               style={delay(80)}
-              className={`mt-5 text-3xl font-bold leading-tight tracking-tight text-text-strong sm:text-4xl lg:text-[42px] ${revealClass}`}
+              className={`mt-5 text-3xl font-bold leading-tight tracking-tight text-text-strong sm:text-4xl lg:text-[32px] xl:text-[36px] ${revealClass}`}
             >
               {renderHeadline(headline, headlineHighlight)}
             </h2>
@@ -210,7 +211,7 @@ export function FinanzcoachingSection() {
 
         {/* Dải số liệu — count-up + reveal */}
         {stats?.length ? (
-          <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {stats.map((stat, i) => (
               <StatCard key={stat.label} stat={stat} active={visible} index={i} />
             ))}

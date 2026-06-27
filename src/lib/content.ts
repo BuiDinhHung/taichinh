@@ -99,7 +99,7 @@ export const heroSlides = [
   {
     eyebrow: "",
     headline: "Chủ động tài chính\nAn nhiên tuổi già",
-    cta: { label: "Về chúng tôi", href: "/page/gioi-thieu" } as CTA,
+    cta: { label: "Tìm hiểu ngay", href: "/bao-hiem-huu-tri" } as CTA,
     image: {
       src: "/images/hero-ve-chung-toi.png",
       alt: "Về chúng tôi - taichinh.de",
