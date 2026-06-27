@@ -11,13 +11,13 @@ function RatingsSlider({ ratings }: { ratings: RatingMock[] }) {
     <div>
       {/* Header */}
       <div className="mb-10 text-center">
-        <p className="text-xs font-bold uppercase tracking-wider text-brand-gold">
+        <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
           Đánh giá khách hàng
         </p>
         <h2 className="mt-3 text-3xl font-bold text-text-strong sm:text-4xl">
           Khách hàng nói gì về chúng tôi
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-text-muted sm:text-base">
+        <p className="mx-auto mt-4 max-w-4xl text-sm leading-relaxed text-text-muted sm:text-base">
           Lắng nghe chia sẻ thật từ cộng đồng người Việt tại Đức trong hành trình tài chính của họ.
         </p>
       </div>

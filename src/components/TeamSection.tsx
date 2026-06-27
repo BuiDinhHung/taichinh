@@ -39,18 +39,18 @@ export function TeamSection() {
         <div className="mt-12 grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-12">
           {teamMembers.map((member) => (
             <article key={member.email} className="text-center">
-              <div className="mx-auto h-28 w-28 overflow-hidden rounded-full border-2 border-brand-gold bg-white shadow-[0_4px_12px_rgba(0,0,0,0.12)] sm:h-32 sm:w-32">
+              <div className="mx-auto aspect-[7/8] w-32 overflow-hidden rounded-[44%] border-2 border-brand-gold bg-white shadow-[0_4px_12px_rgba(0,0,0,0.12)] sm:w-44">
                 <Image
                   src={member.image}
                   alt={member.name}
-                  width={180}
-                  height={180}
+                  width={220}
+                  height={252}
                   className="h-full w-full object-cover"
                 />
               </div>
-              <h3 className="mt-4 text-xs font-bold leading-tight text-text-strong sm:text-sm">{member.name}</h3>
-              <p className="mt-1 text-[11px] leading-tight text-text-muted sm:text-xs">Tel.: {member.phone}</p>
-              <p className="text-[11px] leading-tight text-text-muted sm:text-xs">Mail: {member.email}</p>
+              <h3 className="mt-4 text-sm font-bold leading-tight text-text-strong sm:text-base">{member.name}</h3>
+              <p className="mt-1 text-xs leading-tight text-text-muted sm:text-sm">Tel.: {member.phone}</p>
+              <p className="text-xs leading-tight text-text-muted sm:text-sm">Mail: {member.email}</p>
             </article>
           ))}
         </div>
