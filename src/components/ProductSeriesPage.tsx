@@ -239,21 +239,9 @@ function SeriesIntro() {
   );
 }
 
-function SectionTitle({
-  children,
-  prominent = false,
-}: {
-  children: ReactNode;
-  prominent?: boolean;
-}) {
+function SectionTitle({ children }: { children: ReactNode }) {
   return (
-    <h2
-      className={`text-center font-bold leading-tight text-brand-gold ${
-        prominent
-          ? "mb-14 text-3xl sm:text-4xl lg:mb-[76px] lg:text-[44px]"
-          : "mb-7 text-2xl sm:text-3xl"
-      }`}
-    >
+    <h2 className="mb-7 text-center text-2xl font-bold leading-tight text-brand-gold sm:text-3xl">
       {children}
     </h2>
   );
@@ -288,10 +276,10 @@ export function ProductSeriesPage({ seriesSlug }: { seriesSlug: string }) {
       )}
 
       {(showAll || seriesSlug === "invest") && (
-        <section className="bg-white pb-8 pt-3 lg:pb-10 lg:pt-2">
+        <section className="bg-white py-10 lg:py-14">
           <div className="dvag-container">
             <div>
-              <SectionTitle prominent>Đầu tư - Tiết kiệm</SectionTitle>
+              <SectionTitle>Đầu tư - Tiết kiệm</SectionTitle>
               <ProductGrid cards={investCards} columns={4} />
             </div>
           </div>
