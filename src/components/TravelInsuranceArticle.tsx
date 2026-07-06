@@ -26,7 +26,10 @@ const travelReasons = [
 
 export function TravelInsuranceArticle() {
   return (
-    <article className="bg-white text-black">
+    <article
+      id="bao-hiem-du-lich"
+      className="bg-white text-black scroll-mt-[calc(var(--header-height)+1rem)]"
+    >
       {/* Hero section */}
       <section className="px-[10%] py-4 sm:py-5">
         <div className="mx-auto max-w-7xl">

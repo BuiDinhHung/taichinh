@@ -262,7 +262,7 @@ export const articles: Article[] = [
     title: "Bảo hiểm du lịch cần thiết thế nào cho kỳ nghỉ của bạn?",
     date: "May 5, 2025",
     image: "/images/bao-hiem-du-lich-ngang.png",
-    href: "/bao-hiem-du-lich",
+    href: "/bao-hiem-tai-san-tong-hop#bao-hiem-du-lich",
   },
   {
     slug: "ke-hoach-cho-tuong-lai-con-yeu",
