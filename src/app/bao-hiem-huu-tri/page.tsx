@@ -36,7 +36,7 @@ export default function PensionInsurancePage() {
                   </h3>
                 </Link>
                 <ul className="mt-2 flex flex-col gap-1.5">
-                  {["Bảo hiểm tài sản", "Bảo hiểm trách nhiệm", "Bảo hiểm pháp lý", "Bảo hiểm nhà đất", "Bảo hiểm kính", "Bảo hiểm Ô tô"].map((label) => (
+                  {["Bảo hiểm tài sản", "Bảo hiểm trách nhiệm", "Bảo hiểm pháp lý", "Bảo hiểm du lịch", "Bảo hiểm nhà đất", "Bảo hiểm kính"].map((label) => (
                     <li key={label}>
                       <Link href="/bao-hiem-tai-san-tong-hop" className="block w-full rounded bg-brand-gold px-2 py-2 text-center text-[12px] font-medium leading-snug text-white transition-colors hover:bg-brand-gold-dark">
                         {label}

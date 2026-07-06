@@ -69,9 +69,9 @@ const insuranceCards: ProductCard[] = [
       { label: "Bảo hiểm tài sản", href: "/bao-hiem-tai-san-tong-hop" },
       { label: "Bảo hiểm trách nhiệm", href: "/bao-hiem-tai-san-tong-hop" },
       { label: "Bảo hiểm pháp lý", href: "/bao-hiem-tai-san-tong-hop" },
+      { label: "Bảo hiểm du lịch", href: "/bao-hiem-tai-san-tong-hop" },
       { label: "Bảo hiểm nhà đất", href: "/bao-hiem-tai-san-tong-hop" },
       { label: "Bảo hiểm kính", href: "/bao-hiem-tai-san-tong-hop" },
-      { label: "Bảo hiểm Ô tô", href: "/bao-hiem-tai-san-tong-hop" },
     ],
   },
   {

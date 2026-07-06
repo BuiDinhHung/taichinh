@@ -9,6 +9,7 @@ import { LegalInsuranceArticle } from "@/components/LegalInsuranceArticle";
 import { HomeBuildingInsuranceArticle } from "@/components/HomeBuildingInsuranceArticle";
 import { GlassInsuranceArticle } from "@/components/GlassInsuranceArticle";
 import { SolarInsuranceArticle } from "@/components/SolarInsuranceArticle";
+import { TravelInsuranceArticle } from "@/components/TravelInsuranceArticle";
 
 export const metadata: Metadata = {
   title: "Bảo hiểm tài sản - taichinh.de",
@@ -27,6 +28,7 @@ export default function PropertyInsuranceGroupPage() {
         <HomeBuildingInsuranceArticle />
         <SolarInsuranceArticle />
         <LegalInsuranceArticle />
+        <TravelInsuranceArticle />
         <section className="bg-white py-12 lg:py-16">
           <div className="dvag-container">
             <h2 className="text-center text-2xl font-bold text-brand-gold sm:text-3xl">

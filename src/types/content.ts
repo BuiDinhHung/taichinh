@@ -21,6 +21,7 @@ export type Article = {
   date: string;
   excerpt?: string;
   image: string;
+  href?: string;
   body?: Block[];
   series?: { name: string; part: number; total: number };
 };
