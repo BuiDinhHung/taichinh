@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 export function LoginForm() {
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const next = searchParams.get("next") || "/write";
+  const nextParam = searchParams.get("next") || "/drafts";
+  const next = nextParam.startsWith("/") ? nextParam : "/drafts";
   const [username, setUsername] = useState("admin");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -27,8 +27,7 @@ export function LoginForm() {
       setMessage(data?.message || "Không đăng nhập được.");
       return;
     }
-    router.push(next);
-    router.refresh();
+    window.location.assign(next);
   };
 
   return (
