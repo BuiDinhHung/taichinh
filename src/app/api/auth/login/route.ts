@@ -30,11 +30,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, message: "Sai tai khoan hoac mat khau." }, { status: 401 });
   }
 
+  const isProduction = process.env.NODE_ENV === "production";
   const response = NextResponse.json({ ok: true, username: user.username });
+  // SameSite=None + Partitioned (CHIPS) so the session also works when the site
+  // runs inside a cross-domain iframe (WebCake embed). Requires HTTPS, so keep
+  // lax on local dev where there is no TLS.
   response.cookies.set(SESSION_COOKIE, signSession(user.username), {
     httpOnly: true,
-    sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    sameSite: isProduction ? "none" : "lax",
+    secure: isProduction,
+    partitioned: isProduction,
     path: "/",
     maxAge: 60 * 60 * 24 * 7,
   });
