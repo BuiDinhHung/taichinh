@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { EmbeddedScrollbarMode } from "@/components/EmbeddedScrollbarMode";
 import "./globals.css";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           <EmbeddedScrollbarMode />
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );
