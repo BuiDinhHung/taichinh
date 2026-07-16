@@ -11,7 +11,35 @@ export function HomeNewsSection() {
         <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-brand-gold-darker">
           Tin mới nhất
         </h2>
+
         <div className="grid gap-5 lg:grid-cols-2">
+          <Link
+            href="/vay-von-doanh-nghiep"
+            className="group flex gap-5 overflow-hidden rounded-xl border border-brand-gold/20 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5"
+          >
+            <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-lg sm:h-32 sm:w-48">
+              <Image
+                src="/images/vaycondoanhnghieptinmoi.png"
+                alt="Khách hàng tìm hiểu giải pháp vay vốn dành cho doanh nghiệp"
+                fill
+                sizes="192px"
+                className="object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="min-w-0 flex-1">
+              <span className="inline-block rounded-full bg-brand-gold px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+                Tin mới
+              </span>
+              <h3 className="mt-2 text-base font-bold leading-snug text-text-strong transition-colors group-hover:text-brand-gold-darker sm:text-lg">
+                Vay vốn dành cho doanh nghiệp
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-text-muted">
+                Chúng tôi hỗ trợ Quý doanh nghiệp mở rộng nguồn lực tài chính,
+                gia tăng sự chủ động và tự do trong mọi quyết định kinh doanh.
+              </p>
+            </div>
+          </Link>
+
           {items.map((item, i) => (
             <Link
               key={item.slug}

@@ -30,7 +30,7 @@ export const seriesList: Series[] = [
     slug: "credit",
     name: "Tín dụng",
     description: "Tín dụng bất động sản, tín dụng cá nhân và các giải pháp tài chính linh hoạt.",
-    articleSlugs: ["tin-dung-bat-dong-san", "tin-dung-ca-nhan"],
+    articleSlugs: ["tin-dung-bat-dong-san", "tin-dung-ca-nhan", "vay-von-doanh-nghiep"],
   },
   {
     slug: "insurance",

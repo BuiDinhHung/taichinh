@@ -49,6 +49,7 @@ export const headerNav: NavItem[] = [
       { label: "Bauspar - Tiết kiệm xây nhà", href: "/tiet-kiem-xay-dung" },
       { label: "Nhà ở tiền chế FingerHaus", href: "/fingerhaus" },
       { label: "Tín dụng bất động sản", href: "/tin-dung-bat-dong-san" },
+      { label: "Vay vốn doanh nghiệp", href: "/vay-von-doanh-nghiep" },
     ],
   },
   {
@@ -317,6 +318,14 @@ export const articles: Article[] = [
     title: "Vay tín dụng xây dựng",
     date: "Mar 30, 2025",
     image: "/images/house-with-euros.jpeg",
+  },
+  {
+    slug: "vay-von-doanh-nghiep",
+    title: "Vay vốn dành cho doanh nghiệp",
+    date: "Jul 16, 2026",
+    excerpt:
+      "Giải pháp vay vốn linh hoạt giúp doanh nghiệp mở rộng nguồn lực tài chính và chủ động dòng tiền.",
+    image: "/images/vaycondoanhnghiepdautrang.png",
   },
   {
     slug: "bao-hiem-huu-tri-co-ban",

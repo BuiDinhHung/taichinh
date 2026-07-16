@@ -107,6 +107,12 @@ const realEstateCards: ProductCard[] = [
     alt: "Vay tín dụng xây dựng",
   },
   {
+    title: "Vay vốn doanh nghiệp",
+    href: "/vay-von-doanh-nghiep",
+    image: "/images/vaycondoanhnghiepdautrang.png",
+    alt: "Vay vốn dành cho doanh nghiệp",
+  },
+  {
     title: "Nhà lắp ghép (Tiền chế)",
     href: "/fingerhaus",
     image: "/images/prefab-house-fingerhaus.jpeg",
@@ -287,10 +293,10 @@ export function ProductSeriesPage({ seriesSlug }: { seriesSlug: string }) {
       )}
 
       {(showAll || seriesSlug === "bauspar") && (
-        <section className="bg-brand-gold-tint py-10 lg:py-14">
+        <section id="bat-dong-san-tin-dung" className="scroll-mt-24 bg-brand-gold-tint py-10 lg:py-14">
           <div className="dvag-container">
-            <SectionTitle>Bất động sản</SectionTitle>
-            <ProductGrid cards={realEstateCards} />
+            <SectionTitle>Bất động sản – Tín dụng Ngân hàng</SectionTitle>
+            <ProductGrid cards={realEstateCards} columns={4} />
           </div>
         </section>
       )}

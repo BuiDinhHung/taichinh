@@ -26,6 +26,7 @@ const categoryBySlug: Record<string, string> = {
   "tiet-kiem-xay-dung": "Bất động sản",
   "tin-dung-bat-dong-san": "Bất động sản",
   "tin-dung-ca-nhan": "Bất động sản",
+  "vay-von-doanh-nghiep": "Bất động sản",
   fingerhaus: "Bất động sản",
   "he-thong-dien-mat-troi-solaranlage": "Năng lượng",
   "nguon-dien-gas-re": "Năng lượng",

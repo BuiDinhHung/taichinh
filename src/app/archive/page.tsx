@@ -49,6 +49,7 @@ const categories: ServiceCategory[] = [
     cards: [
       { title: "Tiết kiệm xây dựng - Bauspar", href: "/tiet-kiem-xay-dung", image: "/images/pdf-field-child.jpeg" },
       { title: "Vay tín dụng xây dựng & cá nhân", href: "/tin-dung-bat-dong-san", image: "/images/house-with-euros.jpeg" },
+      { title: "Vay vốn doanh nghiệp", href: "/vay-von-doanh-nghiep", image: "/images/vaycondoanhnghiepdautrang.png" },
       { title: "Nhà lắp ghép - FingerHaus", href: "/fingerhaus", image: "/images/prefab-house-fingerhaus.jpeg" },
     ],
   },

@@ -3,9 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { AuthorCard } from "@/components/AuthorCard";
 import { ArticleBody } from "@/components/ArticleBody";
 import { BasicPensionArticle } from "@/components/BasicPensionArticle";
+import { BusinessLoanArticle } from "@/components/BusinessLoanArticle";
 import { BuildingSavingsArticle } from "@/components/BuildingSavingsArticle";
 import { BusinessInsuranceArticle } from "@/components/BusinessInsuranceArticle";
 import { ChildFutureArticle } from "@/components/ChildFutureArticle";
@@ -42,10 +42,11 @@ export function generateStaticParams() {
 }
 
 const customRelatedSlugs: Record<string, string[]> = {
-  "tiet-kiem-xay-dung": ["tin-dung-bat-dong-san", "fingerhaus"],
-  "fingerhaus": ["tiet-kiem-xay-dung", "tin-dung-bat-dong-san"],
-  "tin-dung-bat-dong-san": ["tiet-kiem-xay-dung", "fingerhaus"],
-  "tin-dung-ca-nhan": ["tiet-kiem-xay-dung", "fingerhaus"],
+  "tiet-kiem-xay-dung": ["tin-dung-bat-dong-san", "fingerhaus", "vay-von-doanh-nghiep"],
+  "fingerhaus": ["tiet-kiem-xay-dung", "tin-dung-bat-dong-san", "vay-von-doanh-nghiep"],
+  "tin-dung-bat-dong-san": ["tiet-kiem-xay-dung", "fingerhaus", "vay-von-doanh-nghiep"],
+  "tin-dung-ca-nhan": ["tiet-kiem-xay-dung", "fingerhaus", "vay-von-doanh-nghiep"],
+  "vay-von-doanh-nghiep": ["tiet-kiem-xay-dung", "tin-dung-bat-dong-san", "fingerhaus"],
 };
 
 function getRelatedArticles(slug: string) {
@@ -342,6 +343,19 @@ export default async function ArticlePage({
         <Header />
         <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
           <RealEstateLoanArticle />
+          <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (slug === "vay-von-doanh-nghiep") {
+    return (
+      <>
+        <Header />
+        <main className="flex-1 dvag-article-compact" style={{ paddingTop: "var(--header-height)" }}>
+          <BusinessLoanArticle />
           <RelatedArticles currentSlug={slug} productStyle title="Những lĩnh vực có thể bạn quan tâm" />
         </main>
         <Footer />
